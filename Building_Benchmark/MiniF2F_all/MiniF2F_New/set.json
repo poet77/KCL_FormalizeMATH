@@ -1,0 +1,203 @@
+[
+  {
+    "problem_name": "aime_1984_p7",
+    "informal_statement": "The [[function]] f is defined on the [[set]] of [[integer]]s and satisfies $f(n)=\\begin{cases}\nn-3&\\mbox{if}\\ n\\ge 1000\\\\\nf(f(n+5))&\\mbox{if}\\ n<1000\\end{cases}$\n\nFind $f(84)$. Show that it is 997.",
+    "informal_proof": "Define $f^{h} = f(f(\\cdots f(f(x))\\cdots))$, where the function $f$ is performed $h$ times. We find that $ f(84) = f(f(89)) = f^2(89) = f^3(94) = \\ldots f^{y}(1004)$. $1004 = 84 + 5(y - 1) \\Longrightarrow y = 185$. So we now need to reduce $f^{185}(1004)$.\n\nLet’s write out a couple more iterations of this function:\n$\\begin{align*}f^{185}(1004)&=f^{184}(1001)=f^{183}(998)=f^{184}(1003)=f^{183}(1000)\\\\\n&=f^{182}(997)=f^{183}(1002)=f^{182}(999)=f^{183}(1004)\\end{align*}$\nSo this function reiterates with a period of 2 for $x$. It might be tempting at first to assume that $f(1004) = 1001$ is the answer; however, that is not true since the solution occurs slightly before that. Start at $f^3(1004)$:\n$f^{3}(1004)=f^{2}(1001)=f(998)=f^{2}(1003)=f(1000)=997$\n\nNote that we should also be suspicious if our answer is $1001$- it is a $4$-digit number, and we were not asked to, say, divide our number by $13$.",
+    "label": [
+      "",
+      "Set",
+      "Function",
+      "Number"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "aime_1988_p8",
+    "informal_statement": "The function $f$, defined on the set of ordered pairs of positive integers, satisfies the following properties:\n$ f(x, x) = x,\\; f(x, y) = f(y, x), {\\rm \\ and\\ } (x+y)f(x, y) = yf(x, x+y). $\nCalculate $f(14,52)$. Show that it is 364.",
+    "informal_proof": "Let $z = x+y$. By the substitution $z=x+y,$ we rewrite the third property in terms of $x$ and $z,$ then solve for $f(x,z):$\n$\\begin{align*}\nzf(x,z-x) &= (z-x)f(x,z) \\\\\nf(x,z) &= \\frac{z}{z-x} \\cdot f(x,z-x).\n\\end{align*}$\nUsing the properties of $f,$ we have\n$\\begin{align*}\nf(14,52) &= \\frac{52}{38} \\cdot f(14,38) \\\\\n&= \\frac{52}{38} \\cdot \\frac{38}{24} \\cdot f(14,24) \\\\\n&= \\frac{52}{38} \\cdot \\frac{38}{24} \\cdot \\frac{24}{10} \\cdot f(14,10)\\\\\n&= \\frac{52}{38} \\cdot \\frac{38}{24} \\cdot \\frac{24}{10} \\cdot f(10,14)\\\\\n&= \\frac{52}{38} \\cdot \\frac{38}{24} \\cdot \\frac{24}{10} \\cdot \\frac{14}{4} \\cdot f(10,4)\\\\\n&= \\frac{52}{38} \\cdot \\frac{38}{24} \\cdot \\frac{24}{10} \\cdot \\frac{14}{4} \\cdot f(4,10)\\\\\n&= \\frac{52}{38} \\cdot \\frac{38}{24} \\cdot \\frac{24}{10} \\cdot \\frac{14}{4} \\cdot \\frac{10}{6} \\cdot f(4,6)\\\\\n&= \\frac{52}{38} \\cdot \\frac{38}{24} \\cdot \\frac{24}{10} \\cdot \\frac{14}{4} \\cdot \\frac{10}{6} \\cdot \\frac{6}{2} \\cdot f(4,2)\\\\\n&= \\frac{52}{38} \\cdot \\frac{38}{24} \\cdot \\frac{24}{10} \\cdot \\frac{14}{4} \\cdot \\frac{10}{6} \\cdot \\frac{6}{2} \\cdot f(2,4)\\\\\n&= \\frac{52}{38} \\cdot \\frac{38}{24} \\cdot \\frac{24}{10} \\cdot \\frac{14}{4} \\cdot \\frac{10}{6} \\cdot \\frac{6}{2} \\cdot \\frac{4}{2} \\cdot f(2,2)\\\\\n&= \\frac{52}{38} \\cdot \\frac{38}{24} \\cdot \\frac{24}{10} \\cdot \\frac{14}{4} \\cdot \\frac{10}{6} \\cdot \\frac{6}{2} \\cdot \\frac{4}{2} \\cdot 2\\\\\n&=364.\n\\end{align*}$\n~MRENTHUSIASM (credit given to AoPS)",
+    "label": [
+      "",
+      "Set",
+      "Function",
+      "Number"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "amc12a_2009_p6",
+    "informal_statement": "Suppose that $P = 2^m$ and $Q = 3^n$. Which of the following is equal to $12^{mn}$ for every pair of integers $(m,n)$?\n\n$\\textbf{(A)}\\ P^2Q \\qquad \\textbf{(B)}\\ P^nQ^m \\qquad \\textbf{(C)}\\ P^nQ^{2m} \\qquad \\textbf{(D)}\\ P^{2m}Q^n \\qquad \\textbf{(E)}\\ P^{2n}Q^m$ Show that it is \\bold{E)} P^{2n} Q^m.",
+    "informal_proof": "We have $12^{mn} = (2\\cdot 2\\cdot 3)^{mn} = 2^{2mn} \\cdot 3^{mn} = (2^m)^{2n} \\cdot (3^n)^m = \\bold{E)} P^{2n} Q^m$.",
+    "label": [
+      "",
+      "Set",
+      "Number"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "amc12a_2020_p15",
+    "informal_statement": "In the complex plane, let $A$ be the set of solutions to $z^{3}-8=0$ and let $B$ be the set of solutions to $z^{3}-8z^{2}-8z+64=0.$ What is the greatest distance between a point of $A$ and a point of $B?$\n\n$\\textbf{(A) } 2\\sqrt{3} \\qquad \\textbf{(B) } 6 \\qquad \\textbf{(C) } 9 \\qquad \\textbf{(D) } 2\\sqrt{21} \\qquad \\textbf{(E) } 9+\\sqrt{3}$ Show that it is \\textbf{(D) } 2\\sqrt{21}.",
+    "informal_proof": "We solve each equation separately:\n<ol style=\"margin-left: 1.5em;\">\n  <li>We solve $z^{3}-8=0$ by De Moivre's Theorem.<p>\nLet $z=r(\\cos\\theta+i\\sin\\theta)=r\\operatorname{cis}\\theta,$ where $r$ is the magnitude of $z$ such that $r\\geq0,$ and $\\theta$ is the argument of $z$ such that $0\\leq\\theta<2\\pi.$ <p>\nWe have $z^3=r^3\\operatorname{cis}(3\\theta)=8(1),$ from which\n<ul style=\"list-style-type:square;\">\n  <li>$r^3=8,$ so $r=2.$</li><p>\n  <li>$\\begin{cases}\n\\begin{aligned}\n\\cos(3\\theta) &= 1 \\\\\n\\sin(3\\theta) &= 0\n\\end{aligned},\n\\end{cases}$ so $3\\theta=0,2\\pi,4\\pi,$ or $\\theta=0,\\frac{2\\pi}{3},\\frac{4\\pi}{3}.$ </li><p>\n</ul>\nThe set of solutions to $z^{3}-8=0$ is $\\boldsymbol{A=\\left\\{2,-1+\\sqrt{3}i,-1-\\sqrt{3}i\\right\\}}.$ In the complex plane, the solutions form the vertices of an equilateral triangle whose circumcircle has center $0$ and radius $2.$</li><p>\n  <li>We solve $z^{3}-8z^{2}-8z+64=0$ by factoring by grouping.</li><p>\nWe have\n$\\begin{align*}\nz^2(z-8)-8(z-8)&=0 \\\\\n\\bigl(z^2-8\\bigr)(z-8)&=0.\n\\end{align*}$\nThe set of solutions to $z^{3}-8z^{2}-8z+64=0$ is $\\boldsymbol{B=\\left\\{2\\sqrt{2},-2\\sqrt{2},8\\right\\}}.$\n</ol>\nIn the graph below, the points in set $A$ are shown in red, and the points in set $B$ are shown in blue. The greatest distance between a point of $A$ and a point of $B$ is the distance between $-1\\pm\\sqrt{3}i$ to $8,$ as shown in the dashed line segments.\n\nBy the Distance Formula, the answer is $\\sqrt{(-1-8)^2+\\left(\\pm\\sqrt{3}-0\\right)^2}=\\sqrt{84}=\\textbf{(D) } 2\\sqrt{21}.$\n~lopkiloinm",
+    "label": [
+      "",
+      "Set"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "imo_2019_p1",
+    "informal_statement": "'Let $\\mathbb{Z}$ be the set of integers. Determine all functions $f : \\mathbb{Z} \\to \\mathbb{Z}$ such that, for all\n''integers $a$ and $b$, $f(2a) + 2f(b) = f(f(a + b)).$''",
+    "informal_proof": "Let us substitute $0$ in for $a$ to get\n$f(0) + 2f(b) = f(f(b)).$\n\nNow, since the domain and range of $f$ are the same, we can let $x = f(b)$ and $f(0)$ equal some constant $c$ to get\n$c + 2x = f(x).$\nTherefore, we have found that '''all''' solutions must be of the form $f(x) = 2x + c.$\n\nPlugging back into the original equation, we have: $4a + c + 4b + 2c = 4a + 4b + 2c + c$ which is true. Therefore, we know that $f(x) = 2x + c$ satisfies the above for any '''integral''' constant c, and that this family of equations is unique.",
+    "label": [
+      "",
+      "Set",
+      "Function",
+      "Number"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "mathd_algebra_160",
+    "informal_statement": "For each plumbing repair job, Mr. Wrench charges $N$ dollars for coming out to the house plus $x$ dollars per hour that he works at the house. He charged $\\$97$ for a one-hour repair job and $\\$265$ for a five-hour repair job. What is his charge for a two-hour repair job? Show that it is \\$ 139.",
+    "informal_proof": "We can rewrite the problem as the system of equations: \\begin{align*}\nN+x &= 97\\\\\nN+5x &= 265\n\\end{align*}Subtracting these gives: \\begin{align*}\n4x &= 265-97=168\\\\\nx &= 42.\n\\end{align*}So now $N = 97-42= 55$. So the charge for a two-hour repair job is $N+2x = \\$ 55+2\\cdot \\$ 42 = \\$ 139$.",
+    "label": [
+      "",
+      "Set"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "mathd_algebra_170",
+    "informal_statement": "How many integers are in the solution set of $|x-2|\\leq5.6$ ? Show that it is 11.",
+    "informal_proof": "Getting rid of the absolute value, we have $-5.6 \\le x-2 \\le 5.6$, or $-3.6 \\le x \\le 7.6$. Thus, $x$ can be any integer from -3 to 7, inclusive. There are $7-(-3)+1=11$ integers in this range.",
+    "label": [
+      "",
+      "Set",
+      "Number"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "mathd_algebra_44",
+    "informal_statement": "At which point do the lines $s=9-2t$ and $t=3s+1$ intersect? Give your answer as an ordered pair in the form $(s, t).$ Show that it is (1,4).",
+    "informal_proof": "We can substitute the second equation into the first equation to get  $$s=9-2(3s+1)=9-6s-2.$$Moving the variable terms to the left-hand side and the constants to the right-hand side, we find $$s+6s=7.$$This gives  $s=1$ which we may plug into either equation to get $t$. For example, $$t=3(1)+1=4.$$So the lines intersect at the point $(1,4)$.",
+    "label": [
+      "",
+      "Set"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "mathd_algebra_513",
+    "informal_statement": "If $3a+2b=5$ and $a+b=2$, what is the ordered pair $(a,b)$ that satisfies both equations? Show that it is (1,1).",
+    "informal_proof": "We wish to solve for $a$ and $b$. First, multiply the second equation by $2$ and subtract it from the first. This gives $(3a - 2a) + (2b - 2b) = (5 - 4)$, or $a = 1$. Then, plugging $a = 1$ into the second equation yields $1 + b = 2$, so $b = 1$. Thus, the ordered pair $(a,b)$ that satisfies both equations is $(1,1)$.",
+    "label": [
+      "",
+      "Set",
+      "Equation"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "mathd_numbertheory_451",
+    "informal_statement": "A positive integer $n$ is nice if there is a positive integer $m$ with exactly four positive divisors (including $1$ and $m$) such that the sum of the four divisors is equal to $n.$ Find the sum of all the nice numbers in the set $\\{ 2010,2011,2012,\\dots,2019 \\}.$ Show that it is 2016.",
+    "informal_proof": "The positive integers with exactly four positive divisors are the integers of the form $p^3$, where $p$ is a prime, or $p \\cdot q$, where $p$ and $q$ are distinct primes. We consider each case:\n\nSuppose that $m = p^3$ for some prime $p$. Then the sum of the divisors of $m$ is $1 + p + p^2 + p^3.$ For $p = 11,$ this value of $m$ is too low, and for $p = 13,$ the value of $m$ is too high; therefore, no prime $p$ gives a value of $n$ in the given set.\n\nTherefore, we must have $m = p \\cdot q$, for some distinct primes $p$ and $q.$ Then the sum of the divisors of $m$ is $1 + p + q + pq$, which we can factor as $(1+p)(1+q)$. First suppose that one of $p$ and $q$ equals $2$; without loss of generality, let $p = 2$. Then $(1+p)(1+q) = 3(1+q).$ Since $q \\neq p = 2$, we see that $q$ is odd, and so $1+q$ is even. Thus $3(1+q)$ is divisible by $6,$ so it must be either $2010$ or $2016.$ Trying both cases, we see that both $3(1+q) = 2010$ and $3(1 + q) = 2016$ give a non-prime value of $q.$\n\nIf neither $p$ nor $q$ equals $2$, then both are odd primes, so $(1+p)(1+q)$ is the product of two even numbers, which must be divisible by $4.$ The only multiples of $4$ in the given range are $2012$ and $2016$.  We have $2012 = 2^2 \\cdot 503,$ so the only way to write $2012$ as the product of two even positive integers is $2012 = 2 \\cdot 1006.$ But we cannot have $1+p=2$ or $1+q=2$, since $2-1=1$ is not prime.  Note that $2016 = (1 + 3)(1 + 503).$  Since both 3 and 503 are prime, 2016 is nice.\n\nThus, $2016$ is the only nice number in the given set.",
+    "label": [
+      "",
+      "Set",
+      "Number"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "amc12a_2003_p25",
+    "informal_statement": "Let $f(x)= \\sqrt{ax^2+bx} $.  For how many [[real number | real]] values of $a$ is there at least one [[positive number | positive]] value of $ b $ for which the [[domain]] of $f $ and the [[range]] of $ f $ are the same [[set]]?\n\n$ \\mathrm{(A) \\ 0 } \\qquad \\mathrm{(B) \\ 1 } \\qquad \\mathrm{(C) \\ 2 } \\qquad \\mathrm{(D) \\ 3 } \\qquad \\mathrm{(E) \\ \\mathrm{infinitely \\ many} }  $ Show that it is \\mathrm{(B) \\ 2 }.",
+    "informal_proof": "The function $f(x) = \\sqrt{x(ax+b)}$ has a [[codomain]] of all non-negative numbers, or $0 \\le f(x)$. Since the domain and the range of $f$ are the same, it follows that the domain of $f$ also satisfies $0 \\le x$.\n\nThe function has two zeroes at $x = 0, \\frac{-b}{a}$, which must be part of the domain. Since the domain and the range are the same set, it follows that $\\frac{-b}{a}$ is in the codomain of $f$, or $0 \\le \\frac{-b}{a}$. This implies that one (but not both) of $a,b$ is non-positive. The problem states that there is at least one positive value of b that works, thus $a$ must be non-positive, $b$ is non-negative, and the domain of the function occurs when $x(ax+b) > 0$, or \n\n<center>$0 \\le x \\le \\frac{-b}{a}.$</center>\n\n[[Completing the square]], $f(x) = \\sqrt{a\\left(x + \\frac{b}{2a}\\right)^2 - \\frac{b^2}{4a}} \\le \\sqrt{\\frac{-b^2}{4a}}$ by the [[Trivial Inequality]] (remember that $a \\le 0$). Since $f$ is continuous and assumes this maximal value at $x = \\frac{-b}{2a}$, it follows that the range of $f$ is \n\n<center>$0 \\le f(x) \\le \\sqrt{\\frac{-b^2}{4a}}.$</center>\n\nAs the domain and the range are the same, we have that $\\frac{-b}{a} = \\sqrt{\\frac{-b^2}{4a}} = \\frac{b}{2\\sqrt{-a}} \\Longrightarrow a(a+4) = 0$ (we can divide through by $b$ since it is given that $b$ is positive). Hence $a = 0, -4$, which both we can verify work, and the answer is $\\mathbf{(C)}$.",
+    "label": [
+      "",
+      "Set",
+      "Function",
+      "Number"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "amc12b_2002_p6",
+    "informal_statement": "Suppose that $a$ and $b$ are nonzero real numbers, and that the [[equation]] $x^2 + ax + b = 0$ has solutions $a$ and $b$. Then the pair $(a,b)$ is\n\n$\\mathrm{(A)}\\ (-2,1)\n\\qquad\\mathrm{(B)}\\ (-1,2)\n\\qquad\\mathrm{(C)}\\ (1,-2)\n\\qquad\\mathrm{(D)}\\ (2,-1)\n\\qquad\\mathrm{(E)}\\ (4,4)$ Show that it is \\mathrm{(C)}\\ (1,-2).",
+    "informal_proof": "Since $(x-a)(x-b) = x^2 - (a+b)x + ab = x^2 + ax + b = 0$, it follows by comparing [[coefficient]]s that $-a - b = a$ and that $ab = b$. Since $b$ is nonzero, $a = 1$, and $-1 - b = 1 \\Longrightarrow b = -2$. Thus $(a,b) = \\mathrm{(C)}\\ (1,-2)$.",
+    "label": [
+      "",
+      "Set",
+      "Equation",
+      "Number"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "imo_1973_p3",
+    "informal_statement": "Let $a$ and $b$ be real numbers for which the equation\n$x^4 + ax^3 + bx^2 + ax + 1 = 0$\nhas at least one real solution. For all such pairs $(a, b)$, find the minimum value of $a^2 + b^2$.",
+    "informal_proof": "Substitute $z=x+1/x$ to change the original equation into $z^2+az+b-2=0$. This equation has solutions $z=\\frac{-a \\pm \\sqrt{a^2+8-4b}}{2}$. We also know that $|z|=|x+1/x| \\geq 2$. So,\n\n$\\left | \\frac{-a \\pm \\sqrt{a^2+8-4b}}{2} \\right | \\geq 2$\n\n$\\frac{|a|+\\sqrt{a^2+8-4b}}{2} \\geq 2$\n\n$|a|+\\sqrt{a^2+8-4b} \\geq 4$\n\nRearranging and squaring both sides,\n\n$a^2+8-4b \\geq a^2-16|a|+16$\n\n$2|a|-b \\geq 2$\n\nSo, $a^2+b^2 \\geq a^2+(2-2|a|)^2 = 5a^2-8|a|+4 = 5(|a|-\\frac{4}{5})^2+\\frac{4}{5}$.\n\nTherefore, the smallest possible value of $a^2+b^2$ is $\\frac{4}{5}$, when $a=\\pm \\frac{4}{5}$ and $b=\\frac{-2}{5}$.",
+    "label": [
+      "",
+      "Set",
+      "Equation",
+      "Number"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "imo_1977_p5",
+    "informal_statement": "Let $a,b$ be two natural numbers. When we divide $a^2+b^2$ by $a+b$, we the the remainder $r$ and the quotient $q.$ Determine all pairs $(a, b)$ for which $q^2 + r = 1977.$ Show that it is (a,b)=(37,50) , (7, 50).",
+    "informal_proof": "Using $r=1977-q^2$, we have $a^2+b^2=(a+b)q+1977-q^2$, or $q^2-(a+b)q+a^2+b^2-1977=0$, which implies $\\Delta=7908+2ab-2(a^2+b^2)\\ge 0$. If we now assume Wlog that $a\\ge b$, it follows $a+b\\le 88$. If $q\\le 43$, then $r=1977-q^2\\ge 128$, contradicting $r<a+b\\le 88$. But $q\\le 44$ from $q^2+r=1977$, thus $q=44$. It follows $r=41$, and we get $a^2+b^2=44(a+b)+41\\Leftrightarrow (a-22)^2+(b-22)^2=1009\\in \\mathbb{P}$. By Jacobi's two squares theorem, we infer that $15^2+28^2=1009$ is the only representation of $1009$ as a sum of squares. This forces $(a,b)=(37,50) , (7, 50)$, and permutations. $\\blacksquare$",
+    "label": [
+      "",
+      "Set"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "imo_1984_p2",
+    "informal_statement": "Find one pair of positive integers $a,b$ such that $ab(a+b)$ is not divisible by $7$, but $(a+b)^7-a^7-b^7$ is divisible by $7^7$.",
+    "informal_proof": "So we want $7 \\nmid ab(a+b)$ and $7^7 | (a+b)^7-a^7-b^7 = 7ab(a+b)(a^2+ab+b^2)^2$, so we want $7^3 | a^2+ab+b^2$.\nNow take e.g. $a=2,b=1$ and get $7|a^2+ab+b^2$. Now by some standard methods like Hensels Lemma (used to the polynomial $x^2+x+1$, so $b$ seen as constant from now) we get also some $\\overline{a}$ with $7^3 | \\overline{a}^2+\\overline{a}b+b^2$ and $\\overline{a} \\equiv a \\equiv 2 \\mod 7$, so $7\\nmid \\overline{a}b(\\overline{a}+b)$ and we are done. (in this case it gives $\\overline{a}=325$)",
+    "label": [
+      "",
+      "Set",
+      "Number"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "imo_1987_p4",
+    "informal_statement": "Prove that there is no function $f $ from the set of non-negative  integers into itself such that $f(f(n)) = n + 1987 $ for every $n $.",
+    "informal_proof": "We prove that if $f(f(n)) = n + k$ for all $n$, where $k$ is a fixed positive integer, then $k$ must be even. If $k = 2h$, then we may take $f(n) = n + h$. \n\nSuppose $f(m) = n$ with $m \\equiv n \\mod k$. Then by an easy induction on $r$ we find $f(m + kr) = n + kr$, $f(n + kr) = m + k(r+1)$. We show this leads to a contradiction. Suppose $m < n$, so $n = m + ks$ for some $s > 0$. Then $f(n) = f(m + ks) = n + ks$. But $f(n) = m + k$, so $m = n + k(s - 1) \\ge n$. Contradiction. So we must have $m \\ge n$, so $m = n + ks$ for some $s \\ge 0$. But now $f(m + k) = f(n + k(s+1)) = m + k(s + 2)$. But $f(m + k) = n + k$, so $n = m + k(s + 1) > n$. Contradiction. \n\nSo if $f(m) = n$, then $m$ and $n$ have different residues $\\pmod k$. Suppose they have $r_1$ and $r_2$ respectively. Then the same induction shows that all sufficiently large $s \\equiv r_1 \\pmod k$ have $f(s) \\equiv r_2 \\pmod k$, and that all sufficiently large $s \\equiv r_2 \\pmod k$ have $f(s) \\equiv r_1 \\pmod k$. Hence if $m$ has a different residue $r \\mod k$, then $f(m)$ cannot have residue $r_1$ or $r_2$. For if $f(m)$ had residue $r_1$, then the same argument would show that all sufficiently large numbers with residue $r_1$ had $f(m) \\equiv r \\pmod k$. Thus the residues form pairs, so that if a number is congruent to a particular residue, then $f$ of the number is congruent to the pair of the residue. But this is impossible for $k$ odd.",
+    "label": [
+      "",
+      "Set",
+      "Function",
+      "Number"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "mathd_algebra_13",
+    "informal_statement": "Find $A$ and $B$ such that\n\\[\\frac{4x}{x^2-8x+15} = \\frac{A}{x-3} + \\frac{B}{x-5}\\]for all $x$ besides 3 and 5. Express your answer as an ordered pair in the form $(A, B).$ Show that it is (-6, 10).",
+    "informal_proof": "Factoring the denominator on the left side gives \\[ \\frac{4x}{(x-5)(x-3)}=\\frac{A}{x-3}+\\frac{B}{x-5}. \\]Then, we multiply both sides of the equation by $(x - 3)(x - 5)$ to get \\[ 4x = A(x-5) + B(x-3). \\]If the linear expression $4x$ agrees with the linear expression $A(x-5) + B(x-3)$ at all values of $x$ besides 3 and 5, then the two expressions must agree for $x=3$ and $x=5$ as well.  Substituting $x = 3$, we get $12 = -2A$, so $A = -6$.  Likewise, we plug in $x = 5$ to solve for $B$. Substituting $x = 5$, we get $20 = 2B$, so $B = 10$.  Therefore, $(A, B) = (-6, 10).$",
+    "label": [
+      "",
+      "Set"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "mathd_algebra_77",
+    "informal_statement": "Suppose that $a$ and $b$ are nonzero real numbers, and that the equation  $${x^2 + ax + b = 0}$$ has solutions $a$ and $b$. Then what is the pair $(a,b)$? Show that it is (1,-2).",
+    "informal_proof": "The given conditions imply that $$\nx^2 + ax + b = (x-a)(x-b) = x^2 -(a+b)x + ab,\n$$ so $$\na+b = -a \\quad\\text{and}\\quad ab = b.\n$$ Since $b \\neq 0$, the second equation implies that $a=1$. The first equation gives $b=-2$, so $(a,b) = (1,-2)$.",
+    "label": [
+      "",
+      "Set",
+      "Equation",
+      "Number"
+    ],
+    "dataset": "MiniF2F"
+  }
+]

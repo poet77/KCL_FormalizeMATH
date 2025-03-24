@@ -1,0 +1,106 @@
+[
+  {
+    "problem_name": "amc12a_2021_p12",
+    "informal_statement": "All the roots of the polynomial $z^6-10z^5+Az^4+Bz^3+Cz^2+Dz+16$ are positive integers, possibly repeated. What is the value of $B$?\n\n$\\textbf{(A) }{-}88 \\qquad \\textbf{(B) }{-}80 \\qquad \\textbf{(C) }{-}64 \\qquad \\textbf{(D) }{-}41\\qquad \\textbf{(E) }{-}40$ Show that it is \\textbf{(A) }{-}88.",
+    "informal_proof": "By Vieta's formulas, the sum of the six roots is $10$ and the product of the six roots is $16$. By inspection, we see the roots are $1, 1, 2, 2, 2,$ and $2$, so the function is $(z-1)^2(z-2)^4=(z^2-2z+1)(z^4-8z^3+24z^2-32z+16)$. Therefore, calculating just the $z^3$ terms, we get $B = -32 - 48 - 8 = \\textbf{(A) }{-}88$.",
+    "label": [
+      "",
+      "Polynomial",
+      "Number"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "amc12a_2021_p22",
+    "informal_statement": "Suppose that the roots of the polynomial $P(x)=x^3+ax^2+bx+c$ are $\\cos \\frac{2\\pi}7,\\cos \\frac{4\\pi}7,$ and $\\cos \\frac{6\\pi}7$, where angles are in radians. What is $abc$?\n\n$\\textbf{(A) }{-}\\frac{3}{49} \\qquad \\textbf{(B) }{-}\\frac{1}{28} \\qquad \\textbf{(C) }\\frac{\\sqrt[3]7}{64} \\qquad \\textbf{(D) }\\frac{1}{32}\\qquad \\textbf{(E) }\\frac{1}{28}$ Show that it is \\textbf{(D) }\\frac{1}{32}.",
+    "informal_proof": "Let $z=e^{\\frac{2\\pi i}{7}}.$ Since $z$ is a $7$th root of unity, we have $z^7=1.$ For all integers $k,$ note that $\\cos\\frac{2k\\pi}{7}=\\operatorname{Re}\\left(z^k\\right)=\\operatorname{Re}\\left(z^{-k}\\right)$ and $\\sin\\frac{2k\\pi}{7}=\\operatorname{Im}\\left(z^k\\right)=-\\operatorname{Im}\\left(z^{-k}\\right).$ It follows that\n$\\begin{alignat*}{4}\n\\cos\\frac{2\\pi}{7} &= \\frac{z+z^{-1}}{2} &&= \\frac{z+z^6}{2}, \\\\\n\\cos\\frac{4\\pi}{7} &= \\frac{z^2+z^{-2}}{2} &&= \\frac{z^2+z^5}{2}, \\\\\n\\cos\\frac{6\\pi}{7} &= \\frac{z^3+z^{-3}}{2} &&= \\frac{z^3+z^4}{2}.\n\\end{alignat*}$\nBy geometric series, we conclude that $\\sum_{k=0}^{6}z^k=\\frac{1-1}{1-z}=0.$\nAlternatively, recall that the $7$th roots of unity satisfy the equation $z^7-1=0.$ By Vieta's Formulas, the sum of these seven roots is $0.$\n\nAs a result, we get $\\sum_{k=1}^{6}z^k=-1.$\nLet $(r,s,t)=\\left(\\cos{\\frac{2\\pi}{7}},\\cos{\\frac{4\\pi}{7}},\\cos{\\frac{6\\pi}{7}}\\right).$ By Vieta's Formulas, the answer is\n$\\begin{align*}\nabc&=[-(r+s+t)](rs+st+tr)(-rst) \\\\\n&=(r+s+t)(rs+st+tr)(rst) \\\\\n&=\\left(\\frac{\\sum_{k=1}^{6}z^k}{2}\\right)\\left(\\frac{2\\sum_{k=1}^{6}z^k}{4}\\right)\\left(\\frac{1+\\sum_{k=0}^{6}z^k}{8}\\right) \\\\\n&=\\frac{1}{32}\\left(\\sum_{k=1}^{6}z^k\\right)\\left(\\sum_{k=1}^{6}z^k\\right)\\left(1+\\sum_{k=0}^{6}z^k\\right) \\\\\n&=\\frac{1}{32}(-1)(-1)(1) \\\\\n&=\\textbf{(D) }\\frac{1}{32}.\n\\end{align*}$",
+    "label": [
+      "",
+      "Polynomial"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "amc12b_2020_p2",
+    "informal_statement": "What is the value of the following expression?\n\n$\\frac{100^2-7^2}{70^2-11^2} \\cdot \\frac{(70-11)(70+11)}{(100-7)(100+7)}$\n\n$\\textbf{(A) } 1 \\qquad \\textbf{(B) } \\frac{9951}{9950} \\qquad \\textbf{(C) } \\frac{4780}{4779} \\qquad \\textbf{(D) } \\frac{108}{107} \\qquad \\textbf{(E) } \\frac{81}{80} $ Show that it is \\textbf{(A) } 1.",
+    "informal_proof": "Using difference of squares to factor the left term, we get\n$\\frac{100^2-7^2}{70^2-11^2} \\cdot \\frac{(70-11)(70+11)}{(100-7)(100+7)} = \\frac{(100-7)(100+7)}{(70-11)(70+11)} \\cdot \\frac{(70-11)(70+11)}{(100-7)(100+7)}.$\nCancelling all the terms, we get $\\textbf{(A) } 1$ as the answer.",
+    "label": [
+      "",
+      "Polynomial"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "mathd_algebra_276",
+    "informal_statement": "The expression $10x^2-x-24$ can be written as $(Ax-8)(Bx+3),$ where $A$ and $B$ are integers. What is $AB + B$? Show that it is 12.",
+    "informal_proof": "We see that $10x^2-x-24=(5x-8)(2x+3)$, thus $A = 5$ and $B = 2$. Hence, $AB + B = 12.$",
+    "label": [
+      "",
+      "Polynomial",
+      "Number"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "mathd_algebra_140",
+    "informal_statement": "The expression $24x^2-19x-35$ can be written as $(Ax-5)(2Bx+C)$, where $A$, $B$, and $C$ are positive numbers. Find $AB-3C$. Show that it is -9.",
+    "informal_proof": "The expression $24x^2-19x-35$ can be factored as $(3x-5)(8x+7)$. Therefore, $(Ax-5)=(3x-5)$ and $(2Bx+C)=(8x+7)$. From that, $A=3$, $B=4$, and $C=7$. \\begin{align*}\nAB-3C&=3\\cdot4-3\\cdot7\\\\\n&=12-21\\\\\n&=-9\n\\end{align*}",
+    "label": [
+      "",
+      "Polynomial"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "mathd_algebra_182",
+    "informal_statement": "Expand the following expression: $7(3y+2)$ Show that it is 21y+14.",
+    "informal_proof": "We apply the distributive property to get\\begin{align*}\n7(3y+2) &= 7\\cdot 3y+7\\cdot 2\\\\\n&= 21y+14.\n\\end{align*}",
+    "label": [
+      "",
+      "Polynomial"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "mathd_algebra_206",
+    "informal_statement": "The polynomial $p(x) = x^2+ax+b$ has distinct roots $2a$ and $b$. Find $a+b$. Show that it is -1.",
+    "informal_proof": "We use the fact that the sum and product of the roots of a quadratic equation $x^2+ax+b=0$ are given by $-a$ and $b$, respectively.\n\nIn this problem, we see that $2a+b = -a$ and $(2a)(b) = b$. From the second equation, we see that either $2a = 1$ or else $b = 0$. But if $b = 0$, then the first equation gives $2a = -a$, implying that $a = 0$. This makes the two solutions of our original polynomial the same, and we are given that they are distinct. Hence $b \\not=0$, so $2a = 1,$ or $a = 1/2$. Then $b = -3a = -3/2$, so $a+b = -1$.",
+    "label": [
+      "",
+      "Polynomial"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "mathd_algebra_509",
+    "informal_statement": "Simplify the following expression to a simplified fraction: $$\\sqrt{\\dfrac{\\dfrac{5}{\\sqrt{80}}+\\dfrac{\\sqrt{845}}{9}+\\sqrt{45}}{\\sqrt5}}.$$ Show that it is \\frac{13}{6}.",
+    "informal_proof": "First, we'll divide $\\sqrt{5}$ into each term in the numerator of the fraction inside the big radical: $$\\sqrt{\\dfrac{\\dfrac{5}{\\sqrt{80}}+\\dfrac{\\sqrt{845}}{9}+\\sqrt{45}}{\\sqrt5}}=\n\\sqrt{\\frac{5}{\\sqrt{80}\\cdot\\sqrt{5}} + \\frac{\\sqrt{845}}{9\\sqrt{5}} + \\frac{\\sqrt{45}}{\\sqrt{5}}}.\n$$Let's attack each fraction within the square root separately. First, $$\\dfrac{5}{\\sqrt{80}\\cdot\\sqrt5}=\\dfrac{5}{\\sqrt{400}}=\\dfrac{5}{20}=\\dfrac{1}{4}.$$The second one is trickier: $$\\dfrac{\\sqrt{845}}{9\\sqrt5}=\\dfrac{\\sqrt{169}}{9}=\\dfrac{13}{9}.$$Finally, $\\dfrac{\\sqrt{45}}{\\sqrt5}=\\sqrt9=3$. Adding these together, we get $$\\sqrt{\\dfrac{1}{4}+\\dfrac{13}{9}+3}=\\sqrt{\\dfrac{9+52+108}{36}}=\\sqrt{\\dfrac{169}{36}}=\\frac{13}{6}.$$",
+    "label": [
+      "",
+      "Polynomial",
+      "Number"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "mathd_algebra_547",
+    "informal_statement": "What is the positive value of the expression $\\sqrt{x^3 - 2^y}$ when $x = 5$ and $y = 2$? Show that it is 11.",
+    "informal_proof": "Plugging in, the desired expression is just $\\sqrt{5^3 - 2^2} = \\sqrt{125 - 4} = \\sqrt{121} = 11$.",
+    "label": [
+      "",
+      "Polynomial"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "mathd_numbertheory_301",
+    "informal_statement": "If $j$ is a positive integer and the expression $(7j+3)$ is multiplied by 3 and then divided by 7, what is the remainder? Show that it is 2.",
+    "informal_proof": "First we multiply $(7j+3)$ by 3 to get $21j+9$. Now we divide by 7 and get $$\\frac{21j+9}{7}=3j+\\frac{9}{7}=3j+1+\\frac{2}{7}.$$ Since $j$ is an integer, we know that $3j+1$ is also an integer. We're left with the fraction $\\frac{2}{7}$ when we divided by 7, which means the remainder is $2$.",
+    "label": [
+      "",
+      "Polynomial",
+      "Number"
+    ],
+    "dataset": "MiniF2F"
+  }
+]

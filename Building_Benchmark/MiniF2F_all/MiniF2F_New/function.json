@@ -1,0 +1,170 @@
+[
+  {
+    "problem_name": "aime_1994_p3",
+    "informal_statement": "The function $f_{}^{}$ has the property that, for each real number $x,\\,$\n<center>$f(x)+f(x-1) = x^2.\\,$</center>\nIf $f(19)=94,\\,$ what is the remainder when $f(94)\\,$ is divided by $1000$? Show that it is 561.",
+    "informal_proof": "$\\begin{align*}f(94)&=94^2-f(93)=94^2-93^2+f(92)=94^2-93^2+92^2-f(91)=\\cdots \\\\\n&= (94^2-93^2) + (92^2-91^2) +\\cdots+ (22^2-21^2)+ 20^2-f(19) \\\\ &= 94+93+\\cdots+21+400-94  \\\\\n&= 4561 \\end{align*}$\n\nSo, the remainder is $561$.",
+    "label": [
+      "",
+      "Function",
+      "Number"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "imo_1968_p5_1",
+    "informal_statement": "Let $a$ be a positive real number and $f$ be a real function such that $\\forall x \\in \\mathbb{R}, f(x+a)=\\frac{1}{2}+\\sqrt{f(x)-f(x)^2}$.\nShow that there exists a positive real number $b$ such that $\\forall x \\in \\mathbb{R}, f(x+b)=f(x)$.",
+    "informal_proof": "Since $f(x+a) \\ge \\frac{1}{2}$ is true for any $x$, and $f(x+a)(1-f(x+a)) = \\frac{1}{4} - (f(x)-(f(x))^2) = (\\frac{1}{2}-f(x))^2$\n\nWe have:\n$f(x+2a) = \\frac{1}{2} + \\sqrt{(\\frac{1}{2}-f(x))^2} = \\frac{1}{2} + (f(x) - \\frac{1}{2}) = f(x)$\n\nTherefore $f$ is periodic, with $2a>0$ as a period.",
+    "label": [
+      "",
+      "Function",
+      "Number"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "imo_1977_p6",
+    "informal_statement": "Let $f(n)$ be a function $f: \\mathbb{N}^{+}\\to\\mathbb{N}^{+}$. Prove that if $ f(n+1) > f(f(n)) $ for each positive integer $n$, then $f(n)=n$.",
+    "informal_proof": "We will prove this via induction. First we will prove there is a $t$ such that $f(t)=1$ and then that $t=1$ is the only such solution.\n\nDefine the sequence $a_n$ with $a_0>1$ for $a_0\\in \\mathbb{N} $ and $a_k=f(a_{k-1}-1)$. By the given inequality we have that $f(a_n)>f(a_{n+1})$, this can be used to form a inequality chain of decreasing positive integers: $ f(a_0)>f(a_1)>f(a_2)>...$\nBy [[Infinite Descent]], this sequence must terminate, and the only way it can terminate is if we input something into $f$ that is outside of its range. This can only happen if $a_n=1$ since the range and domain of $f$ are the positive integers. Since $a_0\\neq 1$, there is a integer $t$ ($a_{n-1}-1$) such that $f(t)=1$.\n\nNow if $t\\neq 1$, then $f(t)=1>f(f(t-1))$, which is impossible since $f(f(t-1))\\ge 1$ by the range of $f$, so we have $t=1$ is the only time when $f(t)=1$.\n\nNow for the inductive step.\n\nAssume that $f(n)=n$ for all $n<k$ and these are the only times these values occur. We will prove that $f(k)=k$ and that this is the only time this value occurs. Define the sequence $a_n$ similarly, except that $a_0>k$, by the reasoning above, there is a $a_m$ such that $f(a_m)=1$, by the inductive assumption, this means that $a_m=f(a_{m-1}-1)=1$, we can repeat the inductive assumption to get that $a_{m-k+1}=k$. This implies that $f(a_{m-k}-1)=k$. Thus, there is a $t$ such that $f(t)=k$.\n\nNow for that $t$, we have $k>f(f(t-1))$, which means that $k+1>t$ by the inductive assumption which implies $t=k$ since we must have $t>k-1$, otherwise $f(t)<k$. So $t=k$ is the only time when $f(t)=k$\n\nSo the inductive step is complete. Therefore, by induction $f(n)=n$ for all positive integers $n$.",
+    "label": [
+      "",
+      "Function",
+      "Number"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "imo_1981_p6",
+    "informal_statement": "The function $f(x,y)$ satisfies\n\n(1) $f(0,y)=y+1, $\n\n(2) $f(x+1,0)=f(x,1), $\n\n(3) $f(x+1,y+1)=f(x,f(x+1,y)), $\n\nfor all non-negative integers $x,y $. Determine $f(4,1981) $.",
+    "informal_proof": "We observe that $f(1,0) = f(0,1) = 2 $ and that $f(1, y+1) = f(1, f(1,y)) = f(1,y) + 1$, so by induction, $f(1,y) = y+2 $.  Similarly, $f(2,0) = f(1,1) = 3$ and $f(2, y+1) = f(2,y) + 2$, yielding $f(2,y) = 2y + 3$.\n\nWe continue with $f(3,0) + 3 = 8 $; $f(3, y+1) + 3 = 2(f(3,y) + 3)$; $f(3,y) + 3 = 2^{y+3}$; and $f(4,0) + 3 = 2^{2^2}$; $f(4,y) + 3 = 2^{f(4,y) + 3}$.\n\nIt follows that $f(4,1981) = 2^{2\\cdot ^{ . \\cdot 2}} - 3 $ when there are 1984 2s, Q.E.D.",
+    "label": [
+      "",
+      "Function",
+      "Number"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "imo_1982_p1",
+    "informal_statement": "The function $f(n)$ is defined on the positive integers and takes non-negative integer values. $f(2)=0,f(3)>0,f(9999)=3333$ and for all $m,n:$$ f(m+n)-f(m)-f(n)=0 \\text{ or } 1. $Determine $f(1982)$. Show that it is 660.",
+    "informal_proof": "Clearly $f(1) \\ge 1 \\Rightarrow f(m+1) \\ge f(m)+f(1) \\ge f(m)+1$ so $f(9999) \\ge 9999$.Contradiction!So $f(1)=0$.This forces $f(3)=1$.Hence $f(3k+3) \\ge f(3k)+f(3)>f(3k)$ so the inequality $f(3)<f(6)<\\cdots<f(9999)=3333$ forces $f(3k)=k \\forall k \\le 3333$.Now $f(3k+2) \\ge k+1 \\Rightarrow f(6k+4) \\ge 2k+2 \\Rightarrow f(12k+8) \\ge 4k+4 \\le f(12k+9)=4k+3$(Note:This is valid for $12k+9 \\le 9999$ or $3k+2 \\le 2499$).Contradiction!Hence the non-decreasing nature of $f$ gives $f(3k+1)=k$.Hence $f(n)=\\lfloor\\frac{n}{3}\\rfloor \\forall 1\\le n \\le 2499$.\n\nSo $f(1982)=\\lfloor\\frac{1982}{3}\\rfloor=660$.",
+    "label": [
+      "",
+      "Function",
+      "Number"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "mathd_algebra_171",
+    "informal_statement": "Consider the function $f(x)=5x+4$.  What is $f(1)$? Show that it is 9.",
+    "informal_proof": "We have $f(1) = 5\\cdot 1+4 =5+4=9$.",
+    "label": [
+      "",
+      "Function"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "mathd_algebra_188",
+    "informal_statement": "Suppose $f(x)$ is an invertible function, and suppose that $f(2)=f^{-1}(2)=4$.\n\nWhat is the value of $f(f(2))$? Show that it is 2.",
+    "informal_proof": "Since $f(2)=f^{-1}(2)$, we can substitute $f^{-1}(2)$ freely for $f(2)$. Therefore, $f(f(2)) = f(f^{-1}(2))$, which is $2$ (since $f(f^{-1}(x))=x$ by definition).\n\nNotice that we didn't actually need the value $4$ given in the problem.",
+    "label": [
+      "",
+      "Function"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "aime_1991_p6",
+    "informal_statement": "Suppose $r^{}_{}$ is a [[real number]] for which\n<div style=\"text-align:center\">$\n\\left\\lfloor r + \\frac{19}{100} \\right\\rfloor + \\left\\lfloor r + \\frac{20}{100} \\right\\rfloor + \\left\\lfloor r + \\frac{21}{100} \\right\\rfloor + \\cdots + \\left\\lfloor r + \\frac{91}{100} \\right\\rfloor = 546.\n$</div>\nFind $\\lfloor 100r \\rfloor$. (For real $x^{}_{}$, $\\lfloor x \\rfloor$ is the [[floor function|greatest integer]] less than or equal to $x^{}_{}$.) Show that it is 743.",
+    "informal_proof": "There are $91 - 19 + 1 = 73$ numbers in the [[sequence]]. Since the terms of the sequence can be at most $1$ apart, all of the numbers in the sequence can take one of two possible values. Since $\\frac{546}{73} = 7 R 35$, the values of each of the terms of the sequence must be either $7$ or $8$. As the remainder is $35$, $8$ must take on $35$ of the values, with $7$ being the value of the remaining $73 - 35 = 38$ numbers. The 39th number is $\\lfloor r+\\frac{19 + 39 - 1}{100}\\rfloor= \\lfloor r+\\frac{57}{100}\\rfloor$, which is also the first term of this sequence with a value of $8$, so $8 \\le r + \\frac{57}{100} < 8.01$. Solving shows that $\\frac{743}{100} \\le r < \\frac{744}{100}$, so $743\\le 100r < 744$, and $\\lfloor 100r \\rfloor = 743$.",
+    "label": [
+      "",
+      "Function",
+      "Number"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "algebra_amgm_prod1toneq1_sum1tongeqn",
+    "informal_statement": "Show that for any real-valued function $a$ on the natural numbers such that $\\forall i \\in \\mathbb{N}, a_i \\geq 0$, if $prod_{i=0}^{n-1} a_i = 1$, then $sum_{i=0}^{n-1} a_i \\geq n$.",
+    "informal_proof": "By AM-GM, we have $\\frac{1}{n}\\sum_{i=0}^{n-1}a(i)\\geq\\sqrt[n]{\\prod_{i=0}^{n-1}a(i)}=1$. Multiplying by n gives the result.",
+    "label": [
+      "",
+      "Function"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "amc12_2000_p15",
+    "informal_statement": "Let $f$ be a [[function]] for which $f\\left(\\dfrac{x}{3}\\right) = x^2 + x + 1$. Find the sum of all values of $z$ for which $f(3z) = 7$.\n\n$\\text {(A)}\\ -1/3 \\qquad \\text {(B)}\\ -1/9 \\qquad \\text {(C)}\\ 0 \\qquad \\text {(D)}\\ 5/9 \\qquad \\text {(E)}\\ 5/3$ Show that it is \\textbf{(B) }-\\frac19.",
+    "informal_proof": "Let $y = \\frac{x}{3}$; then $f(y) = (3y)^2 + 3y + 1 = 9y^2 + 3y+1$. Thus $f(3z)-7=81z^2+9z-6=3(9z-2)(3z+1)=0$, and $z = -\\frac{1}{3}, \\frac{2}{9}$. These sum up to $\\textbf{(B) }-\\frac19$.",
+    "label": [
+      "",
+      "Function"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "amc12_2001_p9",
+    "informal_statement": "Let $f$ be a function satisfying $f(xy) = \\frac{f(x)}y$ for all positive real numbers $x$ and $y$. If $f(500) =3$, what is the value of $f(600)$?\n\n$(\\mathrm{A})\\ 1 \\qquad (\\mathrm{B})\\ 2 \\qquad (\\mathrm{C})\\ \\frac52 \\qquad (\\mathrm{D})\\ 3 \\qquad (\\mathrm{E})\\ \\frac{18}5$ Show that it is \\textbf{C } \\frac52.",
+    "informal_proof": "Letting $x = 500$ and $y = \\dfrac65$ in the given equation, we get $f(500\\cdot\\frac65) = \\frac3{\\frac65} = \\frac52$, or $f(600) = \\textbf{C } \\frac52$.",
+    "label": [
+      "",
+      "Function",
+      "Number"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "amc12a_2017_p7",
+    "informal_statement": "Define a function on the positive integers recursively by $f(1) = 2$, $f(n) = f(n-1) + 1$ if $n$ is even, and $f(n) = f(n-2) + 2$ if $n$ is odd and greater than $1$. What is $f(2017)$?\n\n$ \\textbf{(A)}\\ 2017 \\qquad\\textbf{(B)}\\ 2018 \\qquad\\textbf{(C)}\\ 4034 \\qquad\\textbf{(D)}\\ 4035 \\qquad\\textbf{(E)}\\ 4036 $ Show that it is \\textbf{(B)}.",
+    "informal_proof": "This is a recursive function, which means the function refers back to itself to calculate subsequent terms. To solve this, we must identify the base case, $f(1)=2$. We also know that when $n$ is odd, $f(n)=f(n-2)+2$. Thus we know that $f(2017)=f(2015)+2$. Thus we know that n will always be odd in the recursion of $f(2017)$, and we add $2$ each recursive cycle, which there are $1008$ of. Thus the answer is $1008*2+2=2018$, which is answer\n$\\textbf{(B)}$.\nNote that when you write out a few numbers, you find that $f(n)=n+1$ for any $n$, so $f(2017)=2018$",
+    "label": [
+      "",
+      "Function",
+      "Number"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "amc12b_2003_p9",
+    "informal_statement": "Let $f$ be a linear function for which $f(6) - f(2) = 12.$ What is $f(12) - f(2)?$\n\n$\n\\text {(A) } 12 \\qquad \\text {(B) } 18 \\qquad \\text {(C) } 24 \\qquad \\text {(D) } 30 \\qquad \\text {(E) } 36\n$ Show that it is \\text {(D) } 30.",
+    "informal_proof": "Since $f$ is a linear function with slope $m$,\n\n$m = \\frac{f(6) - f(2)}{\\Delta x} = \\frac{12}{6 - 2} = 3$\n\n$f(12) - f(2) = m \\Delta x = 3(12 - 2) = 30 \\Rightarrow \\text (D)$",
+    "label": [
+      "",
+      "Function"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "imo_1978_p5",
+    "informal_statement": "Let $f$ be an injective function from ${1,2,3,\\ldots}$ in itself. Prove that for any $n$ we have: $\\sum_{k=1}^{n} f(k)k^{-2} \\geq \\sum_{k=1}^{n} k^{-1}.$",
+    "informal_proof": "We know that all the unknowns are integers, so the smallest one must greater or equal to 1.\n\nLet me denote the permutations of $(k_1,k_2,...,k_n)$ with $(y_1,y_2,...,y_n)=y_i (*)$.\n\nFrom the rearrangement's inequality we know that $\\text{Random Sum} \\geq \\text{Reversed Sum}$.\n\nWe will denote we permutations of $y_i$ in this form $y_n \\geq ...\\geq y_1$.\n\nSo we have $\\frac{k_1}{1^2}+\\frac{k_2}{2^2}+...+\\frac{k_n}{n^2} \\geq \\frac{y_1}{1^2}+ \\frac{y_2}{2^2}+...+ \\frac{y_n}{n^2} \\geq 1+\\frac{1}{2}+...+\\frac{1}{n}$.\n\nLet's denote $\\frac{y_1}{1^2}+ \\frac{y_2}{2^2}+...+ \\frac{y_n}{n^2}=T$ and $1+\\frac{1}{2}+...+\\frac{1}{n}=S$.\n\nWe have $T \\geq S$. Which comes from $y_1 \\geq1, y_2 \\geq2, ...,y_n \\geq n$.\n\nSo we are done.\n\nThe above solution was posted and copyrighted by Davron. The original thread for this problem can be found here: [https://aops.com/community/p509573]",
+    "label": [
+      "",
+      "Function"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "imo_1993_p5",
+    "informal_statement": "Let $\\mathbb{N} = \\{1,2,3, \\ldots\\}$. Determine if there exists a strictly increasing function $f: \\mathbb{N} \\mapsto \\mathbb{N}$ with the following properties:\n\n(i) $f(1) = 2$;\n\n(ii) $f(f(n)) = f(n) + n, (n \\in \\mathbb{N})$.",
+    "informal_proof": "Here is my Solution https://artofproblemsolving.com/community/q2h62193p16226748\n\nFind as ≈ Ftheftics",
+    "label": [
+      "",
+      "Function"
+    ],
+    "dataset": "MiniF2F"
+  },
+  {
+    "problem_name": "mathd_algebra_616",
+    "informal_statement": "Given the two functions $f(x)=x^3+2x+1$ and $g(x)=x-1$, find $f(g(1))$. Show that it is 1.",
+    "informal_proof": "Since we know that $f(x)=x^3+2x+1$ and $g(x)=x-1$, we can express $f(g(1))$ as $(x-1)^3+2(x-1)+1$. Thus, when $x=1$ we find \\begin{align*} (f(g(1))&=(1-1)^3+2(1-1)+1\n\\\\ &=(0)^3+2(0)+1\n\\\\ &=0+0+1\n\\\\&=1\n\\end{align*}",
+    "label": [
+      "",
+      "Function"
+    ],
+    "dataset": "MiniF2F"
+  }
+]
