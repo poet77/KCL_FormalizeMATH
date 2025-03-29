@@ -1,0 +1,105 @@
+[
+    {
+        "problem": "What number must we add to $3-5i$ to get $2+7i$? Here, $i^2 = -1.$",
+        "level": "Level 4",
+        "type": "Algebra",
+        "solution": "We seek the number $z$ such that $3-5i + z = 2+7i$, so $z = 2+7i-3+5i = \\boxed{-1+12i}$. ",
+        "tag": [
+            "algebra",
+            "complex"
+        ]
+    },
+    {
+        "problem": "Evaluate $\\left(\\frac{i}{2}\\right)^2$.",
+        "level": "Level 3",
+        "type": "Algebra",
+        "solution": "$(i/2)^2 = (i^2)/(2^2) = (-1)/4 = \\boxed{-\\frac{1}{4}}$",
+        "tag": [
+            "algebra",
+            "complex"
+        ]
+    },
+    {
+        "problem": "Evaluate $i^6+i^{16}+i^{-26}$.",
+        "level": "Level 3",
+        "type": "Algebra",
+        "solution": "We have $i^6 = i^4\\cdot i^2 = 1\\cdot (-1) = -1$.  We also have $i^{16} = (i^4)^4 = 1^4 =1$, and $i^{-26} = 1/i^{26} = 1/(i^{24}\\cdot i^2) = 1/[1\\cdot (-1)] = -1$. So, adding these three results gives $i^6 + i^{16} + i^{-26} = -1+1-1 = \\boxed{-1}$. ",
+        "tag": [
+            "complex",
+            "algebra"
+        ]
+    },
+    {
+        "problem": "If $Q = 5+2i$, $E = i$, and $D = 5-2i$, find $Q\\cdot E \\cdot D$.",
+        "level": "Level 4",
+        "type": "Algebra",
+        "solution": "\\begin{align*}\nQED &= (5+2i)(i)(5-2i)\\\\\n&=i(25-(2i)^2)\\\\\n&=i(25+4)\\\\\n&=\\boxed{29i}.\n\\end{align*}",
+        "tag": [
+            "complex",
+            "algebra"
+        ]
+    },
+    {
+        "problem": "What is $a-2b$, where $a=4-2i$ and $b=3+2i$?",
+        "level": "Level 3",
+        "type": "Algebra",
+        "solution": "Substituting in, we have $4-2i-2(3+2i)$. Expanding the last part, we have $4-2i-6-4i$; adding, we have $\\boxed{-2-6i}$. ",
+        "tag": [
+            "complex",
+            "algebra"
+        ]
+    },
+    {
+        "problem": "If the two roots of the quadratic $4x^2+7x+k$ are $\\frac{-7\\pm i\\sqrt{15}}{8}$, what is $k$?",
+        "level": "Level 4",
+        "type": "Algebra",
+        "solution": "Using the quadratic formula, we find that the roots of the quadratic are $\\frac{-7\\pm\\sqrt{7^2-4(4)(k)}}{8}=\\frac{-7\\pm\\sqrt{49-16k}}{8}$. Since the problem tells us that these roots must equal $\\frac{-7\\pm\\sqrt{15}i}{8}$, \\begin{align*} \\sqrt{49-16k}&=\\sqrt{15}i\n\\\\\\Rightarrow\\qquad \\sqrt{49-16k}&=\\sqrt{-15}\n\\\\\\Rightarrow\\qquad 49-16k&=-15\n\\\\\\Rightarrow\\qquad 16k&=64\n\\\\\\Rightarrow\\qquad k&=\\boxed{4}.\n\\end{align*}",
+        "tag": [
+            "algebra",
+            "equation",
+            "complex"
+        ]
+    },
+    {
+        "problem": "Solve for $z$ in the following equation: $2-3iz = 3 + 2iz$.",
+        "level": "Level 5",
+        "type": "Algebra",
+        "solution": "$2-3iz = 3 + 2iz \\Rightarrow -1 = 5iz \\Rightarrow z = \\frac{-1}{5i}$. Multiplying the numerator and denominator by $-i$, we get $z = \\frac{-1}{5i} \\cdot \\frac{-i}{-i} = \\boxed{\\frac{i}{5}}$.",
+        "tag": [
+            "algebra",
+            "equation",
+            "complex"
+        ]
+    },
+    {
+        "problem": "Compute $i^{-100}+i^{-99}+i^{-98}+\\cdots+i^{-1}+i^0+i^1+\\cdots+i^{99}+i^{100}$.",
+        "level": "Level 4",
+        "type": "Algebra",
+        "solution": "Each group of 4 consecutive powers of $i$ adds to 0: $i + i^2 + i^3 + i^4 = i - 1 - i +1 = 0$, $i^5+i^6+i^7+i^8 = i^4(i+i^2+i^3+i^4) = 1(0) = 0$, and so on for positive powers of $i$. Similarly, we note that $i^{-4} = \\frac1{i^4} = \\frac11 = 1$. Then $i^{-4}+i^{-3}+i^{-2}+i^{-1} = 1+1\\cdot i+1\\cdot{-1} + 1\\cdot{-i} = 0$, $i^{-8}+i^{-7}+i^{-6}+i^{-5}=i^{-4}(i^{-4}+i^{-3}+i^{-2}+i^{-1}) = 0$, and so on for negative powers of $i$. Because 100 is divisible by 4, we group the positive powers of $i$ into 25 groups with zero sum. Similarly, we group the negative powers of $i$ into 25 groups with zero sum. Therefore, $$i^{-100}+i^{-99}+\\cdots+i^{99}+i^{100} = 25\\cdot0+i^0+25\\cdot0 = \\boxed{1}$$.",
+        "tag": [
+            "complex",
+            "algebra"
+        ]
+    },
+    {
+        "problem": "If $z=3+4i$, find $z^2$. (Note that $i^2 = -1.$)",
+        "level": "Level 4",
+        "type": "Algebra",
+        "solution": "We multiply $(3+4i)(3+4i)=9+12i+12i-16=\\boxed{-7+24i}$. ",
+        "tag": [
+            "complex",
+            "algebra"
+        ]
+    },
+    {
+        "problem": "There are 3 complex numbers $a+bi$, $c+di$, and $e+fi$. If $b=1$, $e=-a-c$, and the sum of the numbers is $-i$, find $d+f$.",
+        "level": "Level 4",
+        "type": "Algebra",
+        "solution": "We know that $a+bi+c+di+e+fi=-i$. Thus, the real parts add up to 0 and the imaginary parts add up to -1. We then have  \\begin{align*}\na+c+e&=0\\\\\nb+d+f&=-1\\\\\n\\end{align*}We know that $b=1$, therefore $d+f=\\boxed{-2}$",
+        "tag": [
+            "algebra",
+            "complex",
+            "equation"
+        ]
+    }
+]
