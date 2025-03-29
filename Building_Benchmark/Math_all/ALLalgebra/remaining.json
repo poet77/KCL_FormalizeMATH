@@ -1,0 +1,64 @@
+[
+    {
+        "problem": "Simplify: $\\frac{2^{n+4} - 2(2^n)}{2(2^{n+3})}$. Express your answer as a common fraction.",
+        "level": "Level 5",
+        "type": "Algebra",
+        "tag": [
+            "algebra",
+            "remaining"
+        ],
+        "solution": "Note that $\\frac{2^{n+4} - 2(2^n)}{2(2^{n+3})} = \\frac{2^n}{2^n}\\cdot\\frac{2^4 - 2}{2(2^3)} = \\boxed{\\frac{7}{8}}$."
+    },
+    {
+        "problem": "If $\\left\\lfloor n^2/4 \\right\\rfloor - \\lfloor n/2 \\rfloor^2 = 2$, then find all integer values of $n$.",
+        "level": "Level 5",
+        "type": "Algebra",
+        "solution": "If $n$ is even, then we can write $n = 2m$ for some integer $m$. Substituting, $$\\left \\lfloor (2m)^2/4 \\right\\rfloor - \\left\\lfloor (2m)/2 \\right\\rfloor^2 = m^2 - m^2 = 0.$$Hence, $n$ must be odd; we can write $n = 2m+1$ for some integer $m$. Substituting,   \\begin{align*}\n&\\left \\lfloor (2m+1)^2/4 \\right. \\rfloor - \\left\\lfloor (2m+1)/2 \\right\\rfloor^2\\\\\n&\\qquad= \\left \\lfloor (4m^2 + 4m + 1)/4 \\right\\rfloor - \\left\\lfloor (2m+1)/2 \\right\\rfloor^2 \\\\\n&\\qquad= \\left\\lfloor m^2 + m + \\frac 14 \\right\\rfloor - \\left\\lfloor m + \\frac 12 \\right\\rfloor^2 \\\\\n&\\qquad= m^2 + m - m^2\\\\\n& = m.\n\\end{align*}Thus, we find $m = 2$ and $n = \\boxed{5}$ as the unique integer solution.",
+        "tag": [
+            "equation",
+            "algebra",
+            "remaining"
+        ]
+    },
+    {
+        "problem": "From the following infinite list of numbers, how many are integers? $$\\sqrt{4096},\\sqrt[3]{4096},\\sqrt[4]{4096},\\sqrt[5]{4096},\\sqrt[6]{4096},\\ldots$$",
+        "level": "Level 4",
+        "type": "Algebra",
+        "solution": "Since $4096=2^{12}$, one of these is an integer if the number on the root is a factor of 12. Therefore, the only numbers in the list that are integers are $\\sqrt{4096}=2^6=64$, $\\sqrt[3]{4096}=2^4=16$, $\\sqrt[4]{4096}=2^3=8$, $\\sqrt[6]{4096}=2^2=4$ and $\\sqrt[12]{4096}=2$. This makes $\\boxed{5}$ integers in all.",
+        "tag": [
+            "number",
+            "integer",
+            "algebra",
+            "remaining"
+        ]
+    },
+    {
+        "problem": "How many integers $m \\neq 0$ satisfy the inequality $\\frac{1}{|m|}\\geq \\frac{1}{8}$?",
+        "level": "Level 4",
+        "type": "Algebra",
+        "solution": "Since $|m| > 0$, we can clear fractions from the inequalities, arriving at $8 \\geq |m|$.  This is satisfied for $-8 \\leq m \\leq 8$.  There are 17 integers in this range, but 0 is not allowed, so our final answer is $\\boxed{16}$.",
+        "tag": [
+            "algebra",
+            "remaining"
+        ]
+    },
+    {
+        "problem": "What is the value of $x$ if $x=\\frac{2009^2-2009}{2009}$?",
+        "level": "Level 2",
+        "type": "Algebra",
+        "solution": "Factor 2009 out of the numerator: \\[\n\\frac{2009^2-2009}{2009}=\\frac{2009(2009-1)}{2009}=\\boxed{2008}.\n\\]",
+        "tag": [
+            "remaining",
+            "algebra"
+        ]
+    },
+    {
+        "problem": "Evaluate $\\left\\lceil\\sqrt{140}\\right\\rceil$.",
+        "level": "Level 2",
+        "type": "Algebra",
+        "solution": "The value $\\sqrt{140}$ lies between the two nearest integers.  Let the two nearest integers be $z_1$ and $z_2$.  Then we have $$z_1<\\sqrt{140}<z_2$$Because all values in the inequality are positive, it is appropriate to square each value and obtain $$z_1^2<140<z_2^2$$We only need the value of the perfect square greater than 140, which is 144.  Thus the least integer greater than $\\sqrt{140}$ is $\\sqrt{144}=\\boxed{12}$.",
+        "tag": [
+            "remaining"
+        ]
+    }
+]
