@@ -1,0 +1,50 @@
+[
+    {
+        "problem_name": "mathd_algebra_10",
+        "informal_statement": "What is the positive difference between $120\\%$ of 30 and $130\\%$ of 20? Show that it is 10.",
+        "informal_proof": "One hundred twenty percent of 30 is $120\\cdot30\\cdot\\frac{1},{100},=36$, and $130\\%$ of 20 is $ 130\\cdot 20\\cdot\\frac{1},{100},=26$.  The difference between 36 and 26 is $10$.",
+        "tag": [
+            "decimal"
+        ]
+    },
+    {
+        "problem_name": "mathd_algebra_104",
+        "informal_statement": "In a 8 fluid ounce bottle of Vitamin Water, there are 125 calories. How many calories would be contained in a 12 fluid ounce bottle? Express your answer in decimal form. Show that it is 187.5.",
+        "informal_proof": "We know that there are 125 calories in 8 fluid ounces of Vitamin Water, so we can set up the proportion $\\frac{125},{8},=\\frac{x},{12},$, where $x$ is the number of calories contained in a 12 fluid ounce bottle. Solving for $x$, we find that $x=\\left(\\frac{125},{8},\\right)(12)=187.5$ calories.",
+        "tag": [
+            "decimal"
+        ]
+    },
+    {
+        "problem_name": "mathd_algebra_190",
+        "informal_statement": "Write $\\cfrac{\\cfrac{3},{8},+\\cfrac{7},{8},},{\\cfrac{4},{5},},$ as a simplified fraction. Show that it is \\cfrac{25},{16},.",
+        "informal_proof": "$\\cfrac{3},{8},+\\cfrac{7},{8},=\\cfrac{10},{8},=\\cfrac{5},{4},$. Therefore, $\\cfrac{5},{4},\\div\\cfrac{4},{5},=\\cfrac{5},{4},\\cdot\n\\cfrac{5},{4},=\\cfrac{25},{16},$.",
+        "tag": [
+            "decimal"
+        ]
+    },
+    {
+        "problem_name": "mathd_algebra_462",
+        "informal_statement": "Evaluate: $\\left( \\frac{1},{2}, + \\frac{1},{3}, \\right) \\left( \\frac{1},{2}, - \\frac{1},{3}, \\right)$ Show that it is \\frac{5},{36},.",
+        "informal_proof": "For any $x$ and $y$, $(x+y)(x-y)=x^2-y^2+xy-xy=x^2-y^2$, so \\begin{align*},\n\\left( \\frac{1},{2}, + \\frac{1},{3}, \\right) \\left( \\frac{1},{2}, - \\frac{1},{3}, \\right)&=\\left(\\frac12\\right)^2-\\left(\\frac13\\right)^2\\\\\n&=\\frac14-\\frac19\\\\\n&=\\frac{9},{36},-\\frac{4},{36},\\\\\n&=\\frac{5},{36},\n\\end{align*},",
+        "tag": [
+            "decimal"
+        ]
+    },
+    {
+        "problem_name": "mathd_algebra_55",
+        "informal_statement": "What fraction is the same as \\[\n\\frac{2-4+6-8+10-12+14},{3-6+9-12+15-18+21},?\n\\] Show that it is \\frac{2},{3},.",
+        "informal_proof": "We have \\begin{align*},\n&\\frac{2-4+6-8+10-12+14},{3-6+9-12+15-18+21}, \\\\\n& \\qquad = \\frac{2(1-2+3-4+5-6+7)},{3(1-2+3-4+5-6+7)}, \\\\\n& \\qquad = \\frac{2},{3},.\n\\end{align*},",
+        "tag": [
+            "decimal"
+        ]
+    },
+    {
+        "problem_name": "mathd_numbertheory_84",
+        "informal_statement": "What is the digit in the hundredths place of the decimal equivalent of $\\frac{9}{160}$? Show that it is 5.",
+        "informal_proof": "Since the denominator of $\\dfrac{9}{160}$ is $2^5\\cdot5$, we multiply numerator and denominator by $5^4$ to obtain  \\[\n\\frac{9}{160} = \\frac{9\\cdot 5^4}{2^5\\cdot 5\\cdot 5^4} = \\frac{9\\cdot 625}{10^5} = \\frac{5625}{10^5} = 0.05625.\n\\]So, the digit in the hundredths place is $5$.",
+        "tag": [
+            "decimal"
+        ]
+    }
+]

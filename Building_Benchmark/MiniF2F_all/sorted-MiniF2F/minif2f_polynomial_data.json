@@ -1,0 +1,162 @@
+[
+    {
+        "problem_name": "mathd_algebra_140",
+        "informal_statement": "The expression $24x^2-19x-35$ can be written as $(Ax-5)(2Bx+C)$, where $A$, $B$, and $C$ are positive numbers. Find $AB-3C$. Show that it is -9.",
+        "informal_proof": "The expression $24x^2-19x-35$ can be factored as $(3x-5)(8x+7)$. Therefore, $(Ax-5)=(3x-5)$ and $(2Bx+C)=(8x+7)$. From that, $A=3$, $B=4$, and $C=7$. \\begin{align*},\nAB-3C&=3\\cdot4-3\\cdot7\\\\\n&=12-21\\\\\n&=-9\n\\end{align*},",
+        "tag": [
+            "polynomial"
+        ]
+    },
+    {
+        "problem_name": "mathd_algebra_182",
+        "informal_statement": "Expand the following expression: $7(3y+2)$ Show that it is 21y+14.",
+        "informal_proof": "We apply the distributive property to get\\begin{align*},\n7(3y+2) &= 7\\cdot 3y+7\\cdot 2\\\\\n&= 21y+14.\n\\end{align*},",
+        "tag": [
+            "polynomial"
+        ]
+    },
+    {
+        "problem_name": "mathd_algebra_206",
+        "informal_statement": "The polynomial $p(x) = x^2+ax+b$ has distinct roots $2a$ and $b$. Find $a+b$. Show that it is -1.",
+        "informal_proof": "We use the fact that the sum and product of the roots of a quadratic equation $x^2+ax+b=0$ are given by $-a$ and $b$, respectively.\n\nIn this problem, we see that $2a+b = -a$ and $(2a)(b) = b$. From the second equation, we see that either $2a = 1$ or else $b = 0$. But if $b = 0$, then the first equation gives $2a = -a$, implying that $a = 0$. This makes the two solutions of our original polynomial the same, and we are given that they are distinct. Hence $b \\not=0$, so $2a = 1,$ or $a = 1/2$. Then $b = -3a = -3/2$, so $a+b = -1$.",
+        "tag": [
+            "polynomial"
+        ]
+    },
+    {
+        "problem_name": "mathd_algebra_245",
+        "informal_statement": "Simplify $\\left( \\frac{4},{x}, \\right)^{-1}, \\left( \\frac{3x^3},{x}, \\right)^2 \\left( \\frac{1},{2x}, \\right)^{-3},$. Show that it is 18x^8.",
+        "informal_proof": "$\\left( \\frac{4},{x}, \\right)^{-1}, \\left( \\frac{3x^3},{x}, \\right)^2 \\left( \\frac{1},{2x}, \\right)^{-3}, = \\frac{x},{4}, \\cdot (3x^2)^2 \\cdot (2x)^3 = \\frac{x},{4}, \\cdot 9x^4 \\cdot 8x^3 = 18x^8$.",
+        "tag": [
+            "polynomial"
+        ]
+    },
+    {
+        "problem_name": "mathd_algebra_568",
+        "informal_statement": "Simplify $(a-1)(a+1)(a+2) - (a-2)(a+1).$ Show that it is a^3 + a^2.",
+        "informal_proof": "We successively expand by multiplying binomials: \\begin{align*},\n(a&-1)(a+1)(a+2) - (a-2)(a+1)\\\\\n&= (a^2-1)(a+2)-(a-2)(a+1)\\\\\n&= (a^3 + 2a^2 - a - 2) - (a^2 -a -2)\\\\\n&= a^3 + a^2.\n\\end{align*},So our answer is just $a^3 + a^2$.",
+        "tag": [
+            "polynomial"
+        ]
+    },
+    {
+        "problem_name": "mathd_algebra_89",
+        "informal_statement": "Simplify $(7b^3)^2 \\cdot (4b^2)^{-3},$ given that $b$ is non-zero. Show that it is \\frac{49},{64},.",
+        "informal_proof": "We see that $(7b^3)^2 = 7^2 \\cdot b^{3\\cdot2}, = 49 \\cdot b^6.$ Likewise, $(4b^2)^{-3}, = 4^{-3}, \\cdot b^{-6},.$ Now, $(7b^3)^2 \\cdot (4b^2)^{-3}, = 49 \\cdot b^6 \\cdot 4^{-3}, \\cdot b^{-6},$ and since $4^{-3}, = \\frac{1},{64},$ we have $\\frac{49},{64}, \\cdot b^6 \\cdot b^{-6}, = \\frac{49},{64},$ since $b^0 = 1$ for all non-zero $b.$",
+        "tag": [
+            "polynomial"
+        ]
+    },
+    {
+        "problem_name": "algebra_2complexrootspoly_xsqp49eqxp7itxpn7i",
+        "informal_statement": "Show that for any complex number $x$, $x^2 + 49 = (x + 7i)(x - 7i)$.",
+        "informal_proof": "We have that $(x + 7i)(x - 7i) = x^2 + 7ix - 7ix - (7i)^2 = x^2 - 49 i^2$.\nSince $i^2=-1$, we have $(x + 7i)(x - 7i) = x^2+49$.",
+        "tag": [
+            "polynomial"
+        ]
+    },
+    {
+        "problem_name": "algebra_2rootsintpoly_am10tap11eqasqpam110",
+        "informal_statement": "Show that for any complex number $a$, $(a-10)(a+11)=a^2+a-110$.",
+        "informal_proof": "By expanding, we get $(a-10)(a+11) = a^2 - 10a + 11a - 10 \\times 11$. After simplification, we have that $(a-10)(a+11)=a^2+a-110$.",
+        "tag": [
+            "polynomial"
+        ]
+    },
+    {
+        "problem_name": "algebra_2rootspoly_apatapbeq2asqp2ab",
+        "informal_statement": "Show that for any complex numbers $a$ and $b$, $(a+a)(a+b) = 2a^2 + 2ab$.",
+        "informal_proof": "By expanding, we get $(a+a)(a+b)=(a+a)a+(a+a)b$. Since $(a+a)a+(a+a)b = (a^2 + a^2) + (ab + ab)$, we get $(a+a)(a+b) = 2a^2 + 2ab$.",
+        "tag": [
+            "polynomial"
+        ]
+    },
+    {
+        "problem_name": "algebra_3rootspoly_amdtamctambeqnasqmbpctapcbtdpasqmbpctapcbta",
+        "informal_statement": "Show that for any complex numbers $a$, $b$, $c$, $d$, $(a-d)(a-c)(a-b) = -(((a^2 - (b+c)a) + cb)d) + (a^2 - (b+c)a + cb)a$.",
+        "informal_proof": "By expansion, we have that $(a-d)(a-c) = a^2-ad-ac+cd$, so $(a-d)(a-c)(a-b) = (a^2-ad-ac+cd)(a-b) = a^3-da^2-ca^2+acd-ba^2+abd+abc-bcd$\nAs a result, $-(((a^2 - (b+c)a) + cb)d) + (a^2 - (b+c)a + cb)a = -d(a^2-ab-ac+bc)+a^3-ba^2-ca^2+abc = a^3-da^2-ca^2+acd-ba^2+abd+abc-bcd = (a-d)(a-c)(a-b)$.",
+        "tag": [
+            "polynomial"
+        ]
+    },
+    {
+        "problem_name": "algebra_manipexpr_2erprsqpesqeqnrpnesq",
+        "informal_statement": "Show that for any two complex numbers e and r, $2er + e^2 + r^2 = (-r + (-e))^2$.",
+        "informal_proof": "Developing the square, we get $(-r + (-e))^2 = (-r)^2 + 2 (-r)(-e) + (-e)^2 = 2er + e^2 + r^2$",
+        "tag": [
+            "polynomial"
+        ]
+    },
+    {
+        "problem_name": "amc12a_2002_p1",
+        "informal_statement": "Compute the sum of all the roots of\n$(2x+3)(x-4)+(2x+3)(x-6)=0 $\n\n$ \\textbf{(A) } \\frac{7}{2}\\qquad \\textbf{(B) } 4\\qquad \\textbf{(C) } 5\\qquad \\textbf{(D) } 7\\qquad \\textbf{(E) } 13 $ Show that it is \\textbf{(A) }7/2.",
+        "informal_proof": "We expand to get $2x^2-8x+3x-12+2x^2-12x+3x-18=0$ which is $4x^2-14x-30=0$ after combining like terms. Using the quadratic part of [[Vieta's Formulas] , we find the sum of the roots is $\\frac{14}4 = \\textbf{(A) }7/2$.",
+        "tag": [
+            "polynomial"
+        ]
+    },
+    {
+        "problem_name": "amc12a_2002_p12",
+        "informal_statement": "Both roots of the quadratic equation $x^2 - 63x + k = 0$ are prime numbers. The number of possible values of $k$ is \n\n$\\text{(A)}\\ 0 \\qquad \\text{(B)}\\ 1 \\qquad \\text{(C)}\\ 2 \\qquad \\text{(D)}\\ 4 \\qquad \\text{(E) more than 4}$ Show that it is \\text{(B)}\\ 1.",
+        "informal_proof": "Consider a general quadratic with the coefficient of $x^2$ being $1$ and the roots being $r$ and $s$. It can be factored as $(x-r)(x-s)$ which is just $x^2-(r+s)x+rs$. Thus, the sum of the roots is the negative of the coefficient of $x$ and the product is the constant term. (In general, this leads to [[Vieta's Formulas]]).\n\nWe now have that the sum of the two roots is $63$ while the product is $k$. Since both roots are primes, one must be $2$, otherwise the sum would be even. That means the other root is $61$ and the product must be $122$. Hence, our answer is $\\text{(B)}\\ 1$.",
+        "tag": [
+            "polynomial"
+        ]
+    },
+    {
+        "problem_name": "amc12a_2021_p12",
+        "informal_statement": "All the roots of the polynomial $z^6-10z^5+Az^4+Bz^3+Cz^2+Dz+16$ are positive integers, possibly repeated. What is the value of $B$?\n\n$\\textbf{(A) }{-}88 \\qquad \\textbf{(B) }{-}80 \\qquad \\textbf{(C) }{-}64 \\qquad \\textbf{(D) }{-}41\\qquad \\textbf{(E) }{-}40$ Show that it is \\textbf{(A) }{-}88.",
+        "informal_proof": "By Vieta's formulas, the sum of the six roots is $10$ and the product of the six roots is $16$. By inspection, we see the roots are $1, 1, 2, 2, 2,$ and $2$, so the function is $(z-1)^2(z-2)^4=(z^2-2z+1)(z^4-8z^3+24z^2-32z+16)$. Therefore, calculating just the $z^3$ terms, we get $B = -32 - 48 - 8 = \\textbf{(A) }{-}88$.",
+        "tag": [
+            "polynomial"
+        ]
+    },
+    {
+        "problem_name": "amc12a_2021_p22",
+        "informal_statement": "Suppose that the roots of the polynomial $P(x)=x^3+ax^2+bx+c$ are $\\cos \\frac{2\\pi}7,\\cos \\frac{4\\pi}7,$ and $\\cos \\frac{6\\pi}7$, where angles are in radians. What is $abc$?\n\n$\\textbf{(A) }{-}\\frac{3}{49} \\qquad \\textbf{(B) }{-}\\frac{1}{28} \\qquad \\textbf{(C) }\\frac{\\sqrt[3]7}{64} \\qquad \\textbf{(D) }\\frac{1}{32}\\qquad \\textbf{(E) }\\frac{1}{28}$ Show that it is \\textbf{(D) }\\frac{1}{32}.",
+        "informal_proof": "Let $z=e^{\\frac{2\\pi i}{7}}.$ Since $z$ is a $7$th root of unity, we have $z^7=1.$ For all integers $k,$ note that $\\cos\\frac{2k\\pi}{7}=\\operatorname{Re}\\left(z^k\\right)=\\operatorname{Re}\\left(z^{-k}\\right)$ and $\\sin\\frac{2k\\pi}{7}=\\operatorname{Im}\\left(z^k\\right)=-\\operatorname{Im}\\left(z^{-k}\\right).$ It follows that\n$\\begin{alignat*}{4}\n\\cos\\frac{2\\pi}{7} &= \\frac{z+z^{-1}}{2} &&= \\frac{z+z^6}{2}, \\\\\n\\cos\\frac{4\\pi}{7} &= \\frac{z^2+z^{-2}}{2} &&= \\frac{z^2+z^5}{2}, \\\\\n\\cos\\frac{6\\pi}{7} &= \\frac{z^3+z^{-3}}{2} &&= \\frac{z^3+z^4}{2}.\n\\end{alignat*}$\nBy geometric series, we conclude that $\\sum_{k=0}^{6}z^k=\\frac{1-1}{1-z}=0.$\nAlternatively, recall that the $7$th roots of unity satisfy the equation $z^7-1=0.$ By Vieta's Formulas, the sum of these seven roots is $0.$\n\nAs a result, we get $\\sum_{k=1}^{6}z^k=-1.$\nLet $(r,s,t)=\\left(\\cos{\\frac{2\\pi}{7}},\\cos{\\frac{4\\pi}{7}},\\cos{\\frac{6\\pi}{7}}\\right).$ By Vieta's Formulas, the answer is\n$\\begin{align*}\nabc&=[-(r+s+t)](rs+st+tr)(-rst) \\\\\n&=(r+s+t)(rs+st+tr)(rst) \\\\\n&=\\left(\\frac{\\sum_{k=1}^{6}z^k}{2}\\right)\\left(\\frac{2\\sum_{k=1}^{6}z^k}{4}\\right)\\left(\\frac{1+\\sum_{k=0}^{6}z^k}{8}\\right) \\\\\n&=\\frac{1}{32}\\left(\\sum_{k=1}^{6}z^k\\right)\\left(\\sum_{k=1}^{6}z^k\\right)\\left(1+\\sum_{k=0}^{6}z^k\\right) \\\\\n&=\\frac{1}{32}(-1)(-1)(1) \\\\\n&=\\textbf{(D) }\\frac{1}{32}.\n\\end{align*}$",
+        "tag": [
+            "polynomial"
+        ]
+    },
+    {
+        "problem_name": "imo_1983_p6",
+        "informal_statement": "Let $a$, $b$ and $c$ be the lengths of the sides of a triangle. Prove that\n\n$a^2 b(a-b) + b^2 c(b-c) + c^2 a(c-a) \\geq 0$.\n\nDetermine when equality occurs.",
+        "informal_proof": "By Ravi substitution, let $a = y+z$, $b = z+x$, $c = x+y$. Then, the triangle condition becomes $x, y, z > 0$. After some manipulation, the inequality becomes:\n\n$xy^3 + yz^3 + zx^3 \\geq xyz(x+y+z)$.\n\nBy Cauchy, we have: \n\n$(xy^3 + yz^3 + zx^3)(z+x+y) \\geq xyz(y+z+x)^2$ with equality if and only if $\\frac{xy^3}{z} = \\frac{yz^3}{x} =\\frac{zx^3}{y}$. So the inequality holds with equality if and only if x = y = z. Thus the original inequality has equality if and only if the triangle is equilateral.",
+        "tag": [
+            "polynomial"
+        ]
+    },
+    {
+        "problem_name": "induction_1pxpownlt1pnx",
+        "informal_statement": "Show that for any real number $x$ and any natural number $n$, if $x > -1$, then $(1+nx)\\leq (1+x)^n$.",
+        "informal_proof": "We show the result by induction on $n$. The result is trivial for $n=0$ or $n=1$. Let us assume the property is true in $n$.\nBy the induction hypothesis we know that $(1+nx)\\leq (1+x)^n$.\nMoreover, as $x > -1$, we have that $x \\leq x (1 + x)^n$. The inequality is trivial if $x \\geq 0$, and is also true if $x < 0$ as $-1 < x < 0 \\implies 0 < (1 + x)^n < 1$.\nSo, $(1+nx) + x \\leq (1+x)^n + x (1+x)^n$ and we have that $(1+(n+1)x) \\leq (1+x)^(n+1)$, so the property is true in $n+1$.\nBy induction, we have that the result is true for any natural number $n$.",
+        "tag": [
+            "polynomial"
+        ]
+    },
+    {
+        "problem_name": "mathd_algebra_176",
+        "informal_statement": "Expand the product $(x+1)^2 \\cdot x$. Show that it is x^3 + 2x^2 + x.",
+        "informal_proof": "We have $(x+1)^2 = (x+1)(x+1) = x(x) + 1(x) + 1(x) + 1 = x^2 + 2x + 1$. Multiplying this by $x$ gives $x^3 + 2x^2 + x$.",
+        "tag": [
+            "polynomial"
+        ]
+    },
+    {
+        "problem_name": "mathd_algebra_276",
+        "informal_statement": "The expression $10x^2-x-24$ can be written as $(Ax-8)(Bx+3),$ where $A$ and $B$ are integers. What is $AB + B$? Show that it is 12.",
+        "informal_proof": "We see that $10x^2-x-24=(5x-8)(2x+3)$, thus $A = 5$ and $B = 2$. Hence, $AB + B = 12.$",
+        "tag": [
+            "polynomial"
+        ]
+    },
+    {
+        "problem_name": "mathd_algebra_432",
+        "informal_statement": "Expand $(x+3)(2x-6)$. Show that it is 2x^2-18.",
+        "informal_proof": "Factoring a $2$ out of the second term gives $2(x+3)(x-3)=2(x^2-3^2)=2x^2-18$.",
+        "tag": [
+            "polynomial"
+        ]
+    }
+]

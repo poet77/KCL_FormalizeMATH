@@ -1,0 +1,53 @@
+[
+    {
+        "problem": "Alex needs to catch a train. The train arrives randomly some time between 1:00 and 2:00, waits for 10 minutes, and then leaves. If Alex also arrives randomly between 1:00 and 2:00, what is the probability that the train will be there when Alex arrives?",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "We put the time the train arrives on the $y$-axis and the time  Alex arrives on the $x$-axis, and shade in the region where Alex arrives while the train is there.\n\n[asy]\nfill((0,0)--(60,60)--(60,50)--(10,0)--cycle, gray(.7));\ndraw((0,0)--(60,0), Arrow);\ndraw((0,0)--(0,60), Arrow);\ntag(\"1:00\", (0,0), SW);\ntag(\"2:00\", (60,0), S);\ntag(\"2:00\", (0,60), W);\n[/asy]\n\nThe probability that Alex arrives while the train is at the station is the ratio of the shaded area to the whole square. If we divide the axes into 60 units, the shaded region can be split up into a triangle of area 50 square units and a parallelogram of area 500 square units, and the whole square has an area of 3600 square units. The ratio is $550/3600=\\boxed{\\frac{11}{72}}$.",
+        "tag": [
+            "probability",
+            "geometry probability"
+        ]
+    },
+    {
+        "problem": "A point $(x,y)$ is randomly picked from inside the rectangle with vertices  $(0,0)$, $(4,0)$, $(4,1)$, and $(0,1)$.  What is the probability that  $x < y$?",
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "solution": "The point $(x,y)$ satisfies $x < y$ if and only if it belongs to the shaded triangle bounded by the lines $x=y$, $y=1$, and $x=0$, the area of which is 1/2. The ratio of the area of the triangle to the area of the  rectangle is $\\frac{1/2}{4} = \\boxed{\\frac{1}{8}}$.",
+        "tag": [
+            "probability",
+            "geometry probability",
+            "area"
+        ]
+    },
+    {
+        "problem": "Two mathematicians were both born in the last 500 years. Each lives (or will live) to be 100 years old, then dies. Each mathematician is equally likely to be born at any point during those 500 years. What is the probability that they were contemporaries for any length of time?",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "Call the mathematicians Karl and Johann. Let the $x$ axis represent the number of years ago Karl was born, and the $y$ axis represent the number of years ago Johann was born.\n\n[asy]\ndraw((0,0)--(100,0), Arrow);\ndraw((0,0)--(0,100), Arrow);\ntag(\"0\", (0,0), SW);\ntag(\"100\", (0,20), W);\ntag(\"400\", (100,80), E);\ntag(\"100\", (20,0), S);\ntag(\"500\", (100,0), S);\ntag(\"500\", (0,100), W);\nfill((0,0)--(100,100)--(100,80)--(20,0)--cycle, gray(.7));\nfill((0,0)--(100,100)--(80,100)--(0,20)--cycle, gray(.7));\n[/asy]\n\nThe shaded region represents the years both mathematicians would have been alive. For example, if Karl was born 200 years ago, Johann could have been born anywhere between 300 and 100 years ago. Let 500 years equal one unit.  Then, we can calculate the area of the shaded region as the area of the entire square minus the areas of the two unshaded triangles.  This will be equal to $2\\cdot \\frac{1}{2} \\cdot \\frac{4}{5} \\cdot \\frac{4}{5}=\\frac{16}{25}$.  So, the area of the shaded region is $1-\\frac{16}{25}=\\frac{9}{25}$.  Since the area of the square is 1, this is also the probability that Karl and Johann were contemporaries. The answer, then, is $\\boxed{\\frac{9}{25}}$.",
+        "tag": [
+            "probability",
+            "geometry probability"
+        ]
+    },
+    {
+        "problem": "Let $ S $ be the set of all sides and diagonals of a regular pentagon. A pair of elements of $ S $ are selected at random without replacement. What is the probability that the two chosen segments have the same length?",
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "solution": "In a regular pentagon, there are $5$ sides of the same length and $5$ diagonals of the same length. Picking an element at random will leave 4 elements with the same length as the element picked, with $9$ total elements remaining. Therefore, the probability that the second element has the same length as the first is simply $\\boxed{\\tfrac{4}{9}}.$",
+        "tag": [
+            "probability",
+            "geometry probability"
+        ]
+    },
+    {
+        "problem": "Let $ S $ be the set of all sides and diagonals of a regular pentagon. A pair of elements of $ S $ are selected at random without replacement. What is the probability that the two chosen segments have the same length?",
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "solution": "In a regular pentagson, there are $5$ sides of the same length and $5$ diagonals of the same length. Picking an element at random will leave 4 elements with the same length as the element picked, with $9$ total elements remaining. Therefore, the probability that the second element has the same length as the first is simply $\\boxed{\\tfrac{4}{9}}.$",
+        "tag": [
+            "probability",
+            "geometry probability"
+        ]
+    }
+]

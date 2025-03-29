@@ -1,0 +1,195 @@
+[
+    {
+        "problem": "Ben rolls 5 fair 12-sided dice.  The 12 faces of each die are numbered from 1 to 12. What is the probability that exactly two of the dice show an even number?",
+        "level": "Level 3",
+        "type": "Counting & Probability",
+        "solution": "There is a $\\frac{1}{2}$ probability that a 12-sided die will show an even number and a $\\frac{1}{2}$ probability that it will show an odd number. We can choose which dice will show the even numbers in $\\binom{5}{2}=10$ ways. For each way, there is a $\\left( \\frac{1}{2} \\right) ^5=\\frac{1}{32}$ probability that the chosen dice actually roll even numbers and the other dice roll odd numbers. Therefore, the probability that exactly two of the dice show an even number is $10\\cdot \\frac{1}{32}=\\boxed{\\frac{5}{16}}$.",
+        "tag": [
+            "probability"
+        ]
+    },
+    {
+        "problem": "Spinners $A$ and $B$ are spun. On each spinner, the arrow is equally likely to land on each number. What is the probability that the product of the two spinners' numbers is even?  Express your answer as a common fraction. [asy]\n/* AMC8 2004 #21 Problem */\ndraw(circle((0,0), 2));\ndraw(circle((6,0), 2));\ndraw((-2,0)--(2,0));\ndraw((0,-2)--(0,2));\npath p=(0,0)--(0,2);\ndraw(shift(6,0)*p);\ndraw(shift(6,0)*rotate(120)*p);\ndraw(shift(6,0)*rotate(240)*p);\ntag(scale(0.6)*\"1\", (-1,1));\ntag(scale(0.6)*\"2\", (1,1));\ntag(scale(0.6)*\"3\", (1,-1));\ntag(scale(0.6)*\"4\", (-1,-1));\ntag(scale(0.6)*\"1\", (5,.75));\ntag(scale(0.6)*\"2\", (7,.75));\ntag(scale(0.6)*\"3\", (6,-1));\ndraw((0,0)--(1.5,.5), EndArrow);\ndraw(shift(6,0)*rotate(45)*((0,0)--(1.5,.5)), EndArrow);\n[/asy]",
+        "level": "Level 3",
+        "type": "Counting & Probability",
+        "solution": "In eight of the twelve outcomes the product is even: $1\\times 2$, $2\\times\n1$, $2\\times 2$, $2\\times 3$, $3\\times 2$, $4\\times 1$, $4\\times 2$, $4\\times 3$. In four of the twelve, the product is odd: $1\\times 1$, $1\\times 3$, $3\\times 1$, $3\\times 3$. So the probability that the product is even is $\\frac{8}{12}$ or $\\boxed{\\frac{2}{3}}$.\n\nOR\n\nTo get an odd product, the result of both spins must be odd. The probability of odd is $\\frac{1}{2}$ on Spinner $A$ and $\\frac{2}{3}$ on Spinner $B$. So the probability of an odd product is $\\left(\\frac{1}{2}\\right)\\left(\\frac{2}{3}\\right)=\\frac{1}{3}$. The probability of an even product, then, is $1-\\frac{1}{3}=\\boxed{\\frac{2}{3}}$.",
+        "tag": [
+            "probability"
+        ]
+    },
+    {
+        "problem": "In a sequence of coin tosses, one can keep a record of instances in which a tail is immediately followed by a head, a head is immediately followed by a head, and etc. We denote these by TH, HH, and etc. For example, in the sequence TTTHHTHTTTHHTTH of 15 coin tosses we observe that there are two HH, three HT, four TH, and five TT subsequences. How many different sequences of 15 coin tosses will contain exactly two HH, three HT, four TH, and five TT subsequences?\n",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "Let's consider each of the sequences of two coin tosses as an operation instead; this operation takes a string and adds the next coin toss on (eg, THHTH + HT = THHTHT). We examine what happens to the last coin toss. Adding HH or TT is simply an identity for the last coin toss, so we will ignore them for now. However, adding HT or TH switches the last coin. H switches to T three times, but T switches to H four times; hence it follows that our string will have a structure of THTHTHTH.\nNow we have to count all of the different ways we can add the identities back in. There are 5 TT subsequences, which means that we have to add 5 T into the strings, as long as the new Ts are adjacent to existing Ts. There are already 4 Ts in the sequence, and since order doesn’t matter between different tail flips this just becomes the ball-and-urn argument. We want to add 5 balls into 4 urns, which is the same as 3 dividers; hence this gives ${{5+3}\\choose3} = 56$ combinations. We do the same with 2 Hs to get ${{2+3}\\choose3} = 10$ combinations; thus there are $56 \\cdot 10 = \\boxed{560}$ possible sequences.",
+        "tag": [
+            "probability",
+            "sequence"
+        ]
+    },
+    {
+        "problem": "There are five unmarked envelopes on a table, each with a letter for a different person.  If the mail is randomly distributed to these five people, with each person getting one letter, what is the probability that exactly four people get the right letter?",
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "solution": "If 4 people get the right letter, then there is only one letter left, and only one person left.  So, the last person will get the right letter, too.  Therefore, it is impossible for exactly four people to get the right letter.  So, the probability is $\\boxed{0}$.",
+        "tag": [
+            "probability",
+            "permutation"
+        ]
+    },
+    {
+        "problem": "An urn contains $4$ green balls and $6$ blue balls. A second urn contains $16$ green balls and $N$ blue balls. A single ball is drawn at random from each urn. The probability that both balls are of the same color is $0.58$. Find $N$.\n",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "First, we find the probability both are green, then the probability both are blue, and add the two probabilities. The sum should be equal to $0.58$.\nThe probability both are green is $\\frac{4}{10}\\cdot\\frac{16}{16+N}$, and the probability both are blue is $\\frac{6}{10}\\cdot\\frac{N}{16+N}$, so\\[\\frac{4}{10}\\cdot\\frac{16}{16+N}+\\frac{6}{10}\\cdot\\frac{N}{16+N}=\\frac{29}{50}\\]Solving this equation,\\[20\\left(\\frac{16}{16+N}\\right)+30\\left(\\frac{N}{16+N}\\right)=29\\]Multiplying both sides by $16+N$, we get\\[20\\cdot 16 + 30\\cdot N = 29(16+n)\\Rightarrow 320+30N=464+29N \\Rightarrow N = \\boxed{144}\\]",
+        "tag": [
+            "probability"
+        ]
+    },
+    {
+        "problem": "For a certain weekend, the weatherman predicts that it will rain with a $40\\%$ probability on Saturday and a $50\\%$ probability on Sunday. Assuming these probabilities are independent, what is the probability that it rains over the weekend (that is, on at least one of the days)? Express your answer as a percentage.",
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "solution": "The probability that it does not rain over the weekend is equal to the product of the probability it does not rain Saturday and the probability it does not rain Sunday, or $(1-.40)(1-.50)=.6\\cdot.5=.3=30\\%$. Therefore, the probability that it does rain is $100\\%-30\\%=\\boxed{70\\%}$.",
+        "tag": [
+            "probability"
+        ]
+    },
+    {
+        "problem": "A board game spinner is divided into three regions taged $A$, $B$ and $C$.  The probability of the arrow stopping on region $A$ is $\\frac{1}{2}$ and on region $B$ is $\\frac{1}{5}$.  What is the probability of the arrow stopping on region $C$?  Express your answer as a common fraction.",
+        "level": "Level 1",
+        "type": "Counting & Probability",
+        "solution": "Since the sum of the three probabilities is 1, the probability of stopping on region $C$ is $1 - \\frac{1}{2} -\n\\frac{1}{5} = \\frac{10}{10} - \\frac{5}{10} - \\frac{2}{10} = \\boxed{\\frac{3}{10}}$.",
+        "tag": [
+            "probability"
+        ]
+    },
+    {
+        "problem": "Dave arrives at an airport which has twelve gates arranged in a straight line with exactly $100$ feet between adjacent gates. His departure gate is assigned at random. After waiting at that gate, Dave is told the departure gate has been changed to a different gate, again at random. Let the probability that Dave walks $400$ feet or less to the new gate be a fraction $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.\n",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "There are $12 \\cdot 11 = 132$ possible situations ($12$ choices for the initially assigned gate, and $11$ choices for which gate Dave's flight was changed to). We are to count the situations in which the two gates are at most $400$ feet apart.\nIf we number the gates $1$ through $12$, then gates $1$ and $12$ have four other gates within $400$ feet, gates $2$ and $11$ have five, gates $3$ and $10$ have six, gates $4$ and $9$ have have seven, and gates $5$, $6$, $7$, $8$ have eight. Therefore, the number of valid gate assignments is\\[2\\cdot(4+5+6+7)+4\\cdot8 = 2 \\cdot 22 + 4 \\cdot 8 = 76\\]so the probability is $\\frac{76}{132} = \\frac{19}{33}$. The answer is $19 + 33 = \\boxed{52}$.",
+        "tag": [
+            "probability"
+        ]
+    },
+    {
+        "problem": "Alexio has 100 cards numbered 1-100, inclusive, and places them in a box. Alexio then chooses a card from the box at random. What is the probability that the number on the card he chooses is a multiple of 2, 3 or 5? Express your answer as a common fraction.",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "There are 50 numbers between 1-100 inclusive which are divisible by 2 --- all the even numbers. To avoid overcounting, we must find all the odd multiples of 3. Beginning with 3, the sequence of all such numbers is $3, 9, 15\\cdots99$, which gives $\\dfrac{99-3}{6}+1=17$ such numbers.\n\nFinally, we must find all odd multiples of 5 which are not divisible by 3. These are 5, 25, 35, 55, 65, 85, and 95. This gives a final count of $50+17+7=74$ numbers between 1-100 inclusive which are multiples of 2, 3, or 5.\n\nThe probability that Alexio selects one of these is therefore $\\boxed{\\dfrac{37}{50}}$.",
+        "tag": [
+            "probability"
+        ]
+    },
+    {
+        "problem": "There is a machine with 8 toys in it that each cost between 25 cents and 2 dollars, with each toy being 25 cents more expensive than the next most expensive one. Each time Sam presses the big red button on the machine, the machine randomly selects one of the remaining toys and gives Sam the option to buy it. If Sam has enough money, he will buy the toy, the red button will light up again, and he can repeat the process. If Sam has 8 quarters and a ten dollar bill and the machine only accepts quarters, what is the probability that Sam has to get change for the 10 dollar bill before he can buy his favorite toy- the one that costs $\\$1.75$? Express your answer as a common fraction.",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "We will calculate the probability that Sam can buy his favorite toy just using his 8 quarters and then subtract that from 1 to get the probability that we're looking for. There are a total of $8!$ orders in which the 8 toys can be dispensed. If his favorite toy is the first one that the machine selects, then he can obviously buy it just using his quarters, and then there are $7!$ order in which the other toys can be dispensed, which gives us 7! orderings of the toys that let him buy his favorite just using the quarters. If the first toy is the one that only costs 25 cents, then he will be able to buy his favorite toy just using his remaining quarters if and only if it is the second one dispensed. If those are the first two toys dispensed, there are $6!$ ways to order the other toys which means that we have another $6!$ orderings of the toys that allow him to buy his favorite toy without getting change for the 10 dollar bill. If the first toy costs more than 25 cents, or if two toys are dispensed before his favorite one, then he won't have enough quarters to buy his favorite one without getting change for his ten dollar bill. So out of the $8!$ orders in which the 8 toys can be dispensed, there are $7! + 6!$ ways that allow him to buy his favorite toy just using his quarters for a probability of $\\dfrac{7!+6!}{8!}=\\dfrac{6!}{6!}\\cdot\\dfrac{7+1}{8\\cdot7}=\\dfrac{1}{7}$. But that is the probability that what we want $\\emph{doesn't}$ happen, so we need to subtract it from 1 to get our final probability of $1-\\dfrac{1}{7}=\\boxed{\\dfrac{6}{7}}$.",
+        "tag": [
+            "probability",
+            "permutation"
+        ]
+    },
+    {
+        "problem": "If three, standard, 6-faced dice are rolled, what is the probability that the sum of the face up integers is 16?",
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "solution": "At least one of the dice must come up 6, since otherwise the best we can do is 15.  The other two dice must add up to 10.  There are two ways two dice add to 10: $4+6$ and $5+5$.\n\nSo, we have two cases to consider:\n\nA) The dice are 6, 6, 4.  There are three possible ways this can happen, and the probability of each is $(1/6)^3 = 1/216$.  So, the probability of this case is $3(1/216) = 1/72$.\n\n\nB) The dice are 6, 5, 5.  There are three possible ways this can happen, and the probability of each is $(1/6)^3 = 1/216$.  So, the probability of this case is $3(1/216) = 1/72$.\n\nAdding the probabilities of these two cases gives us a total probability of $\\frac{1}{72} + \\frac{1}{72} = \\boxed{\\frac{1}{36}}$.",
+        "tag": [
+            "probability"
+        ]
+    },
+    {
+        "problem": "If I roll a fair, regular six-sided die four times, what is the probability that I will roll the number $1$ exactly three times?",
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "solution": "Each roll is independent of every other roll, so the probability of getting a $1$ on any given roll is $\\frac{1}{6}$, and the probability of not getting a $1$ on any given roll is $\\frac{5}{6}$. Since we are looking for a $1$ rolled three times and a number not $1$ rolled once, we have $\\left(\\frac{1}{6}\\right)^3 \\cdot \\frac{5}{6}$. Now, we have to consider the order of the rolls. The number that is not a $1$ could be rolled on the first, second, third, or fourth roll, so we multiply by four. Hence, the probability of rolling $1$ exactly three times is $4 \\cdot \\left(\\frac{1}{6}\\right)^3 \\cdot \\frac{5}{6} = \\boxed{\\frac{5}{324}}$.",
+        "tag": [
+            "probability"
+        ]
+    },
+    {
+        "problem": "Suppose 5 different integers are randomly chosen from between 20 and 69, inclusive.  What is the probability that they each have a different tens digit?",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "In this set of integers, there are 5 tens digits: {2, 3, 4, 5, 6}.  If 5 integers all have different tens digits, then there must be exactly one integer among the 5 with each tens digit.  Since there are 10 different integers for each tens digit, the number of ways to pick, without regard to order, 5 different integers with different tens digits is $10^5$.  The total number of combinations of 5 integers is $\\binom{50}{5}$.  So the probability that 5 integers drawn all have the different tens digits is $$ \\frac{10^5}{\\binom{50}{5}} = \\frac{100000}{2118760} = \\boxed{\\frac{2500}{52969}}. $$",
+        "tag": [
+            "probability",
+            "digit"
+        ]
+    },
+    {
+        "problem": "Suppose that 7 boys and 13 girls line up in a row. Let $S$ be the number of places in the row where a boy and a girl are standing next to each other. For example, for the row $\\text{GBBGGGBGBGGGBGBGGBGG}$ we have that $S=12$. The average value of $S$ (if all possible orders of these 20 people are considered) is closest to\n$\\text{(A)}\\ 9\\qquad\\text{(B)}\\ 10\\qquad\\text{(C)}\\ 11\\qquad\\text{(D)}\\ 12\\qquad\\text{(E)}\\ 13$",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "We approach this problem using Linearity of Expectation. Consider a pair of two people standing next to each other. Ignoring all other people, the probability that a boy is standing on the left position and a girl is standing on the right position is $\\frac7{20}\\cdot\\frac{13}{19}$. Similarly, if a girl is standing on the left position and a boy is standing on the right position the probability is also $\\frac{7\\cdot 13}{20\\cdot 19}$. Thus, the total probability of the two people being one boy and one girl is $\\frac{91}{190}$.\nThere are a total of 19 different adjacent pairs, so by Linearity of Expectation, we have that the expected value of $S$ is $\\frac{91}{10}$ so $\\boxed{9}$.",
+        "tag": [
+            "probability",
+            "expectation",
+            "statistics"
+        ]
+    },
+    {
+        "problem": "The numbers from 1 to 150, inclusive, are placed in a bag and a number is randomly selected from the bag. What is the probability it is not a perfect power (integers that can be expressed as $x^{y}$ where $x$ is an integer and $y$ is an integer greater than 1. For example, $2^{4}=16$ is a perfect power, while $2\\times3=6$ is not a perfect power)? Express your answer as a common fraction.",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "It is easier to count the number of integers from 1 to 150 that are perfect powers. We see there are 12 perfect squares from 1 to 150, namely $1^{2}, 2^{2}, \\ldots, 12^{2}$, and there are 5 perfect cubes, namely $1^{3}, \\ldots, 5^{3}$. Notice all the perfect fourth powers are also perfect squares. Similarly, all the perfect sixth powers are also perfect squares. The only perfect powers not yet counted are $2^5=32$ and $2^7=128$. Then notice there are two repetitions, $1^{6} =1$ and $2^{6} = 64$ which we counted both as perfect squares and perfect cubes. So there is a total $12+5+1+1-2=17$ of integers from 1 to 150 that are perfect powers. Thus, $150-17=133$ integers are not perfect powers. The probability that we select such a number is $\\boxed{\\frac{133}{150}}$.",
+        "tag": [
+            "probability",
+            "digit"
+        ]
+    },
+    {
+        "problem": "Two standard dice are rolled. What is the expected number of 1's obtained? Express your answer as a common fraction.",
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "solution": "The probability of rolling a number other than 1 on one die is $\\frac{5}{6}$, so the probability of rolling zero 1's on two dice is $\\left(\\frac{5}{6}\\right)^2 = \\frac{25}{36}$. The probability of rolling a 1 on one die is $\\frac{1}{6}$, so the probability of rolling 1's on two dice (for a total of two 1's) is $\\left(\\frac{1}{6}\\right)^2 = \\frac{1}{36}$. Since the only other possibility is rolling exactly one 1, the probability of rolling one 1 is $1-\\frac{25}{36}-\\frac{1}{36} = \\frac{10}{36}$. We find the expected number of 1's to be $E = \\frac{1}{36} \\cdot 2 + \\frac{10}{36} \\cdot 1 + \\frac{25}{36} \\cdot 0 = \\boxed{\\frac{1}{3}}$.",
+        "tag": [
+            "expectation",
+            "probability"
+        ]
+    },
+    {
+        "problem": "A given sequence $r_1, r_2, \\dots, r_n$ of distinct real numbers can be put in ascending order by means of one or more \"bubble passes\". A bubble pass through a given sequence consists of comparing the second term with the first term, and exchanging them if and only if the second term is smaller, then comparing the third term with the second term and exchanging them if and only if the third term is smaller, and so on in order, through comparing the last term, $r_n$, with its current predecessor and exchanging them if and only if the last term is smaller.\nThe example below shows how the sequence 1, 9, 8, 7 is transformed into the sequence 1, 8, 7, 9 by one bubble pass. The numbers compared at each step are underlined.\n$\\underline{1 \\quad 9} \\quad 8 \\quad 7$\n$1 \\quad {}\\underline{9 \\quad 8} \\quad 7$\n$1 \\quad 8 \\quad \\underline{9 \\quad 7}$\n$1 \\quad 8 \\quad 7 \\quad 9$\nSuppose that $n = 40$, and that the terms of the initial sequence $r_1, r_2, \\dots, r_{40}$ are distinct from one another and are in random order. Let $p/q$, in lowest terms, be the probability that the number that begins as $r_{20}$ will end up, after one bubble pass, in the $30^{\\mbox{th}}$ place. Find $p + q$.",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "If any of $r_1, \\ldots, r_{19}$ is larger than $r_{20}$, one of these numbers will be compared with $r_{20}$ on the 19th step of the first bubble pass and $r_{20}$ will be moved back to the 19th position. Thus, $r_{20}$ must be the largest of the first 20 terms. In addition, $r_{20}$ must be larger than $r_{21}, r_{22}, \\ldots, r_{30}$ but smaller than $r_{31}$ in order that it move right to the 30th position but then not continue moving right to the 31st.\nThus, our problem can be restated: What is the probability that in a sequence of 31 distinct real numbers, the largest is in position 31 and the second-largest is in position 20 (the other 29 numbers are irrelevant)?\nThis is much easier to solve: there are $31!$ ways to order the first thirty-one numbers and $29!$ ways to arrange them so that the largest number is in the 31st position and the second-largest is in the 20th. This gives us a desired probability of $\\frac{29!}{31!} = \\frac{1}{31\\cdot 30} = \\frac{1}{930}$, so the answer is $\\boxed{931}$.",
+        "tag": [
+            "probability",
+            "permutation",
+            "sequence"
+        ]
+    },
+    {
+        "problem": "What is the expected value of the roll of a standard 6-sided die?",
+        "level": "Level 2",
+        "type": "Counting & Probability",
+        "solution": "Each outcome of rolling a 6-sided die has probability $\\frac16$, and the possible outcomes are 1, 2, 3, 4, 5, and 6.  So the expected value is $$ \\frac16(1) + \\frac16(2) + \\frac16(3) + \\frac16(4) + \\frac16(5) + \\frac16(6) = \\frac{21}{6} = \\boxed{3.5}. $$",
+        "tag": [
+            "expectation",
+            "probability"
+        ]
+    },
+    {
+        "problem": "Fifty ping-pong-balls are numbered 1, 2, 3, ..., 49, 50. A ball is chosen at random. What is the probability that the number on the selected ball is a multiple of 5 or 7 or both? Express your answer as a common fraction.",
+        "level": "Level 2",
+        "type": "Counting & Probability",
+        "solution": "There are 10 balls whose number is divisible by 5. The balls $7, 14, \\ldots,49$ are multiples of 7.  There are 7 of these.  The ball 35 is the unique ball that is a multiple of both 5 and 7.\n\nIn total, there are $10+7-1 = 16$ balls whose number is divisible by 5 or 7.  The probability that a randomly selected ball will be one of these 16 is $\\frac{16}{50} = \\boxed{\\frac{8}{25}}$.",
+        "tag": [
+            "probability",
+            "sequence"
+        ]
+    },
+    {
+        "problem": "Charles has two six-sided die. One of the die is fair, and the other die is biased so that it comes up six with probability $\\frac{2}{3}$ and each of the other five sides has probability $\\frac{1}{15}$. Charles chooses one of the two dice at random and rolls it three times. Given that the first two rolls are both sixes, the probability that the third roll will also be a six is $\\frac{p}{q}$, where $p$ and $q$ are relatively prime positive integers. Find $p+q$.",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "The probability that he rolls a six twice when using the fair die is $\\frac{1}{6}\\times \\frac{1}{6}=\\frac{1}{36}$. The probability that he rolls a six twice using the biased die is $\\frac{2}{3}\\times \\frac{2}{3}=\\frac{4}{9}=\\frac{16}{36}$. Given that Charles rolled two sixes, we can see that it is $16$ times more likely that he chose the second die. Therefore the probability that he is using the fair die is $\\frac{1}{17}$, and the probability that he is using the biased die is $\\frac{16}{17}$. The probability of rolling a third six is\n\\[\\frac{1}{17}\\times \\frac{1}{6} + \\frac{16}{17} \\times \\frac{2}{3} = \\frac{1}{102}+\\frac{32}{51}=\\frac{65}{102}\\]Therefore, our desired $p+q$ is $65+102= \\boxed{167}$",
+        "tag": [
+            "probability",
+            "expectation"
+        ]
+    }
+]
