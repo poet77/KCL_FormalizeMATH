@@ -1,0 +1,271 @@
+[
+    {
+        "problem": "John has 6 green marbles and 4 purple marbles. He chooses a marble at random, writes down its color, and then puts the marble back.  He performs this process 5 times. What is the probability that he chooses exactly two green marbles?",
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "tag": [
+            "probability",
+            "binomial"
+        ],
+        "solution": "There are $\\binom{5}{2}=10$ ways to choose which two of the five marbles John chose were green. For any of those 10 choices, there is a $\\left( \\frac{6}{10} \\right) ^2 \\left( \\frac{4}{10} \\right) ^3 = \\frac{72}{3125}$ chance for that choice to happen. The total probability is then $10 \\cdot \\frac{72}{3125}= \\boxed{\\frac{144}{625}}$."
+    },
+    {
+        "problem": "A pirate is searching for buried treasure on 6 islands. On each island, there is a $\\frac{1}{4}$ chance that the island has buried treasure and no traps, a $\\frac{1}{12}$ chance that the island has traps but no treasure, and a $\\frac{2}{3}$ chance that the island has neither traps nor treasure. What is the probability that while searching all 6 islands, the pirate will encounter exactly 3 islands with treasure, and none with traps?",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "tag": [
+            "probability",
+            "binomial"
+        ],
+        "solution": "There are $\\binom{6}{3}=20$ ways to choose 3 islands. For each of these choices, there is a probability of $\\left( \\frac{1}{4} \\right)^3 \\left( \\frac{2}{3} \\right)^3$ that the chosen islands have treasure and the remaining ones have neither treasure nor traps. Therefore, the probability that the pirate encounters exactly 3 islands with treasure and none with traps is $20 \\left( \\frac{1}{4} \\right)^3 \\left( \\frac{2}{3} \\right)^3 = \\boxed{\\frac{5}{54}}$."
+    },
+    {
+        "problem": "8 coins are simultaneously flipped.  What is the probability that heads are showing on at most 2 of them?",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "The number of ways for the outcome to have exactly 0, 1, or 2 heads are $\\binom{8}{0}=1$, $\\binom{8}{1}=8$, or $\\binom{8}{2}=28$, respectively.  There are $2^8$ total possible outcomes (2 possibilities for each coin, and 8 coins). So the answer is $\\dfrac{1+8+28}{2^8}=\\boxed{\\dfrac{37}{256}}$.",
+        "tag": [
+            "probability",
+            "binomial"
+        ]
+    },
+    {
+        "problem": "Compute $\\dbinom{8}{0}$.",
+        "level": "Level 2",
+        "type": "Counting & Probability",
+        "solution": "This problem uses the identity $0!=1$ $$\\dbinom{8}{0}=\\frac{8!}{8!0!}=\\frac{1}{0!}=\\frac{1}{1}=\\boxed{1}$$",
+        "tag": [
+            "binomial"
+        ]
+    },
+    {
+        "problem": "Robert likes chocolate milk, so he decides to visit the milk bottling plant every day for a week to get the free samples. Unfortunately for him, the bottling plant sometimes bottles regular milk instead of chocolate milk, so each day the plant has a 2/3 chance of bottling chocolate milk. What is the probability that the bottling plant bottles chocolate milk exactly 4 of the 5 days he visits?",
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "solution": "There are $\\binom{5}{4}=5$ ways to choose which 4 of the 5 days the plant will bottle chocolate milk. For each choice, there is a probability of $\\left( \\frac{2}{3} \\right)^4 \\left( \\frac{1}{3} \\right)^1$ that on those 4 days they will be bottling chocolate milk and on the other day they will not. Therefore, the total probability on that exactly 4 of the 5 days they will be bottling chocolate milk is $5 \\left( \\frac{2}{3} \\right)^4 \\left( \\frac{1}{3} \\right)^1 = \\boxed{\\frac{80}{243}}$.",
+        "tag": [
+            "probability",
+            "binomial"
+        ]
+    },
+    {
+        "problem": "What is the value of $101^{4} - 4 \\cdot 101^{3} + 6 \\cdot 101^2 - 4 \\cdot 101 + 1$?  (No calculators!)",
+        "level": "Level 3",
+        "type": "Counting & Probability",
+        "solution": "Look at the coefficients of the powers of 101: 1, -4, 6, -4, 1. You might recognize these as $\\binom40$, $-\\binom41$, $\\binom42$, $-\\binom43$, $\\binom44$. This suggests that the Binomial Theorem is in play. Indeed, we have\n\n\\begin{align*}\n(101 + (-1))^4 &= \\binom40 \\cdot 101^{4} \\cdot (-1)^0 + \\binom41 \\cdot 101^{3} \\cdot (-1)^1 + \\\\\n&\\phantom{=} \\binom42 \\cdot 101^2 \\cdot (-1)^2 + \\binom43 \\cdot 101^1 \\cdot (-1)^3 + \\\\\n&\\phantom{=} \\binom44 \\cdot 101^0 \\cdot (-1)^4\\\\\n& = 101^{4} - 4 \\cdot 101^{3} + 6 \\cdot 101^2 - 4 \\cdot 101 + 1.\n\\end{align*}\n\nTherefore, we have $(101 + (-1))^4 = 100^4 = \\boxed{100000000}$.",
+        "tag": [
+            "binomial",
+            "algebra"
+        ]
+    },
+    {
+        "problem": "The Boston weatherman says there is a 75 percent chance of rain for each day of the Labor Day four-day weekend. If it doesn't rain, then the weather will be sunny.  Paul and Yuri want it to be sunny one of those days for a World War III preenactment, but if it's sunny for more than one day they won't know what to do with themselves. What is the probability they get the weather they want? Give your answer as a fraction.",
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "solution": "There are $\\binom{4}{3}=4$ ways to choose which three of the four days it will be rainy so that the other day it will be sunny. For any of those 4 choices, there is a $\\left( \\frac{3}{4} \\right) ^3 \\left( \\frac{1}{4} \\right) ^1 = \\frac{27}{256}$ chance for that choice to happen, because there is a $\\frac{3}{4}$ chance that we get what we want when we want it to be rainy, and a $\\frac{1}{4}$ chance that we get what we want when we want it to be sunny. The total probability is then $4 \\cdot \\frac{27}{256}= \\boxed{\\frac{27}{64}}$.",
+        "tag": [
+            "probability",
+            "binomial"
+        ]
+    },
+    {
+        "problem": "Ben rolls four fair 10-sided dice, each numbered with numbers from 1 to 10. What is the probability that exactly two of the dice show a prime number?",
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "solution": "The probability that a 10-sided die rolls a prime number is $\\frac{4}{10}=\\frac{2}{5}$ since the primes it can roll are 2, 3, 5, and 7. We can choose which dice show a prime number in $\\binom{4}{2}=6$ ways. Then, there is a $\\frac{2}{5}\\cdot \\frac{2}{5} \\cdot \\frac{3}{5} \\cdot \\frac{3}{5}=\\frac{36}{625}$ chance that the chosen dice will actually roll a prime number and the other dice won't. Therefore, the total probability that exactly two dice show a prime number is $6 \\cdot \\frac{36}{625}=\\boxed{\\frac{216}{625}}$.",
+        "tag": [
+            "probability",
+            "binomial"
+        ]
+    },
+    {
+        "problem": "What is the value of $9^3 + 3(9^2) + 3(9) + 1$?",
+        "level": "Level 1",
+        "type": "Counting & Probability",
+        "solution": "The given expression is the expansion of $(9+1)^3$.  In general, the cube of $(x+y)^3$ is \\[(x+y)^3=1x^3+3x^2y+3xy^2+1y^3.\\]   The first and last terms in the given expression are cubes and the middle two terms both have coefficient 3, giving us a clue that this is a cube of a binomial and can be written in the form \\[(x+y)^3\\]In this case, $x=9$ and $y=1$, so our answer is\\[(9+1)^3\\ = 10^3 = \\boxed{1000}\\]",
+        "tag": [
+            "algebra",
+            "binomial"
+        ]
+    },
+    {
+        "problem": "If Anna flips 8 coins, what is the probability that she gets more heads than tails?",
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "solution": "We could solve this problem using casework, but using a little bit of symmetry and complementary probability gives us a more elegant solution. Since each coin flips heads and tails with equal probability, by the principle of symmetry the probability of getting more heads than tails is the equal to the probability of getting more tails than heads. Additionally, there are only three possible outcomes: getting more heads than tails, getting more tails than heads, or getting the same number of both. If we let $x$ represent the probability of the first outcome (which is the same as the probability of the second outcome) and $y$ represent the probability of the third outcome, we get the equation $2x + y = 1 \\Rightarrow x=\\dfrac{1-y}{2}$. So all we need to do is calculate the probability of getting the same number of heads and tails and we can then easily solve for what we want using the principle of complementary probability. Since there are two equally likely outcomes for each flip, there are a total of $2^8$ equally likely possible outcomes for flipping the 8 coins. We will have the same number of both heads and tails if we have exactly 4 of each, which we can count by selecting 4 out of the 8 flips to be heads which can occur in $\\binom{8}{4}=70$ ways. So $y=\\dfrac{70}{256}=\\dfrac{35}{128}$, and substituting that back into our first equation gives us the probability that we want: $x=\\boxed{\\dfrac{93}{256}}$.",
+        "tag": [
+            "probability",
+            "binomial"
+        ]
+    },
+    {
+        "problem": "We flip a fair coin 10 times. What is the probability that we get heads in at least 8 of the 10 flips?",
+        "tag": [
+            "probability",
+            "binomial"
+        ],
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "solution": "There are $2^{10} = 1024$ possible outcomes of the 10 coin flips. The number of ways to get 8, 9, or 10 heads is $\\binom{10}{8}+\\binom{10}{9}+\\binom{10}{10}=45+10+1=56$. So the probability is $\\dfrac{56}{1024}=\\boxed{\\dfrac{7}{128}}$."
+    },
+    {
+        "problem": "Jeff decides to play with a Magic 8 Ball. Each time he asks it a question, it has a 2/5 chance of giving him a positive answer. If he asks it 5 questions, what is the probability that it gives him exactly 2 positive answers?",
+        "tag": [
+            "probability",
+            "binomial"
+        ],
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "solution": "There are $\\binom{5}{2}=10$ ways to choose 2 of 5 questions to give a positive response to. For each choice, there is a probability of $\\left( \\frac{2}{5} \\right)^2 \\left( \\frac{3}{5} \\right)^3$ that those 2 questions will yield a positive answer and the other 3 will not. Therefore, the total probability that exactly 2 of questions give a positve answer is $10 \\left( \\frac{2}{5} \\right)^2 \\left( \\frac{3}{5} \\right)^3 = \\boxed{\\frac{216}{625}}$."
+    },
+    {
+        "problem": "How many rows of Pascal's Triangle contain the number $43$?",
+        "tag": [
+            "counting",
+            "binomial"
+        ],
+        "level": "Level 3",
+        "type": "Counting & Probability",
+        "solution": "$43$ appears in the $43$rd row of Pascal's Triangle, since $\\binom{43}{1} = 43$. Note that $43$ is prime, so the smallest integer $n$ such that $n!$ is divisible by $43$ is actually $43$. Therefore, the $43$rd row is the first row in which $43$ appears. Also note that all the other numbers in the $43$rd row are greater than $43$, with the exception of the $1$'s on the ends. As a result, all the numbers on the following rows will either be $1$ or greater than $43$, so $43$ only appears in the $43$rd row. Therefore, only $\\boxed{1}$ row of Pascal's Triangle contains the number $43$."
+    },
+    {
+        "problem": "We roll a fair 6-sided die 5 times. What is the probability that we get an odd number in exactly 4 of the 5 rolls?",
+        "tag": [
+            "probability",
+            "binomial"
+        ],
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "The chances of getting an odd or even number are equal, so there are $2^5=32$ equally likely outcomes. If we want to get exactly 4 of 5 the rolls to be odd, the probability is $\\dfrac{\\binom{5}{4}}{2^5}=\\boxed{\\dfrac{5}{32}}.$"
+    },
+    {
+        "problem": "John has five children.  What is the probability that at least half of them are girls? (We can assume a boy is equally likely to be born as is a girl, and vice-versa.)",
+        "level": "Level 3",
+        "type": "Counting & Probability",
+        "solution": "In all cases, at least half of John's kids will be boys or at least half will be girls.  Furthermore, since John has an odd number of children, these conditions are mutually exclusive--that is, they are never true at the same time.  Since a boy is equally likely to be born as is a girl, our answer is therefore $\\boxed{\\frac{1}{2}}$.",
+        "tag": [
+            "probability",
+            "binomial"
+        ]
+    },
+    {
+        "problem": "There are four even integers in the top five rows of Pascal's Triangle. How many even integers are in the top 10 rows of the triangle?",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "We can list the first 10 rows of Pascal's triangle, and mark the even numbers.\n\n[asy]\nusepackage(\"amsmath\");\nunitsize(0.5 cm);\n\nint i, j, n;\n\nfor (int i = 0; i <= 9; ++i) {\nfor (int j = 0; j <= 9; ++j) {\n  if (i + j <= 9) {\n    n = choose(i + j,i);\n    if (n % 2 == 0) {label(\"$\\boxed{\" + string(n) + \"}$\", i*(-1,-1) + j*(1,-1));}\n    if (n % 2 == 1) {label(\"$\" + string(n) + \"$\", i*(-1,-1) + j*(1,-1));}\n  }\n}}\n[/asy]\n\nThus, the number of even numbers is $1 + 3 + 2 + 3 + 7 + 6 = \\boxed{22}.$",
+        "tag": [
+            "binomial",
+            "counting",
+            "digit"
+        ]
+    },
+    {
+        "problem": "What is the positive difference between the probability of a fair coin landing heads up exactly 2 times out of 3 flips and the probability of a fair coin landing heads up 3 times out of 3 flips? Express your answer as a common fraction.",
+        "level": "Level 3",
+        "type": "Counting & Probability",
+        "solution": "The probability that a fair coin lands heads up exactly 2 times out of 3 flips is $p_1=\\binom{3}{2}(1/2)^2(1/2)=3/8$. The probability that a fair coin lands heads up 3 times out of 3 flips is $p_2=(1/2)^3=1/8$. Finally, we have $p_1-p_2=2/8=\\boxed{\\frac{1}{4}}$.",
+        "tag": [
+            "probability",
+            "binomial"
+        ]
+    },
+    {
+        "problem": "Mr. Jones has 6 children. Assuming that the gender of each child is determined independently and with equal likelihood of male and female, what is the probability that Mr. Jones has more sons than daughters or more daughters than sons?",
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "solution": "We could do this with a bit of casework, but that gets boring after a while. Instead, we can use complementary probability. Since each child can be male or female with equal likelihood, there are $2^6=64$ possible ways in which the genders of the children can be determined. The only way in which Mr. Jones won't have more sons than daughters or more daughters than sons is if he has exactly 3 of each, which can occur in $\\binom{6}{3}=20$ ways. Using the concept of complementary counting gives us that there are $64-20=44$ ways in which he can have more children of one gender than the other out of a total of 64 possible ways, for a final probability of $\\dfrac{44}{64}=\\boxed{\\dfrac{11}{16}}$.",
+        "tag": [
+            "probability",
+            "binomial"
+        ]
+    },
+    {
+        "problem": "A fair coin is tossed six times and the sequence of heads and tails is recorded. What is the probability that the sequence contains exactly two heads? Express your answer as a common fraction.",
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "solution": "There are a total of $2^6=64$ equally likely sequences of heads and tails we could record from the fair coin, since heads and tails are equally likely for each of the six tosses.  This is the denominator of our probability.  Now, we need the number of sequences that contain exactly two heads.  We can think of this as counting the number of sequences of T and H of length six where H appears exactly twice.  The number of such sequences will be equal to the number of ways to choose the two positions for H, which is $\\dbinom{6}{2}=15$.  Thus, the final probability is $\\boxed{\\frac{15}{64}}$.",
+        "tag": [
+            "probability",
+            "binomial"
+        ]
+    },
+    {
+        "problem": "What is the coefficient of $x^5$ in the expansion of $(2x+3)^7$?",
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "solution": "Using the Binomial Theorem, we know that the $x^5$ term of the expansion is $\\binom{7}{5}(2x)^5(3)^{7-5}=(21)(32x^5)(9)=(21)(32)(9)x^5=\\boxed{6048}x^5$.",
+        "tag": [
+            "binomial",
+            "algebra"
+        ]
+    },
+    {
+        "problem": "What's the coefficient of the $x^2y^4$ term in the expansion of $(x+y)^6$?",
+        "level": "Level 3",
+        "type": "Counting & Probability",
+        "solution": "By the Binomial Theorem, the coefficient that we want is just $\\binom{6}{2}=\\boxed{15}$.",
+        "tag": [
+            "binomial",
+            "counting"
+        ]
+    },
+    {
+        "problem": "What is the coefficient of $x^8$ in the expansion of $(x-1)^9$?",
+        "level": "Level 3",
+        "type": "Counting & Probability",
+        "solution": "By the Binomial Theorem applied to $(x+(-1))^9$, this term is $\\binom98x^8(-1)^1=-9x^8$.  The coefficient of this term is $\\boxed{-9}$.",
+        "tag": [
+            "binomial"
+        ]
+    },
+    {
+        "problem": "An element is randomly chosen from among the first $15$ rows of Pascal's Triangle. What is the probability that the value of the element chosen is $1$?\n\nNote:  The 1 at the top is often labelled the \"zeroth\" row of Pascal's Triangle, by convention. So to count a total of 15 rows, use rows 0 through 14.",
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "solution": "First we find the total number of elements in the first $15$ rows. The first row of Pascal's Triangle has one element, the second row has two, and so on. The first $15$ rows thus have $1+2+\\cdots+15$ elements. Instead of manually adding the summands, we can find the sum by multiplying the average of the first and last term $\\frac{1+15}{2}$ by the number of terms, $15$. The sum is $\\frac{16}{2}\\cdot15=8\\cdot15=120$, so there are $120$ elements. Now we find the number of ones in the first $15$ rows. Each row except the first has two ones, and the first row only has one. So there are $14\\cdot2+1=29$ ones. With $29$ ones among the $120$ possible elements we could choose, the probability is $\\boxed{\\frac{29}{120}}$.",
+        "tag": [
+            "probability",
+            "binomial"
+        ]
+    },
+    {
+        "problem": "What is the sum of the last two digits of $8^{25} + 12^{25}?$",
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "solution": "We're really looking for the remainder when $8^{25}+12^{25}$ is divided by 100. Notice that $8=10-2$ and $12=10+2$. Then notice that the $k^{th}$ term of the expansion of $(10+2)^{25}$ is, by the binomial theorem, $\\binom{25}{k} \\cdot 10^{25-k} \\cdot 2^k$. Similarly, the $k^{th}$ term of the expansion of $(10-2)^{25}$ is, by the binomial theorem, $\\binom{25}{k} \\cdot 10^{25-k} \\cdot (-2)^k = (-1)^k \\cdot \\binom{25}{k} \\cdot 10^{25-k} \\cdot 2^k$, which is the same as the $k^{th}$ term of $(10+2)^{25}$ for $k$ even, and the negative of the $k^{th}$ term of $(10+2)^{25}$ for $k$ odd. So, if we add together the $k^{th}$ terms of the expansions of $(10-2)^{25}$ and $(10+2)^{25}$, we get double the value of the $k^{th}$ term of the expansion of $(10+2)^{25}$, that is, $2 \\cdot \\binom{25}{k} \\cdot 10^{25-k} \\cdot 2^k$, if $k$ is even, and 0 if $k$ is odd. So, $8^{25}+12^{25}$ is the sum of all terms of the form $2 \\cdot \\binom{25}{k} \\cdot 10^{25-k} \\cdot 2^k$ for $0 \\leq k \\leq 25$, $k$ even. But notice that this is divisible by 100 for $k<24$, and because we care only about the remainder when dividing by 100, we can ignore such terms. This means we care only about the term where $k=24$. This term is $$2 \\cdot \\binom{25}{24} \\cdot 10^1 \\cdot 2^{24} = 2 \\cdot 25 \\cdot 10 \\cdot 2^{24} = 500 \\cdot 2^{24},$$which is also divisible by 100. So, $8^{25}+12^{25}$ is divisible by 100. So the sum of the last two digits is $0+0=\\boxed{0}.$",
+        "tag": [
+            "digit",
+            "binomial"
+        ]
+    },
+    {
+        "problem": "Ten 6-sided dice are rolled. What is the probability that exactly three of the dice show a 1? Express your answer as a decimal rounded to the nearest thousandth.",
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "solution": "There are $\\binom{10}{3}=120$ ways to select exactly three dice to roll 1's ones out of ten dice total. The probability of any one of these outcomes occurring is $\\left(\\dfrac{1}{6}\\right)^3\\left(\\dfrac{5}{6}\\right)^7$ and they're all mutually exclusive cases, so the probability that one of them will occur (which is the probability that we're looking for) is $\\binom{10}{3}\\left(\\dfrac{1}{6}\\right)^3\\left(\\dfrac{5}{6}\\right)^7=\\dfrac{120\\cdot5^7\\cdot1^3}{6^{10}}\\approx \\boxed{.155}$.",
+        "tag": [
+            "probability",
+            "binomial"
+        ]
+    },
+    {
+        "problem": "The Badgers play the Cougars in a series of seven basketball games. Each team has an equal chance of winning each game. What is the probability that the Badgers will win at least four games? Express your answer as a common fraction.",
+        "level": "Level 3",
+        "type": "Counting & Probability",
+        "solution": "Precisely one team must win at least four games.  Since the teams are equally matched, this team will be the Badgers with probability $\\boxed{\\frac{1}{2}}$.",
+        "tag": [
+            "probability",
+            "binomial"
+        ]
+    },
+    {
+        "problem": "The probability of snow for each of the next three days is $\\frac{3}{4}$. What is the probability that it will not snow at all during the next three days? Express your answer as a common fraction.",
+        "level": "Level 3",
+        "type": "Counting & Probability",
+        "solution": "The probability of it snowing on any one day is $\\frac{3}{4}$ so the probability of it not snowing on any one day is $\\frac{1}{4}$. So, the probability it not snowing on all three days is $\\left(\\frac{1}{4}\\right)^3 = \\boxed{\\frac{1}{64}}$.",
+        "tag": [
+            "probability",
+            "binomial"
+        ]
+    }
+]
