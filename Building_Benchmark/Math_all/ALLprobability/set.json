@@ -1,0 +1,181 @@
+[
+    {
+        "problem": "Bag A has 3 white marbles and 4 black marbles.  Bag B has 6 yellow marbles and 4 blue marbles.  Bag C has 2 yellow marbles and 5 blue marbles.  A marble is drawn at random from Bag A.  If it is white, a marble is drawn at random from Bag B, otherwise, if it is black, a marble is drawn at random from Bag C.  What is the probability that the second marble drawn is yellow?",
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "solution": "We can get the second marble to be yellow in two ways:  either a white from A (with probability 3/7) then a yellow from B (with probability 6/10), or a black from A (with probability 4/7) then a yellow from C (with probability 2/7). Thus, the probability is \\[ \\left(\\frac{3}{7}\\times\\frac{6}{10}\\right)+\\left(\\frac{4}{7}\\times\\frac{2}{7}\\right)=\\boxed{\\frac{103}{245}}.\\]",
+        "tag": [
+            "probability",
+            "set"
+        ]
+    },
+    {
+        "problem": "Sets $A$ and $B$, shown in the Venn diagram, are such that the total number of elements in set $A$ is twice the total number of elements in set $B$. Altogether, there are 3011 elements in the union of $A$ and $B$, and their intersection has 1000 elements. What is the total number of elements in set $A$?\n\n[asy]\nlabel(\"$A$\", (2,67));\nlabel(\"$B$\", (80,67));\ndraw(Circle((30,45), 22));\ndraw(Circle((58, 45), 22));\nlabel(\"1000\", (44, 45));\n[/asy]",
+        "level": "Level 2",
+        "type": "Counting & Probability",
+        "solution": "Let $a$ be the number of elements in set $A$ and $b$ be the total number of elements in set $B$. We are told that the total number of elements in set $A$ is twice the total number of elements in set $B$ so we can write  $$a=2b.$$ Since there are 1000 elements in the intersection of set $A$ and set $B$, there are $a-1000$ elements that are only in set $A$ and $b-1000$ elements only in set $B$. The total number of elements in the union of set $A$ and set $B$ is equal to $$\\mbox{elements in only }A+\\mbox{elements in only }B+\\mbox{elements in both}$$ which we can also write as  $$(a-1000)+(b-1000)+1000.$$ Because we know that there is a total of 3011 elements in the union of $A$ and $B$, we can write  $$(a-1000)+(b-1000)+1000=3011$$ which simplifies to $$a+b=4011.$$  Because $a=2b$ or $b=\\frac{1}{2}a$, we can write the equation in terms of $a$ and then solve for $a$. We get  \\begin{align*}\na+b&=4011\\qquad\\implies\\\\\na+\\frac{1}{2}a&=4011\\qquad\\implies\\\\\n\\frac{3}{2}a&=4011\\qquad\\implies\\\\\na&=2674\\\\\n\\end{align*} Therefore, the total number of elements in set $A$ is $\\boxed{2674}.$",
+        "tag": [
+            "set",
+            "probability"
+        ]
+    },
+    {
+        "problem": "The set $S = \\{1, 2, 3, \\ldots , 49, 50\\}$ contains the first $50$ positive integers.  After the multiples of 2 and the multiples of 3 are removed, how many integers remain in the set $S$?",
+        "level": "Level 2",
+        "type": "Counting & Probability",
+        "solution": "The set $S$ contains $25$ multiples of 2 (that is, even numbers).  When these are removed, the set $S$ is left with only the odd integers from 1 to 49. At this point, there are $50-25=25$ integers in $S$. We still need to remove the multiples of 3 from $S$.\n\nSince $S$ only contains odd integers after the multiples of 2 are removed,  we must remove the odd multiples of 3 between 1 and 49.  These are 3, 9, 15, 21, 27, 33, 39, 45, of which there are 8.  Therefore, the number of integers remaining in the set $S$ is $25 - 8 = \\boxed{17}$.",
+        "tag": [
+            "set",
+            "probability"
+        ]
+    },
+    {
+        "problem": "Container I holds 8 red balls and 4 green balls; containers II and III each hold 2 red balls and 4 green balls. A container is selected at random and then a ball is randomly selected from that container. What is the probability that the ball selected is green? Express your answer as a common fraction.",
+        "level": "Level 3",
+        "type": "Counting & Probability",
+        "solution": "There are three different possibilities for our first decision, each corresponding to which container we choose. So, if we choose container I, with $\\frac{1}{3}$ probability, we have a $\\frac{4}{12} = \\frac{1}{3}$ probability for a $\\frac{1}{3} \\cdot \\frac{1}{3} = \\frac{1}{9}$ probability of getting green from Container I. Similarly for container II the probability is $\\frac{1}{3} \\cdot \\frac{4}{6} = \\frac{2}{9}$, and the same for container III. So, the total probability is $\\frac{1}{9} + \\frac{2}{9} + \\frac{2}{9} = \\boxed{\\frac{5}{9}}$.",
+        "tag": [
+            "probability",
+            "set"
+        ]
+    },
+    {
+        "problem": "At the Gooddog Obedience School, dogs can learn to do three tricks: sit, stay, and roll over. Of the dogs at the school: \\begin{tabular}{l@{\\qquad}l}\n50 dogs can sit & 17 dogs can sit and stay \\\\\n29 dogs can stay & 12 dogs can stay and roll over \\\\\n34 dogs can roll over & 18 dogs can sit and roll over \\\\\n9 dogs can do all three & 9 dogs can do none\n\\end{tabular} How many dogs are in the school?",
+        "level": "Level 3",
+        "type": "Counting & Probability",
+        "solution": "We draw a Venn Diagram with three circles, and fill it in starting with the center and proceeding outwards. There are $9$ dogs that can do all three tricks. Since $18$ dogs can sit and roll over (and possibly stay) and $9$ dogs can sit, roll over, and stay, there are $18 - 9 = 9$ dogs that can sit, roll over, but not stay. Using the same reasoning, there are $12 - 9 = 3$ dogs that can stay, rollover, but not sit, and $17 - 9 = 8$ dogs that can sit, stay, but not rollover.\n\n[asy]unitsize(50);\nimport graph;\npair A = (0,-1); pair B = (sqrt(3)/2,1/2); pair C = (-sqrt(3)/2,1/2);\ndraw(Circle(A,1.2) ^^ Circle(B,1.2) ^^ Circle(C,1.2));\nlabel(\"13\",A); label(\"9\",B); label(\"24\",C); label(\"$9$\",(0,0)); label(\"$8$\",(B+C)/2); label(\"$3$\",(A+B)/2); label(\"$9$\",(A+C)/2);\nlabel(\"Sit\",2.4C,C); label(\"Stay\",2.4B,B); label(\"Roll Over\", 2.4A,A);[/asy]\n\nSo now we know how many dogs can do multiple tricks, and exactly what tricks they can do. Since $50$ dogs can sit, $9$ dogs can sit and rollover only, $8$ dogs can sit and stay only, and $9$ dogs can do all three tricks, the remaining dogs that can't do multiple tricks can only sit, and there are $50 - 9 - 8 - 9 = 24$ of these. Using the same reasoning, we find that $29 - 3 - 8 - 9 = 9$ dogs can only stay and $34 - 9 - 3 - 9 = 13$ dogs can only roll over.\n\nSince $9$ dogs can do no tricks, we can add that to each category in the Venn Diagram to find that there are a total of $9 + 9 + 3 + 8 + 24 + 13 + 9 + 9 = \\boxed{84}$ dogs.",
+        "tag": [
+            "set",
+            "probability"
+        ]
+    },
+    {
+        "problem": "Twenty tiles are numbered 1 through 20 and are placed into box $A$. Twenty other tiles numbered 11 through 30 are placed into box $B$. One tile is randomly drawn from each box. What is the probability that the tile from box $A$ is less than 15 and the tile from box $B$ is either even or greater than 25? Express your answer as a common fraction.",
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "tag": [
+            "probability",
+            "set"
+        ],
+        "solution": "Since the two events are independent, we consider each separately. The probability of the tile from A being less than 15 is equal to $\\frac{14}{20} = \\frac{7}{10}$. The probability of a tile from B being even or greater than 25 is $\\frac{10+2}{20} = \\frac{3}{5}$. So we multiply the probabilities for the independent events, giving us probability $\\frac{7}{10} \\cdot \\frac{3}{5} = \\boxed{\\frac{21}{50}}$."
+    },
+    {
+        "problem": "There are 30 students in Mrs. Taylor's kindergarten class.  If there are twice as many students with blond hair as with blue eyes, 6 students with blond hair and blue eyes, and 3 students with neither blond hair nor blue eyes, how many students have blue eyes?",
+        "level": "Level 3",
+        "type": "Counting & Probability",
+        "solution": "Let the number of blue-eyed students be $x$, so the number of blond students is $2x$.  Since the number of blue-eyed blond students is $6$, the number of blue-eyed non-blond students is $x - 6$, while the number of blond non-blue-eyed students is $2x - 6$.  Since the number of non-blue-eyed non-blond students is $3$, we can add up these four exclusive categories (blond blue-eyed, blond non-blue-eyed, etc.) to sum to 30 students in the class.\n\n[asy]\nunitsize(0.05cm);\nlabel(\"Blue eyes\", (2,74));\nlabel(\"Blond hair\", (80,74));\nlabel(\"Neither: 3\", (44,10));\ndraw(Circle((30,45), 22));\ndraw(Circle((58, 45), 22));\nlabel(\"$6$\", (44, 45));\nlabel(scale(0.8)*\"$x-6$\",(28,58));\nlabel(scale(0.8)*\"$2x-6$\",(63,58));\n[/asy]\n\nSo $(x - 6) + (2x - 6) + 6 + 3 = 30$ and $x = \\boxed{11}$, which is the number of blue-eyed students.",
+        "tag": [
+            "set"
+        ]
+    },
+    {
+        "problem": "Eighty percent of adults drink coffee and seventy percent drink tea. What is the smallest possible percent of adults who drink both coffee and tea?",
+        "level": "Level 1",
+        "type": "Counting & Probability",
+        "solution": "Adding together the percent of people who drink coffee with those who drink tea, we obtain a total of $150\\%$.  Thus, we double-counted at least $50\\%$, meaning that at least $\\boxed{50\\%}$ of adults drink both.  (The percentage who drink both ${\\it can}$ be exactly ${50\\%}$ if everybody drinks either coffee or tea; otherwise, the overlap is more than ${50\\%}$, but the problem asked for the smallest possible overlap.)",
+        "tag": [
+            "probability",
+            "set"
+        ]
+    },
+    {
+        "problem": "Arnold is studying the prevalence of three health risk factors, denoted by A, B, and C, within a population of men. For each of the three factors, the probability that a randomly selected man in the population has only this risk factor (and none of the others) is 0.1. For any two of the three factors, the probability that a randomly selected man has exactly these two risk factors (but not the third) is 0.14. The probability that a randomly selected man has all three risk factors, given that he has A and B is $\\frac{1}{3}$. The probability that a man has none of the three risk factors given that he does not have risk factor A is $\\frac{p}{q}$, where $p$ and $q$ are relatively prime positive integers. Find $p+q$.\n",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "We first assume a population of $100$ to facilitate solving. Then we simply organize the statistics given into a Venn diagram.\n[asy]  pair A,B,C,D,E,F,G; A=(0,55); B=(60,55); C=(60,0); D=(0,0); draw(A--B--C--D--A); E=(30,35); F=(20,20); G=(40,20); draw(circle(E,15)); draw(circle(F,15)); draw(circle(G,15));  draw(\"$A$\",(30,52)); draw(\"$B$\",(7,7)); draw(\"$C$\",(53,7));  draw(\"100\",(5,60)); draw(\"10\",(30,40)); draw(\"10\",(15,15)); draw(\"10\",(45,15));  draw(\"14\",(30,16)); draw(\"14\",(38,29)); draw(\"14\",(22,29));  draw(\"$x$\",(30,25)); draw(\"$y$\",(10,45));  [/asy]\nLet $x$ be the number of men with all three risk factors. Since \"the probability that a randomly selected man has all three risk factors, given that he has A and B is $\\frac{1}{3}$,\" we can tell that $x = \\frac{1}{3}(x+14)$, since there are $x$ people with all three factors and 14 with only A and B. Thus $x=7$.\nLet $y$ be the number of men with no risk factors. It now follows that\\[y= 100 - 3 \\cdot 10 - 3 \\cdot 14 - 7 = 21.\\]The number of men with risk factor A is $10+2 \\cdot 14+7 = 45$ (10 with only A, 28 with A and one of the others, and 7 with all three). Thus the number of men without risk factor $A$ is 55, so the desired conditional probability is $21/55$. So the answer is $21+55=\\boxed{76}$.",
+        "tag": [
+            "probability",
+            "set"
+        ]
+    },
+    {
+        "problem": "Each unit square of a 3-by-3 unit-square grid is to be colored either blue or red. For each square, either color is equally likely to be used. The probability of obtaining a grid that does not have a 2-by-2 red square is $\\frac {m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m + n$.",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "We can use complementary counting, counting all of the colorings that have at least one red $2\\times 2$ square.\nFor at least one red $2 \\times 2$ square:\nThere are four $2 \\times 2$ squares to choose which one will be red. Then there are $2^5$ ways to color the rest of the squares. $4*32=128$\nFor at least two $2 \\times 2$ squares:\nThere are two cases: those with two red squares on one side and those without red squares on one side.\nThe first case is easy: 4 ways to choose which the side the squares will be on, and $2^3$ ways to color the rest of the squares, so 32 ways to do that. For the second case, there will by only two ways to pick two squares, and $2^2$ ways to color the other squares. $32+8=40$\nFor at least three $2 \\times 2$ squares:\nChoosing three such squares leaves only one square left, with four places to place it. This is $2 \\cdot 4 = 8$ ways.\nFor at least four $2 \\times 2$ squares, we clearly only have one way.\nBy the Principle of Inclusion-Exclusion, there are (alternatively subtracting and adding) $128-40+8-1=95$ ways to have at least one red $2 \\times 2$ square.\nThere are $2^9=512$ ways to paint the $3 \\times 3$ square with no restrictions, so there are $512-95=417$ ways to paint the square with the restriction. Therefore, the probability of obtaining a grid that does not have a $2 \\times 2$ red square is $\\frac{417}{512}$, and $417+512=\\boxed{929}$.",
+        "tag": [
+            "probability",
+            "set"
+        ]
+    },
+    {
+        "problem": "Four distinct points, $A$, $B$, $C$, and $D$, are to be selected from $1996$ points evenly spaced around a circle. All quadruples are equally likely to be chosen. What is the probability that the chord $\\overline{AB}$ intersects the chord $\\overline{CD}$?",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "Because all quadruples are equally likely, we need only examine the six clockwise orderings of the points: \\[ACBD, ADBC, ABCD, ADCB, ABDC, \\text{ and } ACDB.\\] Only the first two of these equally likely orderings satisfy the intersection condition, so the probability is $2/6=\\boxed{\\frac{1}{3}}$.",
+        "tag": [
+            "probability",
+            "set"
+        ]
+    },
+    {
+        "problem": "How many natural numbers greater than 6 but less than 60 are relatively prime to 15?",
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "solution": "We are interested in how many numbers among $7, 8, 9, \\dots, 59$ are relatively prime to 15.\n\nFirst, we count how many numbers among $1, 2, 3, \\dots, 60$ are relatively prime to 15.  Note that $15 = 3 \\cdot 5$.  Among these 60 numbers, $60/3 = 20$ are multiples of 3, $60/5 = 12$ are multiples of 5, and $60/15 = 4$ are multiples of 15.  We can take 60, and subtract 20 and 12, but we have subtracted the multiples of 15 twice.  Therefore, among the 60 numbers, there are $60 - 20 - 12 + 4 = 32$ numbers that are relatively prime to 15.\n\nGoing back to the set $7, 8, 9, \\dots, 59$, we must account for the numbers 1, 2, and 4 that are relatively prime to 15.  Thus, the answer is $32 - 3 = \\boxed{29}$.",
+        "tag": [
+            "counting",
+            "set"
+        ]
+    },
+    {
+        "problem": "Let $\\mathcal{S}$ be the set $\\lbrace1,2,3,\\ldots,10\\rbrace$ Let $n$ be the number of sets of two non-empty disjoint subsets of $\\mathcal{S}$. (Disjoint sets are defined as sets that have no common elements.) Find the remainder obtained when $n$ is divided by $1000$.\n",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "Let the two disjoint subsets be $A$ and $B$, and let $C = S-(A+B)$. For each $i \\in S$, either $i \\in A$, $i \\in B$, or $i \\in C$. So there are $3^{10}$ ways to organize the elements of $S$ into disjoint $A$, $B$, and $C$.\nThus, there are $3^{10}-2\\cdot2^{10}+1$ ordered pairs of sets $(A,B)$. But since the question asks for the number of unordered sets $\\{ A,B \\}$, $n = \\frac{1}{2}(3^{10}-2\\cdot2^{10}+1) = 28501 \\equiv \\boxed{501} \\pmod{1000}$.",
+        "tag": [
+            "counting",
+            "set"
+        ]
+    },
+    {
+        "problem": "If two distinct members of the set $\\{ 2, 4, 10, 12, 15, 20, 50 \\}$ are randomly selected and multiplied, what is the probability that the product is a multiple of 100? Express your answer as a common fraction.",
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "solution": "Since a multiple of 100 must have 2 factors of 2 and 2 factors of 5, we can count the pairs by focusing on the factors of 5. For one thing, 50 can be paired with any number that has one factor of 2, since $50=2 \\cdot 5^2$ takes care of all the other primes. So, 50 can be paired with 2, 4, 10, 12, and 20, for 5 pairs. Then, 20 can be paired with (excluding 50 which we already counted) 15 and 10, both of which have the necessary factor of 5, giving us 2 more pairs. There are no remaining pairs of numbers 15 and smaller that are multiples of 100, because the only pair with two factors of 5, $\\{10, 15 \\}$, lacks a factor of 2. So, there are $5+2 = 7$ pairs. And in total, there are ${7 \\choose 2 } =21$ possible pairs, giving us a probability of $\\frac{7}{21} = \\boxed{\\frac{1}{3}}$.",
+        "tag": [
+            "probability",
+            "set"
+        ]
+    },
+    {
+        "problem": "Two distinct integers, $x$ and $y$, are randomly chosen from the set $\\{1,2,3,4,5,6,7,8,9,10\\}$. What is the probability that $xy-x-y$ is even?",
+        "tag": [
+            "probability",
+            "set"
+        ],
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "solution": "We note that $xy-x-y$ is very close to the expansion of $(x-1)(y-1)$. (This is basically a use of Simon's Favorite Factoring Trick.)\n\nIf $xy-x-y$ is even, then $xy-x-y+1 = (x-1)(y-1)$ is odd. This only occurs when $x-1$ and $y-1$ are both odd, so $x$ and $y$ must be even. There are $\\binom{5}{2}$ distinct pairs of even integers, and $\\binom{10}{2}$ distinct pairs of integers, so the probability is $\\dfrac{\\binom{5}{2}}{\\binom{10}{2}} = \\boxed{\\frac{2}{9}}$."
+    },
+    {
+        "problem": "Define an ordered triple $(A, B, C)$ of sets to be minimally intersecting if $|A \\cap B| = |B \\cap C| = |C \\cap A| = 1$ and $A \\cap B \\cap C = \\emptyset$. For example, $(\\{1,2\\},\\{2,3\\},\\{1,3,4\\})$ is a minimally intersecting triple. Let $N$ be the number of minimally intersecting ordered triples of sets for which each set is a subset of $\\{1,2,3,4,5,6,7\\}$. Find the remainder when $N$ is divided by $1000$.\n",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "Let each pair of two sets have one element in common. Label the common elements as $x$, $y$, $z$. Set $A$ will have elements $x$ and $y$, set $B$ will have $y$ and $z$, and set $C$ will have $x$ and $z$. There are $7 \\cdot 6 \\cdot 5 = 210$ ways to choose values of $x$, $y$ and $z$. There are $4$ unpicked numbers, and each number can either go in the first set, second set, third set, or none of them. Since we have $4$ choices for each of $4$ numbers, that gives us $4^4 = 256$.\nFinally, $256 \\cdot 210 = 53760$, so the answer is $\\boxed{760}$.",
+        "tag": [
+            "counting",
+            "set"
+        ]
+    },
+    {
+        "problem": "How many different positive integers can be represented as a difference of two distinct members of the set $\\{1, 2, 3, 4, 5, 6 \\}$?",
+        "level": "Level 2",
+        "type": "Counting & Probability",
+        "solution": "It is clear that the maximal positive difference is $6 - 1 = 5$. Moreover, we can use 6 to ensure that we can get all positive integer differences up to 5: $6 - 5 = 1$, $6 - 4 = 2$, $6 - 3 = 3$, $6 - 2 = 4$, $6 - 1 = 5$. So, there are $\\boxed{5}$ possible differences.",
+        "tag": [
+            "counting",
+            "set"
+        ]
+    },
+    {
+        "problem": "Two different numbers are randomly selected from the set $S = \\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11\\}$. The probability that their sum is 12 would be greater if the number $n$ had first been removed from set $S$. What is the value of $n$?",
+        "level": "Level 2",
+        "type": "Counting & Probability",
+        "solution": "All of the integers in the set $S$ have exactly one complementary number, $12-x$, such that their sum is 12, except for the number 6. Because $6+6= 12$, and the two numbers chosen are distinct, removing 6 will not eliminate any of the pairs that sum to 12, and it will reduce the total number of pairs possible. So $n=\\boxed{6}$.",
+        "tag": [
+            "probability",
+            "set"
+        ]
+    }
+]

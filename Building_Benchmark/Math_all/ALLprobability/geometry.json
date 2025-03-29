@@ -1,0 +1,282 @@
+[
+    {
+        "problem": "A point $P$ is randomly placed in the interior of the right triangle below.  What is the probability that the area of triangle $PBC$ is less than half of the area of triangle $ABC$?  Express your answer as a common fraction. [asy]\nsize(7cm);\ndefaultpen(linewidth(0.7));\npair A=(0,5), B=(8,0), C=(0,0), P=(1.5,1.7);\ndraw(A--B--C--cycle);\ndraw(C--P--B);\nlabel(\"$A$\",A,NW);\nlabel(\"$B$\",B,E);\nlabel(\"$C$\",C,SW);\nlabel(\"$P$\",P,N);\ndraw((0,0.4)--(0.4,0.4)--(0.4,0));[/asy]",
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "solution": "Let $h$ be the distance from $P$ to $CB$.  The area of triangle $ABC$ is $\\frac{1}{2}(AC)(CB)$.  The area of triangle $PBC$ is $\\frac{1}{2}(h)(CB)$.  Therefore, the area of triangle $PBC$ is less than one-half of the area of triangle $ABC$ if $h<AC/2$.  This happens if $P$ falls below the dashed line whose endpoints are the midpoints $D$ and $E$ of $\\overline{AC}$ and $\\overline{AB}$.  Triangle $ADE$ is similar to triangle $ACB$, so the ratio of the area of triangle $ADE$ to the area of triangle $ACB$ is $\\left(\\frac{AD}{AC}\\right)^2=\\frac{1}{4}$.  Therefore, the ratio of the area of trapezoid $DEBC$ to the area of triangle $ABC$ is $1-\\dfrac{1}{4}=\\boxed{\\frac{3}{4}}$.\n\n[asy]\nsize(7cm);\ndefaultpen(linewidth(0.7));\npair A=(0,5), B=(8,0), C=(0,0), P=(1.5,1.7);\ndraw(A--B--C--cycle);\ndraw((A+C)/2--(A+B)/2,dashed);\ndot(P);\nlabel(\"$A$\",A,NW);\nlabel(\"$B$\",B,E);\nlabel(\"$C$\",C,SW);\nlabel(\"$P$\",P,E);\ndlabel(\"$D$\",(A+C)/2,W);\ndlabel(\"$E$\",(A+B)/2,NE);\ndraw((0,0.4)--(0.4,0.4)--(0.4,0));[/asy]",
+        "tag": [
+            "geometry",
+            "probability"
+        ]
+    },
+    {
+        "problem": "How many non-congruent squares can be drawn, such that their vertices are lattice points on the 5 by 5 grid of lattice points shown? [asy]\ndot((0,0));dot((1,0));dot((2,0));dot((3,0));dot((4,0));\ndot((0,1));dot((1,1));dot((2,1));dot((3,1));dot((4,1));\ndot((0,2));dot((1,2));dot((2,2));dot((3,2));dot((4,2));\ndot((0,3));dot((1,3));dot((2,3));dot((3,3));dot((4,3));\ndot((0,4));dot((1,4));dot((2,4));dot((3,4));dot((4,4));\n[/asy]",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "To start, we can clearly draw $1\\times1$,$2\\times2$,$3\\times3$,and $4\\times4$ squares.  Next, we must consider the diagonals.  We can draw squares with sides of $\\sqrt{2}$ and $2\\sqrt{2}$ as shown: [asy]\ndraw((1,4)--(0,3)--(1,2)--(2,3)--cycle,blue);\ndraw((2,4)--(0,2)--(2,0)--(4,2)--cycle,red);\ndot((0,0));dot((1,0));dot((2,0));dot((3,0));dot((4,0));\ndot((0,1));dot((1,1));dot((2,1));dot((3,1));dot((4,1));\ndot((0,2));dot((1,2));dot((2,2));dot((3,2));dot((4,2));\ndot((0,3));dot((1,3));dot((2,3));dot((3,3));dot((4,3));\ndot((0,4));dot((1,4));dot((2,4));dot((3,4));dot((4,4));\n[/asy] In addition, we can draw squares with side lengths diagonals of $1\\times 2$ and $1\\times 3$ rectangles as shown: [asy]\ndraw((2,4)--(0,3)--(1,1)--(3,2)--cycle,red);\ndraw((3,4)--(0,3)--(1,0)--(4,1)--cycle,blue);\ndot((0,0));dot((1,0));dot((2,0));dot((3,0));dot((4,0));\ndot((0,1));dot((1,1));dot((2,1));dot((3,1));dot((4,1));\ndot((0,2));dot((1,2));dot((2,2));dot((3,2));dot((4,2));\ndot((0,3));dot((1,3));dot((2,3));dot((3,3));dot((4,3));\ndot((0,4));dot((1,4));dot((2,4));dot((3,4));dot((4,4));\n[/asy] Any larger squares will not be able to fit on the lattice. There are a total of $4+2+2=\\boxed{8}$ possible squares.",
+        "tag": [
+            "counting",
+            "geometry"
+        ]
+    },
+    {
+        "problem": "Thirty identical toothpicks were used to create the figure below. There are over 25 triangles in the figure. What is the fewest number of toothpicks that could be removed so that no triangles remain?\n\n[asy]\ndraw((0,0)--(8,0), linewidth(1));\ndraw(2dir(60)--(2dir(60)+(6,0)), linewidth(1));\ndraw(4dir(60)--(4dir(60)+(4,0)), linewidth(1));\ndraw(6dir(60)--(6dir(60)+(2,0)), linewidth(1));\n\ndraw((0,0)--8dir(60),linewidth(1));\ndraw((2,0)--(6dir(60)+(2,0)),linewidth(1));\ndraw((4,0)--(4dir(60)+(4,0)),linewidth(1));\ndraw((6,0)--(2dir(60)+(6,0)),linewidth(1));\n\ndraw(2dir(60)--(2,0),linewidth(1));\ndraw(4dir(60)--(4,0),linewidth(1));\ndraw(6dir(60)--(6,0),linewidth(1));\ndraw(8dir(60)--(8,0),linewidth(1));\n[/asy]",
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "solution": "Call a triangle with side length 1 toothpick a 1-triangle. The figure contains 10 upward-pointing 1-triangles and 6 downward-pointing 1-triangles. Removing a toothpick destroys at most one upward-pointing 1-triangle, so we must remove at least 10 toothpicks. Any triangle must have at least one horizontal toothpick, so if we remove all $\\boxed{10}$ horizontal toothpicks, no triangles remain. Since we have to remove at least 10, this is the minimum.",
+        "tag": [
+            "counting",
+            "geometry"
+        ]
+    },
+    {
+        "problem": "A point $P$ is randomly selected from the square region with vertices at $(\\pm 2, \\pm 2)$. What is the probability that $P$ is within one unit of the origin? Express your answer as a common fraction in terms of $\\pi$.",
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "solution": "The probability that $P$ lies within one unit of the origin is the same as the probability that $P$ lies inside the unit circle centered at the origin, since this circle is by definition the set of points of distance 1 from the origin.\n\n[asy]\ndefaultpen(1);\ndraw((-2,-2)--(-2,2)--(2,2)--(2,-2)--cycle);\n\ndraw(circle((0,0),1));\nfill(circle((0,0),1),gray(.7));\n[/asy]\n\nSince the unit circle centered at the origin lies inside our square, the probability we seek is the area of the circle divided by the area of the square.  Since the circle has radius 1, its area is $\\pi(1^2) = \\pi$.  Since the square has side length 4, its area is $4^2 = 16$.  Therefore the probability in question is $\\boxed{\\frac{\\pi}{16}}$.",
+        "tag": [
+            "geometry probability",
+            "area",
+            "probability"
+        ]
+    },
+    {
+        "problem": "I have two 20-sided dice that each have 4 maroon sides, 7 teal sides, 8 cyan sides, and one sparkly side. If I roll both dice, what is the probability they come up the same?",
+        "level": "Level 3",
+        "type": "Counting & Probability",
+        "solution": "This problem requires a little bit of casework.  There are four ways in which the dice can both show the same thing: if they both show maroon, both show teal, both show cyan or both show sparkly. The probability of getting maroon is $\\dfrac{4}{20}$, so the probability that they will both show maroon is $\\left(\\dfrac{4}{20}\\right)^2=\\dfrac{16}{400}$. Similarly, the probability of getting teal is $\\dfrac{7}{20}$, so the probability that they will both show teal is $\\left(\\dfrac{7}{20}\\right)^2=\\dfrac{49}{400}$, the probability of getting cyan is $\\dfrac{8}{20}$, so the probability that they will both show cyan is $\\left(\\dfrac{8}{20}\\right)^2=\\dfrac{64}{400}$ and the probability of getting sparkly is $\\dfrac{1}{20}$, so the probability that they will both get sparkly is $\\left(\\dfrac{1}{20}\\right)^2=\\dfrac{1}{400}$. So our answer is $\\dfrac{16}{400}+\\dfrac{49}{400}+\\dfrac{64}{400}+\\dfrac{1}{400}=\\frac{130}{400}=\\boxed{\\dfrac{13}{40}}$.",
+        "tag": [
+            "probability",
+            "geometry probability"
+        ]
+    },
+    {
+        "problem": "A circular dartboard is divided into regions with various central angles, as shown. The probability of a dart randomly landing in a particular region is $\\frac16$. What is the corresponding measure, in degrees, of the central angle of this section of the dartboard? [asy]\nunitsize(1.5cm); defaultpen(linewidth(.7pt));\n\npair O=(0,0); draw(Circle(O,1)); draw(dir(0)--O--dir(90)); draw(dir(150)--O--dir(225)); [/asy]",
+        "level": "Level 2",
+        "type": "Counting & Probability",
+        "solution": "Let $A$ be the area of the circular dartboard.  If the measure of a central angle of a sector is $x$ degrees, then the area of the sector is $\\left(\\frac{x}{360}\\right)A$.  The probability of the dart landing in a region is ratio of the area of the region to the area of the dartboard, so  \\[\n\\frac{1}{6} = \\frac{\\left(\\frac{x}{360}\\right)A}{A}.\n\\] Solve to find $x=\\boxed{60}$.",
+        "tag": [
+            "probability",
+            "geometry probability",
+            "area"
+        ]
+    },
+    {
+        "problem": "Allen and Bethany each arrive at a party at a random time between 1:00 and 2:00.  Each stays for 15 minutes, then leaves.  What is the probability that Allen and Bethany see each other at the party?",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "tag": [
+            "geometry probability",
+            "probability"
+        ],
+        "solution": "We let the $x$ axis represent the time Allen arrives, and the $y$ axis represent the time Bethany arrives.\n\n[asy]\ndraw((0,0)--(60,0), Arrow);\ndraw((0,0)--(0,60), Arrow);\nlabel(\"1:00\", (0,0), SW);\nlabel(\"1:15\", (0,15), W);\nlabel(\"1:45\", (60,45), E);\nlabel(\"1:15\", (15,0), S);\nlabel(\"2:00\", (60,0), S);\nlabel(\"2:00\", (0,60), W);\nfill((0,0)--(60,60)--(60,45)--(15,0)--cycle, gray(.7));\nfill((0,0)--(60,60)--(45,60)--(0,15)--cycle, gray(.7));\n[/asy]\n\nThe shaded region represents the times that Allen and Bethany would see each other at the party.  For example, if Allen arrived at 1:30, Bethany could arrive at any time between 1:15 and 1:45 and see Allen at the party.  Let one hour equal one unit.  Then, we can calculate the area of the shaded region as the area of the entire square minus the areas of the two unshaded triangles.  This will be equal to $2\\cdot \\frac{1}{2} \\cdot \\frac{3}{4} \\cdot \\frac{3}{4}=\\frac{9}{16}$.  So, the area of the shaded region is $1-\\frac{9}{16}=\\boxed{\\frac{7}{16}}$.  Since the area of the square is 1, this is the probability that Allen and Bethany see each other at the party."
+    },
+    {
+        "problem": "A point $P$ is randomly selected from the rectangular region with vertices $(0,0), (2,0)$, $(2,1),(0,1)$. What is the probability that $P$ is closer to the origin than it is to the point $(3,1)$?",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "The area of the rectangular region is 2. Hence the probability that $P$ is closer to $(0,0)$ than it is to $(3,1)$ is half the area of the trapezoid bounded by the lines $y=1$, the $x$- and $y$-axes, and the perpendicular bisector of the segment joining $(0,0)$ and $(3,1)$. The perpendicular bisector goes through the point $(3/2,1/2)$, which is the center of the square whose vertices are $(1,0), (2,0), (2,1), \\text{ and\n}(1,1)$. Hence, the line cuts the square  into two quadrilaterals of equal  area $1/2$. Thus the area of the trapezoid is $3/2$ and the probability is $\\boxed{\\frac{3}{4}}$.\n\n[asy]\ndraw((-1,0)--(4,0),Arrow);\ndraw((0,-1)--(0,3),Arrow);\nfor (int i=0; i<4; ++i) {\ndraw((i,-0.2)--(i,0.2));\n}\nfor (int i=0; i<3; ++i) {\ndraw((-0.2,i)--(0.2,i));\n}\nlabel(\"$x$\",(3.7,0),S);\nlabel(\"$y$\",(0,2.7),W);\nlabel(\"1\",(1,-0.2),S);\nlabel(\"2\",(2,-0.2),S);\nlabel(\"3\",(3,-0.2),S);\nlabel(\"1\",(-0.2,1),W);\nlabel(\"2\",(-0.2,2),W);\ndraw((0,0)--(3,1),linewidth(0.7));\ndraw((1,2)--(2,-1),linewidth(0.7));\ndot((1.5,0.5));\ndot((3,1));\ndraw((1,0)--(1,1.3),dashed);\ndraw((1.5,0.5)--(1.7,1.5));\nlabel(\"($\\frac{3}{2}$,$\\frac{1}{2}$)\",(1.7,1.5),N);\ndraw((0,1)--(2,1)--(2,0),linewidth(0.7));\nlabel(\"$(3,1)$\",(3,1),N);\n[/asy]",
+        "tag": [
+            "geometry probability",
+            "area"
+        ]
+    },
+    {
+        "problem": "A point $P$ is chosen at random in the interior of equilateral triangle $ABC$. What is the probability that $\\triangle ABP$ has a greater area than each of $\\triangle ACP$ and $\\triangle BCP$?",
+        "level": "Level 3",
+        "type": "Counting & Probability",
+        "solution": "Since the three triangles $ABP$, $ACP$, and $BCP$ have equal bases, their areas are proportional to the lengths of their altitudes.\n\nLet $O$ be the centroid of $\\triangle ABC$, and draw medians $\\overline{AOE}$ and $\\overline{BOD}$. Any point above $\\overline{BOD}$ will be farther from $\\overline{AB}$ than from $\\overline{BC},$ and any point above $\\overline{AOE}$ will be farther from $\\overline{AB}$  than from $\\overline{AC}.$ Therefore the condition of the problem is met if and only if $P$ is inside quadrilateral $CDOE.$\n\n[asy]\npair A,B,C,D,I,F,O;\nA=(0,0);\nB=(10,0);\nC=(5,8.7);\nD=(2.5,4.3);\nI=(7.5,4.3);\nF=(5,0);\nO=(5,2.3);\ndraw(A--B--C--cycle,linewidth(0.7));\ndraw(A--I,linewidth(0.7));\ndraw(B--D,linewidth(0.7));\ndraw(C--F,dashed);\nlabel(\"$A$\",A,W);\nlabel(\"$B$\",B,E);\nlabel(\"$C$\",C,N);\nlabel(\"$D$\",D,NW);\nlabel(\"$E$\",I,NE);\nlabel(\"$F$\",F,S);\nlabel(\"$O$\",O,SW);\n[/asy]\n\n\nIf $\\overline{CO}$ is extended to $F$ on $\\overline{AB}$, then $\\triangle ABC$ is divided into six congruent triangles, of which two comprise quadrilateral $CDOE$. Thus $CDOE$ has one-third the area of $\\triangle ABC,$ so the required probability is $\\boxed{\\frac{1}{3}}$.",
+        "tag": [
+            "geometry probability",
+            "area"
+        ]
+    },
+    {
+        "problem": "John needs to catch a train...",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "We put the time the train arrives on the $y$-axis...",
+        "tag": [
+            "probability",
+            "geometry probability"
+        ]
+    },
+    {
+        "problem": "Three points are chosen uniformly at random on a circle. What is the probability that no two of these points form an obtuse triangle with the circle's center?",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "Let us call the circle's center $O$.  We first note that if $A$ and $B$ are points on the circle, then triangle $AOB$ is isosceles with $AO= BO$.  Therefore, if $AOB$ is an obtuse triangle, then the obtuse angle must be at $O$.  So $AOB$ is an obtuse triangle if and only if minor arc $AB$ has measure of more than $\\pi/2$ ($90^\\circ$).\n\nSince the probability that $\\theta < \\pi/2$ is 1/2, our final probability is $\\frac{1}{2} \\cdot \\frac{3}{8} = \\boxed{\\frac{3}{16}}$.",
+        "tag": [
+            "probability",
+            "geometry probability"
+        ]
+    },
+    {
+        "problem": "Alice and Bob each arrive at a party at a random time between 1:00 and 2:00. If Alice arrives after Bob, what is the probability that Bob arrived before 1:30?",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "We let the $x$-axis represent the time Bob arrives, and the $y$-axis represent the time Alice arrives. Then we shade in the region where Alice arrives after Bob, and mark off the part of that area where Bob arrives before 1:30.\n\n[asy]\nfill((0,0)--(60,60)--(0,60)--cycle, gray(.7));\ndraw((30,0)--(30,60));\nlabel(\"1:30\", (30,0), S);\n\ndraw((0,0)--(60,0)--(60,60)--(0,60));\ndraw((0,0)--(0,60));\nlabel(\"1:00\", (0,0), SW);\nlabel(\"2:00\", (60,0), S);\nlabel(\"2:00\", (0,60), W);\n[/asy]\n\nWe need the ratio of the area of the shaded region to the left of the line marking 1:30 to the area of the whole shaded region. This ratio is $\\boxed{\\frac{3}{4}}$.",
+        "tag": [
+            "probability",
+            "geometry probability"
+        ]
+    },
+    {
+        "problem": "A point $(x,y)$ is randomly picked from inside the rectangle with vertices  $(0,0)$, $(3,0)$, $(3,2)$, and $(0,2)$.  What is the probability that  $x < y$?",
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "solution": "The point $(x,y)$ satisfies $x < y$ if and only if it belongs to the shaded triangle bounded by the lines $x=y$, $y=2$, and $x=0$, the area of which is 2.  The rectangle has area 6, so the probability in question is $\\dfrac{2}{6} = \\boxed{\\dfrac{1}{3}}$.\n\n[asy]\ndefaultpen(.7);\ndraw((-1,0)--(5,0),Arrow);\ndraw((0,-1)--(0,3),Arrow);\nfor (int i=1; i<4; ++i) {\ndraw((i,-0.1)--(i,0.1));\n}\nfill((0,0)--(0,2)--(2,2)--cycle,gray(0.7));\ndraw((-0.1,1)--(0.1,1));\ndraw((-.1,2)--(0,2));\ndraw((3,0)--(3,2)--(0,2),linewidth(1.0));\ndraw((-0.5,-0.5)--(2.8,2.8),dashed);\n[/asy]",
+        "tag": [
+            "probability",
+            "geometry probability",
+            "area"
+        ]
+    },
+    {
+        "problem": "A point $(x,y)$ is randomly and uniformly chosen inside the square with vertices (0,0), (0,2), (2,2), and (2,0).  What is the probability that $x+y < 3$?",
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "solution": "We note that the points for which $x+y<3$ are those that lie below the line $x+y = 3$, or $y= -x + 3$.  As the diagram below illustrates, these are all the points in the square except those in the triangle with vertices (2,1), (2,2), and (1,2).\n\n[asy]\ndefaultpen(.7);\n\ndraw((-.1,0)--(3,0),Arrow);\ndraw((0,-.1)--(0,4),Arrow);\n\ndraw((0,2)--(2,2)--(2,0));\ndraw((-.5,3.5)--(2.5,.5),dashed,Arrows);\n\nfill((0,0)--(0,2)--(1,2)--(2,1)--(2,0)--cycle,gray(.7));\n\nlabel(\"(1,2)\",(1,2),NE);\nlabel(\"(2,2)\",(2,2),NE);\nlabel(\"(2,1)\",(2,1),NE);\n[/asy]\n\nSince this is a right triangle whose sides both of length 1, its area is $\\frac{1}{2} \\cdot 1^2 = 1/2$.  Since the square in question has side length 2, its area is $2^2 = 4$, so the shaded region has area $4 - 1/2 = 7/2$.  Our probability is therefore $\\dfrac{7/2}{4} = \\boxed{\\dfrac{7}{8}}$.",
+        "tag": [
+            "probability",
+            "geometry probability",
+            "area"
+        ]
+    },
+    {
+        "problem": "A point $(x,y)$ is randomly selected such that $0 \\le x \\le 3$ and $0 \\le y \\le 6$. What is the probability that $x+y \\le 4$? Express your answer as a common fraction.",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "We draw the region and mark off the area where $x+y \\le 4$:\n\n[asy]\ndraw((0,0)--(3,0)--(3,6)--(0,6)--cycle);\nfill((0,0)--(0,4)--(3,1)--(3,0)--cycle, gray(.7));\ndot((0,0));\ndot((3,0));\ndot((0,6));\ndot((3,6));\ndot((0,4));\ndot((3,1));\nlabel(\"(0,0)\", (0,0), W);\nlabel(\"(0,6)\", (0,6), W);\nlabel(\"(0,4)\", (0,4), W);\nlabel(\"(3,1)\", (3,1), E);\nlabel(\"(3,0)\", (3,0), E);\nlabel(\"(3,6)\", (3,6), E);\n[/asy] The area of the rectangle is 18. The area of the shaded region, a trapezoid, is $\\frac{1}{2}(1+4)\\cdot3=\\frac{15}{2}$. The probability that the point ends up in the shaded region is then $\\boxed{\\frac{5}{12}}$.",
+        "tag": [
+            "probability",
+            "geometry probability",
+            "area"
+        ]
+    },
+    {
+        "problem": "On a standard die one of the dots is removed at random with each dot equally likely to be chosen. The die is then rolled. What is the probability that the top face has an odd number of dots?",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "The dot is chosen from the face with $n$ dots with probability $\\frac{n}{21}$. Thus the face that originally has $n$ dots is left with an odd number of dots with probability $\\frac{n}{21}$ if $n$ is even and $1 - n/21$ if $n$ is odd. Each face is the top face with probability $\\frac{1}{6}$. Therefore the top face has an odd number of dots with probability \\begin{align*}\n&\\frac{1}{6}\\displaystyle\\left(\\displaystyle\\left(1 - \\frac{1}{21}\\displaystyle\\right) + \\frac{2}{21} + \\displaystyle\\left(1 - \\frac{3}{21}\\displaystyle\\right)\n+ \\frac{4}{21} + \\displaystyle\\left(1 - \\frac{5}{21}\\displaystyle\\right) + \\frac{6}{21}\\displaystyle\\right) \\\\\n& \\qquad = \\frac{1}{6} \\displaystyle\\left(3 + \\frac{3}{21}\\displaystyle\\right)\\\\\n& \\qquad = \\frac{1}{6}\\cdot \\frac{66}{21} \\\\\n& \\qquad = \\boxed{\\frac{11}{21}}.\n\\end{align*}",
+        "tag": [
+            "probability",
+            "geometry probability"
+        ]
+    },
+    {
+        "problem": "A point is chosen at random on the number line between 0 and 1, and the point is colored green. Then, another point is chosen at random on the number line between 0 and 1, and this point is colored purple. What is the probability that the number of the purple point is greater than the number of the green point, but less than twice the number of the green point?",
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "solution": "We let the $x$-axis represent the number of the green point and the $y$-axis represent the number of the purple point, and we shade in the region where the number of the purple point is between the number of the green point and twice the number of the green point.\n\n[asy]\ndraw((0,0)--(1,0), Arrow);\ndraw((0,0)--(0,1), Arrow);\nlabel(\"(0,0)\", (0,0), SW);\nlabel(\"(0,1)\", (0,1), W);\nlabel(\"(1,0)\", (1,0), S);\n\nfill((0,0)--(1,1)--(.5,1)--cycle, gray(.7));\ndraw((.5,1)--(.5,.5));\n[/asy]\n\nThe shaded region can be divided into two triangles, each with base $\\frac{1}{2}$ and height $\\frac{1}{2}$. The total area of the shaded region is then $\\frac{1}{4}$. Since the area of the whole square is 1, the probability that a randomly chosen point lies in the shaded region is $\\boxed{\\frac{1}{4}}$.",
+        "tag": [
+            "probability",
+            "geometry probability",
+            "area"
+        ]
+    },
+    {
+        "problem": "How many different lines pass through at least two points in this 3-by-3 grid of lattice points shown?\n\n[asy]\nsize(30);\ndot((0,0));\ndot((1,0));\ndot((2,0));\ndot((0,1));\ndot((1,1));\ndot((2,1));\ndot((0,2));\ndot((1,2));\ndot((2,2));\n[/asy]",
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "solution": "There are $\\binom92$ choices of two points for a line to pass through. However, this counts each line that goes through three points three times, so we must subtract twice the number of lines which go through three points. Our answer is thus $\\binom92-2\\cdot8=36-16=\\boxed{20}$ lines.",
+        "tag": [
+            "counting",
+            "geometry probability"
+        ]
+    },
+    {
+        "problem": "Point $(x,y)$ is randomly picked from the rectangular region with vertices at $(0,0),(2008,0),(2008,2009),$ and $(0,2009)$. What is the probability that $x > 2y$? Express your answer as a common fraction.",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "To see which points in the rectangle satisfy $x>2y$, we rewrite the inequality as $y<\\frac{1}{2}x$.  This inequality is satisfied by the points below the line $y=\\frac{1}{2}x$.  Drawing a line with slope $\\frac{1}{2}$ and $y$-intercept 0, we obtain the figure below.  We are asked to find the ratio of the area of the shaded triangle to the area of the rectangle.  The vertices of the triangle are $(0,0), (2008,0)$, and $(2008,2008/2)$, so the ratio of areas is  \\[\n\\frac{\\frac{1}{2}(2008)\\left(\\frac{2008}{2}\\right)}{2008(2009)}=\\frac{2008/4}{2009}=\\boxed{\\frac{502}{2009}}.\n\\]",
+        "tag": [
+            "probability",
+            "area",
+            "geometry probability"
+        ]
+    },
+    {
+        "problem": "Point $P$ is selected at random from the interior of the pentagon with vertices $A=(0,2)$, $B= (4,0)$, $C = (2\\pi +1, 0)$, $D=(2\\pi\n+1,4)$, and $E=(0,4)$. What is the probability that $\\angle APB$ is obtuse? Express your answer as a common fraction.",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "Since $\\angle APB = 90^{\\circ}$ if and only if $P$ lies on the semicircle with center $(2,1)$ and radius $\\sqrt{5}$, the angle is obtuse if and only if the point $P$ lies inside this semicircle. The semicircle lies entirely inside the pentagon, since the distance, 3, from $(2,1)$ to $\\overline{DE}$ is greater than the radius of the circle. Thus the probability that the angle is obtuse is the ratio of the area of the semicircle to the area of the pentagon.\n\nThe probability is $$\\frac{\\frac{5}{2}\\pi}{8\\pi} = \\boxed{\\frac{5}{16}}.$$",
+        "tag": [
+            "probability",
+            "area",
+            "geometry probability"
+        ]
+    },
+    {
+        "problem": "A point in space $(x,y,z)$ is randomly selected so that $-1\\le x \\le 1$,$-1\\le y \\le 1$,$-1\\le z \\le 1$.  What is the probability that $x^2+y^2+z^2\\le 1$?",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "The region that the point $(x,y,z)$ can lie in is a cube with side length 2.  It has total volume of $2^3=8$.  The region of points that satisfy $x^2+y^2+z^2\\le 1$ corresponds to a unit sphere centered at the origin.  The volume of this sphere is $\\frac{4\\pi}{3}\\cdot 1^3=\\frac{4\\pi}{3}$.  This sphere lies completely inside, and is tangent to, the cube.  The probability that a point randomly selected from the cube will lie inside this sphere is equal to $\\frac{\\frac{4\\pi}{3}}{8}=\\boxed{\\frac{\\pi}{6}}$.",
+        "tag": [
+            "probability",
+            "geometry probability"
+        ]
+    },
+    {
+        "problem": "A point is selected at random from the portion of the number line shown here. What is the probability that the point is closer to 4 than to 0? Express your answer as a decimal to the nearest tenth.",
+        "level": "Level 3",
+        "type": "Counting & Probability",
+        "solution": "We find the point which is equidistant from 0 and 4. Clearly, this occurs at 2. So, for all $x > 2$, $x$ is closer to 4 than 0. So, the probability is equal to the length of this region $\\frac{5-2}{5} = \\boxed{.6}$.",
+        "tag": [
+            "probability",
+            "geometry probability"
+        ]
+    },
+    {
+        "problem": "A boss plans a business meeting at Starbucks with the two engineers below him. However, he fails to set a time, and all three arrive at Starbucks at a random time between 2:00 and 4:00 p.m. When the boss shows up, if both engineers are not already there, he storms out and cancels the meeting. Each engineer is willing to stay at Starbucks alone for an hour, but if the other engineer has not arrived by that time, he will leave. What is the probability that the meeting takes place?",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "Let the number of hours after 2:00 p.m. that the two engineers arrive at Starbucks be $x$ and $y$, and let the number of hours after 2:00 p.m. that the boss arrives at Starbucks be $z$. Then $0\\le x,y,z\\le2$ and in three dimensions, we are choosing a random point within this cube with volume 8. We must have $z>x$ and $z>y$; this forms a square pyramid with base area 4 and height 2, or volume $8/3$.\n[asy]\nunitsize(1 cm);\n\npair O, A, B, C, D, E, F, G, X, Y, Z;\nreal d1, d2; d1=20;\n\nreal dis=1.2;\nO = (0,0);\nA = (2,0);\nB = (2,2);\nC = (0,2);\nD = A+dis*dir(d1);\nG = O+dis*dir(d1);\nE = B+dis*dir(d1);\nF = C+dis*dir(d1);\nG = O+dis*dir(d1);\nX = (3,0);\nZ = (0,3);\nY = O+2*dis*dir(d1);\n\nfill(C--B--E--F--cycle,gray(0.8));\nfill(O--E--F--C--cycle,gray(0.8));\ndraw(O--A--B--C--cycle);\ndraw(G--D, dashed);\ndraw(E--F);\ndraw(F--G, dashed);\ndraw(C--F);\ndraw(B--E);\ndraw(A--D);\ndraw(D--E);\ndraw(O--G, dashed);\ndraw(O--X, Arrow);\ndraw(O--Z, Arrow);\ndraw(O--E, red+dashed);\ndraw(C--B--E--F--cycle, red);\ndraw(O--B, red);\ndraw(O--F, red+dashed);\ndraw(O--Y, dashed, Arrow);\n\nlabel(\"$2$\", A, S);\nlabel(\"$2$\", C, W);\nlabel(\"$2$\", G, NW);\nlabel(\"$O$\", O, SW);\nlabel(\"$X$\", X, S);\nlabel(\"$Z$\", Z, W);\nlabel(\"$Y$\", Y, NW);\n[/asy]\nHowever, if one of the engineers decides to leave early, the meeting will fail. The engineers will leave early if $x>y+1$ or $y>x+1$. The intersections of these with our pyramid gives two smaller triangular pyramids each with base area 1/2 and height 1, or volume $1/6$.\n[asy]\nsize(200);\npair O, A, B, C, D, E, F, G, X, Y, Z;\nreal d1, d2; d1=20; d2=150;\nreal dis1, dis2;\ndis1=2; dis2=1.8;\nO = (0,0);\nA = O+dis1*dir(d1);\nC = O+dis2*dir(d2);\nB = A+dis2*dir(d2);\nG = (0,2);\nD = G+dis1*dir(d1);\nF = G+dis2*dir(d2);\nE = D+dis2*dir(d2);\nX = A+.5*dis1*dir(d1);\nY = C+.5*dis2*dir(d2);\nZ = (0,4);\n\nfill(G--D--E--F--cycle, gray(0.8));\nfill(O--F--G--cycle, gray(0.8));\nfill(O--D--G--cycle, gray(0.8));\ndraw(G--D--E--F--cycle);\ndraw(G--O);\ndraw(F--C--O--A--D);\ndraw(A--B--C, dashed);\ndraw(B--E, dashed);\ndraw(O--D, dashed);\ndraw(O--F, dashed);\ndraw(O--X, Arrow);\ndraw(O--Y, Arrow);\ndraw(O--Z, Arrow);\n\nlabel(\"$2$\", A, SE);\nlabel(\"$2$\", C, W);\nlabel(\"$2$\", G, SW);\nlabel(\"$O$\", O, S);\nlabel(\"$X$\", X, SE);\nlabel(\"$Z$\", Z, W);\nlabel(\"$Y$\", Y, W);\nlabel(\"$y=x-1$\", (O+A)/2, SE, red+fontsize(10));\nlabel(\"$y=x+1$\", (O+C)/2, SW, red+fontsize(10));\n\ndraw((G+D)/2--(E+D)/2, red);\ndraw((G+F)/2--(E+F)/2, red);\ndraw((O+C)/2--(C+B)/2, red+dashed);\ndraw((O+A)/2--(A+B)/2, red+dashed);\ndraw((O+C)/2--(G+F)/2, red);\ndraw((C+B)/2--(E+F)/2, red+dashed);\ndraw((O+A)/2--(G+D)/2, red);\ndraw((A+B)/2--(E+D)/2, red+dashed);\n[/asy]\nIn all, the probability of the meeting occurring is the volume of the big square pyramid minus the volumes of the smaller triangular pyramids divided by the volume of the cube: $\\frac{8/3-1/6-1/6}8=\\frac{7/3}8=\\boxed{\\frac{7}{24}}$.",
+        "tag": [
+            "probability",
+            "geometry probability"
+        ]
+    },
+    {
+        "problem": "Two of the vertices of a regular octahedron are to be chosen at random. What is the probability that they will be the endpoints of an edge of the octahedron? Express your answer as a common fraction. [asy]\nsize(150);\npair A, B, C, D, E, F;\nA=(1,1);\nB=(-1,-1);\nC=(0,6);\nD=(0,-6);\nE=(6, 0);\nF=(-6,0);\ndraw(C--F--D--E--C--B--F);\ndraw(D--B--E);\ndraw(F--A--C, dashed);\ndraw(D--A--E, dashed);\n[/asy]",
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "solution": "Because the octahedron is symmetric and all vertices have the same number of edges, we can assume that the first vertex we choose is the top one. If we do not choose this vertex, we can simply rotate the octahedron so that we have. From here, there are 5 other vertices. 4 of them share an edge with the vertex we have already chosen, so the probability that the 2 vertices chosen form an edge is $\\boxed{\\frac{4}{5}}$.",
+        "tag": [
+            "probability",
+            "geometry probability"
+        ]
+    },
+    {
+        "problem": "Two mathematicians take a morning coffee break each day. They arrive at the cafeteria independently, at random times between 9 a.m. and 10 a.m., and stay for exactly $m$ minutes. The probability that either one arrives while the other is in the cafeteria is $40 \\%,$ and $m = a - b\\sqrt {c},$ where $a, b,$ and $c$ are positive integers, and $c$ is not divisible by the square of any prime. Find $a + b + c.$",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "Let the two mathematicians be $M_1$ and $M_2$. Consider plotting the times that they are on break on a coordinate plane with one axis being the time $M_1$ arrives and the second axis being the time $M_2$ arrives (in minutes past 9 a.m.). The two mathematicians meet each other when $|M_1-M_2| \\leq m$. Also because the mathematicians arrive between 9 and 10, $0 \\leq M_1,M_2 \\leq 60$. Therefore, $60\\times 60$ square represents the possible arrival times of the mathematicians, while the shaded region represents the arrival times where they meet.[asy] import graph; size(180); real m=60-12*sqrt(15); draw((0,0)--(60,0)--(60,60)--(0,60)--cycle); fill((m,0)--(60,60-m)--(60,60)--(60-m,60)--(0,m)--(0,0)--cycle,lightgray); draw((m,0)--(60,60-m)--(60,60)--(60-m,60)--(0,m)--(0,0)--cycle); xaxis(\"$M_1$\",-10,80); yaxis(\"$M_2$\",-10,80); label(rotate(45)*\"$M_1-M_2\\le m$\",((m+60)/2,(60-m)/2),NW,fontsize(9)); label(rotate(45)*\"$M_1-M_2\\ge -m$\",((60-m)/2,(m+60)/2),SE,fontsize(9)); label(\"$m$\",(m,0),S); label(\"$m$\",(0,m),W); label(\"$60$\",(60,0),S); label(\"$60$\",(0,60),W); [/asy]It's easier to compute the area of the unshaded region over the area of the total region, which is the probability that the mathematicians do not meet:\n$\\frac{(60-m)^2}{60^2} = .6$\n$(60-m)^2 = 36\\cdot 60$\n$60 - m = 12\\sqrt{15}$\n$\\Rightarrow m = 60-12\\sqrt{15}$\nSo the answer is $60 + 12 + 15 = \\boxed{87}$.",
+        "tag": [
+            "probability",
+            "geometry probability"
+        ]
+    },
+    {
+        "problem": "In triangle $ABC$, $AB = 5$, $BC = 4$, and $CA = 3$.\n\n[asy]\ndefaultpen(1);\n\npair C=(0,0), A = (0,3), B = (4,0);\ndraw(A--B--C--cycle);\n\nlabel(\"\\(A\\)\",A,N);\nlabel(\"\\(B\\)\",B,E);\nlabel(\"\\(C\\)\",C,SW);\n[/asy]\n\nPoint $P$ is randomly selected inside triangle $ABC$.  What is the probability that $P$ is closer to $C$ than it is to either $A$ or $B$?",
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "solution": "Let $\\ell$ be the perpendicular bisector of segment $AC$.  We note that the points that are closer to $A$ than they are to $C$ are the points that are on the same side of $\\ell$ as $A$. [asy]\ndefaultpen(1);\n\npair C=(0,0), A=(0,3), B=(4,0);\n\npair D = (A+B)/2;\npair E = (C+A)/2;\npair F = (B+C)/2;\n\npair DH = D + (.5,0);\npair EH = E + (-.5,0);\n\ndraw(A--B--C--cycle);\ndraw(DH--EH,dashed);\nfill(E--D--B--C--cycle,gray(.7));\n\nlabel(\"\\(A\\)\",A,N);\nlabel(\"\\(B\\)\",B,(1,0));\nlabel(\"\\(C\\)\",C,SW);\n\nlabel(\"\\(\\ell\\)\",DH,(1,0));\nlabel(\"\\(D\\)\",D,NE);\n[/asy]\n\nSince $ABC$ is a 3-4-5 right triangle with a right angle at $C$, $\\ell$ is parallel to line $BC$.  Since it passes through the midpoint of $AC$, it also passes through the midpoint of $AB$, which we'll call $D$.\n\nLet $m$ be the perpendicular bisector of segment $BC$.  As before, the points that are closer to $C$ than they are to $B$ are those that lie on the same side of $m$ as $A$, and $m$ also passes through $D$.\n\n[asy]\ndefaultpen(1);\n\npair C=(0,0), A=(0,3), B=(4,0);\n\npair D = (A+B)/2;\npair E = (C+A)/2;\npair F = (B+C)/2;\n\npair DH = D + (.5,0);\npair EH = E + (-.5,0);\npair DV = D + (0,.5);\npair FV = F + (0,-.5);\n\ndraw(A--B--C--cycle);\ndraw(DV--FV,dashed);\nfill(D--F--C--A--cycle,gray(.7));\n\nlabel(\"\\(A\\)\",A,N);\nlabel(\"\\(B\\)\",B,(1,0));\nlabel(\"\\(C\\)\",C,SW);\n\nlabel(\"\\(m\\)\",DV,(0,1));\nlabel(\"\\(D\\)\",D,NE);\n[/asy] Therefore the points that are closer to $C$ than they are to $A$ or $B$ are the points in the shaded rectangle below. [asy]\ndefaultpen(1);\n\npair C=(0,0), A=(0,3), B=(4,0);\n\npair D = (A+B)/2;\npair E = (C+A)/2;\npair F = (B+C)/2;\n\npair DH = D + (.5,0);\npair EH = E + (-.5,0);\npair DV = D + (0,.5);\npair FV = F + (0,-.5);\n\ndraw(A--B--C--cycle);\ndraw(DV--FV,dashed);\ndraw(DH--EH,dashed);\nfill(D--F--C--E--cycle,gray(.7));\n\nlabel(\"\\(A\\)\",A,N);\nlabel(\"\\(B\\)\",B,(1,0));\nlabel(\"\\(C\\)\",C,SW);\n\nlabel(\"\\(m\\)\",DV,(0,1));\nlabel(\"\\(\\ell\\)\",DH,(1,0));\nlabel(\"\\(D\\)\",D,NE);\n[/asy] The probability we want is then this rectangle's area divided by triangle $ABC$'s area.  There are a few different ways to see that this ratio is $\\boxed{\\frac{1}{2}}$.  One way is to note that we can divide $ABC$ into 4 congruent triangles, 2 of which are shaded: [asy]\ndefaultpen(1);\n\npair C=(0,0), A=(0,3), B=(4,0);\n\npair D = (A+B)/2;\npair E = (C+A)/2;\npair F = (B+C)/2;\n\ndraw(A--B--C--cycle);\nfill(D--F--C--E--cycle,gray(.7));\n\ndraw(E--D--F);\ndraw(C--D);\n\nlabel(\"\\(A\\)\",A,N);\nlabel(\"\\(B\\)\",B,(1,0));\nlabel(\"\\(C\\)\",C,SW);\n\nlabel(\"\\(D\\)\",D,NE);\n[/asy] Another way is to notice that the rectangle's sides have length $\\frac{3}{2}$ and $\\frac{4}{2}$, so that the rectangle's area is $\\frac{3 \\cdot 4}{2 \\cdot 2}$.  Since triangle $ABC$'s area is $\\frac{3 \\cdot 4}{2}$, it follows that the probability we seek is $\\boxed{\\frac{1}{2}}$, as before.",
+        "tag": [
+            "probability",
+            "area",
+            "geometry probability"
+        ]
+    },
+    {
+        "problem": "If two lines $l$ and $m$ have equations $y = -x + 6$, and $y = -4x + 6$, what is the probability that a point randomly selected in the 1st quadrant and below $l$ will fall between $l$ and $m$? Express your answer as a decimal to the nearest hundredth.",
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "solution": "We first find the areas of the triangles under $l$ and $m$ and in the first quadrant. From $l$'s equation, we find that at $x = 6$, $y = 0$. From $m$, we find that at $x = \\frac{3}{2}$, we find that $y = 0$.\n\nWe then find the areas using the formula for a triangle: $\\frac{1}{2}bh$. The area under $l$ is $\\frac{1}{2}(6\\times 6) = 18$. The area under $m$ is $\\frac{1}{2}\\left(\\frac{3}{2}\\times 6\\right) = \\frac{9}{2}$. Thus, the probability that the point selected will fall between $l$ and $m$ has probability $\\frac{18 - \\frac{9}{2}}{18} = \\frac{27/2}{18} = \\frac{3}{4} = 0.75$. Thus, the probability is $\\boxed{0.75}$.",
+        "tag": [
+            "probability",
+            "area",
+            "geometry probability"
+        ]
+    }
+]

@@ -1,0 +1,35 @@
+[
+    {
+        "problem": "Brent rolls a fair dodecahedral die with numbers $1,2,3,...,12$ on its faces. What is the expected number of digits in the number he obtains? Express your answer in a decimal.",
+        "level": "Level 3",
+        "type": "Counting & Probability",
+        "solution": "There are nine numbers with one digit: $1,2,...,9$, so the probability of selecting a one digit number is $\\frac{9}{12} =\\frac{3}{4}$. There are three numbers with two digits: $10,11,12$, so the probability of selecting a two digit number is $\\frac{3}{12} = \\frac{1}{4}$. The expected number of digits is therefore $E = \\frac{3}{4} \\cdot 1 + \\frac{1}{4} \\cdot 2 = \\boxed{1.25}$.",
+        "tag": [
+            "expectation",
+            "decimal",
+            "digit"
+        ]
+    },
+    {
+        "problem": "Phil has 7 green marbles and 3 purple marbles in a bag. He removes a marble at random, records the color, puts it back, and then repeats this process until he has withdrawn 6 marbles. What is the probability that exactly three of the marbles that he removes are green? Express your answer as a decimal rounded to the nearest thousandth.",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "There is a $\\left( \\frac{7}{10} \\right) ^3 \\left( \\frac{3}{10} \\right) ^3 = \\frac{9261}{1000000}$ probability that 3 particular marbles out of 6 will be green and the rest will be purple. There are also  $\\binom{6}{3}=20$ ways to choose which 3 out of the 6 are the green ones. Because these ways are all mutually exclusive, we multiply to get the probability that we're looking for: $20 \\cdot \\frac{9261}{1000000}\\approx \\boxed{.185}$.",
+        "tag": [
+            "probability",
+            "combination",
+            "decimal"
+        ]
+    },
+    {
+        "problem": "George has an unfair six-sided die. The probability that it rolls a 6 is $\\frac{1}{2}$, and the probability that it rolls any other number is $\\frac{1}{10}$. What is the expected value of the number shown when this die is rolled? Express your answer as a decimal.",
+        "level": "Level 3",
+        "type": "Counting & Probability",
+        "solution": "The expected value is $$\\frac{1}{10}(1) + \\frac{1}{10}(2) + \\frac{1}{10}(3) + \\frac{1}{10}(4) + \\frac{1}{10}(5) + \\frac{1}{2}(6) = \\frac{15}{10} + 3 = \\boxed{4.5}. $$",
+        "tag": [
+            "probability",
+            "expectation",
+            "decimal"
+        ]
+    }
+]

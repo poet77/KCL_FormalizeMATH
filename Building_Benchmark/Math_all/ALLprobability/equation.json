@@ -1,0 +1,110 @@
+[
+    {
+        "problem": "Let $P(x) = x^2 - 3x - 9$. A real number $x$ is chosen at random from the interval $5 \\le x \\le 15$. The probability that $\\lfloor\\sqrt{P(x)}\\rfloor = \\sqrt{P(\\lfloor x \\rfloor)}$ is equal to $\\frac{\\sqrt{a} + \\sqrt{b} + \\sqrt{c} - d}{e}$ , where $a$, $b$, $c$, $d$, and $e$ are positive integers. Find $a + b + c + d + e$.",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "Table of values of $P(x)$:\n\\begin{align*} P(5) &= 1 \\\\ P(6) &= 9 \\\\ P(7) &= 19 \\\\ P(8) &= 31 \\\\ P(9) &= 45 \\\\ P(10) &= 61 \\\\ P(11) &= 79 \\\\ P(12) &= 99 \\\\ P(13) &= 121 \\\\ P(14) &= 145 \\\\ P(15) &= 171 \\\\ \\end{align*}\n...",
+        "tag": [
+            "probability",
+            "function",
+            "equation"
+        ]
+    },
+    {
+        "problem": "For what value of $n$ is $5 \\times 8 \\times 2 \\times n = 7!$?",
+        "level": "Level 1",
+        "type": "Counting & Probability",
+        "solution": "To make the arithmetic a little easier, we can write out 7! as $7! = 7 \\times 6 \\times 5 \\times 4 \\times 3 \\times 2 = 7 \\times 5 \\times 3^2 \\times 2^4$. And, $5 \\times 8 \\times 2 = 5 \\times 2^4$. So, $n = \\frac{7 \\times 5 \\times 3^2 \\times 2^4}{5 \\times 2^4} = 7 \\times 3^2 = \\boxed{63}$.",
+        "tag": [
+            "algebra",
+            "equation"
+        ]
+    },
+    {
+        "problem": "How many integers $n$ satisfy the condition $100 < n < 200$ and the condition $n$ has the same remainder whether it is divided by $6$ or by $8$?",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "Since $n$ has the same remainder whether divided by 6 or by 8, we can write that $n = 6a + r = 8b + r$, where $0\\leq r \\leq 5$.  This implies that $3a = 4b$, and so $a$ is a multiple of 4 and we can write $a = 4k$ for some integer $k$.  Since $100<n<200$, we see that $95<6a<200$, or $\\frac{95}{24} < k <\\frac{200}{24}$.  Since $k$ is an integer, $4\\leq k \\leq 8$.  If $k = 4$, then we must have $r = 5$.  Otherwise, $r = 0,1,2,3,4,5$ are all allowable.  Thus we have a total of $\\boxed{25}$ possible values for $n$.",
+        "tag": [
+            "equation"
+        ]
+    },
+    {
+        "problem": "If $x+\\frac1x=-5$, what is $x^3+\\frac1{x^3}$?",
+        "level": "Level 4",
+        "type": "Counting & Probability",
+        "solution": "To get $x^3$ and $\\frac1{x^3}$, we cube $x+\\frac1x$: $$-125=(-5)^3=\\left(x+\\frac1x\\right)^3=x^3+3x+\\frac3x+\\frac1{x^3}$$ by the Binomial Theorem. Conveniently, we can evaluate $3x +\n\\frac{3}{x}$ as  $3\\left(x+\\frac1x\\right)=3(-5)=-15$, so $$x^3+\\frac1{x^3}=(-125)-(-15)=\\boxed{-110}.$$",
+        "tag": [
+            "algebra",
+            "equation",
+            "binomial"
+        ]
+    },
+    {
+        "problem": "At a particular school with 43 students, each student takes chemistry, biology, or both. The chemistry class is three times as large as the biology class, and 5 students are taking both classes. How many people are in the chemistry class?",
+        "level": "Level 2",
+        "type": "Counting & Probability",
+        "solution": "Let $x$ be the number of students in the biology class who aren't in the chemistry class and $y$ be the number of students in the chemistry class who aren't in the biology class. Then, since all students are in either one of the classes or in both, we know that $43=x+y+5$. We also know that $3(x+5)=y+5$. Solving for $y$ in terms of $x$ gives us $y=3x+10$, and substituting that into the first equation gives us $43=x+(3x+10)+5$, which gives us $x=7$. Substituting this into the other equation gives us $y=31$. However, $y$ is only the number of chemistry students who aren't taking biology, so we need to add the number of students taking both to get our final answer of $\\boxed{36}$.",
+        "tag": [
+            "set",
+            "algebra",
+            "equation"
+        ]
+    },
+    {
+        "problem": "A board game spinner is divided into four regions labeled $A$, $B$, $C$, and $D$.  The probability of the arrow stopping on region $A$ is $\\frac{3}{8}$, the probability of it stopping in $B$ is $\\frac{1}{4}$, and the probability of it stopping in region $C$ is equal to the probability of it stopping in region $D$. What is the probability of the arrow stopping in region $C$?  Express your answer as a common fraction.",
+        "level": "Level 2",
+        "type": "Counting & Probability",
+        "solution": "Let $x$ be the probability that we want. Since the sum of the four probabilities is 1, we have the equation $1 = \\frac{3}{8} + \\frac{1}{4} + x + x = \\frac{5}{8} + 2x$.  Solving the equation $1=\\frac{5}{8} + 2x$ gives $x=\\boxed{\\frac{3}{16}}$.",
+        "tag": [
+            "probability",
+            "algebra",
+            "equation"
+        ]
+    },
+    {
+        "problem": "One day Max says to Liz, \"Out of the 25 people taking either English or French, you and I are the only two taking both.'' Liz, being mathematically inclined, responds by pointing out that there are exactly twice as many people in the English class as there are in the French class. How many people are taking English but not French?",
+        "level": "Level 2",
+        "type": "Counting & Probability",
+        "solution": "Let $x$ be the number of kids in the French class not including Max and Liz and let $y$ be the number of kids in the English class not including Max and Liz. Since all 25 kids are either just in English, just in French, or in both (Max and Liz), we know that $x+y+2=25$ or $x+y=23$. Furthermore, we know that $2(x+2)=y+2$ since $x+2$ and $y+2$ represent the total number of kids in each of the two classes.  Rewriting the last equation gives us $2x+2=y$ which can be substituted into the first equation to give us $x+(2x+2)=23$, which gives $x=7$. Substituting this value into any of the equations gives us $y=\\boxed{16}$.",
+        "tag": [
+            "set",
+            "algebra",
+            "equation"
+        ]
+    },
+    {
+        "problem": "A bin has 5 green balls and $k$ purple balls in it, where $k$ is an unknown positive integer.  A ball is drawn at random from the bin.  If a green ball is drawn, the player wins 2 dollars, but if a purple ball is drawn, the player loses 2 dollars.  If the expected amount won for playing the game is 50 cents, then what is $k$?",
+        "level": "Level 3",
+        "type": "Counting & Probability",
+        "solution": "There are 5 green balls and $5+k$ total balls, so the probability that a green ball is drawn is $\\dfrac{5}{5+k}$. Similarly, the probability that a purple ball is drawn is $\\dfrac{k}{5+k}$. So the expected value is $$\\frac{5}{5+k}(2)+\\frac{k}{5+k}(-2)=\\frac{1}{2}$$.\n\nMultiplying both sides of the equation by $2(5+k)$ gives $20-4k=5+k$, or $15=5k$. Therefore, $\\boxed{k=3}$.",
+        "tag": [
+            "probability",
+            "expectation",
+            "algebra",
+            "equation"
+        ]
+    },
+    {
+        "problem": "A bag contains ten balls, some of which are red and the rest of which are yellow. When two balls are drawn at random at the same time, the probability that both balls are red is $\\frac{1}{15}$. How many balls in the bag are red?",
+        "level": "Level 2",
+        "type": "Counting & Probability",
+        "solution": "Let $r$ represent the number of red balls in the bag. The probability that the first ball is red is $\\frac{r}{10}$, while the probability that the other ball is red becomes $\\frac{r-1}{9}$ (drawing two balls at random at the same time is similar to drawing one ball and then drawing another ball without replacement). So the probability that both balls are red is $\\frac{r}{10}\\cdot\\frac{r-1}{9}$, which we set equal to $\\frac{1}{15}$. \\begin{align*}\n\\frac{r}{10}\\cdot\\frac{r-1}{9}&=\\frac{1}{15}\\quad\\Rightarrow\\\\\nr(r-1)&=\\frac{90}{15}\\quad\\Rightarrow\\\\\nr^2-r-6&=0\\quad\\Rightarrow\\\\\n(r-3)(r+2)&=0\n\\end{align*} The value of $r$ cannot be negative, so $r=3$. There are $\\boxed{3}$ red balls in the bag.",
+        "tag": [
+            "probability",
+            "algebra",
+            "equation"
+        ]
+    },
+    {
+        "problem": "A drawer contains a mixture of red socks and blue socks, at most $1991$ in all. It so happens that, when two socks are selected randomly without replacement, there is a probability of exactly $\\frac{1}{2}$ that both are red or both are blue. What is the largest possible number of red socks in the drawer that is consistent with this data?",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "Let $r$ and $b$ denote the number of red and blue socks, respectively. Also, let $t=r+b$. The probability $P$ that when two socks are drawn randomly, without replacement, both are red or both are blue is given by\n\\[\\frac{r(r-1)}{(r+b)(r+b-1)}+\\frac{b(b-1)}{(r+b)(r+b-1)}=\\frac{r(r-1)+(t-r)(t-r-1)}{t(t-1)}=\\frac{1}{2}.\\]\nSolving the resulting quadratic equation $r^{2}-rt+t(t-1)/4=0$, for $r$ in terms of $t$, one obtains that\n\\[r=\\frac{t\\pm\\sqrt{t}}{2}\\, .\\]\nNow, since $r$ and $t$ are positive integers, it must be the case that $t=n^{2}$, with $n\\in\\mathbb{N}$. Hence, $r=n(n\\pm 1)/2$ would correspond to the general solution. For the present case $t\\leq 1991$, and so one easily finds that $n=44$ is the largest possible integer satisfying the problem conditions.\nIn summary, the solution is that the maximum number of red socks is $r=\\boxed{990}$.",
+        "tag": [
+            "probability",
+            "algebra",
+            "equation"
+        ]
+    }
+]

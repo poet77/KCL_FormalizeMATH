@@ -1,0 +1,83 @@
+[
+    {
+        "problem": "How many continuous paths from $A$ to $B$, along segments of the figure, do not revisit any of the six labeled points?",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "We denote a path from $A$ to $B$ by writing the labeled points visited, such as $A$-$C$-$B$ (first going to $C$ then to $B$).\n\nCase 1: Path ends in $C$-$B$.  There are clearly four such paths, which we can determine systematically; $A$-$C$-$B$, $A$-$D$-$C$-$B$, $A$-$D$-$F$-$C$-$B$, and $A$-$D$-$E$-$F$-$C$-$B$.\n\nCase 2: Path ends in $F$-$B$.  The possible paths are easy to determine systematically as $A$-$C$-$F$-$B$, $A$-$C$-$D$-$F$-$B$, $A$-$C$-$D$-$E$-$F$-$B$, $A$-$D$-$C$-$F$-$B$, $A$-$D$-$F$-$B$, $A$-$D$-$E$-$F$-$B$, yielding 6 possible paths.\n\nTherefore there are a total of $\\boxed{10}$ such paths.",
+        "tag": [
+            "counting"
+        ]
+    },
+    {
+        "problem": "A library has six identical copies of a certain book. At any given time, some of these copies are at the library and some are checked out. How many different ways are there for some of the books to be in the library and the rest to be checked out if at least one book is in the library and at least one is checked out?  (The books should be considered indistinguishable.)",
+        "level": "Level 3",
+        "type": "Counting & Probability",
+        "solution": "From 1 to 5 books can be in the library, and the rest are checked out. Therefore, there are $\\boxed{5}$ possibilities.",
+        "tag": [
+            "counting"
+        ]
+    },
+    {
+        "problem": "Compute without using a calculator: $8!-7!$",
+        "level": "Level 1",
+        "type": "Counting & Probability",
+        "solution": "$8! - 7! = 8 \\times 7! - 7! = 7!(8 - 1) = 7! \\times 7 = 5040 \\times 7 = \\boxed{35,\\!280}$.",
+        "tag": [
+            "counting"
+        ]
+    },
+    {
+        "problem": "Calculate $5\\cdot5! + 4\\cdot4!+4!$.",
+        "level": "Level 1",
+        "type": "Counting & Probability",
+        "solution": "Using the distributive property twice, \\begin{align*}\n5\\cdot5!+4\\cdot4!+4! &= 5\\cdot5! + (4+1)\\cdot4!\\\\\n&=5\\cdot5! + 5!\\\\\n&=(5+1)\\cdot5!\\\\\n&=6!\\\\\n&=\\boxed{720}.\n\\end{align*}",
+        "tag": [
+            "counting"
+        ]
+    },
+    {
+        "problem": "How many pairs of positive integers $(m,n)$ satisfy $m^2 + n < 22?$",
+        "level": "Level 3",
+        "type": "Counting & Probability",
+        "solution": "It may not be obvious how to proceed with this problem, but a little experimentation might lead you to determine the possible values of $m.$\n\nSince $0 < m^2 < 22,$ we can see that $m$ must be one of $1,$ $2,$ $3,$ or $4.$ So let's use these as our cases.\n\nCase 1: When $m=1$, we must have $n < 22-1 = 21.$ Thus there are $20$ possible choices for $n$ when $m=1.$\nCase 2: When $m=2,$ we must have $n < 22-4 = 18.$ Thus there are $17$ possible choices for $n$ when $m=2.$\nCase 3: When $m=3,$ we must have $n < 22-9 = 13.$ Thus there are $12$ possible choices for $n$ when $m=3.$\nCase 4: When $m=4,$ we must have $n < 22-16 = 6.$ Thus there are $5$ possible choices for $n$ when $m=4.$\n\nSo to get the total number of pairs of positive integers satisfying the inequality, we add up all of our possible cases, and see that there are $20 + 17 + 12 + 5 = \\boxed{54}$ possible pairs.",
+        "tag": [
+            "counting"
+        ]
+    },
+    {
+        "problem": "Three dice with faces numbered 1 through 6 are stacked as shown. Seven of the eighteen faces are visible, leaving eleven faces hidden(back, bottom, between). What is the total number of dots NOT visible in this view?",
+        "level": "Level 2",
+        "type": "Counting & Probability",
+        "solution": "The numbers on one die total $1+2+3+4+5+6=21$, so the numbers on the three dice total 63. Numbers 1, 1, 2, 3, 4, 5, 6 are visible, and these total 22. This leaves $63-22=\\boxed{41}$ not seen.",
+        "tag": [
+            "counting"
+        ]
+    },
+    {
+        "problem": "Rachel has two identical basil plants and an aloe plant. She also has two identical white lamps and two identical red lamps she can put each plant under (she can put more than one plant under a lamp, but each plant is under exactly one lamp). How many ways are there for Rachel to put her plants under her lamps?",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "We can split this up into cases.\n\nFirst, consider the case when all three plants are under the same color lamp. Either all three plants are under the same lamp, both basil plants are under one lamp and the aloe plant is under the other lamp, or the aloe plant and one basil plant are under one lamp and the other basil plant is under the other lamp. This case gives us three possibilities for each color of lamp, for a total of six possibilities.\n\nNext, consider the case where the aloe plant is under a different color of lamp than the two basil plants. Since the two lamps of the same color the aloe plant can be under are identical, it doesn't matter which one the aloe plant is under. The basil plants can either both be under the same lamp, or each be under a different lamp. This case gives us two possibilities when the aloe is under a white lamp and two possibilities when the aloe is under a red lamp, for a total of four possibilities.\n\nLast, consider the case where the basil plants are each under a different colored lamp. The aloe plant can be under the same white lamp as a basil plant, the same red lamp as a basil plant, a different white lamp from the basil plant, or a different red lamp from the basil plant, for a total of four possibilities.    In all, there are $6+4+4=\\boxed{14}$ possibilities.",
+        "tag": [
+            "counting"
+        ]
+    },
+    {
+        "problem": "Find $n$ if $n\\cdot n! + n! = 720$, where $n! = n\\cdot (n-1)\\cdot (n-2)\\cdots 2\\cdot 1$.",
+        "level": "Level 1",
+        "type": "Counting & Probability",
+        "solution": "We can factor n! out of the left-hand side: \\begin{align*}\nn\\cdot n! +n! &= (n+1)(n!)\\\\\n&= (n+1)!\\\\\n\\end{align*}We see that $(n+1)! = 720 = 6!$,  so $n+1 = 6$ and $n = \\boxed{5}$.",
+        "tag": [
+            "counting"
+        ]
+    },
+    {
+        "problem": "A total of 17 teams play in a single-elimination tournament.  (A single-elimination tournament is one where once a team has lost, it is removed from the competition.)  How many total games must be played before a winner can be declared, assuming there is no possibility of ties?",
+        "level": "Level 2",
+        "type": "Counting & Probability",
+        "solution": "Each game played removes one team from the tournament.  Since we seek to remove 16 teams from the tournament, we must play $\\boxed{16}$ games.",
+        "tag": [
+            "counting"
+        ]
+    }
+]

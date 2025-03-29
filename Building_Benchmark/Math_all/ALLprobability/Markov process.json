@@ -1,0 +1,85 @@
+[
+    {
+        "problem": "Let $p$ be the probability that, in the process of repeatedly flipping a fair coin, one will encounter a run of $5$ heads before one encounters a run of $2$ tails. Given that $p$ can be written in the form $m/n$ where $m$ and $n$ are relatively prime positive integers, find $m+n$.\n",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "Think of the problem as a sequence of H's and T's. No two T's can occur in a row, so the sequence is blocks of $1$ to $4$ H's separated by T's and ending in $5$ H's. Since the first letter could be T or the sequence could start with a block of H's, the total probability is that $3/2$ of it has to start with an H.\nThe answer to the problem is then the sum of all numbers of the form $\\frac 32 \\left( \\frac 1{2^a} \\cdot \\frac 12 \\cdot \\frac 1{2^b} \\cdot \\frac 12 \\cdot \\frac 1{2^c} \\cdots \\right) \\cdot \\left(\\frac 12\\right)^5$, where $a,b,c \\ldots$ are all numbers $1-4$, since the blocks of H's can range from $1-4$ in length. The sum of all numbers of the form $(1/2)^a$ is $1/2+1/4+1/8+1/16=15/16$, so if there are n blocks of H's before the final five H's, the answer can be rewritten as the sum of all numbers of the form $\\frac 32\\left( \\left(\\frac {15}{16}\\right)^n \\cdot \\left(\\frac 12\\right)^n \\right) \\cdot \\left(\\frac 1{32}\\right)=\\frac 3{64}\\left(\\frac{15}{32}\\right)^n$, where $n$ ranges from $0$ to $\\infty$, since that's how many blocks of H's there can be before the final five. This is an infinite geometric series whose sum is $\\frac{3/64}{1-(15/32)}=\\frac{3}{34}$, so the answer is $\\boxed{37}$.",
+        "tag": [
+            "probability",
+            "Markov process"
+        ]
+    },
+    {
+        "problem": "Let $A$, $B$, $C$ and $D$ be the vertices of a regular tetrahedron each of whose edges measures 1 meter. A bug, starting from vertex $A$, observes the following rule: at each vertex it chooses one of the three edges meeting at that vertex, each edge being equally likely to be chosen, and crawls along that edge to the vertex at its opposite end. Let $p = \\frac n{729}$ be the probability that the bug is at vertex $A$ when it has crawled exactly 7 meters. Find the value of $n$.\n",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "Let $P(n)$ denote the probability that the bug is at $A$ after it has crawled $n$ meters. Since the bug can only be at vertex $A$ if it just left a vertex which is not $A$, we have $P(n + 1) = \\frac13 (1 - P(n))$. We also know $P(0) = 1$, so we can quickly compute $P(1)=0$, $P(2) = \\frac 13$, $P(3) = \\frac29$, $P(4) = \\frac7{27}$, $P(5) = \\frac{20}{81}$, $P(6) = \\frac{61}{243}$ and $P(7) = \\frac{182}{729}$, so the answer is $\\boxed{182}$. One can solve this recursion fairly easily to determine a closed-form expression for $P(n)$.",
+        "tag": [
+            "probability",
+            "Markov process"
+        ]
+    },
+    {
+        "problem": "Alice and Bob play a game with a baseball. On each turn, if Alice has the ball, there is a 1/2 chance that she will toss it to Bob and a 1/2 chance that she will keep the ball. If Bob has the ball, there is a 2/5 chance that he will toss it to Alice, and if he doesn't toss it to Alice, he keeps it. Alice starts with the ball. What is the probability that Alice has the ball again after two turns?",
+        "level": "Level 3",
+        "type": "Counting & Probability",
+        "solution": "We can solve this problem by dividing it into cases. If Alice tosses the baseball to Bob on the first turn, there is a 2/5 chance that Bob will toss it back to her on the next turn. On the other hand, if Alice keeps the baseball on the first turn, there is a 1/2 chance that she will also keep it on the second turn. The total probability is then $\\frac{1}{2}\\cdot\\frac{2}{5} + \\frac{1}{2}\\cdot\\frac{1}{2}=\\boxed{\\frac{9}{20}}$.",
+        "tag": [
+            "probability",
+            "Markov process"
+        ]
+    },
+    {
+        "problem": "Starting at $(0,0),$ an object moves in the coordinate plane via a sequence of steps, each of length one. Each step is left, right, up, or down, all four equally likely. Let $p$ be the probability that the object reaches $(2,2)$ in six or fewer steps. Given that $p$ can be written in the form $m/n,$ where $m$ and $n$ are relatively prime positive integers, find $m+n.$\n",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "It takes an even number of steps for the object to reach $(2,2)$, so the number of steps the object may have taken is either $4$ or $6$.\nIf the object took $4$ steps, then it must have gone two steps N and two steps E, in some permutation. There are $\\frac{4!}{2!2!} = 6$ ways for these four steps of occuring, and the probability is $\\frac{6}{4^{4}}$.\nIf the object took $6$ steps, then it must have gone two steps N and two steps E, and an additional pair of moves that would cancel out, either N/S or W/E. The sequences N,N,N,E,E,S can be permuted in $\\frac{6!}{3!2!1!} = 60$ ways. However, if the first four steps of the sequence are N,N,E,E in some permutation, it would have already reached the point $(2,2)$ in four moves. There are $\\frac{4!}{2!2!}$ ways to order those four steps and $2!$ ways to determine the order of the remaining two steps, for a total of $12$ sequences that we have to exclude. This gives $60-12=48$ sequences of steps. There are the same number of sequences for the steps N,N,E,E,E,W, so the probability here is $\\frac{2 \\times 48}{4^6}$.\nThe total probability is $\\frac{6}{4^4} + \\frac{96}{4^6} = \\frac{3}{64}$, and $m+n= \\boxed{67}$.",
+        "tag": [
+            "probability",
+            "permutation",
+            "Markov process"
+        ]
+    },
+    {
+        "problem": "An ant moves on the following lattice, beginning at the dot labeled $A$. Each minute he moves to one of the dots neighboring the dot he was at, choosing from among its neighbors at random. What is the probability that after 5 minutes he is at the dot labeled $B$? [asy]\ndraw((-2,0)--(2,0));\ndraw((0,-2)--(0,2));\ndraw((1,1)--(1,-1)--(-1,-1)--(-1,1)--cycle);\ndot((0,0)); dot((1,0)); dot((2,0)); dot((-1,0)); dot((-2,0)); dot((0,1)); dot((0,2)); dot((0,-1)); dot((0,-2)); dot((1,1)); dot((1,-1)); dot((-1,-1)); dot((-1,1));\nlabel(\"$A$\",(0,0),SW);\nlabel(\"$B$\",(0,1),NE);\n[/asy]",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "Color the dots red and blue as shown below. Notice that whenever the ant moves, it moves from a red dot to a blue dot or a blue dot to a red dot. So since $A$ is a red dot, it must move to a blue dot, then a red dot, then a blue dot, then a red dot, and end up on a blue dot. There are only four blue dots, and the ant is equally likely to end up on any one of these four, since the diagram is symmetric to a $90^\\circ$ rotation. The probability that the ant ends on $B$ after five minutes is therefore $\\boxed{\\frac{1}{4}}$. [asy]\ndraw((-2,0)--(2,0));\ndraw((0,-2)--(0,2));\ndraw((1,1)--(1,-1)--(-1,-1)--(-1,1)--cycle);\ndot((0,0),red); dot((1,0),blue); dot((2,0),red); dot((-1,0),blue); dot((-2,0),red); dot((0,1),blue); dot((0,2),red); dot((0,-1),blue); dot((0,-2),red); dot((1,1),red); dot((1,-1),red); dot((-1,-1),red); dot((-1,1),red);\nlabel(\"$A$\",(0,0),SW);\nlabel(\"$B$\",(0,1),NE);\n[/asy]",
+        "tag": [
+            "probability",
+            "Markov process"
+        ]
+    },
+    {
+        "problem": "An octahedron consists of two square-based pyramids glued together along their square bases to form a polyhedron with eight faces. Imagine an ant that begins at the top vertex and walks to one of the four adjacent vertices that he randomly selects and calls vertex A. From vertex A, he will then walk to one of the four adjacent vertices that he randomly selects and calls vertex B. What is the probability that vertex B will be the bottom vertex? Express your answer as a common fraction.\n\n[asy]\ndraw((-10,0)--(10,0)--(3,-15)--cycle);\ndraw((-10,0)--(10,0)--(3,15)--cycle);\ndraw((10,0)--(17,7)--(3,-15)--(17,7)--(3,15));\ndraw((-3,7)--(3,15)--(-3,7)--(17,7)--(-3,7)--(-10,0)--(-3,7)--(3,-15),dashed);\n[/asy]",
+        "level": "Level 3",
+        "type": "Counting & Probability",
+        "solution": "Since the ant starts at the top vertex, his next destination, vertex A, is equally likely to be any of the 4 vertices along the middle ring. Each of these vertices is adjacent to 4 other vertices, and since they are in the middle, exactly 1 of those 4 vertices is the bottom vertex. So, regardless of which intermediate vertex he goes to, the ant will end up at the bottom vertex with $\\boxed{\\frac{1}{4}}$ probability, by the symmetry of the 4 intermediate stages.",
+        "tag": [
+            "probability",
+            "Markov process"
+        ]
+    },
+    {
+        "problem": "A moving particle starts at the point $(4,4)$ and moves until it hits one of the coordinate axes for the first time. When the particle is at the point $(a,b)$, it moves at random to one of the points $(a-1,b)$, $(a,b-1)$, or $(a-1,b-1)$, each with probability $\\frac{1}{3}$, independently of its previous moves. The probability that it will hit the coordinate axes at $(0,0)$ is $\\frac{m}{3^n}$, where $m$ and $n$ are positive integers such that $m$ is not divisible by $3$. Find $m + n$.\n",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "One could recursively compute the probabilities of reaching $(0,0)$ as the first axes point from any point $(x,y)$ as\\[P(x,y) = \\frac{1}{3} P(x-1,y) + \\frac{1}{3} P(x,y-1) + \\frac{1}{3} P(x-1,y-1)\\]for $x,y \\geq 1,$ and the base cases are $P(0,0) = 1, P(x,0) = P(y,0) = 0$ for any $x,y$ not equal to zero. We then recursively find $P(4,4) = \\frac{245}{2187}$ so the answer is $245 + 7 = \\boxed{252}$.",
+        "tag": [
+            "probability",
+            "Markov process",
+            "geometry probability"
+        ]
+    },
+    {
+        "problem": "A standard six-sided fair die is rolled four times. The probability that the product of all four numbers rolled is a perfect square is $\\tfrac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.",
+        "level": "Level 5",
+        "type": "Counting & Probability",
+        "solution": "Notice that, other than the number 5, the remaining numbers 1, 2, 3, 4, 6 are only divisible by 2 and/or 3. We can do some cases on the number of 5's rolled (note that there are $6^4 = 1296$ outcomes)...Computing $a_2$, $a_3$, $a_4$ gives $a_2 = 7$, $a_3 = 32$, and $a_4 = 157$. Thus for Case 3, there are 157 outcomes. For case 2, we multiply by $\\binom{4}{2} = 6$ to distribute the two 5's among four rolls. Thus the probability is\n\\[\\frac{1 + 6 \\cdot 7 + 157}{6^4} = \\frac{200}{6^4} = \\frac{25}{162} \\implies m+n = \\boxed{187}.\\]",
+        "tag": [
+            "probability",
+            "Markov process",
+            "sequence"
+        ]
+    }
+]
