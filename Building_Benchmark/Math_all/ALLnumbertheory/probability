@@ -1,0 +1,89 @@
+[
+    {
+        "problem": "Fifty cards, numbered 1-50, are placed in a box. One card is randomly selected. What is the probability that the number on the card is prime and is a multiple of 7? Express your answer as a common fraction.",
+        "level": "Level 2",
+        "type": "Number Theory",
+        "solution": "The only multiple of 7 that is prime is 7. Any other multiple of 7 has at least three positive divisors: 1, 7, and itself. Therefore, the probability that the selected number is both prime and a multiple of 7 is $\\boxed{\\frac{1}{50}}$.",
+        "tag": [
+            "probability",
+            "prime",
+            "number"
+        ]
+    },
+    {
+        "problem": "Each of two boxes contains both black and white marbles, and the total number of marbles in the two boxes is $25.$ One marble is taken out of each box randomly. The probability that both marbles are black is $27/50,$ and the probability that both marbles are white is $m/n,$ where $m$ and $n$ are relatively prime positive integers. What is $m + n$?\n",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "solution": "If we work with the problem for a little bit, we quickly see that there is no direct combinatorics way to calculate $m/n$. The Principle of Inclusion-Exclusion still requires us to find the individual probability of each box.\nLet $a, b$ represent the number of marbles in each box, and without loss of generality let $a>b$. Then, $a + b = 25$, and since the $ab$ may be reduced to form $50$ on the denominator of $\\frac{27}{50}$, $50|ab$. It follows that $5|a,b$, so there are 2 pairs of $a$ and $b: (20,5),(15,10)$.\nCase 1: Then the product of the number of black marbles in each box is $54$, so the only combination that works is $18$ black in first box, and $3$ black in second. Then, $P(\\text{both white}) = \\frac{2}{20} \\cdot \\frac{2}{5} = \\frac{1}{25},$ so $m + n = 26$.\nCase 2: The only combination that works is 9 black in both. Thus, $P(\\text{both white}) = \\frac{1}{10}\\cdot \\frac{6}{15} = \\frac{1}{25}$. $m + n = 26$.\nThus, $m + n = \\boxed{26}$.",
+        "tag": [
+            "probability",
+            "number"
+        ]
+    },
+    {
+        "problem": "Billy and Bobbi each selected a positive integer less than 200. Billy's number is a multiple of 18, and Bobbi's number is a multiple of 24. What is the probability that they selected the same number? Express your answer as a common fraction.",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "solution": "We must first find how many positive integers less than 200 are multiples of both 18 and 24. $18=2\\cdot3^2$ and $24=2^3\\cdot3$, so the LCM of 18 and 24 is $2^3\\cdot3^2=72$. Therefore, an integer is a multiple of both 18 and 24 if and only if it is a multiple of 72.\n\nDividing 200 by 72 gives quotient 2 (and remainder 56), so there are 2 multiples of 72 less than 200.\n\nDividing 200 by 18 gives quotient 11 (and remainder 2), so there are 11 multiples of 18 less than 200.\n\nDividing 200 by 24 gives quotient 8 (and remainder 8), so there are 8 multiples of 24 less than 200.\n\nTherefore, Billy and Bobbi together can pick $11\\cdot8=88$ different two-number combinations, and 2 of these involve them choosing the same number (the two multiples of 72 are the possible duplicate numbers). Thus, the probability that they selected the same number is $2/88=\\boxed{\\frac{1}{44}}$.",
+        "tag": [
+            "number",
+            "probability"
+        ]
+    },
+    {
+        "problem": "A standard six-sided die is rolled, and  $P$ is the product of the five numbers that are visible. What is the largest number that is certain to divide $P$?",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "solution": "Since $6! = 720 = 2^4 \\cdot 3^2 \\cdot 5$, the prime factors of $P$ can consist of at most 2's, 3's, and 5's.  The least possible number of 2's is two, which occurs when 4 is not visible. The least possible number of 3's is one, which occurs when either 3 or 6 is not visible, and the least number of 5's is zero, when 5 is not visible.  Thus $P$ must be divisible by $2^2\\cdot3 =\n\\boxed{12}$, but not necessarily by any larger number.",
+        "tag": [
+            "number",
+            "probability",
+            "remaining"
+        ]
+    },
+    {
+        "problem": "Let $S$ be the set of integers between $1$ and $2^{40}$ whose binary expansions have exactly two $1$'s. If a number is chosen at random from $S,$ the probability that it is divisible by $9$ is $p/q,$ where $p$ and $q$ are relatively prime positive integers. Find $p+q.$\n",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "solution": "A positive integer $n$ has exactly two 1s in its binary representation exactly when $n = 2^j + 2^k$ for $j \\neq k$ nonnegative integers. Thus, the set $S$ is equal to the set $\\{n \\in \\mathbb{Z} \\mid n = 2^j + 2^k \\,\\mathrm{ and }\\, 0 \\leq j < k \\leq 39\\}$. (The second condition ensures simultaneously that $j \\neq k$ and that each such number less than $2^{40}$ is counted exactly once.) This means there are ${40 \\choose 2} = 780$ total such numbers.\nNow, consider the powers of $2$ mod $9$: $2^{6n} \\equiv 1, 2^{6n + 1} \\equiv 2, 2^{6n + 2} \\equiv 4, 2^{6n + 3} \\equiv 8 \\equiv -1,$ $2^{6n + 4} \\equiv 7 \\equiv -2,$ $2^{6n + 5} \\equiv 5 \\equiv -4 \\pmod 9$.\nIt's clear what the pairs $j, k$ can look like. If one is of the form $6n$ (7 choices), the other must be of the form $6n + 3$ (7 choices). If one is of the form $6n + 1$ (7 choices) the other must be of the form $6n + 4$ (6 choices). And if one is of the form $6n + 2$ (7 choices), the other must be of the form $6n + 5$ (6 choices). This means that there are $7\\cdot 7 + 7\\cdot 6 + 7\\cdot 6 = 49 + 42 +42 = 133$ total \"good\" numbers.\nThe probability is $\\frac{133}{780}$, and the answer is $133 + 780 = \\boxed{913}$.",
+        "tag": [
+            "number",
+            "digit",
+            "probability",
+            "set"
+        ]
+    },
+    {
+        "problem": "Ten identical crates each of dimensions $3\\mathrm{ft}\\times 4\\mathrm{ft}\\times 6\\mathrm{ft}$. The first crate is placed flat on the floor. Each of the remaining nine crates is placed, in turn, flat on top of the previous crate, and the orientation of each crate is chosen at random. Let $\\frac {m}{n}$ be the probability that the stack of crates is exactly $41\\mathrm{ft}$ tall, where $m$ and $n$ are relatively prime positive integers. Find $m$.\n",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "solution": "Only the heights matter, and each crate is either 3, 4, or 6 feet tall with equal probability. We have the following:\n\\begin{align*}3a + 4b + 6c &= 41\\\\ a + b + c &= 10\\end{align*}\nSubtracting 3 times the second from the first gives $b + 3c = 11$, or $(b,c) = (2,3),(5,2),(8,1),(11,0)$. The last doesn't work, obviously. This gives the three solutions $(a,b,c) = (5,2,3),(3,5,2),(1,8,1)$. In terms of choosing which goes where, the first two solutions are analogous.\nFor $(5,2,3),(3,5,2)$, we see that there are $2\\cdot\\dfrac{10!}{5!2!3!} = 10\\cdot9\\cdot8\\cdot7$ ways to stack the crates. For $(1,8,1)$, there are $2\\dbinom{10}{2} = 90$. Also, there are $3^{10}$ total ways to stack the crates to any height.\nThus, our probability is $\\dfrac{10\\cdot9\\cdot8\\cdot7 + 90}{3^{10}} = \\dfrac{10\\cdot8\\cdot7 + 10}{3^{8}} = \\dfrac{570}{3^8} = \\dfrac{190}{3^{7}}$. Our answer is the numerator, $\\boxed{190}$.",
+        "tag": [
+            "number",
+            "probability"
+        ]
+    },
+    {
+        "problem": "Two circles, one of radius 5 inches, the other of radius 2 inches, are tangent at point P. Two bugs start crawling at the same time from point P, one crawling along the larger circle at $3\\pi$ inches per minute, the other crawling along the smaller circle at $2.5\\pi$ inches per minute. How many minutes is it before their next meeting at point P?",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "solution": "The circumference of the larger circle, $C_1$, is $2\\cdot5\\pi=10\\pi$. The circumference of the smaller circle, $C_2$, is $2\\cdot2\\pi=4\\pi$. The bug on $C_1$ crawls the circumference in $\\frac{10\\pi}{3\\pi}=\\frac{10}{3}$ minutes, while the bug on $C_2$ crawls the circumference in $\\frac{4\\pi}{2.5\\pi}=\\frac{8}{5}$ minutes. The two bugs will meet at point P in some $t$ minutes, when $t\\div\\frac{10}{3}=\\frac{3t}{10}$ and $t\\div\\frac{8}{5}=\\frac{5t}{8}$ are both integers. We have $\\text{GCD}(3,10)=\\text{GCD}(5,8)=1$, so we have to find the LCM of $10=2\\cdot5$ and $8=2^3$. The LCM is $2^3\\cdot5=40$, so the bugs will next meet in $t=\\boxed{40}$ minutes.",
+        "tag": [
+            "number",
+            "function",
+            "probability"
+        ]
+    },
+    {
+        "problem": "A number is chosen uniformly at random from among the positive integers less than $10^8$. Given that the sum of the digits of the number is 9, what is the probability that the number is prime?",
+        "level": "Level 4",
+        "type": "Number Theory",
+        "solution": "According to the divisibility rule for 9, we know that if the sum of the digits of a number is 9, then it must be divisible by 9. Additionally, we know that 9 itself is not a prime number, since it is divisible by 3. Therefore, no such number that satisfies this condition can possibly be prime because it must be divisible by 9, and thus must have at least one factor besides 1 and itself. Since a number can never be prime if the sum of its digits is 9, the probability that the number is prime is $\\boxed{0}$.",
+        "tag": [
+            "number",
+            "probability",
+            "digit",
+            "prime"
+        ]
+    }
+]
