@@ -1,0 +1,54 @@
+[
+    {
+        "problem": "A triangle has three sides of the following side lengths: $7$, $10$, and $x^2$. What are all of the positive integer values of $x$ such that the triangle exists? Separate your answers using commas and express them in increasing order.",
+        "level": "Level 4",
+        "type": "Algebra",
+        "solution": "For a triangle to exist, the sum of two sides of the triangle must be greater than the third. Therefore, we have three formulas: $x^2+7>10 \\to x^2>3$, $x^2+10>7 \\to x^2>-3$, and $7+10>x^2 \\to x^2<17$. Thus, we have two quadratics, $x^2>3$ and $x^2<17$. Therefore, possible values for $x$ are $\\boxed{2, 3, \\text{ and } 4}$.",
+        "tag": [
+            "algebra",
+            "inequality"
+        ]
+    },
+    {
+        "problem": "How many integers satisfy the inequality $x(3x-4) \\le \\frac{6x^2 - 3x + 5}{10}$?",
+        "level": "Level 4",
+        "type": "Algebra",
+        "solution": "We begin by expanding the left side: $$3x^2-4x \\le \\frac{6x^2 - 3x + 5}{10}$$\n\nThen we multiply both sides by 10 to clear denominators: $$30x^2-40x \\le 6x^2-3x+5$$\n\nRearranging, we have $24x^2 - 37x - 5 \\le 0$. The left-hand side can be factored, giving $(8x+1)(3x-5) \\le 0$. Thus, $8x+1$ and $3x-5$ have opposite signs (or are equal to zero). Then $-\\frac 18 \\le x \\le \\frac{5}{3}$, so $x = 0$ and $x=1$ are the $\\boxed{2}$ integer solutions.",
+        "tag": [
+            "algebra",
+            "equation",
+            "inequality"
+        ]
+    },
+    {
+        "problem": "Betty goes to the store to get flour and sugar.  The amount of flour she buys, in pounds, is at least 6 pounds more than half the amount of sugar, and is no more than twice the amount of sugar.  Find the least number of pounds of sugar that Betty could buy.",
+        "level": "Level 3",
+        "type": "Algebra",
+        "solution": "Suppose Betty buys $f$ pounds of flour and $s$ pounds of sugar.  From the problem, we have $f \\ge 6+s/2$ and $f \\le 2s$.  Putting these together, we have $2s \\ge f \\ge 6 +s/2$. The expression on the left end of this inequality chain must therefore be greater than or equal to the $6+s/2$ on the right, so \\[2s \\ge 6 + s/2 \\implies 3s/2 \\ge 6 \\implies s\\ge \\boxed{4}.\\]",
+        "tag": [
+            "algebra",
+            "inequality"
+        ]
+    },
+    {
+        "problem": "For how many positive integral values of $a$ is it true that $x = 2$ is the only positive integer solution of the system of inequalities $$\n\\begin{cases}\n2x>3x-3\\\\\n3x-a>-6\n\\end{cases}\n$$",
+        "level": "Level 5",
+        "type": "Algebra",
+        "solution": "If we start by looking at the first inequality, we see it is equivalent to $3>x,$ so the only possible positive integers $x$ could be are $x=1$ or $x=2.$ Now, looking at the second equation, if $x=2$ we have $$3(2)-a>-6 \\Rightarrow 12>a$$ If $x=1,$ then $$3(1)-a>-6 \\Rightarrow 9>a.$$ We want $x=2$ to be the only solution. Thus, we must choose $a=9,$ $10,$ $11.$ This is $\\boxed{3}$ possible values.",
+        "tag": [
+            "algebra",
+            "inequality",
+            "set"
+        ]
+    },
+    {
+        "problem": "How many integers are in the solution of the inequality $|x + 4|< 9$?",
+        "level": "Level 4",
+        "type": "Algebra",
+        "solution": "If $x+4\\geq 0$ (or $x\\geq -4$), then the given inequality is the same as $x+4<9$ which means $x<5$. If $x+4<0$ (or $x<-4$), we have $-(x+4)<9$ which means $x+4>-9$ which yields $x>-13$. Thus, the solution is $-13<x<5$. Thus, the integers in this solution are -1 through -12 (12 integers), 1 through 4 (4 integers), and 0 (1 integer). Thus, the total is $12+4+1=\\boxed{17}$ integers.",
+        "tag": [
+            "algebra",
+            "inequality"
+        ]
+    }
+]
