@@ -1,0 +1,65 @@
+[
+    {
+        "problem": "Cindy wishes to arrange her coins into $X$ piles, each consisting of the same number of coins, $Y$. Each pile will have more than one coin and no pile will have all the coins. If there are 13 possible values for $Y$ given all of the restrictions, what is the smallest number of coins she could have?",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "tag": [
+            "number",
+            "set"
+        ],
+        "solution": "If Cindy has $n$ coins, then the possible values for $Y$ are the proper factors of $n$ (recall that a proper factor of $n$ is a factor other than 1 or $n$).  Since there are 13 possible values of $Y$, there are $13+2=15$ factors of $n$.  Our goal is to find the least value of $n$ with exactly 15 factors.  Recall that we can determine the number of positive integer factors of $n$ by prime factorizing $n$, adding 1 to each exponent in the prime factorization, and multiplying the results.  The sets of exponents which would give rise to 15 factors are $\\{14\\}$ and $\\{2,4\\}$.  The least positive integer whose prime factorization has an exponent of 14 is $2^{14}$.  The least positive integer whose prime factorization has exponents 2 and 4 is obtained by assigning these exponents in decreasing order to the smallest two primes, which yields $2^4\\cdot 3^2=144$.  The smaller of these two numbers is 144, so Cindy has $\\boxed{144}$ coins."
+    },
+    {
+        "problem": "Let $S$ be a subset of $\\{1,2,3,...,50\\}$ such that no pair of distinct elements in $S$ has a sum divisible by $7$. What is the maximum number of elements in $S$?\n$\\text{(A) } 6\\quad \\text{(B) } 7\\quad \\text{(C) } 14\\quad \\text{(D) } 22\\quad \\text{(E) } 23$\n",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "tag": [
+            "number",
+            "set",
+            "remaining"
+        ],
+        "solution": "The fact that $x \\equiv 0 \\mod 7 \\Rightarrow 7 \\mid x$ is assumed as common knowledge in this answer.\nFirst, note that there are $8$ possible numbers that are equivalent to $1 \\mod 7$, and there are $7$ possible numbers equivalent to each of $2$-$6 \\mod 7$.\nSecond, note that there can be no pairs of numbers $a$ and $b$ such that $a \\equiv -b$ mod $7$, because then $a+b | 7$. These pairs are $(0,0)$, $(1,6)$, $(2,5)$, and $(3,4)$. Because $(0,0)$ is a pair, there can always be $1$ number equivalent to $0 \\mod 7$, and no more.\nTo maximize the amount of numbers in S, we will use $1$ number equivalent to $0 \\mod 7$, $8$ numbers equivalent to $1$, and $14$ numbers equivalent to $2$-$5$. This is obvious if you think for a moment. Therefore the answer is $1+8+14=\\boxed{23}$ numbers."
+    },
+    {
+        "problem": "Let $R$ be the set of all possible remainders when a number of the form $2^n$, $n$ a nonnegative integer, is divided by 1000. Let $S$ be the sum of the elements in $R$. Find the remainder when $S$ is divided by 1000.\n",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "solution": "Note that $x \\equiv y \\pmod{1000} \\Leftrightarrow x \\equiv y \\pmod{125}$ and $x \\equiv y \\pmod{8}$. So we must find the first two integers $i$ and $j$ such that $2^i \\equiv 2^j \\pmod{125}$ and $2^i \\equiv 2^j \\pmod{8}$ and $i \\neq j$. Note that $i$ and $j$ will be greater than 2 since remainders of $1, 2, 4$ will not be possible after 2 (the numbers following will always be congruent to 0 modulo 8). Note that $2^{100}\\equiv 1\\pmod{125}$ (see Euler's theorem) and $2^0,2^1,2^2,\\ldots,2^{99}$ are all distinct modulo 125 (proof below). Thus, $i = 103$ and $j =3$ are the first two integers such that $2^i \\equiv 2^j \\pmod{1000}$. All that is left is to find $S$ in mod $1000$. After some computation:\\[S = 2^0+2^1+2^2+2^3+2^4+...+2^{101}+ 2^{102} = 2^{103}-1 \\equiv 8 - 1 \\mod 1000 = \\boxed{7}.\\]To show that $2^0, 2^1,\\ldots, 2^{99}$ are distinct modulo 125, suppose for the sake of contradiction that they are not. Then, we must have at least one of $2^{20}\\equiv 1\\pmod{125}$ or $2^{50}\\equiv 1\\pmod{125}$. However, writing $2^{10}\\equiv 25 - 1\\pmod{125}$, we can easily verify that $2^{20}\\equiv -49\\pmod{125}$ and $2^{50}\\equiv -1\\pmod{125}$, giving us the needed contradiction.",
+        "tag": [
+            "number",
+            "remaining",
+            "set"
+        ]
+    },
+    {
+        "problem": "Karlanna places 600 marbles into $m$ total boxes such that each box contains an equal number of marbles.  There is more than one box, and each box contains more than one marble.  For how many values of $m$ can this be done?",
+        "level": "Level 4",
+        "type": "Number Theory",
+        "solution": "If the number of marbles in each box is $n$, then $mn = 600$, so $m$ and $n$ are both divisors of 600. $$ 600 = 2^3 \\cdot 3^1 \\cdot 5^2 \\qquad \\Rightarrow \\qquad t(600) = (3 + 1)(1 + 1)(2 + 1) = 24. $$However, $m > 1$ and $n > 1$, so $m$ can be neither 1 nor 600.  This leaves $24 - 2 = \\boxed{22}$ possible values for $m$.",
+        "tag": [
+            "number",
+            "set"
+        ]
+    },
+    {
+        "problem": "Cindy wishes to arrange her coins into $X$ piles, each consisting of the same number of coins, $Y$. Each pile will have more than one coin and no pile will have all the coins. If there are 13 possible values for $Y$ given all of the restrictions, what is the smallest number of coins she could have?",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "tag": [
+            "number",
+            "set"
+        ],
+        "solution": "If Cindy has $n$ coins, then the possible values for $Y$ are the proper factors of $n$ (recall that a proper factor of $n$ is a factor other than 1 or $n$).  Since there are 13 possible values of $Y$, there are $13+2=15$ factors of $n$.  Our goal is to find the least value of $n$ with exactly 15 factors.  Recall that we can determine the number of positive integer factors of $n$ by prime factorizing $n$, adding 1 to each exponent in the prime factorization, and multiplying the results.  The sets of exponents which would give rise to 15 factors are $\\{14\\}$ and $\\{2,4\\}$.  The least positive integer whose prime factorization has an exponent of 14 is $2^{14}$.  The least positive integer whose prime factorization has exponents 2 and 4 is obtained by assigning these exponents in decreasing order to the smallest two primes, which yields $2^4\\cdot 3^2=144$.  The smaller of these two numbers is 144, so Cindy has $\\boxed{144}$ coins."
+    },
+    {
+        "problem": "Let $S$ be a subset of $\\{1,2,3,...,50\\}$ such that no pair of distinct elements in $S$ has a sum divisible by $7$. What is the maximum number of elements in $S$?\n$\\text{(A) } 6\\quad \\text{(B) } 7\\quad \\text{(C) } 14\\quad \\text{(D) } 22\\quad \\text{(E) } 23$\n",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "tag": [
+            "number",
+            "set",
+            "remaining"
+        ],
+        "solution": "The fact that $x \\equiv 0 \\mod 7 \\Rightarrow 7 \\mid x$ is assumed as common knowledge in this answer.\nFirst, note that there are $8$ possible numbers that are equivalent to $1 \\mod 7$, and there are $7$ possible numbers equivalent to each of $2$-$6 \\mod 7$.\nSecond, note that there can be no pairs of numbers $a$ and $b$ such that $a \\equiv -b$ mod $7$, because then $a+b | 7$. These pairs are $(0,0)$, $(1,6)$, $(2,5)$, and $(3,4)$. Because $(0,0)$ is a pair, there can always be $1$ number equivalent to $0 \\mod 7$, and no more.\nTo maximize the amount of numbers in S, we will use $1$ number equivalent to $0 \\mod 7$, $8$ numbers equivalent to $1$, and $14$ numbers equivalent to $2$-$5$. This is obvious if you think for a moment. Therefore the answer is $1+8+14=\\boxed{23}$ numbers."
+    }
+]
