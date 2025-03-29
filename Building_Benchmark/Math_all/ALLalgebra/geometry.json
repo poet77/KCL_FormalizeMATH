@@ -1,0 +1,42 @@
+[
+    {
+        "problem": "A triangular region is bounded by the two coordinate axes and the line given by the equation $2x + y = 6$. What is the area of the region, in square units?",
+        "level": "Level 3",
+        "type": "Algebra",
+        "solution": "To start, use the equation to solve for the $x$ and $y$ intercepts of the line.  Letting $x$ equal 0, the $y$-intercept is 6.  Letting $y$ equal 0, we find that $2x=6$ so the $x$-intercept is 3.  Using the intercepts, we can graph the line as shown: [asy]size(100,0);\nfill((0,0)--(0,6)--(3,0)--cycle,gray(.7));\nadd(grid(5,8));\ndraw((0,0)--(5,0),linewidth(2));\ndraw((0,0)--(0,8),linewidth(2));\nlabel(\"\",(5,0),E);\nlabel(\"\",(0,8),N);\ndraw((0,6)--(3,0),blue,Arrows);[/asy] We wish to find the area of the shaded region.  This is a right triangle with one base of length 3, and one of length 6.  Therefore, the area is equal to $\\frac{1}{2}\\cdot 3\\cdot 6=\\boxed{9}$.",
+        "tag": [
+            "algebra",
+            "geometry"
+        ]
+    },
+    {
+        "problem": "A quadrilateral has vertices at $(0,1)$, $(3,4)$, $(4,3)$ and $(3,0)$. Its perimeter can be expressed in the form $a\\sqrt2+b\\sqrt{10}$ with $a$ and $b$ integers. What is the sum of $a$ and $b$?",
+        "level": "Level 4",
+        "type": "Algebra",
+        "solution": "We use the distance formula to find the length of each side.\n\nThe distance from $(0, 1)$ to $(3, 4)$ is $\\sqrt{(3 - 0)^2 + (4 - 1)^2} = 3\\sqrt{2}$.\n\nThe distance from $(3, 4)$ to $(4, 3)$ is $\\sqrt{(4 - 3)^2 + (3 - 4)^2} = \\sqrt{2}$.\n\nThe distance from $(4, 3)$ to $(3, 0)$ is $\\sqrt{(3 - 4)^2 + (0 - 3)^2} = \\sqrt{10}$.\n\nThe distance from $(3, 0)$ to $(0, 1)$ is $\\sqrt{(0 - 3)^2 + (1 - 0)^2} = \\sqrt{10}$.\n\nAdding all of these side lengths, we find that the perimeter is $4\\sqrt{2} + 2\\sqrt{10}$. Thus, our final answer is $4 + 2 = \\boxed{6}$.",
+        "tag": [
+            "algebra",
+            "geometry"
+        ]
+    },
+    {
+        "problem": "On the Cartesian plane in which each unit is one foot, a dog is tied to a post on the point $(4,3)$ by a $10$ foot rope. What is the greatest distance the dog can be from the origin?",
+        "level": "Level 5",
+        "type": "Algebra",
+        "solution": "The area the dog can go in is a circle of radius $10$ centered at the point $(4,3)$. The point farthest from $(0,0)$ in the circle would be the point on the circle's circumference which is on the same diameter as $(0,0)$ but on the other side of the center of the circle.\nThe distance from the origin to the center of the circle, by the distance formula, is $\\sqrt{(4-0)^2+(3-0)^2}=\\sqrt{16+9}=5$. As the radius of the circle is $10$, the distance from the origin to the point in the circle farthest from the origin is $\\boxed{15}$.",
+        "tag": [
+            "algebra",
+            "geometry"
+        ]
+    },
+    {
+        "problem": "Circles with centers of $(2,2)$ and $(17,10)$ are both tangent to the $x$-axis. What is the distance between the closest points of the two circles?",
+        "level": "Level 5",
+        "type": "Algebra",
+        "solution": "The radius of the first circle is 2, and the radius of the second circle is 10.  The distances between the centers of the circles is $\\sqrt{(17 - 2)^2 + (10 - 2)^2} = 17,$ so the distance between the two closest points of the two circle is $17 - 2 - 10 = \\boxed{5}.$",
+        "tag": [
+            "algebra",
+            "geometry"
+        ]
+    }
+]
