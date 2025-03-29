@@ -1,5 +1,280 @@
 [
     {
+        "problem": "At the beginning of a program, the 105 members of a marching band stand in a rectangular formation named Formation $A$. All of the band members then move into Formation $B$, which is a different rectangular formation with six more rows, but with two fewer band members per row. How many rows are in Formation $A$?",
+        "level": "Level 3",
+        "type": "Number Theory",
+        "solution": "Let there be $x$ rows with $y$ band members per row in Formation $A$. Then we have $xy=105$. From the information about Formation $B$, we have $(x+6)(y-2)=105$. Multiplying and substituting $xy=105$, we get $xy-2x+6y-12=105-2x+6y-12=105\\Leftrightarrow -2x+6y=12\\Leftrightarrow x=3y-6$. We now substitute $3y-6$ for $x$ in $xy=105$ and use the quadratic formula to solve the resulting quadratic equation, $3y^2-6y-105=0$. The positive solution, $y=7$, gives $x=15$. Thus, there are $\\boxed{15}$ rows in Formation $A$.",
+        "tag": [
+            "number",
+            "equation",
+            "function"
+        ]
+    },
+    {
+        "problem": "Recall that if $b$ is a residue $\\pmod{m}$, then the modular inverse of $b$ is the residue $c$ for which $bc \\equiv 1\\pmod{m}$. The table below shows the inverses of the first 9 positive residues modulo 47.  \\begin{tabular}{c|ccccccccc}\n$b$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\\\ \\hline\ninverse of $\\,b$ & 1 & 24 & 16 & 12 & 19 & 8 & 27 & 6 & 21\n\\end{tabular}Find the modular inverse of $35\\pmod{47}$.\n\nExpress your answer as an integer from $0$ to $46$, inclusive.",
+        "level": "Level 4",
+        "type": "Number Theory",
+        "solution": "We want to find the residue $c$ such that $35c \\equiv 1 \\pmod{47}$. Recall that, since 35 is relatively prime to 47, this inverse exists and is unique. To make use of the table we are given, we notice that $35 = 5\\cdot 7$. We can multiply both sides of $35c \\equiv 1\\pmod{47}$ by the inverse of 5 to obtain  \\begin{align*}\n19\\cdot 5 \\cdot 7 \\cdot c &\\equiv 19\\cdot 1 \\pmod{47} \\implies \\\\\n(19\\cdot 5) \\cdot 7 \\cdot c &\\equiv 19 \\pmod{47} \\implies \\\\\n1 \\cdot 7 \\cdot c &\\equiv 19 \\pmod{47}. \\\\\n\\end{align*}Now we can multiply both sides by 27, the inverse of 7, to find  \\begin{align*}\n27\\cdot 7 \\cdot c &\\equiv 27\\cdot 19 \\pmod{47} \\implies \\\\\nc &\\equiv 513 \\pmod{47}.\n\\end{align*}Subtracting 470 from 513 does not change its residue (mod 47), so we have $c\\equiv 43\\pmod{47}$. Since $0\\leq 43 < 47$, $\\boxed{43}$ is the desired residue.\n\nRemark: More generally, the approach above shows that $(ab)^{-1}=b^{-1}a^{-1}$, where $b^{-1}$ denotes the modular inverse of $b$.",
+        "tag": [
+            "number",
+            "remaining",
+            "function"
+        ]
+    },
+    {
+        "problem": "Given that $p\\ge 7$ is a prime number, evaluate $$1^{-1} \\cdot 2^{-1} + 2^{-1} \\cdot 3^{-1} + 3^{-1} \\cdot 4^{-1} + \\cdots + (p-2)^{-1} \\cdot (p-1)^{-1} \\pmod{p}.$$",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "solution": "As $p$ is a prime number, it follows that the modular inverses of $1,2, \\ldots, p-1$ all exist. We claim that $n^{-1} \\cdot (n+1)^{-1} \\equiv n^{-1} - (n+1)^{-1} \\pmod{p}$ for $n \\in \\{1,2, \\ldots, p-2\\}$, in analogue with the formula $\\frac{1}{n(n+1)} = \\frac{1}{n} - \\frac{1}{n+1}$. Indeed, multiplying both sides of the congruence by $n(n+1)$, we find that $$1 \\equiv n(n+1) \\cdot (n^{-1} - (n+1)^{-1}) \\equiv (n+1) - n \\equiv 1 \\pmod{p},$$as desired. Thus, \\begin{align*}&1^{-1} \\cdot 2^{-1} + 2^{-1} \\cdot 3^{-1} + 3^{-1} \\cdot 4^{-1} + \\cdots + (p-2)^{-1} \\cdot (p-1)^{-1} \\\\ &\\equiv 1^{-1} - 2^{-1} + 2^{-1} - 3^{-1} + \\cdots - (p-1)^{-1} \\pmod{p}.\\end{align*}This is a telescoping series, which sums to $1^{-1} - (p-1)^{-1} \\equiv 1 - (-1)^{-1} \\equiv \\boxed{2} \\pmod{p}$, since the modular inverse of $-1$ is itself.",
+        "tag": [
+            "number",
+            "remaining",
+            "function"
+        ]
+    },
+    {
+        "problem": "The sum of two positive integers $a$ and $b$ is 80.  What is the largest possible value of $\\gcd(a,b)$?",
+        "level": "Level 3",
+        "type": "Number Theory",
+        "solution": "If $a = b = 40$, then $a + b = 80$, and $\\gcd(a,b) = \\gcd(40,40) = 40$.  If one of $a$ and $b$ is greater than 40, then the other is less than 40, in which case $\\gcd(a,b)$ must also be less than 40.  Therefore, the largest possible value of $\\gcd(a,b)$ is $\\boxed{40}$.",
+        "tag": [
+            "number",
+            "function"
+        ]
+    },
+    {
+        "problem": "If $a$ and $b$ are positive integers such that $\\gcd(a,b)=210$, $\\mathop{\\text{lcm}}[a,b]=210^3$, and $a<b$, how many possible values are there for $a$?",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "solution": "Note that the prime factorization of $210$ is $2\\cdot 3\\cdot 5\\cdot 7$, and so the prime factorization of $210^3$ is $2^3\\cdot 3^3\\cdot 5^3\\cdot 7^3$.\n\nGiven that $\\gcd(a,b)=210$ and $\\mathop{\\text{lcm}}[a,b]=210^3$, we must have $a=2^k\\cdot 3^\\ell\\cdot 5^m\\cdot 7^n$ and $b=2^p\\cdot 3^q\\cdot 5^r\\cdot 7^s$ where each of the ordered pairs $(k,p),(\\ell,q),(m,r),(n,s)$ is either $(1,3)$ or $(3,1)$. Therefore, if we ignore the condition $a<b$, there are independently two choices for each of $k$, $\\ell$, $m$, and $n$, and these choices determine both of the numbers $a$ and $b$. We have $2\\cdot 2\\cdot 2\\cdot 2=16$ ways to make all four choices.\n\nHowever, these $16$ sets of choices will generate each possible pair of values for $a$ and $b$ in both possible orders. Half of these choices will satisfy $a<b$ and half will satisfy $a>b$. So, imposing the condition $a<b$, we see that there are $\\frac{16}{2}=\\boxed{8}$ possible choices for $a$.",
+        "tag": [
+            "number",
+            "function"
+        ]
+    },
+    {
+        "problem": "What is the residue modulo $16$ of the sum of the modulo $16$ inverses of the first $8$ positive odd integers?\n\nExpress your answer as an integer from $0$ to $15$, inclusive.",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "solution": "Since $16$ is even and only has a prime factor of $2$, all of the odd numbers are relatively prime with $16$ and their modular inverses exist. Furthermore, the inverses must be distinct: suppose that $a^{-1} \\equiv b^{-1} \\pmod{16}$. Then, we can multiply both sides of the congruence by $ab$ to obtain that $b \\equiv ab \\cdot a^{-1} \\equiv ab \\cdot b^{-1} \\equiv a \\pmod{16}$.\n\nAlso, the modular inverse of an odd integer $\\mod{16}$ must also be odd: if the modular inverse of $m$ was of the form $2n$, then $2mn = 16k + 1$, but the left-hand side is even and the right-hand side is odd.\n\nThus, the set of the inverses of the first $8$ positive odd integers is simply a permutation of the first $8$ positive odd integers. Then, \\begin{align*}&1^{-1} + 3^{-1} + \\cdots + 15^{-1} \\\\\n&\\equiv 1 + 3 + \\cdots + 15 \\\\ &\\equiv 1 + 3 + 5 + 7 + (-7) + (-5) + (-3) + (-1) \\\\ &\\equiv \\boxed{0} \\pmod{16}.\\end{align*}",
+        "tag": [
+            "number",
+            "remaining",
+            "function"
+        ]
+    },
+    {
+        "problem": "For any integer $x$, $\\boxed{x}$ is defined to be the product of all its factors greater than 1 not including $x$. Find $\\fbox{12}$.",
+        "level": "Level 3",
+        "type": "Number Theory",
+        "solution": "For every divisor $d$ of $12$, the number $12/d$ is also a divisor of $12$. Their product is $d \\cdot (12/d) = 12$. It follows that every divisor can be paired with another divisor of $12$ such that their product is $12 = 2^2 \\cdot 3$. There are $(2+1)(1+1) = 6$ divisors of $12$, namely $1,2,3,4,6,12$. Thus, the product of the divisors is given by $12^{6/2} = 12^3.$ Since we need to exclude $12$ itself, the answer is $\\frac{12^3}{12} = \\boxed{144}$.",
+        "tag": [
+            "number",
+            "function"
+        ]
+    },
+    {
+        "problem": "Let $n$ be the inverse of $2\\pmod{17}$. That is, let $n$ be the integer $0\\leq n < 17$ for which $2n \\equiv 1 \\pmod{17}$. What is $\\left(2^n\\right)^2 - 2 \\pmod{17}$?\n\nExpress your answer as an integer from $0$ to $16$, inclusive.",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "solution": "Since $9 \\cdot 2 = 18 = 17 + 1$, it follows that $9$ is the modular inverse of $2$, modulo $17$. Thus, $2^n \\equiv 2^9 \\pmod{17}$. After computing some powers of $2$, we notice that $2^4 \\equiv -1 \\pmod{17}$, so $2^8 \\equiv 1 \\pmod{17}$, and $2^9 \\equiv 2 \\pmod{17}$. Thus, $(2^9)^2 \\equiv 4 \\pmod{17}$, and $(2^9)^2 - 2 \\equiv \\boxed{2} \\pmod{17}$.\n\nNotice that this problem implies that $\\left(a^{2^{-1}}\\right)^2 \\not\\equiv a \\pmod{p}$ in general, so that certain properties of modular inverses do not extend to exponentiation (for that, one needs to turn to Fermat's Little Theorem or other related theorems).",
+        "tag": [
+            "number",
+            "remaining",
+            "function"
+        ]
+    },
+    {
+        "problem": "The product of two positive integers is $144$. The ratio of their least common multiple to their greatest common divisor is equal to $9$. What is the sum of the two integers?",
+        "level": "Level 3",
+        "type": "Number Theory",
+        "solution": "Let the integers be $a$ and $b$. Then $ab = 144$ and $$\\frac{\\mathop{\\text{lcm}}[a,b]}{\\gcd(a,b)} = 9.$$The identity $ab = \\gcd(a,b) \\cdot \\mathop{\\text{lcm}}[a,b]$ yields that $$ab = \\gcd(a,b) \\cdot \\mathop{\\text{lcm}}[a,b] = 144.$$Multiplying the two equations above yields that $\\big(\\mathop{\\text{lcm}}[a,b]\\big)^2 = 9 \\cdot 144 = 36^2$, so $\\mathop{\\text{lcm}}[a,b] = 36$.  Then $\\gcd(a,b) = 144/36 = 4$.\n\nSince $\\gcd(a,b) = 4$ is a divisor of both $a$ and $b$, $a$ must have at least two factors of 2, and $b$ must have at least two factors of 2.  Therefore, their product $ab$ has at least four factors of 2.  But $ab = 144 = 2^4 \\cdot 3^2$, which has exactly four factors of 2, so both $a$ and $b$ have exactly two factors of 2.\n\nSince $ab = 2^4 \\cdot 3^2$, the only primes that can divide $a$ and $b$ are 2 and 3.  Let $a = 2^2 \\cdot 3^u$ and let $b = 2^2 \\cdot 3^v$.  Then $\\gcd(a,b) = 2^2 \\cdot 3^{\\min\\{u,v\\}}$.  But $\\gcd(a,b) = 4 = 2^2 \\cdot 3^0$, so $\\min\\{u,v\\} = 0$, which means that either $u = 0$ or $v = 0$.\n\nHence, one of the numbers $a$ and $b$ must be 4, and the other number must be $144/4 = 36$.  Therefore, the sum of the numbers is $4 + 36 = \\boxed{40}$.",
+        "tag": [
+            "number",
+            "function"
+        ]
+    },
+    {
+        "problem": "One morning each member of Angela's family drank an 8-ounce mixture of coffee with milk. The amounts of coffee and milk varied from cup to cup, but were never zero. Angela drank a quarter of the total amount of milk and a sixth of the total amount of coffee. How many people are in the family?",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "solution": "Suppose that the whole family drank $x$ cups of milk and $y$ cups of coffee. Let $n$ denote the number of people in the family. The information given implies that $\\frac{x}{4}+\\frac{y}{6}=\\frac{x+y}{n}$. This leads to \\[\n3x(n-4)=2y(6-n).\n\\]Since $x$ and $y$ are positive, the only positive integer $n$ for which both sides have the same sign is $n=\\boxed{5}$.",
+        "tag": [
+            "number",
+            "function"
+        ]
+    },
+    {
+        "problem": "Compute the least common multiple of $9999$ and $100{,}001$.",
+        "level": "Level 4",
+        "type": "Number Theory",
+        "solution": "Recall the identity $\\mathop{\\text{lcm}}[a,b]\\cdot \\gcd(a,b)=ab$, which holds for all positive integers $a$ and $b$. Thus, $$\\mathop{\\text{lcm}}[9999,100001] = \\frac{9999\\cdot 100001}{\\gcd(9999,100001)},$$so we focus on computing $\\gcd(9999,100001)$.\n\nNotice that $100001 = 99990+11 = 10(9999)+11$. Therefore, any common divisor of $100001$ and $9999$ must be a divisor of $100001-10\\cdot 9999 = 11$. The possibilities are $1$ and $11$.\n\nIn fact, $9999=11\\cdot 909$, so $11$ is a divisor of $9999$ and $100001$, which gives $\\gcd(9999,100001) = 11$.\n\nTherefore, \\begin{align*}\n\\mathop{\\text{lcm}}[9999,100001] &= \\frac{9999\\cdot 100001}{11} \\\\\n&= 909\\cdot 100001 \\\\\n&= 909\\cdot 100000 + 909 \\\\\n&= \\boxed{90{,}900{,}909}.\n\\end{align*}",
+        "tag": [
+            "number",
+            "function"
+        ]
+    },
+    {
+        "problem": "Suppose $a$ and $b$ are positive integers such that the units digit of $a$ is $2$, the units digit of $b$ is $4$, and the greatest common divisor of $a$ and $b$ is $6$.\n\nWhat is the smallest possible value of the least common multiple of $a$ and $b$?",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "solution": "Both $a$ and $b$ must be divisible by $6$, so the choices for $a$ are $$12, 42, 72, 102, 132, \\ldots\\phantom{~.}$$and the choices for $b$ are $$24, 54, 84, 114, 144, \\ldots~.$$We know that $\\mathop{\\text{lcm}}[a,b]\\cdot \\gcd(a,b)=ab$ (since this identity holds for all positive integers $a$ and $b$). Therefore, $$\\mathop{\\text{lcm}}[a,b] = \\frac{ab}{6},$$so in order to minimize $\\mathop{\\text{lcm}}[a,b]$, we should make $ab$ as small as possible. But we can't take $a=12$ and $b=24$, because then $\\gcd(a,b)$ would be $12$, not $6$. The next best choice is either $a=12,b=54$ or $a=42,b=24$. Either of these pairs yields $\\gcd(a,b)=6$ as desired, but the first choice, $a=12$ and $b=54$, yields a smaller product. Hence this is the optimal choice, and the smallest possible value for $\\mathop{\\text{lcm}}[a,b]$ is $$\\mathop{\\text{lcm}}[12,54] = \\frac{12\\cdot 54}{6} = 2\\cdot 54 = \\boxed{108}.$$",
+        "tag": [
+            "number",
+            "function"
+        ]
+    },
+    {
+        "problem": "What is the largest $n$ such that $a = 2^{306} \\cdot 3^{340}$ is a perfect $n$th power?",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "solution": "We claim that $a$ is a perfect $n$th power if and only if $n$ divides both $306$ and $340$. To see this, suppose that $n \\mid 306$ and $n \\mid 340$. Then $2^{\\frac{306}{n}} 3^{\\frac{340}{n}}$ is an integer whose $n$th power is $a$. Conversely, suppose $b^n = a$. Then the only primes which divide $b$ are $2$ and $3$. Choose $c$ and $d$ so that $b=2^{c} 3^{d}$. Then $b^n = 2^{cn} 3^{dn} = 2^{306} 3^{340}$, which implies $n \\mid 306$ and $n \\mid 340$. This concludes our proof of the claim that $a$ is an $n$th power if and only if $n$ divides both $306$ and $340$.\n\nThe largest number which simultaneously divides two numbers is their GCD. Using the Euclidean algorithm, the GCD of $306$ and $340$ is the same as the GCD of $340$ and $340-306 = 34$. Since $34$ divides $340$, the GCD of these two is $34$, so the largest possible $n$ is $\\boxed{34}$.",
+        "tag": [
+            "number",
+            "function"
+        ]
+    },
+    {
+        "problem": "The greatest common divisor of two positive integers less than $100$ is equal to $3$. Their least common multiple is twelve times one of the integers. What is the largest possible sum of the two integers?",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "solution": "Let the two integers be $a$ and $b$. Then, $\\gcd(a,b) = 3$ and, without loss of generality, let $\\mathop{\\text{lcm}}[a,b] = 12a$. Multiplying the two equations yields that $\\mathop{\\text{lcm}}[a,b] \\cdot \\gcd(a,b) = 36a$. Using the identity that $ab = \\mathop{\\text{lcm}}[a,b] \\cdot \\gcd(a,b)$, it follows that $ab = 36a$, and so $b = 36$.\n\nSince $\\gcd(a,b) = 3$, we know $a$ is divisible by 3.  However, $a$ cannot be divisible by $3^2 = 9$, because if $a$ was divisible by 9, then $\\gcd(a,b)$ would be divisible by 9 as well, since 36 is divisible by 9.  This cannot occur since $\\gcd(a,b) = 3$.  Similarly, $a$ cannot be divisible by 2, because if $a$ were divisible by 2, then $\\gcd(a,b)$ would be divisible by 2 as well, since 36 is divisible by 2.\n\nIn summary, $a$ is a multiple of 3, but not 9, and $a$ is not divisible by 2.  The largest such number less than 100 is 93.  We can verify that $\\mathop{\\text{lcm}}[93,36] = 1116 = 12 \\cdot 93$, so the largest possible sum of $a + b$ is $36 + 93 = \\boxed{129}$.",
+        "tag": [
+            "number",
+            "function"
+        ]
+    },
+    {
+        "problem": "The product of the proper positive integer factors of $n$ can be written as $n^{(ax+b)/c}$, where $x$ is the number of positive divisors $n$ has, $c$ is a positive integer, and the greatest common factor of the three integers $a$, $b$, and $c$ is $1$. What is $a+b+c$?",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "solution": "Recall that by pairing up divisors of $n$, we can show that the product of the positive integer factors of $n$ is $n^\\frac{x}{2}$. We divide this formula by $n$ to get the product of the proper positive integer factors of $n$, and we obtain $\\frac{n^\\frac{x}{2}}{n} = n^{\\frac{x}{2}-1} = n^\\frac{x-2}{2}$. Therefore, $a = 1$, $b = -2$, and $c = 2$, so $a+b+c = \\boxed{1}$.",
+        "tag": [
+            "number",
+            "function"
+        ]
+    },
+    {
+        "problem": "If the least common multiple of $A$ and $B$ is $1575$, and the ratio of $A$ to $B$ is $3:7$, then what is their greatest common divisor?",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "solution": "Since the ratio of $A$ to $B$ is $3:7$, there is an integer $k$ for which $A=3k$ and $B=7k$. Moveover, $k$ is the greatest common divisor of $A$ and $B$, since 3 and 7 are relatively prime. Recalling the identity $\\mathop{\\text{lcm}}[A,B]\\cdot\\gcd(A,B)=AB$, we find that $1575k=(3k)(7k),$ which implies $k=1575/21=\\boxed{75}$.",
+        "tag": [
+            "number",
+            "function"
+        ]
+    },
+    {
+        "problem": "The greatest common divisor of positive integers $m$ and $n$ is 6. The least common multiple of $m$ and $n$ is 126. What is the least possible value of $m+n$?",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "solution": "Since the GCD of $m$ and $n$ is 6, $m = 6x$ and $n = 6y$ for some integers $x$ and $y$.  Note that minimizing $m + n = 6x + 6y = 6(x + y)$ is equivalent to minimizing $x + y$.\n\nThe LCM of $m$ and $n$ is $126=2\\cdot3^2\\cdot7= 6 \\cdot 3 \\cdot 7$, so one of $x$ and $y$ is divisible by 3 and one is divisible by 7.  Then we can minimize $x + y$ by setting $x$ and $y$ to be 3 and 7 in some order.  Therefore, the least possible value of $m+n$ is $6(3 + 7) = \\boxed{60}$.",
+        "tag": [
+            "number",
+            "function"
+        ]
+    },
+    {
+        "problem": "Let $n$ be the smallest positive integer such that $mn$ is a perfect $k$th power of an integer for some $k \\ge 2$, where $m=2^{1980} \\cdot 3^{384} \\cdot 5^{1694} \\cdot 7^{343}$. What is $n+k$?",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "solution": "Note $1980 = 2^23^25^111^1$, $384=2^7 3^1$, $1694 = 2^1 7^1 11^2$, and $343=7^3$. Their GCD is $1$, so the integer $m$ is not a perfect power (i.e., we can't take $n=1$). We need $n=2^a3^b5^c7^d$ (any other prime factors of $n$ would be superfluous) such that $(1980+a,384+b,1694+c,343+d)$ has GCD greater than $1$ (i.e., we must use $n$ to \"modify\" the exponents of the primes in the prime factorization to get an integer $mn$ which actually is a perfect power).\n\nFirst we search for a prime which divides at least three of the exponents $1980$, $384$, $1694$, and $343$, which would mean we only have to modify one of them (hence have $n$ be a prime power). This, however, is only true of the prime $2$, and the exponent not divisible by $2$ is $343$, which is the exponent of 7 in $m$. Therefore, to modify only one of the exponents, we would need $(a,b,c,d)=(0,0,0,1)$, giving $n=7$. But there is one number less than $7$ which has more than one prime divisor, and that is $6$. Furthermore, $7 \\mid 1694, 343$, and $1980 \\equiv 384 \\equiv -1 \\mod{7}$, so if we set $a=b=1$ and $c=d=0$, we find that $(1980+a,384+b,1694+c,343+d)$ has $7$ as a divisor.\n\nThis gives $n=6$, which is therefore the smallest value such that $mn$ is a perfect power. In this case, $mn$ is a perfect $7$th power, so $k=7$. Thus $n+k=6+7=\\boxed{13}$.",
+        "tag": [
+            "number",
+            "function"
+        ]
+    },
+    {
+        "problem": "How many fractions in the form $\\frac{n}{99}$, with $0<n<99$, are in lowest terms?",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "solution": "The prime factorization of 99 is $3^2\\cdot11$. So for $\\frac{n}{99}$ to be in lowest terms, $n$ cannot be divisible by 3 or 11. The possible values of $n$ are from 1 to 98, inclusive, so there are 98 possible values for $n$. We can find the number of multiples of 3 and multiples of 11 and subtract from 98 to get the number of values that aren't divisible by 3 or 11. For multiples of 3, we go from 3 to 96, or $3\\cdot1$ to $3\\cdot32$, so there are 32 multiples of 3 from 1 to 98, inclusive. For multiples of 11, we go from 11 to 88, so there are 8 multiples of 11 from 1 to 98, inclusive. We have to make sure we don't double-count the numbers that are multiples of both 3 and 11: 33 and 66. So there are $32+8-2=38$ values of $n$ that are divisible by 3 or 11. That means there are $98-38=\\boxed{60}$ values of $n$ for which $\\frac{n}{99}$ is in lowest terms.",
+        "tag": [
+            "number",
+            "function"
+        ]
+    },
+    {
+        "problem": "Find the greatest common factor of $1001$ and $2431.$",
+        "level": "Level 3",
+        "type": "Number Theory",
+        "solution": "By the Euclidean algorithm for computing greatest common factors, we have  \\[\n\\text{gcf}(1001,2431)=\\text{gcf}(1001,2431-2\\cdot 1001) = \\text{gcf}(1001,429).\n\\]Applying the Euclidean algorithm again, we get \\[\n\\text{gcf}(1001,429)=\\text{gcf}(429,1001-2\\cdot 429)= \\text{gcf}(429,143).\n\\]Recognizing 429 as $3\\times 143$, we conclude that the greatest common factor of 1001 and 2431 is $\\boxed{143}.$",
+        "tag": [
+            "number",
+            "function"
+        ]
+    },
+    {
+        "problem": "Emma plays with her square unit tiles by arranging all of them into different shaped rectangular figures. (For example, a $5$ by $7$ rectangle would use $35$ tiles and would be considered the same rectangle as a $7$ by $5$ rectangle). Emma can form exactly ten different such rectangular figures that each use all of her tiles. What is the least number of tiles Emma could have?",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "solution": "Let $k$ be the number of tiles.  There are two cases: If $k$ has twenty divisors, then we can divide them into ten pairs, which gives us 10 ways to write $k$ as the product of two positive integers.  Alternatively, if $k$ has 19 divisors, then $k$ is a square.  So other than the square case, there are $(19 - 1)/2 = 9$ ways to write $k$ as the product of two positive integers, which gives us a total of $9 + 1 = 10$ ways.\n\nIf the prime factorization of $k$ is $p_1^{e_1} p_2^{e_2} \\dotsm p_n^{e_n},$ then the number of divisors of $k$ is\n\\[(e_1 + 1)(e_2 + 1) \\dotsm (e_n + 1).\\]Note that $e_i \\ge 1$ for each $i,$ so each factor $e_i + 1$ is at least 2.\n\nIf $k$ has 19 divisors, then $k$ must be of the form $p^{18},$ where $p$ is prime.  The smallest number of this form is $2^{18} = 262144.$\n\nOtherwise, $k$ has 20 divisors.  We want to write 20 as the product of factors, each of which are least 2.  Here are all the ways:\n\\[20 = 2 \\cdot 10 = 4 \\cdot 5 = 2 \\cdot 2 \\cdot 5.\\]Thus, we have the following cases:\n\n(i). $k=p^{19}$ for some prime $p.$ The smallest such $k$ is attained when $p=2,$ which gives $k=2^{19}.$\n\n(ii). $k=pq^9$ for distinct primes $p$ and $q.$ The smallest such $k$ is attained when $p = 3$ and $q = 2$ which gives $k=2^9\\cdot3.$\n\n(iii). $k=p^3 q^4$ for distinct primes $p$ and $q.$ The smallest such $k$ is attained when $p = 3$ and $q = 2,$ which gives $k=2^4\\cdot3^3=432.$\n\n(iv). $k=pqr^4$ for distinct primes $p,$ $q,$ and $r.$ The smallest such $k$ is attained when $p = 3,$ $q = 5,$ and $r = 2,$ which gives $k=2^4\\cdot3\\cdot5=240.$\n\nTherefore, the least number of tiles Emma could have is $\\boxed{240}$ tiles.",
+        "tag": [
+            "number",
+            "function"
+        ]
+    },
+    {
+        "problem": "For some positive integer $n$, the number $110n^3$ has $110$ positive integer divisors, including $1$ and the number $110n^3$. How many positive integer divisors does the number $81n^4$ have?\n$\\textbf{(A) }110\\qquad\\textbf{(B) }191\\qquad\\textbf{(C) }261\\qquad\\textbf{(D) }325\\qquad\\textbf{(E) }425$\n",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "solution": "Since the prime factorization of $110$ is $2 \\cdot 5 \\cdot 11$, we have that the number is equal to $2 \\cdot 5 \\cdot 11 \\cdot n^3$. This has $2 \\cdot 2 \\cdot 2=8$ factors when $n=1$. This needs a multiple of 11 factors, which we can achieve by setting $n=2^3$, so we have $2^{10} \\cdot 5 \\cdot 11$ has $44$ factors. To achieve the desired $110$ factors, we need the number of factors to also be divisible by $5$, so we can set $n=2^3 \\cdot 5$, so $2^{10} \\cdot 5^4 \\cdot 11$ has $110$ factors. Therefore, $n=2^3 \\cdot 5$. In order to find the number of factors of $81n^4$, we raise this to the fourth power and multiply it by $81$, and find the factors of that number. We have $3^4 \\cdot 2^{12} \\cdot 5^4$, and this has $5 \\cdot 13 \\cdot 5=\\boxed{325}$ factors.",
+        "tag": [
+            "number",
+            "function"
+        ]
+    },
+    {
+        "problem": "A day can be evenly divided into 86,400 periods of 1 second; 43,200 periods of each 2 seconds; or in many other ways. In total, how many ways are there to divide a day into $n$ periods of $m$ seconds, where $n$ and $m$ are positive integers?",
+        "level": "Level 4",
+        "type": "Number Theory",
+        "solution": "A day has $86,\\!400$ seconds. $86,\\!400=2^7\\cdot3^3\\cdot5^2$, so 86,400 has $(7+1)(3+1)(2+1)=96$ positive factors. Thus there are $96/2=48$ (unordered) pairs of factors each of whose product is $86,\\!400.$ Since ``$n$ periods of $m$ seconds'' is different from ``$m$ periods of $n$ seconds,'' we need to multiply $48$ by $2$ to get our final answer of $\\boxed{96}$ ways.",
+        "tag": [
+            "number",
+            "function"
+        ]
+    },
+    {
+        "problem": "Suppose that $a$ and $b$ are positive integers for which $a$ has $3$ factors and $b$ has $a$ factors. If $b$ is divisible by $a$, then what is the least possible value of $b?$",
+        "level": "Level 3",
+        "type": "Number Theory",
+        "solution": "Since $a$ has three factors, it is the square of a prime. The smallest such square is $a=2^2=4,$ so we look to find the smallest positive integer $b$ with $4$ factors. The smallest positive integers with four factors are 6 and 8, of which $\\boxed{8}$ is divisible by 4. It is easy to check that no smaller value of $b$ would work for a different choice of $a$, because the next smallest square is 9, which is greater than 8.",
+        "tag": [
+            "number",
+            "function"
+        ]
+    },
+    {
+        "problem": "The least common multiple of two integers is 36 and 6 is their greatest common divisor. What is the product of the two numbers?",
+        "level": "Level 2",
+        "type": "Number Theory",
+        "solution": "Let $a$ and $b$ be the two integers. We can use the identity $\\gcd(a,b) \\cdot \\mathop{\\text{lcm}}[a,b] = ab$. Substituting gives that the answer is $36 \\cdot 6 = \\boxed{216}$.",
+        "tag": [
+            "number",
+            "function"
+        ]
+    },
+    {
+        "problem": "What is the greatest integer less than or equal to\\[\\frac{3^{100}+2^{100}}{3^{96}+2^{96}}?\\]\n$\\textbf{(A) }80\\qquad \\textbf{(B) }81 \\qquad \\textbf{(C) }96 \\qquad \\textbf{(D) }97 \\qquad \\textbf{(E) }625\\qquad$\n",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "tag": [
+            "number",
+            "function"
+        ],
+        "solution": "We write\\[\\frac{3^{100}+2^{100}}{3^{96}+2^{96}}=\\frac{3^{96}}{3^{96}+2^{96}}\\cdot\\frac{3^{100}}{3^{96}}+\\frac{2^{96}}{3^{96}+2^{96}}\\cdot\\frac{2^{100}}{2^{96}}=\\frac{3^{96}}{3^{96}+2^{96}}\\cdot 81+\\frac{2^{96}}{3^{96}+2^{96}}\\cdot 16.\\]Hence we see that our number is a weighted average of 81 and 16, extremely heavily weighted toward 81. Hence the number is ever so slightly less than 81, so the answer is $\\boxed{80}$."
+    },
+    {
+        "problem": "For positive integers $n,$ let $\\tau (n)$ denote the number of positive integer divisors of $n,$ including 1 and $n.$ For example, $\\tau (1)=1$ and $\\tau(6) =4.$ Define $S(n)$ by $S(n)=\\tau(1)+ \\tau(2) + \\cdots + \\tau(n).$ Let $a$ denote the number of positive integers $n \\leq 2005$ with $S(n)$ odd, and let $b$ denote the number of positive integers $n \\leq 2005$ with $S(n)$ even. Find $|a-b|.$\n",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "tag": [
+            "number",
+            "function"
+        ],
+        "solution": "It is well-known that $\\tau(n)$ is odd if and only if $n$ is a perfect square. (Otherwise, we can group divisors into pairs whose product is $n$.) Thus, $S(n)$ is odd if and only if there are an odd number of perfect squares less than $n$. So $S(1), S(2)$ and $S(3)$ are odd, while $S(4), S(5), \\ldots, S(8)$ are even, and $S(9), \\ldots, S(15)$ are odd, and so on.\nSo, for a given $n$, if we choose the positive integer $m$ such that $m^2 \\leq n < (m + 1)^2$ we see that $S(n)$ has the same parity as $m$.\nIt follows that the numbers between $1^2$ and $2^2$, between $3^2$ and $4^2$, and so on, all the way up to the numbers between $43^2$ and $44^2 = 1936$ have $S(n)$ odd. These are the only such numbers less than $2005$ (because $45^2 = 2025 > 2005$).\nNotice that the difference between consecutive squares are consecutively increasing odd numbers. Thus, there are $3$ numbers between $1$ (inclusive) and $4$ (exclusive), $5$ numbers between $4$ and $9$, and so on. The number of numbers from $n^2$ to $(n + 1)^2$ is $(n + 1 - n)(n + 1 + n) = 2n + 1$. Whenever the lowest square beneath a number is odd, the parity will be odd, and the same for even. Thus, $a = [2(1) + 1] + [2(3) + 1] \\ldots [2(43) + 1] = 3 + 7 + 11 \\ldots 87$. $b = [2(2) + 1] + [2(4) + 1] \\ldots [2(42) + 1] + 70 = 5 + 9 \\ldots 85 + 70$, the $70$ accounting for the difference between $2005$ and $44^2 = 1936$, inclusive. Notice that if we align the two and subtract, we get that each difference is equal to $2$. Thus, the solution is $|a - b| = |b - a| = |2 \\cdot 21 + 70 - 87| = \\boxed{25}$."
+    },
+    {
         "problem": "Let $f(x) = x^2 - x + 2010$. What is the greatest common divisor of $f(100)$ and $f(101)$?",
         "level": "Level 3",
         "type": "Number Theory",
