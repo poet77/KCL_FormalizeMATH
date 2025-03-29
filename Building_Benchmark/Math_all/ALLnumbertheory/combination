@@ -1,0 +1,242 @@
+[
+    {
+        "problem": "Use each of the digits 3, 4, 6, 8 and 9 exactly once to create the greatest possible five-digit multiple of 6. What is that multiple of 6?",
+        "level": "Level 2",
+        "type": "Number Theory",
+        "solution": "A multiple of 6 is a multiple of 3, which means the sum of its digits is a multiple of 3, and a multiple of 2, which means its units digit is even. We note that 4, 6, and 8 are even and that $3+4+6+8+9=30=3(10)$, so indeed it is possible to create a multiple of 6. Choose the smallest even number on the list, 4, for the units digit and arrange the rest of the digits in decreasing order to maximize the multiple of 6: $\\boxed{98,634}$.",
+        "tag": [
+            "combination",
+            "digit",
+            "number"
+        ]
+    },
+    {
+        "problem": "What is the largest number, all of whose digits are 3 or 2, and whose digits add up to $11$?",
+        "level": "Level 4",
+        "type": "Number Theory",
+        "solution": "To make a number as large as possible, we want as many digits as possible, so we want the digits to be as small as possible. To have the most number of digits, we use 4 twos and 1 three to make $4 \\cdot 2 +3 =11$. We want to arrange them in decreasing order because we want the digits to the left to be as large as possible. Therefore, we have the number $\\boxed{32222}$.",
+        "tag": [
+            "digit",
+            "number",
+            "combination"
+        ]
+    },
+    {
+        "problem": "The prime factorization of 2007 is $3^{2}\\times223$. How many ordered pairs of positive integers $(x,y)$ satisfy the equation $xy=2007$?",
+        "level": "Level 4",
+        "type": "Number Theory",
+        "solution": "$x$ must be a divisor of 2007. To count the number of divisors, we note that a divisor can have zero factors of 3, one factor, or two factors, and (independently) it can have zero factors of 223 or one factor. The total number of divisors is then $3\\cdot2=6$ (3 choices for the factors of 3 and 2 choices for the factors of 223). Since each divisor is unique, each creates a unique ordered pair. So there are $\\boxed{6}$ ordered pairs.",
+        "tag": [
+            "number",
+            "combination",
+            "prime"
+        ]
+    },
+    {
+        "problem": "The positive integer divisors of 175, except 1, are arranged around a circle so that every pair of adjacent integers has a common factor greater than 1. What is the sum of the two integers adjacent to 7?",
+        "level": "Level 3",
+        "type": "Number Theory",
+        "solution": "$175=5^2\\cdot7^1$. To arrange the divisors of 175, we can (conveniently) start with the divisor 7. Since $\\gcd(5,7)=1$, the two divisors that are adjacent to 7 must be multiples of 7, which means they have to be $5^1\\cdot7=35$ and $5^2\\cdot7=175$. Thus, the sum of the two integers adjacent to 7 is $35+175=\\boxed{210}$.",
+        "tag": [
+            "number",
+            "combination",
+            "prime"
+        ]
+    },
+    {
+        "problem": "What is the largest integer that must divide the product of any $4$ consecutive integers?",
+        "level": "Level 4",
+        "type": "Number Theory",
+        "solution": "Any $4$ consecutive integers will have at least one multiple of $3,$ an even number not divisible by $4,$ and a multiple of $4.$ Therefore the product of any $4$ consecutive integers must be divisible by $2\\cdot 3\\cdot 4=\\boxed{24}.$\n\nWe can check that no larger number divides every product of four consecutive integers by considering $1\\cdot2\\cdot3\\cdot4=24$.",
+        "tag": [
+            "number",
+            "combination"
+        ]
+    },
+    {
+        "problem": "A subset of the integers $1,2,\\cdots,100$ has the property that none of its members is 3 times another. What is the largest number of members such a subset can have?\n$\\text{(A) } 50\\quad \\text{(B) } 66\\quad \\text{(C) } 67\\quad \\text{(D) } 76\\quad \\text{(E) } 78$\n",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "solution": "Notice that inclusion of the integers from $34$ to $100$ is allowed as long as no integer between $11$ and $33$ inclusive is within the set. This provides a total of $100 - 34 + 1$ = 67 solutions.\nFurther analyzation of the remaining integers between $1$ and $10$, we notice that we can include all the numbers except $3$ (as including $3$ would force us to remove both $9$ and $1$) to obtain the maximum number of $9$ solutions.\nThus, $67 + 9 = \\boxed{76}$.",
+        "tag": [
+            "number",
+            "combination",
+            "set"
+        ]
+    },
+    {
+        "problem": "What is the least three-digit whole number, the product of whose digits is 6?",
+        "level": "Level 2",
+        "type": "Number Theory",
+        "solution": "We must minimize first the hundreds digit and then the tens digit to find the least three-digit whole number the product of whose digits is 6. The smallest possible hundreds digit is 1, and the least tens digit is 1 as well, giving a units digit of 6. Thus the least number is $\\boxed{116}$.",
+        "tag": [
+            "digit",
+            "number",
+            "combination"
+        ]
+    },
+    {
+        "problem": "Consider a string of $n$ $7$'s, $7777\\cdots77,$ into which $+$ signs are inserted to produce an arithmetic expression. For example, $7+77+777+7+7=875$ could be obtained from eight $7$'s in this way. For how many values of $n$ is it possible to insert $+$ signs so that the resulting expression has value $7000$?\n",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "solution": "Suppose we require $a$ $7$s, $b$ $77$s, and $c$ $777$s to sum up to $7000$ ($a,b,c \\ge 0$). Then $7a + 77b + 777c = 7000$, or dividing by $7$, $a + 11b + 111c = 1000$. Then the question is asking for the number of values of $n = a + 2b + 3c$.\nManipulating our equation, we have $a + 2b + 3c = n = 1000 - 9(b + 12c) \\Longrightarrow 0 \\le 9(b+12c) < 1000$. Thus the number of potential values of $n$ is the number of multiples of $9$ from $0$ to $1000$, or $112$.\nHowever, we forgot to consider the condition that $a \\ge 0$. For a solution set $(b,c): n=1000-9(b+12c)$, it is possible that $a = n-2b-3c < 0$ (for example, suppose we counted the solution set $(b,c) = (1,9) \\Longrightarrow n = 19$, but substituting into our original equation we find that $a = -10$, so it is invalid). In particular, this invalidates the values of $n$ for which their only expressions in terms of $(b,c)$ fall into the inequality $9b + 108c < 1000 < 11b + 111c$.\nFor $1000 - n = 9k \\le 9(7 \\cdot 12 + 11) = 855$, we can express $k$ in terms of $(b,c): n \\equiv b \\pmod{12}, 0 \\le b \\le 11$ and $c = \\frac{n-b}{12} \\le 7$ (in other words, we take the greatest possible value of $c$, and then \"fill in\" the remainder by incrementing $b$). Then $11b + 111c \\le 855 + 2b + 3c \\le 855 + 2(11) + 3(7) = 898 < 1000$, so these values work.\nSimilarily, for $855 \\le 9k \\le 9(8 \\cdot 12 + 10) = 954$, we can let $(b,c) = (k-8 \\cdot 12,8)$, and the inequality $11b + 111c \\le 954 + 2b + 3c \\le 954 + 2(10) + 3(8) = 998 < 1000$. However, for $9k \\ge 963 \\Longrightarrow n \\le 37$, we can no longer apply this approach.\nSo we now have to examine the numbers on an individual basis. For $9k = 972$, $(b,c) = (0,9)$ works. For $9k = 963, 981, 990, 999 \\Longrightarrow n = 37, 19, 10, 1$, we find (using that respectively, $b = 11,9,10,11 + 12p$ for integers $p$) that their is no way to satisfy the inequality $11b + 111c < 1000$.\nThus, the answer is $112 - 4 = \\boxed{108}$.",
+        "tag": [
+            "number",
+            "combination",
+            "equation"
+        ]
+    },
+    {
+        "problem": "Four consecutive positive integers have a product of 840. What is the largest of the four integers?",
+        "level": "Level 2",
+        "type": "Number Theory",
+        "solution": "We have $840=2^3\\cdot3\\cdot5\\cdot7$. From this prime factorization, it is clear that the product of four consecutive positive integers is $840=2^2\\cdot5\\cdot(2\\cdot3)\\cdot7=4\\cdot5\\cdot6\\cdot7$. The largest of the four integers is $\\boxed{7}$.",
+        "tag": [
+            "number",
+            "combination"
+        ]
+    },
+    {
+        "problem": "Harold, Tanya, and Ulysses paint a very long picket fence.\nHarold starts with the first picket and paints every $h$ th picket;\nTanya starts with the second picket and paints every $t$ th picket; and\nUlysses starts with the third picket and paints every $u$ th picket.\nCall the positive integer $100h+10t+u$ paintable when the triple $(h,t,u)$ of positive integers results in every picket being painted exactly once. Find the sum of all the paintable integers.\n",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "solution": "Note that it is impossible for any of $h,t,u$ to be $1$, since then each picket will have been painted one time, and then some will be painted more than once.\n$h$ cannot be $2$, or that will result in painting the third picket twice. If $h=3$, then $t$ may not equal anything not divisible by $3$, and the same for $u$. Now for fourth and fifth pickets to be painted, $t$ and $u$ must be $3$ as well. This configuration works, so $333$ is paintable.\nIf $h$ is $4$, then $t$ must be even. The same for $u$, except that it can't be $2 \\mod 4$. Thus $u$ is $0 \\mod 4$ and $t$ is $2 \\mod 4$. Since this is all $\\mod 4$, $t$ must be $2$ and $u$ must be $4$, in order for $5,6$ to be paint-able. Thus $424$ is paintable.\n$h$ cannot be greater than $5$, since if that were the case then the answer would be greater than $999$, which would be impossible for the AIME.\nThus the sum of all paintable numbers is $\\boxed{757}$.",
+        "tag": [
+            "digit",
+            "number",
+            "combination"
+        ]
+    },
+    {
+        "problem": "Let $[r,s]$ denote the least common multiple of positive integers $r$ and $s$. Find the number of ordered triples $(a,b,c)$ of positive integers for which $[a,b] = 1000$, $[b,c] = 2000$, and $[c,a] = 2000$.\n",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "solution": "It's clear that we must have $a = 2^j5^k$, $b = 2^m 5^n$ and $c = 2^p5^q$ for some nonnegative integers $j, k, m, n, p, q$. Dealing first with the powers of 2: from the given conditions, $\\max(j, m) = 3$, $\\max(m, p) = \\max(p, j) = 4$. Thus we must have $p = 4$ and at least one of $m, j$ equal to 3. This gives 7 possible triples $(j, m, p)$: $(0, 3, 4), (1, 3, 4), (2, 3, 4), (3, 3, 4), (3, 2, 4), (3, 1, 4)$ and $(3, 0, 4)$.\nNow, for the powers of 5: we have $\\max(k, n) = \\max(n, q) = \\max(q, k) = 3$. Thus, at least two of $k, n, q$ must be equal to 3, and the other can take any value between 0 and 3. This gives us a total of 10 possible triples: $(3, 3, 3)$ and three possibilities of each of the forms $(3, 3, n)$, $(3, n, 3)$ and $(n, 3, 3)$.\nSince the exponents of 2 and 5 must satisfy these conditions independently, we have a total of $7 \\cdot 10 = \\boxed{70}$ possible valid triples.",
+        "tag": [
+            "number",
+            "function",
+            "combination"
+        ]
+    },
+    {
+        "problem": "A relatively prime date is a date for which the number of the month and the number of the day are relatively prime. For example, June 17 is a relatively prime date because the greatest common factor of 6 and 17 is 1. How many relatively prime dates are in the month with the fewest relatively prime dates?",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "solution": "Since exactly 1 in every $n$ consecutive dates is divisible by $n$, the month with the fewest relatively prime days is the month with the greatest number of distinct small prime divisors. This reasoning gives us June ($6=2\\cdot3$) and December ($12=2^2\\cdot3$). December, however, has one more relatively prime day, namely December 31, than does June, which has only 30 days. Therefore, June has the fewest relatively prime days. To count how many relatively prime days June has, we must count the number of days that are divisible neither by 2 nor by 3. Out of its 30 days, $\\frac{30}{2}=15$ are divisible by 2 and $\\frac{30}{3}=10$ are divisible by 3. We are double counting the number of days that are divisible by 6, $\\frac{30}{6}=5$ days. Thus, June has $30-(15+10-5)=30-20=\\boxed{10}$ relatively prime days.",
+        "tag": [
+            "number",
+            "prime",
+            "combination"
+        ]
+    },
+    {
+        "problem": "What perfect-square integer is closest to 273?",
+        "level": "Level 2",
+        "type": "Number Theory",
+        "solution": "Note that $16^2 = 256 < 273$ while $17^2 = 289 > 273$.  Since all other perfect squares are farther away from $273$, our answer is the closer of these two, $\\boxed{289}$.",
+        "tag": [
+            "number",
+            "prime",
+            "digit",
+            "combination"
+        ]
+    },
+    {
+        "problem": "A set $\\mathcal{S}$ of distinct positive integers has the following property: for every integer $x$ in $\\mathcal{S},$ the arithmetic mean of the set of values obtained by deleting $x$ from $\\mathcal{S}$ is an integer. Given that 1 belongs to $\\mathcal{S}$ and that 2002 is the largest element of $\\mathcal{S},$ what is the greatest number of elements that $\\mathcal{S}$ can have?\n",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "solution": "Let the sum of the integers in $\\mathcal{S}$ be $N$, and let the size of $|\\mathcal{S}|$ be $n+1$. After any element $x$ is removed, we are given that $n|N-x$, so $x\\equiv N\\pmod{n}$. Since $1\\in\\mathcal{S}$, $N\\equiv1\\pmod{n}$, and all elements are congruent to 1 mod $n$. Since they are positive integers, the largest element is at least $n^2+1$, the $(n+1)$th positive integer congruent to 1 mod $n$.\nWe are also given that this largest member is 2002, so $2002\\equiv1\\pmod{n}$, and $n|2001=3\\cdot23\\cdot29$. Also, we have $n^2+1\\le2002$, so $n<45$. The largest factor of 2001 less than 45 is 29, so $n=29$ and $n+1$ $\\Rightarrow{\\boxed{30}}$ is the largest possible. This can be achieved with $\\mathcal{S}=\\{1,30,59,88,\\ldots,813,2002\\}$, for instance.",
+        "tag": [
+            "number",
+            "set",
+            "combination"
+        ]
+    },
+    {
+        "problem": "Lupe went to the store and paid for her purchase with a $\\$ 10$ bill. She found that the digits making the amount of her purchase could be rearranged to make the amount she received back in change. If her purchase amount and her change amount were different and each amount was at least $\\$1 $, how many possible amounts of change could she have received?",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "solution": "First, for simplicity, let's make all the amounts of money into integers by considering them all in cents. For example, $\\$5.43$ becomes 543. Let the purchase price be $A=A_1A_2A_3$ and the amount of change be $B_1B_2B_3$ where $A_1$ represents the first digit of $A$, $B_1$ represents the first digit of $B$, $A_2$ represents the second digit of $A$, etc.\n\nWe know that $A+B=1000$, and we can conclude that $A_1+B_1=9$ because if $A_1+B_1<9$ then $A+B<1000$ and if $A_1+B_1=10$ then $A_2=B_2=A_3=B_3=0$, but then the only way that B can be a rearrangement of the digits of A is if $A_1=B_1=5$, which means $A=B=500$, but the problem states that the price and the amount of change are different.\n\nSince 9 is odd, we can also conclude that $A_1$ and $B_1$ are distinct, which, using the fact that $A$'s digits can be rearranged to get B's digits, implies that $A_1=B_2$ or $A_1=B_3$ and $B_1=A_2$ or $B_1=A_3$. We can also observe that A and B have the same remainder when divided by 9 because the remainder when $n$ is divided by 9 is equal to the remainder when the sum of the digits of $n$ is divided by 9 for all $n$ and the sum of the digits of A is obviously equal to the sum of the digits of B.\n\nSince the remainder when 1000 is divided by 9 is 1, we can in fact conclude that the remainder when A and B are divided by 9 (and when the sum of their digits is divided by 9) is 5. Keeping in mind that two of the digits of $A$ are $A_1$ and $B_1$ and that $A_1+B_1=9$, we can conclude that the other digit is 5, which is the only digit that would result in the sum having a remainder of 5 when divided by 9. By similar logic we can conclude that 5 is also one of the digits of $B$. A little thought makes it clear that at least one of these 5's appears as the last digit in its number (that is, $A_3=5$ or $B_3=5$) since if neither of them appears as the last digit in a number, then $A_1=B_3$ and $B_1=A_3$ and $A_3+B_3=9\\Rightarrow A+B$ ends in a 9, which is a contradiction. But if $A_3=5$ then the only way for the sum of $A$ and $B$ to end in a 0 is for $B_3=5$, so we can conclude that $A_3=B_3=5$, $A_1=B_2$, and $A_2=B_1$. So once we have picked a value for $A_1$, the other 5 digits are all determined. Since both amounts are greater than a dollar, we know that $A_1$ can be any number between 1 and 8 for a total of 8 possible prices (and thus 8 possible amounts of change). To double check, we can work out $A$ and $B$ for each value of $A_1$ and reconvert them to dollars to make sure that the price and the amount of change satisfy the given conditions:\n\n$A_1=1\\Rightarrow A=\\$1.85, B=\\$8.15$;\n\n$A_1=2\\Rightarrow A=\\$2.75, B=\\$7.25$;\n\n$A_1=3\\Rightarrow A=\\$3.65, B=\\$6.35$;\n\n$A_1=4\\Rightarrow A=\\$4.55, B=\\$5.45$;\n\n$A_1=5\\Rightarrow A=\\$5.45, B=\\$4.55$;\n\n$A_1=6\\Rightarrow A=\\$6.35, B=\\$3.65$;\n\n$A_1=7\\Rightarrow A=\\$7.25, B=\\$2.75$; and finally\n\n$A_1=8\\Rightarrow A=\\$8.15, B=\\$1.85$.\n\nThis confirms that there are $\\boxed{8}$ possible amounts of change.",
+        "tag": [
+            "number",
+            "digit",
+            "combination"
+        ]
+    },
+    {
+        "problem": "What is the largest three-digit number in which the product of the digits is $12$?",
+        "level": "Level 2",
+        "type": "Number Theory",
+        "solution": "To get the largest number, first maximize the hundreds digit, then the tens, then the ones. One-digit factors of $12$ are $6$, $2$, $3$, $4$, and $1$, so the hundreds digit must be $6$.  In order to make the digits multiply to 12, the next two digits must be $2$ and $1$.  Therefore, the largest three-digit number in which the product of the digits is $12$ is $\\boxed{621}$.",
+        "tag": [
+            "number",
+            "digit",
+            "combination"
+        ]
+    },
+    {
+        "problem": "Each of the digits 3, 4, 6, 7, 8, and 9 is used once and only once to form a six-digit integer. What is the largest six-digit multiple of 4 that can be formed?",
+        "level": "Level 3",
+        "type": "Number Theory",
+        "solution": "Divisibility by 4 depends only on the last two digits, since 100 is divisible by 4.  Therefore, to form the largest possible multiple of 4, we must use the smallest pair of digits which form a multiple of 4 as the last two digits and place the remaining digits in descending order in the first four positions.  Neither 43 nor 34 is a multiple of 4, but the next smallest pair of digits does form a multiple of 4, namely 36.  Therefore, the smallest multiple of 4 using the given digits is $\\boxed{987,\\!436}$.",
+        "tag": [
+            "number",
+            "digit",
+            "combination"
+        ]
+    },
+    {
+        "problem": "What is the smallest positive five-digit integer, with all different digits, that is divisible by each of its non-zero digits?  Note that one of the digits of the original integer may be a zero.",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "solution": "We know that the five-digit number must be divisible by each of its non-zero digits. We should include the digit zero since it does not have to be included as a possible divisor and it will keep the integer smaller. Knowing this, the least possible five-digit number that we could try is $10,234$. Any number we choose will be divisible by one. We also see that it is even, and therefore, divisible by two. However, the two-digit number formed by its last two digit ($34$) is not divisible by four, and therefore, neither is the five-digit number. We also see that the sum of the five digits is $10$, and since $10$ is not divisible by three, neither is the five-digit number. However, notice that by increasing the five-digit number by two to form the number $10,236$, we create another even number and increase the digit-sum to $12$ (which takes care of the number being divisible by three). We have now eliminated the digit of four and added the digit of six, which is fine because $10,236$ being divisible by both two and three means that it is divisible by six. Our five-digit number is $\\boxed{10,\\!236}$.",
+        "tag": [
+            "number",
+            "digit",
+            "combination"
+        ]
+    },
+    {
+        "problem": "In a particular list of three-digit perfect squares, the first perfect square can be turned into each of the others by rearranging its digits. What is the largest number of distinct perfect squares that could be in the list?",
+        "level": "Level 4",
+        "type": "Number Theory",
+        "solution": "We look at all the possible three-digit perfect squares: 100, 121, 144, 169, 196, 225, 256, 289, 324, 361, 400, 441, 484, 529, 576, 625, 676, 729, 784, 841, 900, 961. We can find a list with three such perfect squares: 169, 196, 961. However, we can't find such a list with four squares. Therefore, the maximum possible length of such a list is $\\boxed{3}$.",
+        "tag": [
+            "number",
+            "digit",
+            "combination"
+        ]
+    },
+    {
+        "problem": "Find the sum of all positive integers $n$ such that, given an unlimited supply of stamps of denominations $5,n,$ and $n+1$ cents, $91$ cents is the greatest postage that cannot be formed.\n",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "tag": [
+            "number",
+            "combination"
+        ],
+        "solution": "By the Chicken McNugget theorem, the least possible value of $n$ such that $91$ cents cannot be formed satisfies $5n - (5 + n) = 91 \\implies n = 24$, so $n$ must be at least $24$.\nFor a value of $n$ to work, we must not only be unable to form the value $91$, but we must also be able to form the values $92$ through $96$, as with these five values, we can form any value greater than $96$ by using additional $5$ cent stamps.\nNotice that we must form the value $96$ without forming the value $91$. If we use any $5$ cent stamps when forming $96$, we could simply remove one to get $91$. This means that we must obtain the value $96$ using only stamps of denominations $n$ and $n+1$.\nRecalling that $n \\geq 24$, we can easily figure out the working $(n,n+1)$ pairs that can used to obtain $96$, as we can use at most $\\frac{96}{24}=4$ stamps without going over. The potential sets are $(24, 25), (31, 32), (32, 33), (47, 48), (48, 49), (95, 96)$, and $(96, 97)$.\nThe last two obviously do not work, since they are too large to form the values $92$ through $94$, and by a little testing, only $(24, 25)$ and $(47, 48)$ can form the necessary values, so $n \\in \\{24, 47\\}$. $24 + 47 = \\boxed{71}$."
+    },
+    {
+        "problem": "Compute the remainder when\n${2007 \\choose 0} + {2007 \\choose 3} + \\cdots + {2007 \\choose 2007}$\nis divided by 1000.\n",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "solution": "Let $\\omega$ and $\\zeta$ be the two complex third-roots of 1. Then let\n$S = (1 + \\omega)^{2007} + (1 + \\zeta)^{2007} + (1 + 1)^{2007} = \\sum_{i = 0}^{2007} {2007 \\choose i}(\\omega^i + \\zeta^i + 1)$.\nNow, if $i$ is a multiple of 3, $\\omega^i + \\zeta^i + 1 = 1 + 1 + 1 = 3$. If $i$ is one more than a multiple of 3, $\\omega^i + \\zeta^i + 1 = \\omega + \\zeta + 1 = 0$. If $i$ is two more than a multiple of 3, $\\omega^i + \\zeta^i + 1 = \\omega^2 + \\zeta^2 + 1= \\zeta + \\omega + 1 = 0$. Thus\n$S = \\sum_{i = 0}^{669} 3 {2007 \\choose 3i}$, which is exactly three times our desired expression.\nWe also have an alternative method for calculating $S$: we know that $\\{\\omega, \\zeta\\} = \\{-\\frac{1}{2} + \\frac{\\sqrt 3}{2}i, -\\frac{1}{2} - \\frac{\\sqrt 3}{2}i\\}$, so $\\{1 + \\omega, 1 + \\zeta\\} = \\{\\frac{1}{2} + \\frac{\\sqrt 3}{2}i, \\frac{1}{2} - \\frac{\\sqrt 3}{2}i\\}$. Note that these two numbers are both cube roots of -1, so $S = (1 + \\omega)^{2007} + (1 + \\zeta)^{2007} + (1 + 1)^{2007} = (-1)^{669} + (-1)^{669} + 2^{2007} = 2^{2007} - 2$.\nThus, the problem is reduced to calculating $2^{2007} - 2 \\pmod{1000}$. $2^{2007} \\equiv 0 \\pmod{8}$, so we need to find $2^{2007} \\pmod{125}$ and then use the Chinese Remainder Theorem. Since $\\phi (125) = 100$, by Euler's Totient Theorem $2^{20 \\cdot 100 + 7} \\equiv 2^7 \\equiv 3 \\pmod{125}$. Combining, we have $2^{2007} \\equiv 128 \\pmod{1000}$, and so $3S \\equiv 128-2 \\pmod{1000} \\Rightarrow S\\equiv \\boxed{42}\\pmod{1000}$.",
+        "tag": [
+            "combination",
+            "remaining",
+            "number"
+        ]
+    },
+    {
+        "problem": "Let $N$ be the number of ways to write $2010$ in the form $2010 = a_3 \\cdot 10^3 + a_2 \\cdot 10^2 + a_1 \\cdot 10 + a_0$, where the $a_i$'s are integers, and $0 \\le a_i \\le 99$. An example of such a representation is $1\\cdot 10^3 + 3\\cdot 10^2 + 67\\cdot 10^1 + 40\\cdot 10^0$. Find $N$.\n",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "solution": "If we choose $a_3$ and $a_1$ such that $(10^3)(a_3) + (10)(a_1) \\leq 2010$ there is a unique choice of $a_2$ and $a_0$ that makes the equality hold. So $N$ is just the number of combinations of $a_3$ and $a_1$ we can pick. If $a_3 = 0$ or $a_3 = 1$ we can let $a_1$ be anything from $0$ to $99$. If $a_3 = 2$ then $a_1 = 0$ or $a_1 = 1$. Thus $N = 100 + 100 + 2 = \\boxed{202}$.",
+        "tag": [
+            "combination",
+            "number",
+            "digit"
+        ]
+    }
+]
