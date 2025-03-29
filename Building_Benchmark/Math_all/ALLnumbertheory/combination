@@ -1,5 +1,92 @@
 [
     {
+        "problem": "Lupe went to the store and paid for her purchase with a $\\$ 10$ bill. She found that the digits making the amount of her purchase could be rearranged to make the amount she received back in change. If her purchase amount and her change amount were different and each amount was at least $\\$1 $, how many possible amounts of change could she have received?",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "solution": "First, for simplicity, let's make all the amounts of money into integers by considering them all in cents. For example, $\\$5.43$ becomes 543. Let the purchase price be $A=A_1A_2A_3$ and the amount of change be $B_1B_2B_3$ where $A_1$ represents the first digit of $A$, $B_1$ represents the first digit of $B$, $A_2$ represents the second digit of $A$, etc.\n\nWe know that $A+B=1000$, and we can conclude that $A_1+B_1=9$ because if $A_1+B_1<9$ then $A+B<1000$ and if $A_1+B_1=10$ then $A_2=B_2=A_3=B_3=0$, but then the only way that B can be a rearrangement of the digits of A is if $A_1=B_1=5$, which means $A=B=500$, but the problem states that the price and the amount of change are different.\n\nSince 9 is odd, we can also conclude that $A_1$ and $B_1$ are distinct, which, using the fact that $A$'s digits can be rearranged to get B's digits, implies that $A_1=B_2$ or $A_1=B_3$ and $B_1=A_2$ or $B_1=A_3$. We can also observe that A and B have the same remainder when divided by 9 because the remainder when $n$ is divided by 9 is equal to the remainder when the sum of the digits of $n$ is divided by 9 for all $n$ and the sum of the digits of A is obviously equal to the sum of the digits of B.\n\nSince the remainder when 1000 is divided by 9 is 1, we can in fact conclude that the remainder when A and B are divided by 9 (and when the sum of their digits is divided by 9) is 5. Keeping in mind that two of the digits of $A$ are $A_1$ and $B_1$ and that $A_1+B_1=9$, we can conclude that the other digit is 5, which is the only digit that would result in the sum having a remainder of 5 when divided by 9. By similar logic we can conclude that 5 is also one of the digits of $B$. A little thought makes it clear that at least one of these 5's appears as the last digit in its number (that is, $A_3=5$ or $B_3=5$) since if neither of them appears as the last digit in a number, then $A_1=B_3$ and $B_1=A_3$ and $A_3+B_3=9\\Rightarrow A+B$ ends in a 9, which is a contradiction. But if $A_3=5$ then the only way for the sum of $A$ and $B$ to end in a 0 is for $B_3=5$, so we can conclude that $A_3=B_3=5$, $A_1=B_2$, and $A_2=B_1$. So once we have picked a value for $A_1$, the other 5 digits are all determined. Since both amounts are greater than a dollar, we know that $A_1$ can be any number between 1 and 8 for a total of 8 possible prices (and thus 8 possible amounts of change). To double check, we can work out $A$ and $B$ for each value of $A_1$ and reconvert them to dollars to make sure that the price and the amount of change satisfy the given conditions:\n\n$A_1=1\\Rightarrow A=\\$1.85, B=\\$8.15$;\n\n$A_1=2\\Rightarrow A=\\$2.75, B=\\$7.25$;\n\n$A_1=3\\Rightarrow A=\\$3.65, B=\\$6.35$;\n\n$A_1=4\\Rightarrow A=\\$4.55, B=\\$5.45$;\n\n$A_1=5\\Rightarrow A=\\$5.45, B=\\$4.55$;\n\n$A_1=6\\Rightarrow A=\\$6.35, B=\\$3.65$;\n\n$A_1=7\\Rightarrow A=\\$7.25, B=\\$2.75$; and finally\n\n$A_1=8\\Rightarrow A=\\$8.15, B=\\$1.85$.\n\nThis confirms that there are $\\boxed{8}$ possible amounts of change.",
+        "tag": [
+            "number",
+            "digit",
+            "combination"
+        ]
+    },
+    {
+        "problem": "What is the largest three-digit number in which the product of the digits is $12$?",
+        "level": "Level 2",
+        "type": "Number Theory",
+        "solution": "To get the largest number, first maximize the hundreds digit, then the tens, then the ones. One-digit factors of $12$ are $6$, $2$, $3$, $4$, and $1$, so the hundreds digit must be $6$.  In order to make the digits multiply to 12, the next two digits must be $2$ and $1$.  Therefore, the largest three-digit number in which the product of the digits is $12$ is $\\boxed{621}$.",
+        "tag": [
+            "number",
+            "digit",
+            "combination"
+        ]
+    },
+    {
+        "problem": "Each of the digits 3, 4, 6, 7, 8, and 9 is used once and only once to form a six-digit integer. What is the largest six-digit multiple of 4 that can be formed?",
+        "level": "Level 3",
+        "type": "Number Theory",
+        "solution": "Divisibility by 4 depends only on the last two digits, since 100 is divisible by 4.  Therefore, to form the largest possible multiple of 4, we must use the smallest pair of digits which form a multiple of 4 as the last two digits and place the remaining digits in descending order in the first four positions.  Neither 43 nor 34 is a multiple of 4, but the next smallest pair of digits does form a multiple of 4, namely 36.  Therefore, the smallest multiple of 4 using the given digits is $\\boxed{987,\\!436}$.",
+        "tag": [
+            "number",
+            "digit",
+            "combination"
+        ]
+    },
+    {
+        "problem": "What is the smallest positive five-digit integer, with all different digits, that is divisible by each of its non-zero digits?  Note that one of the digits of the original integer may be a zero.",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "solution": "We know that the five-digit number must be divisible by each of its non-zero digits. We should include the digit zero since it does not have to be included as a possible divisor and it will keep the integer smaller. Knowing this, the least possible five-digit number that we could try is $10,234$. Any number we choose will be divisible by one. We also see that it is even, and therefore, divisible by two. However, the two-digit number formed by its last two digit ($34$) is not divisible by four, and therefore, neither is the five-digit number. We also see that the sum of the five digits is $10$, and since $10$ is not divisible by three, neither is the five-digit number. However, notice that by increasing the five-digit number by two to form the number $10,236$, we create another even number and increase the digit-sum to $12$ (which takes care of the number being divisible by three). We have now eliminated the digit of four and added the digit of six, which is fine because $10,236$ being divisible by both two and three means that it is divisible by six. Our five-digit number is $\\boxed{10,\\!236}$.",
+        "tag": [
+            "number",
+            "digit",
+            "combination"
+        ]
+    },
+    {
+        "problem": "In a particular list of three-digit perfect squares, the first perfect square can be turned into each of the others by rearranging its digits. What is the largest number of distinct perfect squares that could be in the list?",
+        "level": "Level 4",
+        "type": "Number Theory",
+        "solution": "We look at all the possible three-digit perfect squares: 100, 121, 144, 169, 196, 225, 256, 289, 324, 361, 400, 441, 484, 529, 576, 625, 676, 729, 784, 841, 900, 961. We can find a list with three such perfect squares: 169, 196, 961. However, we can't find such a list with four squares. Therefore, the maximum possible length of such a list is $\\boxed{3}$.",
+        "tag": [
+            "number",
+            "digit",
+            "combination"
+        ]
+    },
+    {
+        "problem": "Find the sum of all positive integers $n$ such that, given an unlimited supply of stamps of denominations $5,n,$ and $n+1$ cents, $91$ cents is the greatest postage that cannot be formed.\n",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "tag": [
+            "number",
+            "combination"
+        ],
+        "solution": "By the Chicken McNugget theorem, the least possible value of $n$ such that $91$ cents cannot be formed satisfies $5n - (5 + n) = 91 \\implies n = 24$, so $n$ must be at least $24$.\nFor a value of $n$ to work, we must not only be unable to form the value $91$, but we must also be able to form the values $92$ through $96$, as with these five values, we can form any value greater than $96$ by using additional $5$ cent stamps.\nNotice that we must form the value $96$ without forming the value $91$. If we use any $5$ cent stamps when forming $96$, we could simply remove one to get $91$. This means that we must obtain the value $96$ using only stamps of denominations $n$ and $n+1$.\nRecalling that $n \\geq 24$, we can easily figure out the working $(n,n+1)$ pairs that can used to obtain $96$, as we can use at most $\\frac{96}{24}=4$ stamps without going over. The potential sets are $(24, 25), (31, 32), (32, 33), (47, 48), (48, 49), (95, 96)$, and $(96, 97)$.\nThe last two obviously do not work, since they are too large to form the values $92$ through $94$, and by a little testing, only $(24, 25)$ and $(47, 48)$ can form the necessary values, so $n \\in \\{24, 47\\}$. $24 + 47 = \\boxed{71}$."
+    },
+    {
+        "problem": "Compute the remainder when\n${2007 \\choose 0} + {2007 \\choose 3} + \\cdots + {2007 \\choose 2007}$\nis divided by 1000.\n",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "solution": "Let $\\omega$ and $\\zeta$ be the two complex third-roots of 1. Then let\n$S = (1 + \\omega)^{2007} + (1 + \\zeta)^{2007} + (1 + 1)^{2007} = \\sum_{i = 0}^{2007} {2007 \\choose i}(\\omega^i + \\zeta^i + 1)$.\nNow, if $i$ is a multiple of 3, $\\omega^i + \\zeta^i + 1 = 1 + 1 + 1 = 3$. If $i$ is one more than a multiple of 3, $\\omega^i + \\zeta^i + 1 = \\omega + \\zeta + 1 = 0$. If $i$ is two more than a multiple of 3, $\\omega^i + \\zeta^i + 1 = \\omega^2 + \\zeta^2 + 1= \\zeta + \\omega + 1 = 0$. Thus\n$S = \\sum_{i = 0}^{669} 3 {2007 \\choose 3i}$, which is exactly three times our desired expression.\nWe also have an alternative method for calculating $S$: we know that $\\{\\omega, \\zeta\\} = \\{-\\frac{1}{2} + \\frac{\\sqrt 3}{2}i, -\\frac{1}{2} - \\frac{\\sqrt 3}{2}i\\}$, so $\\{1 + \\omega, 1 + \\zeta\\} = \\{\\frac{1}{2} + \\frac{\\sqrt 3}{2}i, \\frac{1}{2} - \\frac{\\sqrt 3}{2}i\\}$. Note that these two numbers are both cube roots of -1, so $S = (1 + \\omega)^{2007} + (1 + \\zeta)^{2007} + (1 + 1)^{2007} = (-1)^{669} + (-1)^{669} + 2^{2007} = 2^{2007} - 2$.\nThus, the problem is reduced to calculating $2^{2007} - 2 \\pmod{1000}$. $2^{2007} \\equiv 0 \\pmod{8}$, so we need to find $2^{2007} \\pmod{125}$ and then use the Chinese Remainder Theorem. Since $\\phi (125) = 100$, by Euler's Totient Theorem $2^{20 \\cdot 100 + 7} \\equiv 2^7 \\equiv 3 \\pmod{125}$. Combining, we have $2^{2007} \\equiv 128 \\pmod{1000}$, and so $3S \\equiv 128-2 \\pmod{1000} \\Rightarrow S\\equiv \\boxed{42}\\pmod{1000}$.",
+        "tag": [
+            "combination",
+            "remaining",
+            "number"
+        ]
+    },
+    {
+        "problem": "Let $N$ be the number of ways to write $2010$ in the form $2010 = a_3 \\cdot 10^3 + a_2 \\cdot 10^2 + a_1 \\cdot 10 + a_0$, where the $a_i$'s are integers, and $0 \\le a_i \\le 99$. An example of such a representation is $1\\cdot 10^3 + 3\\cdot 10^2 + 67\\cdot 10^1 + 40\\cdot 10^0$. Find $N$.\n",
+        "level": "Level 5",
+        "type": "Number Theory",
+        "solution": "If we choose $a_3$ and $a_1$ such that $(10^3)(a_3) + (10)(a_1) \\leq 2010$ there is a unique choice of $a_2$ and $a_0$ that makes the equality hold. So $N$ is just the number of combinations of $a_3$ and $a_1$ we can pick. If $a_3 = 0$ or $a_3 = 1$ we can let $a_1$ be anything from $0$ to $99$. If $a_3 = 2$ then $a_1 = 0$ or $a_1 = 1$. Thus $N = 100 + 100 + 2 = \\boxed{202}$.",
+        "tag": [
+            "combination",
+            "number",
+            "digit"
+        ]
+    },
+    {
         "problem": "Use each of the digits 3, 4, 6, 8 and 9 exactly once to create the greatest possible five-digit multiple of 6. What is that multiple of 6?",
         "level": "Level 2",
         "type": "Number Theory",
