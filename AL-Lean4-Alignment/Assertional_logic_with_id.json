@@ -1,0 +1,2786 @@
+[
+    {
+        "Declarations": "f: Function",
+        "Facts": "Get_Function_Expression(f) = Sqrt(3 - Sqrt(5 - Sqrt(x)))",
+        "Query": "Build_Set(x, (x >= 0) & (5 - Sqrt(x) >= 0) & (3 - Sqrt(5 - Sqrt(x)) >= 0))",
+        "id": 1
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "9997 ^ 2",
+        "id": 2
+    },
+    {
+        "Declarations": "a: Real; b: Real",
+        "Facts": "a * b^2 = 27 / 5; a^2 * b = 135",
+        "Query": "a + 5 * b",
+        "id": 3
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "(3^4 - 3^3) / (3^3 - 3^2)",
+        "id": 4
+    },
+    {
+        "Declarations": "a: EvenNumbers; b: EvenNumbers",
+        "Facts": "a = b + 2; a ^ 2 - b ^ 2 = 268",
+        "Query": "a ^ 2",
+        "id": 5
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "91 ^ 2",
+        "id": 6
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "115 ^ 2",
+        "id": 7
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "(2 ^ 10 - 2 ^ 8) / (2 ^ 7 - 2 ^ 6)",
+        "id": 8
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "99^2 + 99 + 1",
+        "id": 9
+    },
+    {
+        "Declarations": "f: Function",
+        "Facts": "Get_StepFunction_Expression(f, x >= 0) = - x ^ (1 /3); Get_StepFunction_Expression(f, x < 0) = x ^ 2",
+        "Query": "Get_Function_Value(Get_Function_IthComposition(f, 3), 512)",
+        "id": 10
+    },
+    {
+        "Declarations": "i: ComplexUnit",
+        "Facts": "",
+        "Query": "Get_Sum(Range(1, 259), n -> i ^ n ) ",
+        "id": 11
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "(34-10)+(20-9)+(55-10)",
+        "id": 12
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "989 ^ 2",
+        "id": 13
+    },
+    {
+        "Declarations": "f: Function",
+        "Facts": "Get_Function_Expression(f) = Sqrt(x^2)",
+        "Query": "Get_Function_Range(f)",
+        "id": 14
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "32 ^ 2 - 18 ^ 2",
+        "id": 15
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "(4 / 3) * (6 / 4) * (8 / 5) * (10 / 6) * (12 / 7) * (14 / 8)",
+        "id": 16
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "113 + 276 - 13 - 26",
+        "id": 17
+    },
+    {
+        "Declarations": "f: Function; g: Function",
+        "Facts": "Get_Function_Expression(f) = x + 1; Get_Function_Expression(g) = 2 * x",
+        "Query": "Get_Function_Value( Get_Function_Composition( f, Get_Function_Composition( Get_Inverse_Function(g), Get_Function_Composition( Get_Inverse_Function(f), Get_Function_Composition( Get_Inverse_Function(f), Get_Function_Composition( g, f ) ) ) ) ), 5 )",
+        "id": 18
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "252 ^ 2 - 248 ^ 2",
+        "id": 19
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "3 * (1 + 3 * (1 + 3 * (1 + 3 * (1 + 3 * (1 + 3 * (1 + 3 * (1 + 3 * (1 + 3 * (1 + 3)))))))))",
+        "id": 20
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "26 * 33 + 67 * 26",
+        "id": 21
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Sqrt(Sqrt(12960000))",
+        "id": 22
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "55 * 1212 - 15 * 1212",
+        "id": 23
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "1017 ^ 2",
+        "id": 24
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "16 * ((125 / 2) + (25 / 4) + (9 / 16) + 1)",
+        "id": 25
+    },
+    {
+        "Declarations": "A: Set",
+        "Facts": "A = Build_Set(x, x = (-1) * 2 ^ n && Is_NaturalNumbers(n) = True && x <= 512)",
+        "Query": "Get_Set_Sum(A)",
+        "id": 26
+    },
+    {
+        "Declarations": "f: Function",
+        "Facts": "Get_StepFunction_Expression(f, x >= 0) = -x^2; Get_StepFunction_Expression(f, x < 0) = x + 8",
+        "Query": "Get_Function_Value(Get_Function_IthComposition(f, 4), 1)",
+        "id": 27
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "(66666 ^ 4) / (22222 ^ 4)",
+        "id": 28
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "55^2 - 45^2",
+        "id": 29
+    },
+    {
+        "Declarations": "f: Function; g: Function",
+        "Facts": "Get_Function_Expression(f) = x + 2; Get_Function_Expression(g) = x / 3",
+        "Query": "Get_Function_Value(Get_Function_Composition(f, Get_Function_Composition(Get_Inverse_Function(g),Get_Function_Composition(Get_Inverse_Function(f), Get_Function_Composition(Get_Inverse_Function(f),Get_Function_Composition(g, f) ) ) ) ), 19 )",
+        "id": 30
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "(1622^2 - 1615^2) / (1629^2 - 1608^2)",
+        "id": 31
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "54 * 46",
+        "id": 32
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "(17 + 10) ^ 2 - (17 - 10) ^ 2",
+        "id": 33
+    },
+    {
+        "Declarations": "x: PositiveIntegers; y: PositiveIntegers",
+        "Facts": "",
+        "Query": "Build_Set((x, y), (x^y + 1 = y^x) & (2 * x^y = y^x + 7))",
+        "id": 34
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "95 ^ 2",
+        "id": 35
+    },
+    {
+        "Declarations": "x: Real; y: Real; a: Real",
+        "Facts": "3 * x + y = a; 2 * x + 5 * y = 2 * a; x = 2",
+        "Query": "a",
+        "id": 36
+    },
+    {
+        "Declarations": "f: Function; g: Function",
+        "Facts": "Get_Function_Expression(f) = 3 * x - 2; Get_Function_Expression(g) = Get_Function_IthComposition(f, 3)",
+        "Query": "Get_Function_InDomain_Range(g, Build_Set(x: Real, 0 <= x <= 2))",
+        "id": 37
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Abs(pi - Abs(pi - 7))",
+        "id": 38
+    },
+    {
+        "Declarations": "x: Real",
+        "Facts": "x = 5",
+        "Query": "(x^8 + 12 * x^4 + 36) / (x^4 + 6)",
+        "id": 39
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Set_Sum({-1, -3, -9, -27, -81, -243, -729})",
+        "id": 40
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "1003^2 - 997^2 - 1001^2 + 999^2",
+        "id": 41
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "(2 + 4 - 8 + 16 + 32 - 64) / (4 + 8 - 16 + 32 + 64 - 128)",
+        "id": 42
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Set_Sum(Get_Polyroots((2x+3)(x-4)+(2x+3)(x-6)))",
+        "id": 43
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "(6^6 - 16 * 6^3 + 64) / (6^3 - 8)",
+        "id": 44
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "98 * 102",
+        "id": 45
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "(1 / 5) + (2 / 5) + (3 / 5) + (4 / 5) + (5 / 5) + (6 / 5) + (7 / 5) + (8 / 5) + (9 / 5) + (10 / 5)",
+        "id": 46
+    },
+    {
+        "Declarations": "y: Function",
+        "Facts": "Get_Function_Expression(y) = Abs(x + 7) - Abs(x - 2)",
+        "Query": "Get_Function_Range(y)",
+        "id": 47
+    },
+    {
+        "Declarations": "x: Real; A: Real; B: Real; C: Real",
+        "Facts": "A = Get_Set_Sum(Build_Set(1 / (2 ^ n), (0 <= n) & (Is_NaturalNumbers(n) = True))); B = Get_Set_Sum(Build_Set((-1) ^ n / (2 ^ n), (0 <= n) & (Is_NaturalNumbers(n) = True))); C = Get_Set_Sum(Build_Set(1 / (x ^ n), (0 <= n) & (Is_NaturalNumbers(n) = True))); A * B = C",
+        "Query": "x",
+        "id": 48
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Log(Sqrt(8), 64 * Sqrt(8))",
+        "id": 49
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "(Get_Number_Ceil(Sqrt(20))) ^ 2",
+        "id": 50
+    },
+    {
+        "Declarations": "a: Real",
+        "Facts": "a = 5",
+        "Query": "a^3 * a^2",
+        "id": 51
+    },
+    {
+        "Declarations": "P: Polynomial; alpha: Real; beta: Real",
+        "Facts": "P = x^2 + 7x - 2; Get_Polyroots(P) = {alpha, beta}",
+        "Query": "alpha^2 + beta^2",
+        "id": 52
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Log(5, 1/625)",
+        "id": 53
+    },
+    {
+        "Declarations": "i: ComplexUnit",
+        "Facts": "",
+        "Query": "i ^ 11 + i ^ 111",
+        "id": 54
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Number_Floor(3.2)",
+        "id": 55
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "(723 * 723) - (722 * 724)",
+        "id": 56
+    },
+    {
+        "Declarations": "x: Real; a: Real",
+        "Facts": "x = a + 7",
+        "Query": "x - a + 3",
+        "id": 57
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Log(5, 625)",
+        "id": 58
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Log(8, 2)",
+        "id": 59
+    },
+    {
+        "Declarations": "x: Real; y: Real; z: Real",
+        "Facts": "x = 1/3; y = 2/3; z = -9",
+        "Query": "x^2 * y^3 * z",
+        "id": 60
+    },
+    {
+        "Declarations": "G: Sequence; k: NaturalNumbers",
+        "Facts": "Get_Sequence_Terms(G, 1) = 1 / 3; Get_Sequence_Terms(G, 2) = 2 / (3^2); Get_Sequence_Terms(G, 3) = 3 / (3^3); Get_Sequence_Terms(G, k) = k / (3^k)",
+        "Query": "Get_Sequence_Infinite_Sum(G)",
+        "id": 61
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "81 ^ (3 / 4)",
+        "id": 62
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Number_Ceil(Sqrt(9 / 4)) + Get_Number_Ceil(9 / 4) + Get_Number_Ceil((9 / 4) ^ 2)",
+        "id": 63
+    },
+    {
+        "Declarations": "a: Real",
+        "Facts": "a = 3",
+        "Query": "a^2 * a^5",
+        "id": 64
+    },
+    {
+        "Declarations": "x: Real; y: Real",
+        "Facts": "x = 3; y = 0",
+        "Query": "y * (y - 3*x)",
+        "id": 65
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Number_Floor(Sqrt(80))",
+        "id": 66
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Number_Ceil(-2.4)",
+        "id": 67
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Log(4, 64)",
+        "id": 68
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Number_Ceil(Sqrt(2)) + Get_Number_Ceil(Sqrt(22)) + Get_Number_Ceil(Sqrt(222))",
+        "id": 69
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Log(3, 1 / Sqrt(3))",
+        "id": 70
+    },
+    {
+        "Declarations": "G: Sequence; k: NaturalNumbers",
+        "Facts": "Get_Sequence_Terms(G, k) = k / (2^k)",
+        "Query": "Get_Sequence_Infinite_Sum(G)",
+        "id": 71
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Log(81, 3) - Log(1/9, 3)",
+        "id": 72
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Log(7, Sqrt(7))",
+        "id": 73
+    },
+    {
+        "Declarations": "f: Fucntion",
+        "Facts": "Get_Function_Value(f, 3) = 10; Get_Function_Value(f, 4) = 17; Get_Function_Value(f, 5) = 26; Get_Function_Value(f, 6) = 37; Get_Function_Value(f, 7) = 50",
+        "Query": "Get_Function_Value(Get_Inverse_Function(f), 50) * Get_Function_Value(Get_Inverse_Function(f), 10) + Get_Function_Value(Get_Inverse_Function(f), 26)",
+        "id": 74
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Number_Floor(Sqrt(63))",
+        "id": 75
+    },
+    {
+        "Declarations": "a: Real; b: Real; c: Real",
+        "Facts": "a = 4; b = a + 2; c = b - 10; a + 1 != 0; b - 2 != 0; c + 6 != 0",
+        "Query": "((a + 2) / (a + 1)) * ((b - 1) / (b - 2)) * ((c + 8) / (c + 6))",
+        "id": 76
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "(2 + 1) * (2^2 + 1^2) * (2^4 + 1^4)",
+        "id": 77
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Number_Ceil(5 / 4) + Get_Number_Floor(-5 / 4)",
+        "id": 78
+    },
+    {
+        "Declarations": "n: Integers",
+        "Facts": "n = 2",
+        "Query": "(n - 1) * n * (n + 1) * (n + 2) * (n + 3)",
+        "id": 79
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Log(Sqrt(6), 216 * Sqrt(6))",
+        "id": 80
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "(2^2)^3",
+        "id": 81
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "99 * 99",
+        "id": 82
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Number_Floor(17.2) + Get_Number_Floor(-17.2)",
+        "id": 83
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Log(8, 2)",
+        "id": 84
+    },
+    {
+        "Declarations": "a: Real; b: Real",
+        "Facts": "a = 2; b = 3",
+        "Query": "(a^b)^a - (b^a)^b",
+        "id": 85
+    },
+    {
+        "Declarations": "a: Real; b: Real",
+        "Facts": "a = 4; b = 1",
+        "Query": "(a^2 + b)^2 - (a^2 - b)^2",
+        "id": 86
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Log(2, 4^2)",
+        "id": 87
+    },
+    {
+        "Declarations": "G: GeometricSequence",
+        "Facts": "Get_Sequence_Terms(G, 1) = 1/3; Get_Sequence_Terms(G, 2) = 1/6; Get_Sequence_Terms(G, 3) = 1/12; Get_Sequence_Terms(G, 4) = 1/24",
+        "Query": "Get_Sequence_Infinite_Sum(G)",
+        "id": 88
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Number_Ceil(3 * (6 - (1 / 2)))",
+        "id": 89
+    },
+    {
+        "Declarations": "i: ComplexUnit",
+        "Facts": "",
+        "Query": "i ^ 11 + i ^ 16 + i ^ 21 + i ^ 26 + i ^ 31",
+        "id": 90
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "(10 ^ (-2) * 5 ^ 0) / 10 ^ (-3)",
+        "id": 91
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Number_Ceil( (17 / 7) - Get_Number_Ceil(27 / 17) ) / Get_Number_Ceil( (27 / 7) + Get_Number_Ceil( (7 * 17) / 27 ) )",
+        "id": 92
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Number_Floor(pi)",
+        "id": 93
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Number_Floor( - ( 5 / 3 ) )",
+        "id": 94
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "27^(-1/3) + 32^(-2/5)",
+        "id": 95
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Log(3, 1/3)",
+        "id": 96
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Sum(Range(5, 29), x => Get_Number_Ceil(Sqrt(x)))",
+        "id": 97
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Number_Floor(0.999) + Get_Number_Ceil(2.001)",
+        "id": 98
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Number_Ceil( (-5 / 3) ^ 2 )",
+        "id": 99
+    },
+    {
+        "Declarations": "G: GeometricSequence",
+        "Facts": "Get_Sequence_Terms(G, 1) = 3 / 2; Get_Sequence_Terms(G, 2) = - (2 / 3); Get_Sequence_Terms(G, 3) = 8 / 27; Get_Sequence_Terms(G, 4) = - (32 / 243)",
+        "Query": "Get_Sequence_Infinite_Sum(G)",
+        "id": 100
+    },
+    {
+        "Declarations": "a: Real; S: Set",
+        "Facts": "a = 2; S = Build_Set(a-x, (Is_Integers(x) = True) & (0 <= x <= 10))",
+        "Query": "Get_Set_Product(S)",
+        "id": 101
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Number_Ceil(Sqrt(140))",
+        "id": 102
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Number_Floor((12.1)^2) - Get_Number_Floor(12.1) * Get_Number_Floor(12.1)",
+        "id": 103
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Log(2, 1/16)",
+        "id": 104
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "(Get_Number_Floor(Sqrt(17))) ^ 2",
+        "id": 105
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Log(27 * Sqrt(3), 3)",
+        "id": 106
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Number_Floor(-4.5) * Get_Number_Ceil(4.5) * Get_Number_Floor(-3.5) * Get_Number_Ceil(3.5) * ... * Get_Number_Floor(-0.5) * Get_Number_Ceil(0.5)",
+        "id": 107
+    },
+    {
+        "Declarations": "a: Real",
+        "Facts": "a = 1.5",
+        "Query": "(5 * a^2 - 13 * a + 4) * (2 * a - 3)",
+        "id": 108
+    },
+    {
+        "Declarations": "f: Function",
+        "Facts": "Get_Function_Expression(f) = x^2 + 2 * Sqrt(x)",
+        "Query": "2 * Get_Function_Value(f, 2) - Get_Function_Value(f, 8)",
+        "id": 109
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "(-27) ^ (5 / 3)",
+        "id": 110
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Log(1/3, 9)",
+        "id": 111
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Number_Floor( Get_Number_Ceil( (13 / 7) ^ 2 ) + (17 / 4) )",
+        "id": 112
+    },
+    {
+        "Declarations": "x: Real; y: Real",
+        "Facts": "x = 2; y = 3",
+        "Query": "3 * x^y + 4 * y^x",
+        "id": 113
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Log(4, 32)",
+        "id": 114
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "64 ^ (1 / 2) * 27 ^ (-1 / 3) * 16 ^ (1 / 4)",
+        "id": 115
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Number_Ceil( - Sqrt(49 / 4) )",
+        "id": 116
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Number_Floor(Sqrt(12)) ^ 2",
+        "id": 117
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "16 ^ (7 / 4)",
+        "id": 118
+    },
+    {
+        "Declarations": "P: Polynomial; alpha: Real; beta: Real",
+        "Facts": "P = 5*x^2 + 3*x + 4; Get_Polyroots(P) = {alpha, beta}",
+        "Query": "alpha + beta",
+        "id": 119
+    },
+    {
+        "Declarations": "i: ComplexUnit",
+        "Facts": "",
+        "Query": "i ^ 22 + i ^ 222",
+        "id": 120
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Number_Floor(Abs(-34.1))",
+        "id": 121
+    },
+    {
+        "Declarations": "x: Real",
+        "Facts": "x = -2",
+        "Query": "(3 + x * (3 + x) - 3^2) / (x - 3 + x^2)",
+        "id": 122
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "(4 ^ (1 / 6)) ^ 9",
+        "id": 123
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Number_Floor(-2.54) + Get_Number_Ceil(25.4)",
+        "id": 124
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "64^2 - 36^2",
+        "id": 125
+    },
+    {
+        "Declarations": "f: Function",
+        "Facts": "Get_Function_Expression(f) = 2 * x^2 - 4 * x + 9",
+        "Query": "2 * Get_Function_Value(f, 3) + 3 * Get_Function_Value(f, -3)",
+        "id": 126
+    },
+    {
+        "Declarations": "x: Real",
+        "Facts": "x = 3",
+        "Query": "x^3 + x^2 + x + 1",
+        "id": 127
+    },
+    {
+        "Declarations": "i: ComplexUnit",
+        "Facts": "",
+        "Query": "i ^ 6 + i ^ 16 + i ^ (-26)",
+        "id": 128
+    },
+    {
+        "Declarations": "x: Real; y: Real",
+        "Facts": "x = 4; y = 3",
+        "Query": "24 - (2*x -y)",
+        "id": 129
+    },
+    {
+        "Declarations": "i: ComplexUnit",
+        "Facts": "",
+        "Query": "(i/2) ^ 2",
+        "id": 130
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "7 / (45^2 -38^2)",
+        "id": 131
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "(2^(5/4))^(2/5) * (4^(25/8))^(2/25)",
+        "id": 132
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Number_Ceil( (7 / 4) ^ 2 )",
+        "id": 133
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Number_Ceil( - ( 7 / 4 ) )",
+        "id": 134
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "(-125) ^ (4 / 3)",
+        "id": 135
+    },
+    {
+        "Declarations": "i: ComplexUnit",
+        "Facts": "",
+        "Query": "(i / 4) ^ 4",
+        "id": 136
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Number_Floor(6.7) + Get_Number_Floor(-6.7)",
+        "id": 137
+    },
+    {
+        "Declarations": "x: Real; y: Real",
+        "Facts": "x = 13; y = 5",
+        "Query": "(x + y) * (x - y)",
+        "id": 138
+    },
+    {
+        "Declarations": "i: ComplexUnit",
+        "Facts": "",
+        "Query": "i ^ 5 + i ^ (-25) + i ^ 45",
+        "id": 139
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Number_Floor(14.6) - Get_Number_Ceil(-14.6)",
+        "id": 140
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Log(3, 27)",
+        "id": 141
+    },
+    {
+        "Declarations": "x: Real; y: Real",
+        "Facts": "x = 2; y = -3",
+        "Query": "(x*y)^5 / y^3",
+        "id": 142
+    },
+    {
+        "Declarations": "x: Real",
+        "Facts": "x = 2",
+        "Query": "x ^ (( x + 1) ^ x )",
+        "id": 143
+    },
+    {
+        "Declarations": "G: GeometricSequence",
+        "Facts": "Get_Sequence_Terms(G, 1) = 1; Get_Sequence_Terms(G, 2) = - (2 / 7); Get_Sequence_Terms(G, 3) = (4 / 49); Get_Sequence_Terms(G, 4) = - (8 / 343)",
+        "Query": "Get_Sequence_Infinite_Sum(G)",
+        "id": 144
+    },
+    {
+        "Declarations": "f: Function",
+        "Facts": "Get_Function_Expression(f) = x ^ 2",
+        "Query": "Get_Set_Maximum(Build_Set(x | \u2203 A : FiniteSet, x = Set_Cardinality(A) \u2227 Get_Function_InDomain_Range(f, A) = {0,1,2,3,4,5,6,7,8,9} ) )",
+        "id": 145
+    },
+    {
+        "Declarations": "f: Function; g: Function",
+        "Facts": "Get_Function_Expression(f) = (x + 5) / 3; Get_Function_Expression(g) =  1 / (Get_Function_Expression(Get_Inverse_Function(f)) + 1 )",
+        "Query": "Get_Function_Value(g, 3)",
+        "id": 146
+    },
+    {
+        "Declarations": "f: Function",
+        "Facts": "Get_Function_Expression(f) = (3 / 7) ^ x",
+        "Query": "Get_Function_InDomain_Range(f, Get_LeftClosed_Interval(0))",
+        "id": 147
+    },
+    {
+        "Declarations": "f: Function",
+        "Facts": "Get_Function_Expression(f) = 1 / (1 - x)",
+        "Query": "Get_Function_InDomain_Range(f, Set_Difference(Get_UniversalSet(Real), Solve_equation(x, 1-x = 0)))",
+        "id": 148
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": " Set_Difference(Get_UniversalSet(Real), Solve_inequation(x, x^2 - 5 * x + 6 <= 0)) ",
+        "id": 149
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Set_Cardinality( Build_Set(x | x - 64 = 0 \u2228 x^2 - 64 = 0 \u2228 x^3 - 64 = 0) )",
+        "id": 150
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Set_Sum(Build_Set(x | x^2 - 7 = 0 \u2228 x^3 - 8 = 0 \u2228 x^4 - 9 = 0))",
+        "id": 151
+    },
+    {
+        "Declarations": "f: Function; g: Function",
+        "Facts": "Get_Function_Expression(f) = x^3 + 2*x + 1; Get_Function_Expression(g) = x - 1",
+        "Query": "Get_Function_Value(Get_Function_Composition(f, g), 1)",
+        "id": 152
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Set_Difference(Get_UniversalSet(Real), Solve_equation(x, (3 * x -9)*(3 * x + 6) = 0))",
+        "id": 153
+    },
+    {
+        "Declarations": "f: Function",
+        "Facts": "Get_Function_Value(f, 1) = 2; Get_Function_Value(f, 2) = 6; Get_Function_Value(f, 3) = 5",
+        "Query": "Get_Function_Value(Get_Function_Composition(Get_Inverse_Function(f), Get_Inverse_Function(f)), 6)",
+        "id": 154
+    },
+    {
+        "Declarations": "g: Function",
+        "Facts": "Get_Function_Expression(g) = 3*x - 4",
+        "Query": "Get_Function_Value(g, 0)",
+        "id": 155
+    },
+    {
+        "Declarations": "f: Function; k: Function",
+        "Facts": "Get_StepFunction_Expression(f, \u2200 x > 2) = Get_Function_Expression(k); Get_StepFunction_Expression(f, \u2200 x <= 2) = 2 + (x-2)^2; Get_Inverse_Function(f) = f",
+        "Query": "Get_Function_Expression(k)",
+        "id": 156
+    },
+    {
+        "Declarations": "f: Function",
+        "Facts": "Get_StepFunction_Expression(f, \u2200 x: NaturalNumber, x >= 2 \u2227 x <= 15) = x^2 + x + 17",
+        "Query": "Get_Function_Value(f, 10) - Get_Function_Value(f, 9)",
+        "id": 157
+    },
+    {
+        "Declarations": "f: Function; g: Function; a: Real; b: Real",
+        "Facts": "Get_Function_Expression(f) = a * x + b; Get_Function_Expression(g) = 3 * x + 2; g = 2 * Get_Inverse_Function(f)",
+        "Query": "(a + b) / 2",
+        "id": 158
+    },
+    {
+        "Declarations": "a: Real; b: Real; h: Function",
+        "Facts": "Get_Function_Expression(h) = a*x + b; Get_Function_Value(h, 1) = 5; Get_Function_Value(h, -1) = 1",
+        "Query": "Get_Function_Value(h, 6)",
+        "id": 159
+    },
+    {
+        "Declarations": "f: Function",
+        "Facts": "Get_StepFunction_Expression(f, \u2200 x \u2208 Get_LeftClosed_Interval(0)) = Get_Number_Floor( (5 / 8) ^ x )",
+        "Query": "Set_Cardinality(Get_Function_Range(f))",
+        "id": 160
+    },
+    {
+        "Declarations": "P: Polynomial; a: Real; b: Real",
+        "Facts": "P = x^2 + a*x  + b; Is_Root(P, 2*a); Is_Root(P, b)",
+        "Query": "a + b",
+        "id": 161
+    },
+    {
+        "Declarations": "P: Polynomial",
+        "Facts": "P = 3*(x - 4) + 2*(x^2 - x + 7) - 5*(x - 1)",
+        "Query": "Get_ConstantTerm(P)",
+        "id": 162
+    },
+    {
+        "Declarations": "P: Polynomial; Q: Polynomial",
+        "Facts": "Get_PolyDegree(P) = 3; Get_PolyDegree(Q) = 5",
+        "Query": "Get_PolyDegree(2*P + 4*Q)",
+        "id": 163
+    },
+    {
+        "Declarations": "E: QuadraticFunction; C: QuadraticFunction; e: Real; c: Real",
+        "Facts": "Get_Function_Expression(E) = x^2 + 4*x + e; Get_Function_Expression(C) = x^2 + 4*x + c; (e != c) = True; Get_QuadraticFunction_Discriminant(E) / Get_QuadraticFunction_Discriminant(C) = e / c",
+        "Query": "e + c",
+        "id": 164
+    },
+    {
+        "Declarations": "F: Polynomial",
+        "Facts": "(x^2 - 1)*F = 5*x^6 - x^5 + 3*x^4 + x^3 - 25*x^2 + 38*x - 17",
+        "Query": "Get_PolyDegree(F)",
+        "id": 165
+    },
+    {
+        "Declarations": "P1: Polynomial; P2: Polynomial; P3: Polynomial; a: Real; b: Real; c: Real; d: Real; e: Real; f: Real; g: Real; h: Real",
+        "Facts": "P1 = a * x^6 + b * x^8 + c * x^3 + d; P2 = x^5 + e * x^4 + f; P3 = x^2 + g * x + h; (a != 0) = True; (b != 0) = True; (c != 0) = True; (d != 0) = True; (e != 0) = True; (f != 0) = True; (g != 0) = True; (h != 0) = True",
+        "Query": "Get_PolyDegree(P1 * P2 * P3)",
+        "id": 166
+    },
+    {
+        "Declarations": "P: Polynomial",
+        "Facts": "P = 3 * (x ^ 10 - x ^ 7 + 2 * x ^ 3 - x + 7) + 4 * (x ^ 3 - 2 * x ^ 2 - 5)",
+        "Query": "Get_Set_Sum(Get_PolyCoefficient(P))",
+        "id": 167
+    },
+    {
+        "Declarations": "F: Polynomial",
+        "Facts": "(x - 1) * F = 3 * x^4 + x^3 - 25 * x^2 + 38 * x - 17",
+        "Query": "Get_PolyDegree(F)",
+        "id": 168
+    },
+    {
+        "Declarations": "F: Polynomial; G: Polynomial",
+        "Facts": "Get_PolyDegree(F) = 4; Get_PolyDegree(G) = 2",
+        "Query": "Get_PolyDegree(F - G)",
+        "id": 169
+    },
+    {
+        "Declarations": "p: PositiveNumbers; q: PositiveNumbers; m: Real; n: Real; P: Polynomial",
+        "Facts": "P = x^2 - m *x + n; Is_Root(P, p) = True; Is_Root(P, q) = True; Is_Prime(p) = True; Is_Prime(q) = True",
+        "Query": "Set_Cardinality(Build_Set(n, m < 20))",
+        "id": 170
+    },
+    {
+        "Declarations": "F: QuadraticPolynomial; G: CubicPolynomial",
+        "Facts": "Get_polynomial_Leading_coefficient(F) = 1; Get_polynomial_Leading_coefficient(G) = 1",
+        "Query": "Get_Set_Maximum(Build_Set(n, n = Get_PolyDegree(f^3 - g^2 + f - 1)))",
+        "id": 171
+    },
+    {
+        "Declarations": "f: Polynomial; g: Polynomial; h: Polynomial",
+        "Facts": "h = Get_Poly_Composition(f, g) + g; Get_PolyDegree(h) = 8; Get_PolyDegree(f) = 4",
+        "Query": "Get_PolyDegree(h)",
+        "id": 172
+    },
+    {
+        "Declarations": "P: Polynomial; G: Polynomial; c: Real",
+        "Facts": "P = 4 * x^3 + 3 * x^2 + 2 * x + 1; G = 3 - 4 * x + 5 * x^2 -6 * x^3; Get_PolyDegree(P + c * G) = 2",
+        "Query": "c",
+        "id": 173
+    },
+    {
+        "Declarations": "f: Polynomial; g: Polynomial",
+        "Facts": "f = 3 * x^4 + 5 * x^2 - 9 * x - 2; g = Get_Poly_Composition(f, x - 1)",
+        "Query": "Get_Set_Sum(Get_PolyCoefficient(g))",
+        "id": 174
+    },
+    {
+        "Declarations": "f: Polynomial; g: Polynomial",
+        "Facts": "Get_PolyDegree(f) = 7; Get_PolyDegree(g) = 7",
+        "Query": "Get_Set_Maximum(Build_Set(n, n = Get_PolyDegree(f + g) ) ) * Get_Set_Minimum(Build_Set(n, n = Get_PolyDegree(f + g) ) )",
+        "id": 175
+    },
+    {
+        "Declarations": "f: Polynomial; g: Polynomial; h: Polynomial",
+        "Facts": "Get_PolyDegree(f) = 6; Get_PolyDegree(g) = 3; Get_PolyDegree(Get_Poly_Composition(f, g) + Get_Poly_Composition(g, h) + Get_Poly_Composition(h, f)) = 36",
+        "Query": "Get_PolyDegree(h)",
+        "id": 176
+    },
+    {
+        "Declarations": "g: Polynomial; h: Polynomial; b: Integer",
+        "Facts": "Get_PolyDegree(h) = 5; h = (x^2 - 7 * x + 10) * g; Get_PolyDegree(g) = b",
+        "Query": "b",
+        "id": 177
+    },
+    {
+        "Declarations": "f: Polynomial; g: Polynomial",
+        "Facts": "f = x^7 - 3 * x^3 + 2; g = Get_Poly_Composition(f, x + 1)",
+        "Query": "Get_Set_Sum(Get_PolyCoefficient(g))",
+        "id": 178
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Set_Cardinality(Build_Set(P: Polynomial, (P = x^2 + m*x + n) & (Is_Root(P, a) -> Is_PositiveIntegers(a) = True) & (n = 28))",
+        "id": 179
+    },
+    {
+        "Declarations": "P: Polynomial; t: Real; S: Set",
+        "Facts": "P = x^2 - 5 * x + t; S = Build_Set(t, Is_Root(P, a) -> Is_PositiveIntegers(a) = True)",
+        "Query": "Get_Set_Means(S)",
+        "id": 180
+    },
+    {
+        "Declarations": "f: Monomial; a: Real; b: Real; c: Real",
+        "Facts": "Eval_Value_Polynomial(f, 0) = 4; Eval_Value_Polynomial(f, 1) = 10; Get_PolyDegree(f) = 2; f = a*x^2 + b*x + c",
+        "Query": "f",
+        "id": 181
+    },
+    {
+        "Declarations": "p: Polynomial; q: Polynomial",
+        "Facts": "Get_PolyDegree(p) = 7; Get_PolyDegree(q) = 7",
+        "Query": "Get_PolyDegree(p * q)",
+        "id": 182
+    },
+    {
+        "Declarations": "p: Polynomial; q: Polynomial",
+        "Facts": "q = x^5 + 3 * x^3 + 9 * x; p + q = 7 * x^3 + 24 * x^2 + 25 * x + 1",
+        "Query": "p",
+        "id": 183
+    },
+    {
+        "Declarations": "P: Polynomial",
+        "Facts": "P = (2 * x^4 + 3 * x^3 + x - 14) * (3 * x^10 - 9 * x^7 + 9 * x^4 + 30) - (x^2 + 5)^7",
+        "Query": "Get_PolyDegree(P)",
+        "id": 184
+    },
+    {
+        "Declarations": "f: Polynomial; g: Polynomial",
+        "Facts": "f = x^3 - 2 * x - 2; f + g = -2 + x",
+        "Query": "g",
+        "id": 185
+    },
+    {
+        "Declarations": "f: Polynomial; g: Polynomial",
+        "Facts": "f = -7 * x^4 + 3 * x^3 + x - 5; Get_PolyDegree(f + g) = 1",
+        "Query": "Get_PolyDegree(g)",
+        "id": 186
+    },
+    {
+        "Declarations": "p: Polynomial; q: Polynomial",
+        "Facts": "p = x^4 - 3 * x + 2; q = p^3",
+        "Query": "Get_PolyCoefficient(q, 3)",
+        "id": 187
+    },
+    {
+        "Declarations": " P: Polynomial",
+        "Facts": "P = 3 * (3 * x^7 + 8 * x^4 - 7) + 7 * (x^5 - 7 * x^2 + 5)",
+        "Query": "Get_Set_Sum(Get_PolyCoefficient(P))",
+        "id": 188
+    },
+    {
+        "Declarations": "F: Polynomial; G: Polynomial; c: Real",
+        "Facts": "F = 1 - 12 * x + 3 * x^2 - 4 * x^3 + 5 * x^4; G = 3 - 2 * x - 6 * x^3 + 9 * x^4; Get_PolyDegree(F + c * G) = 3",
+        "Query": "c",
+        "id": 189
+    },
+    {
+        "Declarations": "M: Polynomial; J: Polynomial; c: PositiveNumbers",
+        "Facts": "Get_PolyDegree(M) = 4; Get_PolyDegree(J) = 4; Get_polynomial_Leading_coefficient(M) = 1; Get_polynomial_Leading_coefficient(J) = 1; Get_ConstantTerm(M) = c; Get_ConstantTerm(J) = c; Get_Term_Coefficient(M, 1) = Get_Term_Coefficient(J, 1); M * J = z^8 + 3*z^7 + z^6 + 3*z^5 + 4*z^4 + 6*z^3 + 2*z^2 + 4",
+        "Query": "c",
+        "id": 190
+    },
+    {
+        "Declarations": "P: Polynomial; Q: Polynomial",
+        "Facts": "P = (x + 7) * (x + 5); Q = (2*x - 3) * (x - 2)",
+        "Query": "P - Q",
+        "id": 191
+    },
+    {
+        "Declarations": "P: Polynomial",
+        "Facts": "P = 4 + 5 * x^3 + 100 + 2 * \u03c0 * x^4 + Sqrt(10) * x^4 + 9",
+        "Query": "Get_PolyDegree(P)",
+        "id": 192
+    },
+    {
+        "Declarations": "P1: Polynomial; P2: Polynomial; P3: Polynomial; Result: Polynomial",
+        "Facts": "P1 = (2 * x^2 + 3 * x + 7) * (x + 1); P2 = (x + 1) * (x^2 + 4 * x - 63); P3 = (3 * x - 14) * (x + 1) * (x + 5); Result = P1 - P2 + P3",
+        "Query": "Result",
+        "id": 193
+    },
+    {
+        "Declarations": "f: Polynomial; g: Polynomial; h: Polynomial",
+        "Facts": "h = 3 * f + 4 * g; Get_PolyDegree(f) = 8; Get_PolyDegree(h) = 9",
+        "Query": "Get_Set_Minimum(Build_Set(n, n = Get_PolyDegree(g)))",
+        "id": 194
+    },
+    {
+        "Declarations": "f: Polynomial; g: Polynomial; h: Polynomial",
+        "Facts": "f = -3 * x^2 + x - 4; g = -5 * x^2 + 3 * x - 8; h = 5 * x^2 + 5 * x + 1",
+        "Query": "f + g + h",
+        "id": 195
+    },
+    {
+        "Declarations": "P: Polynomial",
+        "Facts": "P = -2 * (x^7 - x^4 + 3 * x^2 - 5) + 4 * (x^3 + 2 * x) - 3 * (x^5 - 4)",
+        "Query": "Get_Set_Sum(Get_PolyCoefficient(P))",
+        "id": 196
+    },
+    {
+        "Declarations": "f: Polynomial; g: Polynomial; h: Polynomial",
+        "Facts": "h = f * g; Get_ConstantTerm(f) = -4; Get_ConstantTerm(h) = 3",
+        "Query": "Eval_Value_Polynomial(g, 0)",
+        "id": 197
+    },
+    {
+        "Declarations": "f: Polynomial; g: Polynomial; h: Polynomial",
+        "Facts": "h = Get_Poly_Composition(f, g) + g; Get_PolyDegree(h) = 6; Get_PolyDegree(f) = 2",
+        "Query": "Get_PolyDegree(g)",
+        "id": 198
+    },
+    {
+        "Declarations": "f: Polynomial; g: Polynomial",
+        "Facts": "Get_PolyDegree(f) = 4; Get_PolyDegree(g) = 5",
+        "Query": "Get_PolyDegree(Get_Poly_Composition(f, x^3) * Get_Poly_Composition(g, x^2))",
+        "id": 199
+    },
+    {
+        "Declarations": "b: Real; c: Real; P: Polynomial",
+        "Facts": "P = x^2 + b * x + c; b = c + 1",
+        "Query": "Get_Set_Product(c, Set_Cardinality(Get_Polyroots(P)) = 1)",
+        "id": 200
+    },
+    {
+        "Declarations": "P: Polynomial",
+        "Facts": "P = -3*(x^4 - x^3 + x) + 7*(x^4 + 2) - 4*(2*x^4 + 2*x^2 + 1)",
+        "Query": "Get_polynomial_Leading_coefficient(P)",
+        "id": 201
+    },
+    {
+        "Declarations": "P1: Polynomial; P2: Polynomial; P3: Polynomial; a: Real; b: Real; c: Real; d: Real; e: Real; f: Real",
+        "Facts": "P1 = x^4 + a * x^7 + b * x + c; P2 = x^3 + d * x^2 + e; P3 = x + f; (a != 0) = True; (b != 0) = True; (c != 0) = True; (d != 0) = True; (e != 0) = True; (f != 0) = True",
+        "Query": "Get_PolyDegree(P1 * P2 * P3)",
+        "id": 202
+    },
+    {
+        "Declarations": "P: Polynomial",
+        "Facts": "P = (3 * x^2 + 11)^12",
+        "Query": "Get_PolyDegree(P)",
+        "id": 203
+    },
+    {
+        "Declarations": "P: Polynomial; k: Real; S: Set",
+        "Facts": "P = x^2 - k * x + 16; S = Build_Set(k, Is_Root(P, a) -> Is_PositiveIntegers(a) = True)",
+        "Query": "Get_Set_Mean(S)",
+        "id": 204
+    },
+    {
+        "Declarations": "f: Polynomial; g: Polynomial",
+        "Facts": "Get_PolyDegree(g) < Get_PolyDegree(f); Get_PolyDegree(f) = 2",
+        "Query": "Get_PolyDegree(f + g)",
+        "id": 205
+    },
+    {
+        "Declarations": "A: PositiveIntegers; B: PositiveIntegers",
+        "Facts": "B = A + 1; A * B = 506",
+        "Query": "A + B",
+        "id": 206
+    },
+    {
+        "Declarations": "a: Integer; b: Integer",
+        "Facts": "Log(579, 10) > a; Log(579, 10) < b; b = a + 1",
+        "Query": "a + b",
+        "id": 207
+    },
+    {
+        "Declarations": "a: Integer; b: Integer",
+        "Facts": "a < Log(17, 10) < b; b = a + 1",
+        "Query": "a + b",
+        "id": 208
+    },
+    {
+        "Declarations": "Set_of_x: Set",
+        "Facts": "Set_of_x = Solve_inequation(x: PositiveIntegers, x^4 / x^2 < 10)",
+        "Query": "Get_Set_Maximum(Set_of_x)",
+        "id": 209
+    },
+    {
+        "Declarations": "a: Integers; b: Integers; logValue: Real",
+        "Facts": "logValue = Log(28471, 10); a < logValue < b; b = a + 1",
+        "Query": "a + b",
+        "id": 210
+    },
+    {
+        "Declarations": "Hash: Operator",
+        "Facts": "Hash({a: Real}, {b: Real}, {c: Real}) = b^2 - 4 * a * c",
+        "Query": "Hash(1, 2, 3)",
+        "id": 211
+    },
+    {
+        "Declarations": "S: Set",
+        "Facts": "S = Build_Set(x: Integers, x >= 80 && x <= 90)",
+        "Query": "Get_Set_Sum(S)",
+        "id": 212
+    },
+    {
+        "Declarations": "a: Integers; S: Set",
+        "Facts": "S = {a, a+1, a+2}; a + (a+2) = 118",
+        "Query": "a + 1",
+        "id": 213
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "81^(1/4) * 27^(1/3) * Sqrt(9)",
+        "id": 214
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Set_Sum({1, 3, 5, 7, 9, 11, 13, 15, 17, 19})",
+        "id": 215
+    },
+    {
+        "Declarations": "a: PositiveIntegers; b: PositiveIntegers; min_b: PositiveIntegers",
+        "Facts": "min_b = Get_Set_Minimum(Build_Set(b, 2700^(1/3) = a * b^(1/3)))",
+        "Query": "a + min_b",
+        "id": 216
+    },
+    {
+        "Declarations": "a: PositiveIntegers; b: PositiveIntegers",
+        "Facts": "Abs(a - b) = 6; a * b = 112",
+        "Query": "a + b",
+        "id": 217
+    },
+    {
+        "Declarations": "p: Real; q: Real",
+        "Facts": "p > 1 = True; q > 1 = True; 1/p + 1/q = 1; p * q = 4",
+        "Query": "q",
+        "id": 218
+    },
+    {
+        "Declarations": "CirclePlus: Operator",
+        "Facts": "CirclePlus({a: Real}, {b: Real}) = 3 * a + 4 * b",
+        "Query": "CirclePlus(3, 1)",
+        "id": 219
+    },
+    {
+        "Declarations": "S: Set; n: PositiveIntegers",
+        "Facts": "S = Build_Set(n, n \u2264 7 \u2227 n \u2208 PositiveIntegers)",
+        "Query": "Get_Sum(S, n -> 9 * n)",
+        "id": 220
+    },
+    {
+        "Declarations": "S: GeometricSequence",
+        "Facts": "Get_Sequence_Terms(S, 1) = 2; Get_Sequence_Terms(S, 5) = 162",
+        "Query": "Get_Sequence_Terms(S, 6)",
+        "id": 221
+    },
+    {
+        "Declarations": "a: Integer; b: Integer; op: Operator",
+        "Facts": "a \u2260 0; b \u2260 0; op(a, b) = 1/a + 1/b; a + b = 9; a * b = 20",
+        "Query": "op(a, b)",
+        "id": 222
+    },
+    {
+        "Declarations": "a: NegativeIntegers; b: NegativeIntegers; S: Set",
+        "Facts": "a + 1 = b; a * b = 2550",
+        "Query": "a + b",
+        "id": 223
+    },
+    {
+        "Declarations": "P1: Polynomial; P2: Polynomial; a: Integers; b: Integers; c: Integers",
+        "Facts": "P1 = x^2 + 15*x + 54; P1 = (x + a)*(x + b); P2 = x^2 - 17*x + 72; P2 = (x - b)*(x - c)",
+        "Query": "a + b + c",
+        "id": 224
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "16^(1/4) * 8^(1/3) * Sqrt(4)",
+        "id": 225
+    },
+    {
+        "Declarations": "d: Real; a: Integers; b: Integers; c: Integers",
+        "Facts": "d \u2260 0; (12*d + 13 + 14*d^2) + (2*d + 1) = a*d + b + c*d^2",
+        "Query": "a + b + c",
+        "id": 226
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Set_Cardinality(Solve_inequation(x: PositiveIntegers, 20 < x^2 + 6x + 9 < 40))",
+        "id": 227
+    },
+    {
+        "Declarations": "a: PositiveIntegers; b: PositiveIntegers",
+        "Facts": "a^2 + b^2 = 193; a * b = 84",
+        "Query": "a + b",
+        "id": 228
+    },
+    {
+        "Declarations": "S: GeometricSequence",
+        "Facts": "Get_Sequence_Terms(S, 1) = 3; Get_Sequence_Terms(S, 4) = 192",
+        "Query": "Get_Sequence_Terms(S, 3)",
+        "id": 229
+    },
+    {
+        "Declarations": "Star: Operator",
+        "Facts": "Star({a: Real}, {b: Real}) = (a + b) / (a - b)",
+        "Query": "Star(Star(1, 2), 4)",
+        "id": 230
+    },
+    {
+        "Declarations": "a: PositiveIntegers; b: PositiveIntegers; c: PositiveIntegers; S: Set",
+        "Facts": "S = {a, b, c}; Get_Set_Sum(S) = 72; b = 3 * a; c = 4 * a",
+        "Query": "a",
+        "id": 231
+    },
+    {
+        "Declarations": "x: PositiveIntegers; y: PositiveIntegers",
+        "Facts": "x - y = 2; x * y = 120",
+        "Query": "x + y",
+        "id": 232
+    },
+    {
+        "Declarations": "a: PositiveIntegers; b: PositiveIntegers",
+        "Facts": "Abs(a - b) = 12; a * b = 45",
+        "Query": "a + b",
+        "id": 233
+    },
+    {
+        "Declarations": "a: PositiveIntegers; b: PositiveIntegers",
+        "Facts": "a + b = 50; a - b = 12",
+        "Query": "Abs(a^2 - b^2)",
+        "id": 234
+    },
+    {
+        "Declarations": "S: Set",
+        "Facts": "S = Build_Set(x: Integers, x > 3 \u2227 x < 12)",
+        "Query": "Get_Set_Sum(S)",
+        "id": 235
+    },
+    {
+        "Declarations": "x: PositiveIntegers; y: PositiveIntegers",
+        "Facts": "Abs(x - y) = 6; x * y = 135",
+        "Query": "Get_Set_Maximum({x, y})",
+        "id": 236
+    },
+    {
+        "Declarations": "a: PositiveIntegers; b: PositiveIntegers",
+        "Facts": "a / b = 5 / 2; a * b = 160",
+        "Query": "Get_Set_Maximum({a, b})",
+        "id": 237
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Set_Cardinality(Solve_inequation(x: PositiveIntegers, 100 <= x^2 <= 200))",
+        "id": 238
+    },
+    {
+        "Declarations": "a: EvenNumbers; S: Set",
+        "Facts": "S = {a, a+2, a+4}; a + (a+4) = 128",
+        "Query": "Get_Set_Sum(S)",
+        "id": 239
+    },
+    {
+        "Declarations": "S: Sequence",
+        "Facts": "ForAll(i: Integers && i >= 1 -> Get_Sequence_Terms(S, i) / 3 = Get_Sequence_Terms(S, i+1) && Is_Integer(Get_Sequence_Terms(S, i)) = True)",
+        "Query": "Set_Cardinality(S)",
+        "id": 240
+    },
+    {
+        "Declarations": "a: PositiveIntegers; b: PositiveIntegers",
+        "Facts": "a^2 + b^2 = 90; a * b = 27",
+        "Query": "a + b",
+        "id": 241
+    },
+    {
+        "Declarations": "Star: Operator",
+        "Facts": "ForAll(a: Real && b: Real && a \u2260 b, Star(a, b) = (a + b) / (a - b))",
+        "Query": "Star(Star(1, 2), 3)",
+        "id": 242
+    },
+    {
+        "Declarations": "x: Integer; S: Set",
+        "Facts": "S = {x, x + 1, x + 2, x + 3}; Get_Set_Sum(S) = 22",
+        "Query": "Get_Sum(S, n -> 2*n + 20)",
+        "id": 243
+    },
+    {
+        "Declarations": "a: Integer; b: Integer",
+        "Facts": "a + 2 = b; Is_Odd_Number(a) = True; Is_Odd_Number(b) = True; Abs(b^2 - a^2) = 128",
+        "Query": "a * b",
+        "id": 244
+    },
+    {
+        "Declarations": "P: Polynomial; A: Integer; B: Integer",
+        "Facts": "P = 6*x^2 + 17*x + 5; P = (A*x + 1)*(B*x + 5)",
+        "Query": "A * B",
+        "id": 245
+    },
+    {
+        "Declarations": "x: PositiveInteger",
+        "Facts": "1^x + 2^x + 5^x = 642",
+        "Query": "x",
+        "id": 246
+    },
+    {
+        "Declarations": "Z: Polynomial; a: Integer; b: Integer",
+        "Facts": "Z = 2*z^2 + 13*z +21; Z = (z + a) * (2*z + b)",
+        "Query": "2a + b",
+        "id": 247
+    },
+    {
+        "Declarations": "p: Real; q: Real",
+        "Facts": "p > 1 = True; q > 1 = True; 1/p + 1/q = 1",
+        "Query": "(p - 1) * (q - 1)",
+        "id": 248
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "1 + 3 + 5 + 7 + 9",
+        "id": 249
+    },
+    {
+        "Declarations": "A: Integer; B: Integer; P: Polynomial",
+        "Facts": "P = 10 * x^2 - x -24; P = (A*x - 8) * (B*x + 3)",
+        "Query": "A*B + B",
+        "id": 250
+    },
+    {
+        "Declarations": "A: Integer",
+        "Facts": "A + (A + 1) + (A + 2) = 27",
+        "Query": "A * (A + 1) * (A + 2)",
+        "id": 251
+    },
+    {
+        "Declarations": "P: Polynomial; A: Integer; B: Integer",
+        "Facts": "P = 3*x^2 + 14*x + 8; P = (3*x + A) * (x + B)",
+        "Query": "A - B",
+        "id": 252
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Set_Cardinality(Solve_inequation(x: PositiveIntegers, x ^ (-1) > x ))",
+        "id": 253
+    },
+    {
+        "Declarations": "a: Integer; S: Set",
+        "Facts": "S = {a, a+1, a+2, a+3, a+4, a+5, a+6}; Get_Set_Sum(S) = 49 ",
+        "Query": "a",
+        "id": 254
+    },
+    {
+        "Declarations": "a: EvenNumbers; S: Set",
+        "Facts": "S = {a, a+2, a+4}; Get_Set_Sum(S) = 66",
+        "Query": "a",
+        "id": 255
+    },
+    {
+        "Declarations": "a: Integers; S: Set",
+        "Facts": "S = {a, a+1, a+2, a+3, a+4}; Get_Set_Sum(S) = 5",
+        "Query": "Get_Set_Product(S)",
+        "id": 256
+    },
+    {
+        "Declarations": "Star: Operator",
+        "Facts": "Star({a: PositiveIntegers}, {b: PositiveIntegers}) = a^b + b^a",
+        "Query": "Star(2, 6)",
+        "id": 257
+    },
+    {
+        "Declarations": "a: NonNegativeNumbers; b: NonNegativeNumbers; P: Polynomial",
+        "Facts": "P = x^2 + 18 * x - 63; P = (x - a) * (x + b)",
+        "Query": "b",
+        "id": 258
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Set_Sum({47,49,51,53,55,57,59,61,63})",
+        "id": 259
+    },
+    {
+        "Declarations": "S: GeometricSequence; a: PositiveIntegers; b: PositiveIntegers; r: Integers",
+        "Facts": "S = {a, b, 2009}; a < b < 2009; b = a * r; 2009 = b * r",
+        "Query": "a",
+        "id": 260
+    },
+    {
+        "Declarations": "x: PositiveIntegers; y: PositiveIntegers; z: PositiveIntegers",
+        "Facts": "6*x*y*z + 30*x*y +21*x*z + 2*y*z + 105*x + 10*y + 7*z = 812",
+        "Query": "x + y + z",
+        "id": 261
+    },
+    {
+        "Declarations": "P: Polynomial; A: PositiveIntegers; B: PositiveIntegers; C: PositiveIntegers",
+        "Facts": "P = 6 * y ^ 2 - y - 51; P = (3 * A * y + B) * (y - C)",
+        "Query": "(A * C) ^ 2 - B",
+        "id": 262
+    },
+    {
+        "Declarations": "S: Set; a: Integers",
+        "Facts": "S = {a, a+1, a+2, a+3}; Get_Set_Sum(S) = 22",
+        "Query": "Get_Sum(S, n -> (n + 2) * 20)",
+        "id": 263
+    },
+    {
+        "Declarations": "a: Real; b: Real",
+        "Facts": "a != 0; b != 0",
+        "Query": "Build_Set((a, b), Solve_equation(x, x^2 + a * x + b = 0) = {a, b})",
+        "id": 264
+    },
+    {
+        "Declarations": "a: PositiveIntegers; b: PositiveIntegers; S: Set",
+        "Facts": "S = Build_Set( (a * b) * (a + b), a * b + (a + b) = 454)",
+        "Query": "Get_Set_Maximum(S)",
+        "id": 265
+    },
+    {
+        "Declarations": "S: GeometricSequence",
+        "Facts": "Get_Sequence_Terms(S, 2) = -2; Get_Sequence_Terms(S, 5) = 16",
+        "Query": "Get_Sequence_Terms(S, 14)",
+        "id": 266
+    },
+    {
+        "Declarations": "k: PositiveIntegers; S_k: ArithmeticSequence; S: Set",
+        "Facts": "S = Build_Set(S_k, Is_Monotonic_Increasing_Sequence(S_k) = True && Get_Sequence_Terms(S_k, 1) = 1 && Get_CommonDifference(S_k) = k) && Elements_In_Set(2005, S_k) = True",
+        "Query": "Set_Cardinality(S)",
+        "id": 267
+    },
+    {
+        "Declarations": "a: EvenNumbers",
+        "Facts": "a + (a + 2) + (a + 4) + (a + 6) + (a + 8) = 1 + 3 + 5 + 7 + 9 + 11 + 13 + 15 - 4",
+        "Query": "a",
+        "id": 268
+    },
+    {
+        "Declarations": "f: Function; l: Integers; k: Integers; m: Integers; n: Integers",
+        "Facts": "Get_Function_Expression(f) = 3 / (2 * c - 3); Get_Function_Expression(Get_Inverse_Function(f)) * c * Get_Function_Expression(f) = (k*c + l) / (m*c +n)",
+        "Query": "(k * n^2) / (l * m)",
+        "id": 269
+    },
+    {
+        "Declarations": "b: Real; Set_of_b: Set",
+        "Facts": "Set_of_b = Build_Set(b | x1: Real && x2: Real && Solve_equtaion(x, x^2 + b * x + 48 = 0) = {x1, x2} && x1 / x2 = 3)",
+        "Query": "Get_Set_Maximum(Set_of_b)",
+        "id": 270
+    },
+    {
+        "Declarations": "m: Real; b: Real",
+        "Facts": "-1 = m * 7 + b; 7 = m * (-1) + b",
+        "Query": "m + b",
+        "id": 271
+    },
+    {
+        "Declarations": "k: Real; x1: PrimeNumbers; x2: PrimeNumbers",
+        "Facts": "Solve_equation(x, x^2 - 12 * x + k = 0) = {x1, x2}",
+        "Query": "k",
+        "id": 272
+    },
+    {
+        "Declarations": "d: Real",
+        "Facts": "",
+        "Query": "Solve_equation(e: Real, And(2 * d = 17 * e - 8, 2 * e = d - 9) )",
+        "id": 273
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, (x + 1) / (x - 1) = (x - 2) / (x + 2) )",
+        "id": 274
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Set_Minimum(Solve_equation(x: Real, 24 * x^2 + 17 * x - 20 = 0 ))",
+        "id": 275
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(a: Real, Sqrt(4 + Sqrt(16 + 16 * a)) + Sqrt(1 + Sqrt(1 + a)) = 6)",
+        "id": 276
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, (2 * x + 1) * (3 * x + 2) = (x - 3) * (6 * x - 5))",
+        "id": 277
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, And(-9 * x^2 - 3 * x + 2 = 0, x > 0) )",
+        "id": 278
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, 2^(2*x) = 256^(1/2))",
+        "id": 279
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, (1/25)^(x + 2) = 125^(-x))",
+        "id": 280
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, 441 + 2 * 21 * 19 + 361 = x)",
+        "id": 281
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, (66 - 2^x) / (2^x + 3) = (4 - 2^x) / (2^(x+1) + 6))",
+        "id": 282
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(w: Real, (1 + 1/6) / w = 42/3)",
+        "id": 283
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, (2^(x+1))^3 * 4^x = 8192)",
+        "id": 284
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, x^2 + 24 * x + 128 = 0)",
+        "id": 285
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, And(-21 * x^2 - 11 * x + 40 = 0, x > 0))",
+        "id": 286
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, (1/9)^x = 3^(x+3))",
+        "id": 287
+    },
+    {
+        "Declarations": "A: GeometricSequence; B: GeometricSequence; a: PositiveNumbers; b: PositiveNumbers",
+        "Facts": "Get_Sequence_Terms(A, 1) = 6; Get_Sequence_Terms(A, 2) = a; Get_Sequence_Terms(A, 3) = b; Get_Sequence_Terms(B, 1) = 1 / b; Get_Sequence_Terms(B, 2) = a; Get_Sequence_Terms(B, 3) = 54",
+        "Query": "a",
+        "id": 288
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_inequation(a, (15 / Abs(9 + 2 * a)) < 1)",
+        "id": 289
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x, (9 - 4*x) / (x + 6) = 7)",
+        "id": 290
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x, (x - 9) / (x + 1) = 2)",
+        "id": 291
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x, (2 / 3) = (4 / x - 5) )",
+        "id": 292
+    },
+    {
+        "Declarations": "a: OddNumbers; b: OddNumbers",
+        "Facts": "a + 2 = b; Abs(b^2 - a^2) = 128",
+        "Query": "a * b",
+        "id": 293
+    },
+    {
+        "Declarations": "m: PositiveIntegers; n: PositiveIntegers",
+        "Facts": "",
+        "Query": "Build_Set((m, n) | 6 * m * n = 27 - 3 * m - 2 * n)",
+        "id": 294
+    },
+    {
+        "Declarations": "x: PositiveIntegers; y: PositiveIntegers",
+        "Facts": "3*x + 2*y + x*y = 115",
+        "Query": "x + y",
+        "id": 295
+    },
+    {
+        "Declarations": "x: PositiveIntegers; y: PositiveIntegers",
+        "Facts": "10*x*y + 14*x + 15*y = 166",
+        "Query": "x + y",
+        "id": 296
+    },
+    {
+        "Declarations": "a: Real; b: Real",
+        "Facts": "a \u2260 0; b \u2260 0; a * b = a - b",
+        "Query": "Get_Set_Minimum(Build_Set(x: Real, x = (a / b) + (b / a) - (a * b)))",
+        "id": 297
+    },
+    {
+        "Declarations": "f: Function; n: Integers",
+        "Facts": "Get_StepFunction_Expression(f, \u2200 n \u2208 OddNumbers) = n^2 + 1; Get_StepFunction_Expression(f, \u2200 n \u2208 EvenNumbers) = n^2 - 3*n + 1",
+        "Query": "Get_Function_Value(f, Get_Function_Value(f, Get_Function_Value(f, Get_Function_Value(f, Get_Function_Value(f, Get_Function_Value(f, 2))))))",
+        "id": 298
+    },
+    {
+        "Declarations": "S: Set",
+        "Facts": "S = Build_Set(x: Integers, -30 <= x <= 26)",
+        "Query": "Get_Set_Sum(S)",
+        "id": 299
+    },
+    {
+        "Declarations": "a: Real; b: Real",
+        "Facts": "a * b^2 = 27 / 5; a^2 * b = 135",
+        "Query": "a + 5 * b",
+        "id": 300
+    },
+    {
+        "Declarations": "a: PositiveIntegers; b: PositiveIntegers; S: Set",
+        "Facts": "b = a + 1; 9999 >= a * b >= 1000",
+        "Query": "Get_Set_Minimum(Build_Set(a * b, 9999 >= a * b >= 1000))",
+        "id": 301
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Set_Cardinality(Build_Set(x | x - 64 = 0 \u2228 x^2 - 64 = 0 \u2228 x^3 - 64 = 0))",
+        "id": 302
+    },
+    {
+        "Declarations": "P: Polynomial; A: Integer; B: Integer; C: Integer",
+        "Facts": "P = 4 * (3 * r^3 + 5 * r - 6) - 6 * (2 * r^3 - r^2 + 4 * r); P = A * r^2 + B * r + C",
+        "Query": "A, B, C",
+        "id": 303
+    },
+    {
+        "Declarations": "a: Real; b: Real; c: Real",
+        "Facts": "a / b = Sqrt(10) / Sqrt(21); b / c = Sqrt(135) / Sqrt(8)",
+        "Query": "a / c",
+        "id": 304
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Set_Sum(Build_Set(x | x^2 - 7 = 0 \u2228 x^3 - 8 = 0 \u2228 x^4 - 9 = 0))",
+        "id": 305
+    },
+    {
+        "Declarations": "a: Real; b: Real",
+        "Facts": "a^2 * b^3 = 32 / 27; a / b^3 = 27 / 4",
+        "Query": "a + b",
+        "id": 306
+    },
+    {
+        "Declarations": "s: Integers; x: Integers; P: QuadraticPolynomial",
+        "Facts": "P = (1/2)x^2 + s*x - 1/2",
+        "Query": "Get_Set_Sum(Build_Set(s | \u2200 x (Is_Root(P, x) \u2227 x \u2208 Integers)))",
+        "id": 307
+    },
+    {
+        "Declarations": "P: Polynomial; A: Integers; B: Integers",
+        "Facts": "P = 6*x^2 + 17*x + 5; P = (A*x + 1)*(B*x + 5)",
+        "Query": "A * B",
+        "id": 308
+    },
+    {
+        "Declarations": "k: PositiveIntegers; t: PositiveIntegers; m: PrimeNumbers; n: PrimeNumbers; P: Polynomial",
+        "Facts": "Solve_equation(x, x^2 - m * x + n = 0) = {k ,t}; k > t",
+        "Query": "m^n + n^m + k^t + t^k",
+        "id": 309
+    },
+    {
+        "Declarations": "A: PositiveIntegers; B: PositiveIntegers; C: PositiveIntegers; D: PositiveIntegers",
+        "Facts": "(1 + Sqrt(2)) / (2 + Sqrt(3)) = A * (1 + Sqrt(B)) - (Sqrt(C) + Sqrt(D))",
+        "Query": "A + B + C + D",
+        "id": 310
+    },
+    {
+        "Declarations": "f: Function; n: Integers",
+        "Facts": "Get_StepFunction_Expression(f, n \u2208 OddNumbers) = n^2; Get_StepFunction_Expression(f, n \u2208 EvenNumbers) = n^2 - 4n - 1",
+        "Query": "Get_Function_Value(Get_Function_IthComposition(f, 4), 4)",
+        "id": 311
+    },
+    {
+        "Declarations": "A: PositiveIntegers; S: Set",
+        "Facts": "S = Build_Set(n, n \u2208 PositiveIntegers \u2227 n \u2265 A \u2227 n \u2264 A + 26); Get_Set_Sum(S) = 3^7",
+        "Query": "A + 13",
+        "id": 312
+    },
+    {
+        "Declarations": "n: PositiveIntegers; S: ArithmeticSequence; omitted: Set",
+        "Facts": "S = Range(1, n); omitted = Build_Set({k, k+1} | k: Integers && 1 <= k < k+1 <= n)",
+        "Query": "Get_Set_Minimum({n: PositiveIntegers | Get_Set_Sum(S) - Get_Set_Sum(omitted) = 241})",
+        "id": 313
+    },
+    {
+        "Declarations": "x: PositiveIntegers",
+        "Facts": "1^x + 2^x + 5^x = 642",
+        "Query": "x",
+        "id": 314
+    },
+    {
+        "Declarations": "x: PositiveIntegers; y: PositiveIntegers",
+        "Facts": "",
+        "Query": "Set_Cardinality(Build_Set((x, y), 1 / ((1/x + 1/y) / 2) = 20))",
+        "id": 315
+    },
+    {
+        "Declarations": "a: PositiveIntegers; b: PositiveIntegers; c: PositiveIntegers; P: Polynomial; x1: Real",
+        "Facts": "P = 8 * x^3 - 3 * x^2 - 3 * x - 1; Is_Root(P, x1); x1 = (Sqrt(a, 3) + Sqrt(b, 3) + 1) / c",
+        "Query": "a + b + c",
+        "id": 316
+    },
+    {
+        "Declarations": "m: Real; n: Real; p: Real",
+        "Facts": "(m + n + p) * (m*n + m*p + n*p) = 25; m^2*(n + p) + n^2*(m + p) + p^2*(m + n) = 4",
+        "Query": "m * n * p",
+        "id": 317
+    },
+    {
+        "Declarations": "x: Real; y: Real",
+        "Facts": "",
+        "Query": "Build_Set((x, y) | Abs(x + y - 7) + Abs(4x - y + 12) = 0)",
+        "id": 318
+    },
+    {
+        "Declarations": "S: ArithmeticSequence",
+        "Facts": "Get_Sequence_Terms(S, 1) * Get_Sequence_Terms(S, 3) = 5; \u2200 x \u2208 S -> Is_PositiveIntegers(x) = True",
+        "Query": "Get_Sequence_Terms(S, 4)",
+        "id": 319
+    },
+    {
+        "Declarations": "S: Set",
+        "Facts": "S = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}; \u2203 x \u2208 S -> Get_Set_Sum(S - {x}) \u2208 {n^2 | n \u2208 PositiveIntegers}",
+        "Query": "x",
+        "id": 320
+    },
+    {
+        "Declarations": "a: Integers; b: Integers; c: Integers",
+        "Facts": "Get_Set_Means({a, 2 * b}) = 7; Get_Set_Means({a, 2 * c}) = 8",
+        "Query": "Get_Set_Means({a, b, c})",
+        "id": 321
+    },
+    {
+        "Declarations": "a: Real; b: Real; i: ComplexUnit",
+        "Facts": "Solve_equation(x, x^2 + 5 * x + 8 = 0) = {a + b * i}",
+        "Query": "a + b^2",
+        "id": 322
+    },
+    {
+        "Declarations": "Star: Operator",
+        "Facts": "Star({K: Integers}, {L: Integers}) = (K + L) * (K - L)",
+        "Query": "Star(6, 5)",
+        "id": 323
+    },
+    {
+        "Declarations": "n: PositiveIntegers; b: PositiveIntegers; T: Function",
+        "Facts": "Get_Function_Expression(T) = (n * (n + 1)) / 2",
+        "Query": "Get_Set_Minimum(Build_Set(b, \u2203 x : PositiveIntegers -> Get_Function_Value(T, b + 1) - Get_Function_Value(T, b) = Get_Function_Value(T, x) && b > 2011)",
+        "id": 324
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_inequation(r, -13 * (r + 5) + 25 > 4 * (r - 10))",
+        "id": 325
+    },
+    {
+        "Declarations": "x: Real",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, (Sqrt(12 * x) + 12) * (Sqrt(3 * x) - 6) = 4 * (x + 3) + x - 34)",
+        "id": 326
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: PositiveNumbers, (x^2 - 4 * x + 4) ^ (1 / 3) = 16)",
+        "id": 327
+    },
+    {
+        "Declarations": "a: Real; b: Real; c: Real; d: Real",
+        "Facts": "",
+        "Query": "Solve_equation(c, a - b = 2 * (c + d) && b = a - 2 && d = c + 5)",
+        "id": 328
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(z, 2 - 3 * i * z = 3 + 2 * i * z)",
+        "id": 329
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, 81^(2*x) = 27^(3*x - 4))",
+        "id": 330
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(r: Real, (r + 9) / (r - 3) = (r - 2) / (r + 5))",
+        "id": 331
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(t: Real, 3 * 3^t + Sqrt(9 * 9^t) = 18)",
+        "id": 332
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, 2^x + 6 = 3 * 2^x - 26)",
+        "id": 333
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, And(5 * x^2 + 9 * x - 18 = 0, x > 0))",
+        "id": 334
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, (3*x^2 + 2*x + 1) / (x - 1) = 3*x + 1)",
+        "id": 335
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, (x - 4)^3 = (1/8)^(-1))",
+        "id": 336
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, Sqrt(3 - 1 / x) = -4)",
+        "id": 337
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, 5^(x + 4) = 125^x)",
+        "id": 338
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, 27 = 3 * (9)^(x-1))",
+        "id": 339
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, (2x + 4) / (x^2 + 4x - 5) = (2 - x) / (x - 1))",
+        "id": 340
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Set_Sum(Solve_equation(x: Real, 3^(x^2 + 4 * x + 4) = 9^(x + 2)))",
+        "id": 341
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(n: Real, 9^n * 9^n * 9^n * 9^n = 81^4)",
+        "id": 342
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(n: Real, (2 - n) / (n + 1) + (2n - 4) / (2 - n) = 1)",
+        "id": 343
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, 2^(x-3) = 4^(x+1))",
+        "id": 344
+    },
+    {
+        "Declarations": "n: Real",
+        "Facts": "",
+        "Query": "Solve_equation(n: Real, Abs(n + 6) = 2 - n)",
+        "id": 345
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, 3^(2 * x) = Sqrt(27))",
+        "id": 346
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, (x + 4) / (x - 2) = 3)",
+        "id": 347
+    },
+    {
+        "Declarations": "s: ArithmeticSequence; x: Real",
+        "Facts": "Get_Sequence_Terms(s, 1) = 1 / 2; Get_Sequence_Terms(s, 2) = x - 1; Get_Sequence_Terms(s, 3) = 3 * x",
+        "Query": "x",
+        "id": 348
+    },
+    {
+        "Declarations": "x: Real; y: Real",
+        "Facts": "",
+        "Query": "Build_Set((x, y), (3 * x - 5 * y = -1.5) && (7 * x + 2 * y = 4.7))",
+        "id": 349
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(c: Real, Sqrt(4 + Sqrt(8 + 4 * c)) + Sqrt(2 + Sqrt(2 + c)) = 2 + 2 * Sqrt(2))",
+        "id": 350
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(Q: Real, Sqrt(Q^3) = 16 * (16)^(1/8))",
+        "id": 351
+    },
+    {
+        "Declarations": "S: ArithmeticSequence; x: PositiveNumbers",
+        "Facts": "Get_Sequence_Terms(S, 1) = 1 ^ 2; Get_Sequence_Terms(S, 2) = x ^ 2; Get_Sequence_Terms(S, 3) = 3 ^ 2",
+        "Query": "x",
+        "id": 352
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, 4 * x^(1/3) - 2 * (x / x^(2/3)) = 7 + x ^ (1 / 3))",
+        "id": 353
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(n: Real, 5^(2 * n + 1) = 1 / 25)",
+        "id": 354
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(n: Real, 2^n * 4^n = 64^(n - 36))",
+        "id": 355
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, 2 * 3^x = 162)",
+        "id": 356
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, (1/4)^(2x + 8) = 16^(2x + 5))",
+        "id": 357
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, 100^3 = 10^x)",
+        "id": 358
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, 1/2 + 1/x = 5/6)",
+        "id": 359
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, (6*x^2 + 111*x + 1) / (2*x + 37) = 3*x + 1)",
+        "id": 360
+    },
+    {
+        "Declarations": "x: Real; y: Real",
+        "Facts": "",
+        "Query": "Build_Set((x, y), (3 * x - 5 * y = -11) && (7 * x + 2 * y = -12))",
+        "id": 361
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Set_Maximum(Solve_equation(x: Real, 5 * (9 * x^2 + 9 * x + 10) = x * (9 * x - 40)))",
+        "id": 362
+    },
+    {
+        "Declarations": "i: ComplexUnit",
+        "Facts": "",
+        "Query": "Solve_equation(z, 1 - i * z = -1 + i * z)",
+        "id": 363
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, (3*x - 1) / (4*x - 4) = 2/3)",
+        "id": 364
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, 1/2 - 1/3 = 1/x)",
+        "id": 365
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(m: Real, (m - 4)^3 = (1/8)^(-1))",
+        "id": 366
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(n: Real, 8^n * 8^n * 8^n = 64^3)",
+        "id": 367
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x, (x^2 + 2*x + 3) / (x + 4) = x + 5)",
+        "id": 368
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(n: Real, 0.03 * n + 0.08 * (20 + n) = 12.6)",
+        "id": 369
+    },
+    {
+        "Declarations": "i: ComplexUnit",
+        "Facts": "",
+        "Query": "Solve_equation(z, 2 - i*z = -1 + 3*i*z)",
+        "id": 370
+    },
+    {
+        "Declarations": "y: Real",
+        "Facts": "",
+        "Query": "Solve_equation(y: Real, 4 + 2.3 * y = 1.7 * y - 20)",
+        "id": 371
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, 8^(4x - 6) = (1/2)^(x + 5))",
+        "id": 372
+    },
+    {
+        "Declarations": "i: ComplexUnit",
+        "Facts": "",
+        "Query": "Solve_equation(z, 1 - i * z = -1 + i * z)",
+        "id": 373
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, (3*x - 1) / (4*x - 4) = 2/3)",
+        "id": 374
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, 1/2 - 1/3 = 1/x)",
+        "id": 375
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(m: Real, (m - 4)^3 = (1/8)^(-1))",
+        "id": 376
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(n: Real, 8^n * 8^n * 8^n = 64^3)",
+        "id": 377
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x, (x^2 + 2*x + 3) / (x + 4) = x + 5)",
+        "id": 378
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(n: Real, 0.03 * n + 0.08 * (20 + n) = 12.6)",
+        "id": 379
+    },
+    {
+        "Declarations": "i: ComplexUnit",
+        "Facts": "",
+        "Query": "Solve_equation(z: ComplexNumbers, 2 - i * z = -1 + 3 * i * z)",
+        "id": 380
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(y: Real, 4 + 2.3 * y = 1.7 * y - 20)",
+        "id": 381
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, 8^(4x - 6) = (1/2)^(x + 5))",
+        "id": 382
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(y, Abs(y - 6) + 2 * y = 9)",
+        "id": 383
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, 361 + 2 * 19 * 6 + 36 = x)",
+        "id": 384
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, x^2 + 4 * x + 3 = - (x + 3) * (x + 5))",
+        "id": 385
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, (5x + 1) / (2x^2 + 5x - 3) = (2x) / (2x - 1))",
+        "id": 386
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(r: Real, (r + 3) / (r - 2) = (r - 1) / (r + 1))",
+        "id": 387
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, (5 * x) / (x + 3) - 3 / (x + 3) = 1 / (x + 3))",
+        "id": 388
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, (x^2 + x + 1) / (x + 1) = x + 2)",
+        "id": 389
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Solve_equation(x: Real, x = 35 / (6 - (2 / 5)))",
+        "id": 390
+    },
+    {
+        "Declarations": "k: Real; a: Integers; b: Integers; P: Polynomial",
+        "Facts": "",
+        "Query": "Get_Set_Product(Build_Set(k, P = x^2 + k * x + 15 && P = (x + a) * (x + b)))",
+        "id": 391
+    },
+    {
+        "Declarations": "Z: Polynomial; a: Integers; b: Integers",
+        "Facts": "Z = 2*z^2 + 13*z + 21; Z = (z + a) * (2*z + b)",
+        "Query": "2 * a + b",
+        "id": 392
+    },
+    {
+        "Declarations": "x: Integers; S: Set",
+        "Facts": "S = Solve_inequation(x: Integers, (Abs(x) + 1 > 7) && (Abs(x + 1) \u2264 7))",
+        "Query": "Get_Set_Sum(S)",
+        "id": 393
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Set_Cardinality(Build_Set(k: PositiveIntegers, Set_Cardinality(Solve_equation(x: Real, kx^2 + 10x + k = 0))) > 0)",
+        "id": 394
+    },
+    {
+        "Declarations": "p: Real; q: Real",
+        "Facts": "p > 1 = True; q > 1 = True; 1/p + 1/q = 1",
+        "Query": "(p - 1) * (q - 1)",
+        "id": 395
+    },
+    {
+        "Declarations": "a: Real; b: Real",
+        "Facts": "Solve_equation(x: Real, 18 + 5*x^2 = 20*x) = {a, b}",
+        "Query": "Get_Number_Round(a) * Get_Number_Round(b)",
+        "id": 396
+    },
+    {
+        "Declarations": "x: PositiveIntegers; y: PositiveIntegers; S: Set",
+        "Facts": "S = Build_Set(x, 1 / x + 1 / y = 1 / 7)",
+        "Query": "Get_Set_Sum(S)",
+        "id": 397
+    },
+    {
+        "Declarations": "A: Integers; B: Integers",
+        "Facts": "",
+        "Query": "Get_Set_Minimum(Build_Set(A + B, 1 / (Sqrt(2) + Sqrt(8) + Sqrt(32)) = Sqrt(A) / B))",
+        "id": 398
+    },
+    {
+        "Declarations": "x: Real; y: Real; z: Real",
+        "Facts": "x != y; y != z; z != x",
+        "Query": "Get_Set_Minimum(Build_Set(t: Real, t = ((y - x)^2 / ((y - z) * (z - x))) + ((z - y)^2 / ((z - x) * (x - y))) + ((x - z)^2 / ((x - y) * (y - z)))))",
+        "id": 399
+    },
+    {
+        "Declarations": "a: Integers; b: Integers",
+        "Facts": "2 * a - 3 * b = -23; b = a + 1; a < b",
+        "Query": "a",
+        "id": 400
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Set_Sum({1, 3, 5, 7, 9})",
+        "id": 401
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Set_Sum(Build_Set(x, x \u2208 Integers \u2227 x > 500 \u2227 x < 700 \u2227 x \u2208 OddNumbers))",
+        "id": 402
+    },
+    {
+        "Declarations": "A: Real; B: Real",
+        "Facts": "(5 * x - 16) / (x^2 - 7 * x + 10) = A / (x - 2) + B / (x - 5)",
+        "Query": "A + B",
+        "id": 403
+    },
+    {
+        "Declarations": "a: Real; b: Real; h: Function",
+        "Facts": "Get_Function_Expression(h) = a*x + b; Get_Function_Value(h, 1) = 5; Get_Function_Value(h, -1) = 1",
+        "Query": "Get_Function_Value(h, 6)",
+        "id": 404
+    },
+    {
+        "Declarations": "x: Real",
+        "Facts": "",
+        "Query": "Get_Set_Maximum(Build_Set(a: Real, a = 4 * (x + 7) * (2 - x)))",
+        "id": 405
+    },
+    {
+        "Declarations": "x: PositiveNumbers; y: PositiveNumbers",
+        "Facts": "(x + y)^2 + (x - y)^2 = 10; (x + y)^4 + (x - y)^4 = 98",
+        "Query": "x * y",
+        "id": 406
+    },
+    {
+        "Declarations": "A: Set; B: Set",
+        "Facts": "A = Build_Set(x: PositiveIntegers, x <= 20); B = Build_Set(y: EvenNumbers, y <= 20)",
+        "Query": "Abs(5 * Get_Set_Sum(A) - Get_Set_Sum(B))",
+        "id": 407
+    },
+    {
+        "Declarations": "a: Integers; b: Integers; c: Integers",
+        "Facts": "x^2 - 8*x - 49 = (a*x + b)^2 + c",
+        "Query": "a * b",
+        "id": 408
+    },
+    {
+        "Declarations": "a: Real; b: Real; c: Real",
+        "Facts": "a - 7 * b + 8 * c = 4; 8 * a + 4 * b - c = 7",
+        "Query": "a^2 - b^2 + c^2",
+        "id": 409
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Get_Set_Sum(Build_Set(x: PositiveIntegers, x < 62 \u2227 EvenNumbers(x)))",
+        "id": 410
+    },
+    {
+        "Declarations": "x: PositiveIntegers; n: Integers; d: Integers",
+        "Facts": "n = x^2 + 2 * x + 17; d = 2 * x + 5; n = d * x + 7",
+        "Query": "x",
+        "id": 411
+    },
+    {
+        "Declarations": "f: Function; n: Integers",
+        "Facts": "Get_StepFunction_Expression(f, n \u2208 OddNumbers) = n^2 + 1; Get_StepFunction_Expression(f, n \u2208 EvenNumbers) = n / 2",
+        "Query": "Set_Cardinality(Build_Set(n | n \u2208 Range(1, 100) \u2227 \u2203 k : NaturalNumbers, Get_Function_Value(Get_Function_IthComposition(f, k), n) = 1))",
+        "id": 412
+    },
+    {
+        "Declarations": "a: Integer; b: Integer; op: Operator",
+        "Facts": "a \u2260 0; b \u2260 0; op(a, b) = 1/a + 1/b; a + b = 9; a * b = 20",
+        "Query": "op(a, b)",
+        "id": 413
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Abs(pi - Abs(pi - 7))",
+        "id": 414
+    },
+    {
+        "Declarations": "S: Set; n: PositiveIntegers",
+        "Facts": "S = Range(1, n)",
+        "Query": "Set_Cardinality(Solve_inequation(n: PositiveIntegers, (6 * n) % Get_Set_Sum(S) = 0))",
+        "id": 415
+    },
+    {
+        "Declarations": "a: NegativeIntegers; b: NegativeIntegers",
+        "Facts": "b = a + 1; a * b = 2550",
+        "Query": "a + b",
+        "id": 416
+    },
+    {
+        "Declarations": "a: NonNegativeIntegers; b: NonNegativeIntegers; P: Polynomial",
+        "Facts": "P = x^2 - 16*x + 60; P = (x - a)*(x - b); a > b",
+        "Query": "3*b - a",
+        "id": 417
+    },
+    {
+        "Declarations": "N: PositiveIntegers; B: PositiveIntegers; J: PositiveIntegers; Cost_PB: Real; Cost_Jam: Real; Total_Cost: Real",
+        "Facts": "N > 1; Cost_PB = N * B * 4; Cost_Jam = N * J * 5; Total_Cost = Cost_PB + Cost_Jam; Total_Cost = 253",
+        "Query": "Cost_Jam / 100",
+        "id": 418
+    },
+    {
+        "Declarations": "x: Real; y: Real; z: Real",
+        "Facts": "y + z = 13; z + x = 14; x + y = 15",
+        "Query": "Sqrt(x * y * z * (x + y + z))",
+        "id": 419
+    },
+    {
+        "Declarations": "a: Real; b: Real; i: ComplexUnit; numerator: ComplexNumbers; denominator: ComplexNumbers; result: ComplexNumbers",
+        "Facts": "numerator = 2 + 2i; denominator = -3 + 4i; result = numerator / denominator; result = a + b*i",
+        "Query": "a + b*i",
+        "id": 420
+    },
+    {
+        "Declarations": "S: Set; n: PositiveIntegers",
+        "Facts": "S = Build_Set(n, n \u2264 7 \u2227 n \u2208 PositiveIntegers)",
+        "Query": "Get_Sum(S, n -> 9 * n)",
+        "id": 421
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Set_Cardinality(Solve_inequation(m: Integers, 1 / Abs(m) >= 1 / 8 \u2227 m != 0))",
+        "id": 422
+    },
+    {
+        "Declarations": "E: Set; O: Set",
+        "Facts": "E = Build_Set(x: EvenNumbers, x <= 40); O = Build_Set(x: OddNumbers, x <= 29)",
+        "Query": "Abs(Get_Set_Sum(E) - Get_Set_Sum(O))",
+        "id": 423
+    },
+    {
+        "Declarations": "x: Real; y: Real; a: PositiveIntegers; b: PositiveIntegers; c: PositiveIntegers; d: PositiveIntegers",
+        "Facts": "Solve_equation({x, y}, x + y = 3 * x * y = 4) = {(x1, y1), (x2, y2)}; x1 = (a + b * Sqrt(c)) / d; x2 = (a - b * Sqrt(c)) / d",
+        "Query": "a + b + c + d",
+        "id": 424
+    },
+    {
+        "Declarations": "S: GeometricSequence",
+        "Facts": "Get_Sequence_Terms(S, 1) = 2; Get_Sequence_Terms(S, 5) = 162",
+        "Query": "Get_Sequence_Terms(S, 6)",
+        "id": 425
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Set_Cardinality( Build_Set( n | Is_PositiveIntegers(n) = True && Is_Integers(4096^(1/n)) = True && n >= 2))",
+        "id": 426
+    },
+    {
+        "Declarations": "P: Polynomial; a: Integers; b: Integers",
+        "Facts": "P = 16*x^2 - 106*x - 105; P = (8*x + a)*(2*x + b)",
+        "Query": "a + 2*b",
+        "id": 427
+    },
+    {
+        "Declarations": "p: Real; q: Real",
+        "Facts": "1 < p = True; p < q = True; 1/p + 1/q = 1; p * q = 9/2",
+        "Query": "q",
+        "id": 428
+    },
+    {
+        "Declarations": "A: Integers; B: Integers; P: Polynomial",
+        "Facts": "P = 12 * y^2 - 65 * y + 42; P = (A * y - 14) * (B * y - 3)",
+        "Query": "A * B + A",
+        "id": 429
+    },
+    {
+        "Declarations": "p: Real; q: Real",
+        "Facts": "p > 1 = True; q > 1 = True; 1/p + 1/q = 1; p * q = 4",
+        "Query": "q",
+        "id": 430
+    },
+    {
+        "Declarations": "CirclePlus: Operator",
+        "Facts": "CirclePlus({a: Real}, {b: Real}) = 3 * a + 4 * b",
+        "Query": "CirclePlus(3, 1)",
+        "id": 431
+    },
+    {
+        "Declarations": "x: PositiveIntegers",
+        "Facts": "(3 * x)^2 - x = 2010",
+        "Query": "x",
+        "id": 432
+    },
+    {
+        "Declarations": "n: OddNumbers; a: OddNumbers; S: Set; y: Real; Set_of_j: Set",
+        "Facts": "Set_of_j = Build_Set(j: EvenNumbers, 0 <= j <= 2*(n-1)); S = Build_Set(a + i, i \u2208 Set_of_j); Get_Set_Means(S) = y",
+        "Query": "Get_Set_Minimum(S) + Get_Set_Maximum(S)",
+        "id": 433
+    },
+    {
+        "Declarations": "c: PositiveIntegers; S: Set",
+        "Facts": "S = Build_Set(c, \u2203 a: RationalNumbers -> Elements_In_Set(a, Solve_equation(x, 5*x^2 + 11*x + c = 0) = True); Set_Cardinality(S) = 2",
+        "Query": "Get_Set_Product(S)",
+        "id": 434
+    },
+    {
+        "Declarations": "b: PositiveIntegers",
+        "Facts": "0.76 = (4 * b + 19) / (6 * b + 11)",
+        "Query": "b",
+        "id": 435
+    },
+    {
+        "Declarations": "a: PositiveIntegers; b: PositiveIntegers; c: PositiveIntegers",
+        "Facts": "a * b + c = 41; b * c + a = 41; a * c + b = 41",
+        "Query": "a + b + c",
+        "id": 436
+    },
+    {
+        "Declarations": "P1: Polynomial; P2: Polynomial; a: Real; b: Real; c: Real; d: Real",
+        "Facts": "P1 = 3*x^2 - 5*x + 4; P2 = 7 - 2*x; P1 * P2 = a*x^3 + b*x^2 + c*x + d",
+        "Query": "8*a + 4*b + 2*c + d",
+        "id": 437
+    },
+    {
+        "Declarations": "f: Function; f_inv: Function; a: Integers; b: Integers",
+        "Facts": "Get_Function_Expression(f) = 3 * x + b; f_inv = Get_Inverse_Function(f); Get_Function_Value(f, -3) = a; Get_Function_Value(f_inv, -3) = a",
+        "Query": "a",
+        "id": 438
+    },
+    {
+        "Declarations": "a: PositiveIntegers; b: PositiveIntegers",
+        "Facts": "Abs(a - b) = 6; a * b = 112",
+        "Query": "a + b",
+        "id": 439
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Set_Cardinality(Solve_inequation(x: Integers, Abs(5 * x - 3) <= 7))",
+        "id": 440
+    },
+    {
+        "Declarations": "p: PositiveNumbers; q: PositiveNumbers; m: Real; n: Real; P: Polynomial",
+        "Facts": "P = x^2 - m * x + n; Is_Prime(p) = True; Is_Prime(q) = True",
+        "Query": "Set_Cardinality(Build_Set(n, m < 20 && Is_Root(P, p) = True && Is_Root(P, q) = True))",
+        "id": 441
+    },
+    {
+        "Declarations": "x: PositiveIntegers, y: PositiveIntegers",
+        "Facts": "2 * x^2 * y^3 + 4 * y^3 = 149 + 3 * x^2",
+        "Query": "x + y",
+        "id": 442
+    },
+    {
+        "Declarations": "A: Integers; B: Integers; P: Polynomial",
+        "Facts": "P = 10 * x^2 - x - 24; P = (A * x - 8) * (B * x + 3)",
+        "Query": "A * B + B",
+        "id": 443
+    },
+    {
+        "Declarations": "a: PositiveIntegers; b: PositiveIntegers; op: Operator",
+        "Facts": "op(a, b) = Sqrt(a * b + a) / Sqrt(a * b - b)",
+        "Query": "op(9, 2)",
+        "id": 444
+    },
+    {
+        "Declarations": "A: Integers",
+        "Facts": "A + (A + 1) + (A + 2) = 27",
+        "Query": "A * (A + 1) * (A + 2)",
+        "id": 445
+    },
+    {
+        "Declarations": "P: Polynomial; A: Integer; B: Integer",
+        "Facts": "P = 3*x^2 + 14*x + 8; P = (3*x + A) * (x + B)",
+        "Query": "A - B",
+        "id": 446
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Set_Cardinality(Solve_inequation(x: PositiveIntegers, x ^ (-1) > x ))",
+        "id": 447
+    },
+    {
+        "Declarations": "m: Integers; n: Integers",
+        "Facts": "Solve_equation(x, (x + 1) * (x + 2) - (x + 3) = 0) = {m + Sqrt(n), m - Sqrt(n)}",
+        "Query": "m + n",
+        "id": 448
+    },
+    {
+        "Declarations": "a: Integers; S: Set",
+        "Facts": "S = {a, a+1, a+2, a+3, a+4, a+5, a+6}; Get_Set_Sum(S) = 49",
+        "Query": "a",
+        "id": 449
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Set_Cardinality(Solve_inequation(x: Integers, Abs(x - 2) <= 5.6))",
+        "id": 450
+    },
+    {
+        "Declarations": "x: Real; y: Real",
+        "Facts": "4 * y - 4 * x^2 = 1; 4 * x - 4 * y^2 = 1",
+        "Query": "1 / (x^3 + y^3)",
+        "id": 451
+    },
+    {
+        "Declarations": "a: Integers; b: Integers; c: Integers; d: Integers; S: Set",
+        "Facts": "S = {a, b, c, d}; a + b = 16; a + c = 19; a + d = 20; b + c = 21; b + d = 22; c + d = 25",
+        "Query": "S",
+        "id": 452
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Set_Cardinality(Solve_inequation(x: Integers, Abs(x + 4) < 9))",
+        "id": 453
+    },
+    {
+        "Declarations": "c: Integers; f: Function",
+        "Facts": "Get_Function_Expression(f) = (2 * x^2 + x + 5) / (x^2 + 4 * x + c)",
+        "Query": "Get_Set_Minimum(Build_Set(c | \u2200x (x^2 + 4 * x + c != 0)))",
+        "id": 454
+    },
+    {
+        "Declarations": "a: NonNegativeNumbers; b: NonNegativeNumbers; c: NonNegativeNumbers",
+        "Facts": "a^2 + b^2 + c^2 = 13; a * b + b * c + c * a = 6",
+        "Query": "Get_Set_Sum({a, b, c})",
+        "id": 455
+    },
+    {
+        "Declarations": "a: PositiveIntegers; b: PositiveIntegers; c: PositiveIntegers",
+        "Facts": "a^2 + b^2 = c^2; a = 162",
+        "Query": "Set_Cardinality(Build_Set((b, c), a^2 + b^2 = c^2))",
+        "id": 456
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Set_Cardinality(Build_Set((x, y), x \u2208 Integers \u2227 y \u2208 Integers \u2227 x^2 - y^2 = 17))",
+        "id": 457
+    },
+    {
+        "Declarations": "a: Integer; b: Integer; logValue: Real",
+        "Facts": "logValue = Log(2938, 8); a < logValue < b; b = a + 1",
+        "Query": "a + b",
+        "id": 458
+    },
+    {
+        "Declarations": "",
+        "Facts": "",
+        "Query": "Set_Cardinality(Solve_inequation(x: PositiveIntegers, x^2 + 4x + 4 < 20))",
+        "id": 459
+    },
+    {
+        "Declarations": "P1: Polynomial; P2: Polynomial; a: Integers; b: Integers",
+        "Facts": "P1 = a * x + b; P2 = 2 * x + 3; P1 * P2 = 20 * x^2 + 44 * x + 21; (a != b) = True",
+        "Query": "a + b",
+        "id": 460
+    },
+    {
+        "Declarations": "a: EvenNumbers; S: Set",
+        "Facts": "S = {a, a+2, a+4}; Get_Set_Sum(S) = 66",
+        "Query": "a",
+        "id": 461
+    },
+    {
+        "Declarations": "a: Integers; b: Integers; c: Integers",
+        "Facts": "a + 1/b = 22/7; b + 1/c = 8; a * b * c = 21",
+        "Query": "c + 1/a",
+        "id": 462
+    },
+    {
+        "Declarations": "a: Real; b: Real; c: Real; S: Set",
+        "Facts": "a + b + c = 0; a * b * c = 17",
+        "Query": "a^3 + b^3 + c^3",
+        "id": 463
+    },
+    {
+        "Declarations": "a: PositiveIntegers; b: PositiveIntegers",
+        "Facts": "a * b - (a + b) = 39; Get_GCD(a, b) = 1; a < 20; b < 20",
+        "Query": "a + b",
+        "id": 464
+    }
+]
