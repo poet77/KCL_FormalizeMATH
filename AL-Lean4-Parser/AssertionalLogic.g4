@@ -4,16 +4,11 @@ grammar AssertionalLogic;
 program
     : '{' 
       '"Declarations"' ':' '"' declarationList '"' ','?
-      '"Facts"' ':' '"' factList '"' ','?
-      '"Query"' ':' '"' query '"' ','?
-      '"Proof"' ':' '"' proofList '"'?
+      '"Facts"' ':' '"' assertionList '"' ','?
+      '"Query"' ':' '"' queryList '"'?
       '}'
-    | traditionalProgram
     ;
 
-traditionalProgram
-    : declarationList? factList? queryList? proofList? EOF
-    ;
 
 declarationList
     : declaration (';' declaration)*
@@ -23,7 +18,7 @@ declaration
     : variable ':' conceptID
     ;
 
-factList
+assertionList
     : assertion (';' assertion)*
     ;
 
@@ -32,39 +27,28 @@ assertion
     ;
 
 queryList
-    : query (';' query)*
+    : assertion (';' assertion)*
     ;
 
-query
-    : term '=' '?'
-    ;
-
-proofList
-    : ('?' assertion (';' '?' assertion)*)?
-    ;
 
 terms
-    : (declaration | term) (',' ( term | proposition))*
+    : (declaration | term) (',' term )*
     ;
-
 
 term
     : '(' term ')'                     # ParenTerm
-    | term op=('*' | '/' | '%') term   # BinaryOpTerm
+    | term op=('>' | '<' | '=' | '<=' | '>=' | '!=') term # ArithmeticOpTerm
+    | term op=('^' | '*' | '/' | '%') term   # BinaryOpTerm
     | term op=('+' | '-') term         # BinaryOpTerm
     | operatorID '(' terms ')'         # OperatorTerm
+    | '{' termList '}'                 # SetTerm 
     | atomicIndividual            # AtomicTerm
     ;
 
-
-proposition
-    : arithmeticExpression ('=' | '>' | '<') arithmeticExpression
+termList
+    : term (',' term)*                 # CommaTermList  // 逗号分隔的项列表
     ;
 
-arithmeticExpression
-    : term ('+' | '-' | '*' | '/') term
-    | term
-    ;
 
 atomicIndividual
     : constant
@@ -75,6 +59,7 @@ constant
     : numeral
     | logicalConstant
     | mathematicalConstant
+    | '?'
     ;
 
 conceptID
@@ -253,11 +238,6 @@ operatorID
     | 'Order'
     | 'Get_Mod_Nat'
     | 'Is_Nat_Mod'
-    | atomicOperator 
-    ;
-
-atomicOperator
-    : '+' | '-' | '*' | '/' | '%'  // Basic arithmetic operators
     ;
 
 
@@ -271,9 +251,13 @@ variableID
     ;
 
 numeral
-    : DIGIT+                      # Integer
-    | DIGIT+ '.' DIGIT+           # Float
+    : DIGITS                  # Interges
+    | DIGIT                   # Integer
+    | DIGITS '.' DIGITS       # Float
     ;
+
+DIGIT : [0-9];
+DIGITS : DIGIT+;
 
 logicalConstant
     : 'True'
@@ -281,16 +265,15 @@ logicalConstant
     ;
 
 mathematicalConstant
-    : 'pi'
-    | 'e'
-    | 'i'
+    : 'Real.pi'
+    | 'Real.e'
+    | 'Complex.i'
     ;
 
 // Basic tokens
 UPPERCASE_LETTER: [A-Z];
 LOWERCASE_LETTER: [a-z];
 ALPHABET: [A-Za-z];
-DIGIT: [0-9];
 
 // Operators and punctuation
 QUESTION: '?';
@@ -304,51 +287,3 @@ UNDERSCORE: '_';
 // Whitespace and comments
 WS: [ \t\r\n]+ -> skip;
 COMMENT: '--' ~[\r\n]* -> skip;
-
-
-
-
-
-// Predefined Concept Keywords
-REAL: 'Real';
-NON_NEGATIVE_NUMBERS: 'NonNegativeNumbers';
-NEGATIVE_NUMBERS: 'NegativeNumbers';
-POSITIVE_NUMBERS: 'PositiveNumbers';
-TRANSCENDENTAL_NUMBERS: 'TranscendentalNumbers';
-ALGEBRAIC_NUMBERS: 'AlgebraicNumbers';
-IRRATIONAL_NUMBERS: 'IrrationalNumbers';
-INTEGERS: 'Integers';
-EVEN_NUMBERS: 'EvenNumbers';
-ODD_NUMBERS: 'OddNumbers';
-POSITIVE_INTEGERS: 'PositiveIntegers';
-NEGATIVE_INTEGERS: 'NegativeIntegers';
-NON_NEGATIVE_INTEGERS: 'NonNegativeIntegers';
-NATURAL_NUMBERS: 'NaturalNumbers';
-PRIME_NUMBERS: 'PrimeNumbers';
-COMPOSITE_NUMBERS: 'CompositeNumbers';
-RATIONAL_NUMBERS: 'RationalNumbers';
-DECIMALS: 'Decimals';
-REPEATING_DECIMALS: 'RepeatingDecimals';
-COMPLEX_NUMBERS: 'ComplexNumbers';
-IMAGINARY_NUMBERS: 'ImaginaryNumbers';
-INFINITY: 'Infinity';
-POSITIVE_INFINITY: 'PositiveInfinity';
-NEGATIVE_INFINITY: 'NegativeInfinity';
-POLYNOMIAL: 'Polynomial';
-MONOMIAL: 'Monomial';
-IRREDUCIBLE_POLYNOMIAL: 'IrreduciblePolynomial';
-QUADRATIC_POLYNOMIAL: 'QuadraticPolynomial';
-CUBIC_POLYNOMIAL: 'CubicPolynomial';
-FUNCTION: 'Function';
-QUADRATIC_FUNCTION: 'QuadraticFunction';
-CUBIC_FUNCTION: 'CubicFunction';
-SET: 'Set';
-SEQUENCE: 'Sequence';
-ARITHMETIC_SEQUENCE: 'ArithmeticSequence';
-GEOMETRIC_SEQUENCE: 'GeometricSequence';
-HARMONIC_SEQUENCE: 'HarmonicSequence';
-EXPRESSION: 'Expression';
-EQUATION: 'Equation';
-INEQUATION: 'Inequation';
-OPERATOR: 'Operator';
-NUMBER: 'Number';
