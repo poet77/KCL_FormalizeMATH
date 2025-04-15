@@ -5,7 +5,7 @@ program
     : '{' 
       '"Declarations"' ':' '"' declarationList '"' ','?
       '"Facts"' ':' '"' assertionList '"' ','?
-      '"Query"' ':' '"' queryList '"'?
+      '"Query"' ':' '"' assertionList '"'?
       '}'
     ;
 
@@ -19,28 +19,20 @@ declaration
     ;
 
 assertionList
-    : assertion (';' assertion)*
+    : (assertion | term) (';' (assertion | term))*
     ;
 
 assertion
     : term '=' term
     ;
 
-queryList
-    : assertion (';' assertion)*
-    ;
-
-
-terms
-    : (declaration | term) (',' term )*
-    ;
 
 term
     : '(' term ')'                     # ParenTerm
-    | term op=('>' | '<' | '=' | '<=' | '>=' | '!=') term # ArithmeticOpTerm
-    | term op=('^' | '*' | '/' | '%') term   # BinaryOpTerm
     | term op=('+' | '-') term         # BinaryOpTerm
-    | operatorID '(' terms ')'         # OperatorTerm
+    | term op=('^' | '*' | '/' | '%') term   # BinaryOpTerm
+    | term op=('>' | '<' | '=' | '<=' | '>=' | '!=') term # ArithmeticOpTerm
+    | operatorID '(' termList ')'         # OperatorTerm
     | '{' termList '}'                 # SetTerm 
     | atomicIndividual            # AtomicTerm
     ;
@@ -53,13 +45,14 @@ termList
 atomicIndividual
     : constant
     | variableID
+    | declaration
+    | '?'
     ;
 
 constant
     : numeral
     | logicalConstant
     | mathematicalConstant
-    | '?'
     ;
 
 conceptID
