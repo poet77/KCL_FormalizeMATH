@@ -91,7 +91,7 @@ def operator_id(operator, *args):
         if len(args) != 1:
             raise ValueError("Get_PolyDegree operator requires exactly 1 argument: x")
         x = args[0]
-        return f"{x}.degree"
+        return f"{x}.natDegree"
     
     elif operator == "Get_Polyroots":
         if len(args) != 1:
