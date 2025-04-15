@@ -45,14 +45,14 @@
         "Explanation": "倒数：一个数的倒数是其与 1 的乘积为 1 的数，例如 4 的倒数是 1/4。"
     },
     {
-        "Assertional_Logic": "Get_Sum({S: Finset}, {L: LamdaExpression}) -> Real",
-        "Lean4_Code": "def Get_Sum (S: Finset ℕ)(f: ℕ → ℝ) : ℝ := ∑ i ∈ S, f i",
-        "Explanation": "集合S可以为(Set.Icc 1 10).toFinset, lambda表达式可以为(λ x : ℕ => x ^ 2 + 1); 求集合中所有元素的和"
+        "Assertional_Logic": "Get_Sum({S: Finset}, {i: variableID}, {L: Term}) -> Real",
+        "Lean4_Code": "#check ∑ i ∈ S, L",
+        "Explanation": "求有限集合中所有关于i的表达式L的和"
     },
     {
-        "Assertional_Logic": "Get_Prod({S: Finset}, {L: LamdaExpression}) -> ℝ",
-        "Lean4_Code": "def Get_Prod (S: Finset ℕ)(f: ℕ → ℝ) : ℝ := ∏ i ∈ S, f i",
-        "Explanation": "集合S可以为(Set.Icc 1 10).toFinset, lambda表达式可以为(λ x : ℕ => x ^ 2 + 1); 求集合中所有元素的乘积"
+        "Assertional_Logic": "Get_Prod({S: Finset}, {i: variableID}, {L: Term}) -> ℝ",
+        "Lean4_Code": "#check ∏ i ∈ S, f i",
+        "Explanation": "求有限集合中所有关于i的表达式L的乘积"
     },
     {
         "Assertional_Logic": "Exp({x: Real}) -> Real",
